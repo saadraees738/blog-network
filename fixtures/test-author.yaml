@@ -1,0 +1,4 @@
+name: Test Author
+role: Test fixture, not a real person
+bio: This author exists only to test the build and is removed before launch.
+photo: null
