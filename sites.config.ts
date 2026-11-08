@@ -14,10 +14,10 @@ export type SiteConfig = {
 export const sites: SiteConfig[] = [
   {
     id: 'site1',
-    name: 'Stackwise', // PLACEHOLDER working name
+    name: 'Stackbrook',
     tagline: 'Hands-on tests of AI tools and software for small teams',
-    domains: ['localhost', 'stackwise.example'], // PLACEHOLDER domains
-    contactEmail: 'hello@stackwise.example', // PLACEHOLDER
+    domains: ['localhost', 'stackbrook.com'],
+    contactEmail: 'hello@stackbrook.com',
     affiliateDisclosure: true,
   },
 ];
