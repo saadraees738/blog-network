@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Bar chart of monthly allowance included in Zapier and Make entry plans">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">What the entry plans include each month</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Zapier counts tasks; Make counts credits. Units are similar but not identical. Prices as of 8 Nov 2026, annual billing.</text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#1d2a2a">
+    <text x="60" y="215">Zapier Free</text>
+    <text x="60" y="305">Make Free</text>
+    <text x="60" y="395">Zapier Professional ($19.99/mo)</text>
+    <text x="60" y="485">Make Core ($9/mo)</text>
+  </g>
+  <g>
+    <rect x="460" y="185" width="7" height="42" fill="#c4572b"/>
+    <rect x="460" y="275" width="68" height="42" fill="#2b6f8f"/>
+    <rect x="460" y="365" width="51" height="42" fill="#c4572b"/>
+    <rect x="460" y="455" width="680" height="42" fill="#2b6f8f"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">
+    <text x="480" y="215">100 tasks</text>
+    <text x="542" y="305">1,000 credits</text>
+    <text x="525" y="395">750 tasks</text>
+    <text x="900" y="485" fill="#ffffff">10,000 credits</text>
+  </g>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Sources: zapier.com and make.com pricing pages. Bars are to scale. How each tool counts a unit differs; see the article.</text>
+</svg>
