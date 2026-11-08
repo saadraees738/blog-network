@@ -15,7 +15,7 @@ export const sites: SiteConfig[] = [
   {
     id: 'site1',
     name: 'Stackbrook',
-    tagline: 'Hands-on tests of AI tools and software for small teams',
+    tagline: 'Plain-English guides to AI tools and software for small teams',
     domains: ['localhost', 'stackbrook.com'],
     contactEmail: 'contact@stackbrook.com',
     affiliateDisclosure: true,
