@@ -17,6 +17,11 @@ Add at most ONE new post per run to the site in `docs/ACTIVE_SITE.md`, by commit
 9. **Validation.** Run `node scripts/validate-content.mjs` before committing. If it fails, set the post to `status: queue`, write the reason in `queueReason`, and commit anyway so nothing is lost.
 10. **Safety brake.** If `docs/PAUSED` exists, still write and queue posts but NEVER set `status: published`. (A human creates this file after a Google manual action, an AdSense policy warning, a traffic collapse of 50%+ in a week, or a copyright complaint, and deletes it when the cause is fixed.)
 
+## Git identity (required, or Vercel blocks the deploy)
+Before any commit run:
+`git config user.name "saadraees738"` and `git config user.email "177437009+saadraees738@users.noreply.github.com"`.
+Vercel's Hobby plan BLOCKS deployments of commits whose author is not linked to the account owner. Never commit with any other author email.
+
 ## Steps
 1. Read `docs/ACTIVE_SITE.md`, `docs/TOPICS.md` (ordered backlog) and the list of existing posts. Pick the first topic not yet covered. Do not publish near-duplicates of existing posts.
 2. Research: fetch the official sources for the topic. Extract only confirmed facts into notes.
