@@ -35,3 +35,9 @@ Vercel's Hobby plan BLOCKS deployments of commits whose author is not linked to 
 
 ## Weekly cap
 Count posts published in the last 7 days (by `publishDate`). Cap: 4 per week at first (raise to 5 only after the site has 20+ posts). If the cap is reached, draft and queue instead of publishing.
+
+## Hero image variety (hard rule)
+Before building a hero, read the `heroAlt` of the 3 newest posts. The new hero must use a different chart type from the previous post. See docs/STYLE.md for the list. Render the SVG to PNG (rsvg-convert) and check that no label is clipped.
+
+## Validation (hard rule)
+Run `node scripts/validate-content.mjs` directly (never piped) and check its exit code. A failure is a hard stop: fix it or send the post to the review queue; do not commit or push.

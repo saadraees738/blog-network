@@ -1,25 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
   <title id="t">HubSpot list price per seat per month</title>
-  <desc id="d">Bar chart of HubSpot list prices per seat per month: Free $0, Starter $20, Professional core seat $50, Enterprise core seat $75, Professional sales seat $100.</desc>
+  <desc id="d">Column chart of HubSpot list prices per seat per month: Free $0, Starter $20, Professional core seat $50, Enterprise core seat $75, Professional sales seat $100.</desc>
   <rect width="800" height="420" fill="#f8fafc"/>
   <text x="40" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">HubSpot list price per seat, per month (USD)</text>
   <text x="40" y="78" font-family="Arial, sans-serif" font-size="14" fill="#475569">From HubSpot's product catalog, Nov 2026. Discounted offers and annual billing can lower these.</text>
-  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
-    <text x="40" y="136">Free (2 users)</text>
-    <rect x="260" y="114" width="3" height="32" fill="#2563eb"/>
-    <text x="276" y="137" font-weight="700">$0</text>
-    <text x="40" y="188">Starter</text>
-    <rect x="260" y="166" width="100" height="32" fill="#2563eb"/>
-    <text x="372" y="189" font-weight="700">$20</text>
-    <text x="40" y="240">Professional core seat</text>
-    <rect x="260" y="218" width="250" height="32" fill="#2563eb"/>
-    <text x="522" y="241" font-weight="700">$50</text>
-    <text x="40" y="292">Enterprise core seat</text>
-    <rect x="260" y="270" width="375" height="32" fill="#2563eb"/>
-    <text x="647" y="293" font-weight="700">$75</text>
-    <text x="40" y="344">Professional sales seat</text>
-    <rect x="260" y="322" width="500" height="32" fill="#0d9488"/>
-    <text x="772" y="345" font-weight="700" text-anchor="end" fill="#ffffff">$100</text>
+  <g font-family="Arial, sans-serif" fill="#0f172a">
+    <rect x="60" y="337.0" width="100" height="3.0" rx="3" fill="#2563eb"/>
+    <text x="110.0" y="329.0" font-size="18" font-weight="700" text-anchor="middle">$0</text>
+    <text x="110.0" y="364" font-size="14" text-anchor="middle">Free</text>
+    <text x="110.0" y="382" font-size="14" text-anchor="middle" fill="#475569">(2 users)</text>
+    <rect x="200" y="296.0" width="100" height="44.0" rx="3" fill="#2563eb"/>
+    <text x="250.0" y="288.0" font-size="18" font-weight="700" text-anchor="middle">$20</text>
+    <text x="250.0" y="364" font-size="14" text-anchor="middle">Starter</text>
+    <rect x="340" y="230.0" width="100" height="110.0" rx="3" fill="#2563eb"/>
+    <text x="390.0" y="222.0" font-size="18" font-weight="700" text-anchor="middle">$50</text>
+    <text x="390.0" y="364" font-size="14" text-anchor="middle">Professional</text>
+    <text x="390.0" y="382" font-size="14" text-anchor="middle" fill="#475569">core seat</text>
+    <rect x="480" y="175.0" width="100" height="165.0" rx="3" fill="#2563eb"/>
+    <text x="530.0" y="167.0" font-size="18" font-weight="700" text-anchor="middle">$75</text>
+    <text x="530.0" y="364" font-size="14" text-anchor="middle">Enterprise</text>
+    <text x="530.0" y="382" font-size="14" text-anchor="middle" fill="#475569">core seat</text>
+    <rect x="620" y="120.0" width="100" height="220.0" rx="3" fill="#0d9488"/>
+    <text x="670.0" y="112.0" font-size="18" font-weight="700" text-anchor="middle">$100</text>
+    <text x="670.0" y="364" font-size="14" text-anchor="middle">Professional</text>
+    <text x="670.0" y="382" font-size="14" text-anchor="middle" fill="#475569">sales seat</text>
+    <line x1="40" y1="340" x2="760" y2="340" stroke="#94a3b8"/>
   </g>
-  <text x="40" y="396" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. Scale: 5 px per dollar.</text>
+  <text x="40" y="408" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. Column height is proportional to price; teal marks a sales seat.</text>
 </svg>
