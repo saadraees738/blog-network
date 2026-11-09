@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="t d">
+  <title id="t">Entry paid plan headline price, Zapier and four alternatives</title>
+  <desc id="d">Bar chart of headline monthly price on annual billing: Make Core 9 dollars, Power Automate Premium 15 dollars per user, Zapier Professional 19.99 dollars, Activepieces Plus 20 dollars, n8n Starter 20 euros.</desc>
+  <rect width="800" height="440" fill="#f8fafc"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Entry paid plan: headline monthly price</text>
+  <text x="40" y="78" font-family="Arial, sans-serif" font-size="14" fill="#475569">Headline prices as read Nov 2026; billing period varies by vendor. What each price buys differs (see text).</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+    <text x="40" y="136">Make Core</text>
+    <rect x="250" y="114" width="180" height="32" fill="#2563eb"/>
+    <text x="442" y="137" font-weight="700">$9</text>
+    <text x="40" y="188">Power Automate Premium</text>
+    <rect x="250" y="166" width="300" height="32" fill="#2563eb"/>
+    <text x="562" y="189" font-weight="700">$15 per user</text>
+    <text x="40" y="240">Zapier Professional</text>
+    <rect x="250" y="218" width="399.8" height="32" fill="#2563eb"/>
+    <text x="661" y="241" font-weight="700">$19.99</text>
+    <text x="40" y="292">Activepieces Plus</text>
+    <rect x="250" y="270" width="400" height="32" fill="#2563eb"/>
+    <text x="662" y="293" font-weight="700">$20 (some pages $25)</text>
+    <text x="40" y="344">n8n Cloud Starter</text>
+    <rect x="250" y="322" width="400" height="32" fill="#0d9488"/>
+    <text x="662" y="345" font-weight="700">€20</text>
+  </g>
+  <text x="40" y="400" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. 20 px per currency unit; n8n is priced in euros and not converted.</text>
+  <text x="40" y="420" font-family="Arial, sans-serif" font-size="13" fill="#475569">Units differ: tasks, credits, executions, per-user licences.</text>
+</svg>

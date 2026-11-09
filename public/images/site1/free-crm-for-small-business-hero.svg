@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Free-plan user limits for four CRMs</title>
+  <desc id="d">Bar chart: HubSpot 2 users, Zoho CRM 3 users, Freshsales 3 users, Bitrix24 no user cap.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Users allowed on each free CRM plan</text>
+  <text x="40" y="78" font-family="Arial, sans-serif" font-size="14" fill="#475569">Bar length is proportional to users; Bitrix24 states no user cap. Vendor pages, Nov 2026.</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+    <text x="40" y="140">HubSpot</text>
+    <rect x="200" y="118" width="160" height="32" fill="#2563eb"/>
+    <text x="372" y="141" font-weight="700">2 users</text>
+    <text x="40" y="206">Zoho CRM</text>
+    <rect x="200" y="184" width="240" height="32" fill="#2563eb"/>
+    <text x="452" y="207" font-weight="700">3 users</text>
+    <text x="40" y="272">Freshsales</text>
+    <rect x="200" y="250" width="240" height="32" fill="#2563eb"/>
+    <text x="452" y="273" font-weight="700">3 users</text>
+    <text x="40" y="338">Bitrix24</text>
+    <rect x="200" y="316" width="560" height="32" fill="#0d9488"/>
+    <text x="212" y="338" fill="#ffffff" font-weight="700">No user cap (storage 5 GB)</text>
+  </g>
+  <text x="40" y="395" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. 80 px per user; Bitrix24 bar is full width because no cap is stated.</text>
+</svg>
