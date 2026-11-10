@@ -55,3 +55,22 @@ export function imageUrl(siteId: string, value?: string | null) {
   if (value.startsWith('/') || value.startsWith('http')) return value;
   return `/images/${siteId}/${value}`;
 }
+
+// Social previews (Facebook, X, LinkedIn, WhatsApp) do not render SVG, so every SVG hero
+// ships with a PNG of the same name. Falls back to the original value for other formats.
+export function socialImageUrl(siteId: string, value?: string | null) {
+  const u = imageUrl(siteId, value);
+  return u.endsWith('.svg') ? u.replace(/\.svg$/, '.png') : u;
+}
+
+export function siteBaseUrl(domains: string[]) {
+  return `https://${domains.find((d) => d !== 'localhost') ?? 'localhost'}`;
+}
+
+// Other published posts, same category first, newest first.
+export async function getRelatedPosts(siteId: string, slug: string, category?: string | null, limit = 3) {
+  const all = (await getPublishedPosts(siteId)).filter((p: any) => p.slug !== slug);
+  const same = all.filter((p: any) => category && p.category === category);
+  const rest = all.filter((p: any) => !(category && p.category === category));
+  return [...same, ...rest].slice(0, limit);
+}

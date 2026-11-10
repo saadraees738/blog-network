@@ -32,6 +32,7 @@ for (const site of fs.existsSync(contentDir) ? fs.readdirSync(contentDir) : []) 
       const p = path.join(root, 'public', img);
       if (!fs.existsSync(p)) bad(file, `image file missing: ${img}`);
       else if (fs.statSync(p).size < 500) bad(file, `image file suspiciously small: ${img}`);
+      if (img.endsWith('.svg') && !fs.existsSync(p.replace(/\.svg$/, '.png'))) bad(file, `PNG copy for social previews missing: ${img.replace(/\.svg$/, '.png')} (run: rsvg-convert -w 1200 <svg> -o <png>)`);
     }
     if (!fm.heroAlt || fm.heroAlt.length < 8) bad(file, 'alt text missing/too short');
     if (!fm.description || fm.description.length < 80 || fm.description.length > 170) bad(file, 'meta description must be 80-170 chars');

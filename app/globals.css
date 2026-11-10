@@ -43,3 +43,6 @@ th { background: var(--soft); }
 .sources li { margin-bottom: 6px; font-size: 15px; }
 .author { display: flex; gap: 14px; align-items: center; border-top: 1px solid var(--line); margin-top: 40px; padding-top: 20px; }
 .empty { color: var(--muted); padding: 48px 0; }
+
+ul.related { padding-left: 20px; }
+ul.related li { margin-bottom: 6px; font-size: 16px; }

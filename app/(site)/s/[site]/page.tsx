@@ -1,14 +1,20 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { siteById } from '../../../../sites.config';
-import { getPublishedPosts, imageUrl } from '../../../../lib/content';
+import { getPublishedPosts, imageUrl, siteBaseUrl } from '../../../../lib/content';
 
 export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: Promise<{ site: string }> }): Promise<Metadata> {
   const site = siteById((await params).site);
   if (!site) return {};
-  return { title: `${site.name}: ${site.tagline}`, description: site.tagline };
+  return {
+    metadataBase: new URL(siteBaseUrl(site.domains)),
+    title: `${site.name}: ${site.tagline}`,
+    description: site.tagline,
+    alternates: { canonical: '/' },
+    openGraph: { type: 'website', siteName: site.name, title: `${site.name}: ${site.tagline}`, description: site.tagline, url: '/' },
+  };
 }
 
 export default async function Home({ params }: { params: Promise<{ site: string }> }) {

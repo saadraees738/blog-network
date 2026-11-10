@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { siteById, sites } from '../../../../../../sites.config';
-import { getPost, getPublishedPosts, imageUrl } from '../../../../../../lib/content';
+import { getPost, getPublishedPosts, getRelatedPosts, imageUrl, siteBaseUrl, socialImageUrl } from '../../../../../../lib/content';
 import { Render } from '../../../../../../components/Render';
 
 export const dynamicParams = false;
@@ -21,10 +21,26 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { site: id, slug } = await params;
   const post = slug === '__none__' ? null : await getPost(id, slug);
   if (!post) return {};
+  const site = siteById(id);
+  const base = site ? siteBaseUrl(site.domains) : undefined;
+  const img = post.heroImage ? socialImageUrl(id, post.heroImage) : undefined;
   return {
+    ...(base ? { metadataBase: new URL(base) } : {}),
     title: post.title,
     description: post.description,
-    openGraph: { title: post.title, description: post.description, images: post.heroImage ? [imageUrl(id, post.heroImage)] : [] },
+    alternates: { canonical: `/posts/${slug}` },
+    openGraph: {
+      type: 'article',
+      url: `/posts/${slug}`,
+      siteName: site?.name,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.publishDate,
+      modifiedTime: post.lastVerified ?? post.publishDate,
+      authors: post.authorData ? [post.authorData.name] : undefined,
+      images: img ? [{ url: img, width: 1200, height: 630, alt: post.heroAlt }] : [],
+    },
+    twitter: { card: 'summary_large_image', title: post.title, description: post.description, images: img ? [img] : [] },
   };
 }
 
@@ -34,15 +50,26 @@ export default async function PostPage({ params }: P) {
   const post = slug === '__none__' ? null : await getPost(id, slug);
   if (!site || !post) notFound();
 
+  const base = siteBaseUrl(site.domains);
+  const pageUrl = `${base}/posts/${slug}`;
+  const related = await getRelatedPosts(id, slug, post.category);
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    url: pageUrl,
     headline: post.title,
     description: post.description,
     datePublished: post.publishDate,
     dateModified: post.lastVerified ?? post.publishDate,
-    image: imageUrl(id, post.heroImage),
-    author: post.authorData ? { '@type': 'Person', name: post.authorData.name } : undefined,
+    image: [`${base}${socialImageUrl(id, post.heroImage)}`],
+    articleSection: post.category || undefined,
+    inLanguage: 'en',
+    author: post.authorData
+      ? { '@type': 'Person', name: post.authorData.name, jobTitle: post.authorData.role, url: `${base}/legal/about` }
+      : undefined,
+    publisher: { '@type': 'Organization', name: site.name, url: base },
+    citation: post.sources.map((s: any) => s.url),
   };
 
   return (
@@ -75,6 +102,16 @@ export default async function PostPage({ params }: P) {
           </li>
         ))}
       </ol>
+      {related.length ? (
+        <>
+          <h2>Related guides</h2>
+          <ul className="related">
+            {related.map((r: any) => (
+              <li key={r.slug}><a href={`/posts/${r.slug}`}>{r.title}</a></li>
+            ))}
+          </ul>
+        </>
+      ) : null}
       {post.authorData ? (
         <div className="author">
           <div>

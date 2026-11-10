@@ -41,3 +41,6 @@ Before building a hero, read the `heroAlt` of the 3 newest posts. The new hero m
 
 ## Validation (hard rule)
 Run `node scripts/validate-content.mjs` directly (never piped) and check its exit code. A failure is a hard stop: fix it or send the post to the review queue; do not commit or push.
+
+## PNG preview (hard rule)
+After building the SVG hero, create the PNG copy (`rsvg-convert -w 1200 -h 630 <name>-hero.svg -o <name>-hero.png`). Validation fails without it.
