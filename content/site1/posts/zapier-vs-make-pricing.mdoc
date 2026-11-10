@@ -4,7 +4,7 @@ description: 'Zapier charges per task and Make per credit, so equal plans are no
 status: published
 queueReason: ''
 publishDate: 2026-11-08
-lastVerified: 2026-11-08
+lastVerified: 2026-11-10
 category: Automation
 author: saad-r
 heroImage: /images/site1/zapier-vs-make-pricing-hero.svg
@@ -12,7 +12,7 @@ heroAlt: Bar chart comparing the monthly tasks or credits included in Zapier and
 imageCredit: Chart created by Stackbrook from the vendors' published pricing
 affiliateLinks: false
 testedFirstHand: false
-quickAnswer: Make's entry plan lists 10,000 credits for $9 a month, while Zapier's lists 750 tasks for $19.99 (both annual billing). The units are counted differently, so compare your own workflow's step count rather than the headline numbers.
+quickAnswer: Make's entry plan lists 10,000 credits for $9 a month (billing period not stated on its comparison page), while Zapier's lists 750 tasks for $19.99 on annual billing. The units are counted differently, so compare your own workflow's step count rather than the headline numbers.
 sources:
   - title: Zapier pricing overview (Zapier blog)
     url: https://zapier.com/blog/zapier-pricing/
@@ -24,7 +24,7 @@ sources:
     url: https://www.make.com/en/pricing
     accessed: 2026-11-08
   - title: Make pricing parameters (Make help)
-    url: https://make.com/en/help/general/pricing-parameters
+    url: https://www.make.com/en/help/general/pricing-parameters
     accessed: 2026-11-08
   - title: Make vs Zapier comparison (Make)
     url: https://www.make.com/compare/make-vs-zapier
@@ -41,34 +41,49 @@ sources:
   - title: Make pricing update, 6 Nov 2025 (Make Community)
     url: https://community.make.com/t/important-update-adjustment-to-plans-and-pricing/94578
     accessed: 2026-11-08
+  - title: How is task usage measured in Zapier? (Zapier Help)
+    url: https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier
+    accessed: 2026-11-10
+  - title: Scheduling your scenario (Make Academy)
+    url: https://academy-content.make.com/courses/make-basics-modules/05-scheduling-your-scenario/
+    accessed: 2026-11-10
+  - title: How to use an AI agent to sort emails, plan requirements (Make)
+    url: https://www.make.com/en/how-to-guides/how-to-use-an-ai-agent-to-sort-emails
+    accessed: 2026-11-10
+  - title: How features use credits (Make help)
+    url: https://help.make.com/how-features-use-credits
+    accessed: 2026-11-10
+  - title: Credits (Make help)
+    url: https://help.make.com/credits
+    accessed: 2026-11-10
 factCheck:
   status: passed
   reviewStatus: approved
-  notes: 'Published on owner approval 2026-11-08 (owner override). Independent reviewer did not give a final APPROVE: open item was the billing period of Make prices, which the post discloses to readers.'
+  notes: 'Published on owner approval 2026-11-08 (owner override). Re-reviewed 2026-11-10 after corrections: removed an unsupported Make price conflict, added sources for Code app credits, AI credits and Free plan limits. Make Core billing period remains unconfirmed and is disclosed in the post.'
 ---
 
-Zapier and Make both automate work between apps, but they bill in different units. Zapier counts **tasks**. Make counts **credits**. A plan that looks cheap on one site can cost more on the other once you count how many of those units your workflow uses. This guide compares the published prices as of 8 November 2026 and walks through three worked examples. It is based on the vendors' own documentation and pricing pages, not on our own use of either product, and both vendors write pages that favour their own product, so we show the numbers and the counting rules rather than their conclusions.
+Zapier and Make both automate work between apps, but they bill in different units. Zapier counts **tasks**. Make counts **credits**. A plan that looks cheap on one site can cost more on the other once you count how many of those units your workflow uses. This guide compares the published prices as of 10 November 2026 and walks through three worked examples. It is based on the vendors' own documentation and pricing pages, not on our own use of either product, and both vendors write pages that favour their own product, so we show the numbers and the counting rules rather than their conclusions.
 
 ## Quick comparison
 
 | | Zapier | Make |
 | --- | --- | --- |
 | Free plan | 100 tasks per month | 1,000 credits per month, no time limit |
-| Entry paid plan | Professional, $19.99 per month billed annually, 750 tasks | Core, $9 per month billed annually, 10,000 credits |
+| Entry paid plan | Professional, $19.99 per month billed annually, 750 tasks | Core, $9 per month (billing period not stated on Make's comparison page), 10,000 credits |
 | Team plan | Team, $69 per month billed annually, 2,000 tasks, up to 25 users | Teams, $29 per month, from 10,000 credits (billing period not stated on Make's comparison page) |
 | Unit billed | A completed action in another app | A module run that processes data |
 
-Make's pricing-parameters help page lists higher figures ($12 for Core, $21 for Pro, $38 for Teams at the 10,000-credit tier), while Make's comparison page lists $9, $16 and $29. We could not reconcile the difference or confirm which billing period each applies to, so check Make's live pricing page and its billing toggle before comparing. Zapier's figures above are the annual-billing prices from its own pricing articles; we did not verify Zapier's month-to-month prices.
+Make's comparison page lists $9, $16 and $29 for these tiers without stating the billing period, and we could not confirm what the same plans cost on monthly billing, so check Make's live pricing page and its billing toggle before comparing. Zapier's figures above are the annual-billing prices from its own pricing articles; we did not verify Zapier's month-to-month prices.
 
 ## How Zapier counts usage
 
-Zapier says a task is the work it performs in another app. According to Zapier, filters, formatting, paths, looping, error handling and triggers do not count toward your task total. That matters for multi-step workflows: only the steps that act in your apps count.
+Zapier says a task is the work it performs in another app. According to Zapier, triggers, Filter and Paths steps, steps that error or halt, and built-in tools such as Looping and Delay do not count toward your task total, and its blog's examples treat Formatter steps as free too. Zapier's help article adds that successful steps inside an error-handler path do count. That matters for multi-step workflows: only the steps that act in your apps count.
 
 If you go over your allowance, Zapier's paid plans keep running and bill the extra tasks. Zapier says annual plans pay 1.25 times the normal per-task cost for extra tasks, monthly plans pay 2.5 times, and total usage is capped at three times the plan's task limit. On Professional, that cap is 2,250 tasks in a month (750 included plus up to 1,500 extra).
 
 ## How Make counts usage
 
-Make says each module action in a scenario, such as adding a row to a Google Sheet, typically counts as one credit. Some features use more. Make's own comparison page says modules that handle multiple data bundles or use its built-in AI tools may consume more than one credit, and a community announcement says built-in AI usage is priced by tokens. Code execution is billed at 2 credits per second. If you bring your own AI provider key on a Pro plan or higher, Make's community answer says the AI step costs one credit per run.
+Make says each module that runs in a scenario typically counts as one credit. Some features use more. Make's own comparison page says modules that handle multiple data bundles or use its built-in AI tools may consume more than one credit, and Make's credits page says its built-in AI usage is priced by tokens. Make's help page says the Make Code app uses 2 credits per second of execution time. If you connect your own AI provider key, a Make community answer says the AI step costs one credit per run on Pro and above, while Make's credits page says paid plans, so confirm which applies to you.
 
 Make sells extra credits if you run out, and its 6 November 2025 announcement changed how extra credits are priced, so check the current extra-credit rate on Make's pricing page before relying on overage as a budget. The same announcement moved plan limits: Core now tops out at 300,000 credits a month, and larger tiers sit on Pro.
 
@@ -78,18 +93,18 @@ These examples are our own arithmetic from the published numbers, not measured b
 
 ### 200 runs a month
 
-- Zapier: 400 tasks. This exceeds the Free plan's 100 tasks, and Zapier's Free plan is also limited to two-step workflows, so it would not cover a trigger plus two actions anyway. It fits inside Professional's 750, so about $19.99 per month on annual billing.
-- Make: 600 credits. This fits inside the Free plan's 1,000, so $0. Make's Free plan also allows only two active scenarios and a minimum 15-minute interval between scheduled runs.
+- Zapier: 400 tasks. This exceeds the Free plan's 100 tasks, and Zapier's blog lists two-step Zaps on the Free plan and multi-step workflows on Professional, so Free may not cover a trigger plus two actions either (confirm on Zapier's live page). It fits inside Professional's 750, so about $19.99 per month on annual billing.
+- Make: 600 credits. This fits inside the Free plan's 1,000, so $0. Make's Academy says the free plan's minimum interval between scheduled runs is 15 minutes, and a Make how-to guide says the Free plan caps you at two active scenarios.
 
 ### 500 runs a month
 
 - Zapier: 1,000 tasks. That is 250 over Professional's 750. Using Zapier's annual overage rule, the plan's normal task cost is about $0.0267 ($19.99 divided by 750), so each extra task is about $0.033, and 250 extra tasks come to roughly $8.33. Estimated total: about $28.32 per month. We calculated this ourselves from Zapier's stated multiplier, so confirm the exact charge in Zapier's calculator.
-- Make: 1,500 credits. This is over the Free plan's 1,000, so the Core plan at $9 per month (annual billing) covers it with 10,000 credits.
+- Make: 1,500 credits. This is over the Free plan's 1,000, so the Core plan at $9 per month (billing period unconfirmed) covers it with 10,000 credits.
 
 ### 3,000 runs a month
 
 - Zapier: 6,000 tasks. Professional's 2,250 figure is only the cap on pay-per-task overage for the 750-task tier, not a limit on the plan, so you would choose a larger task tier. Zapier's pricing page has a task selector for this, and we did not verify the price of tiers above 750, so we cannot give a Zapier total.
-- Make: 9,000 credits. This fits inside Core's 10,000, so $9 per month on annual billing.
+- Make: 9,000 credits. This fits inside Core's 10,000, so $9 per month (billing period unconfirmed).
 
 The pattern is that Make's headline allowance is much larger per dollar. The caveat is that Make's count rises quickly if a workflow uses many modules, loops over many records or relies on built-in AI, and Zapier's count stays low if most of your steps are filters, formatting or paths.
 
@@ -97,4 +112,4 @@ The pattern is that Make's headline allowance is much larger per dollar. The cav
 
 Choose by counting your own steps. List the apps a typical run touches. For Zapier, count only the actions in other apps. For Make, count every module that processes data, then multiply by monthly runs. If the result fits the Free plan on one tool, start there. If you need teams, shared folders and roles, compare Zapier Team ($69 for up to 25 users) with Make Teams (from $29, billing period unconfirmed), and read the plan feature lists, since the included usage differs.
 
-Both vendors change plans and prices. Make updated its plans on 6 November 2025, and Zapier restructured its plans during 2024. Check the live pricing pages before you commit, and note that this article was last verified on 8 November 2026.
+Both vendors change plans and prices. Make updated its plans on 6 November 2025, and Zapier restructured its plans during 2024. Check the live pricing pages before you commit, and note that this article was last verified on 10 November 2026.
