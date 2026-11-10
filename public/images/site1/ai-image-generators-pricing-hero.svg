@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Midjourney plan prices and Fast GPU hours</title>
+  <desc id="d">Column chart of Midjourney monthly price with annual billing and monthly Fast GPU hours: Basic 8 dollars and 3.3 hours, Standard 24 dollars and 15 hours, Pro 48 dollars and 30 hours, Mega 96 dollars and 60 hours.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Midjourney: what each plan costs per month</text>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="14" fill="#475569">Annual billing (20% off). Fast GPU time per month shown under each plan.</text>
+  <line x1="60" y1="330" x2="740" y2="330" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="95" y="312" width="110" height="18" rx="5" fill="#93c5fd"/>
+  <text x="150.0" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$8</text>
+  <text x="150.0" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Basic</text>
+  <text x="150.0" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">3.3 h Fast</text>
+  <rect x="260" y="275" width="110" height="55" rx="5" fill="#60a5fa"/>
+  <text x="315.0" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$24</text>
+  <text x="315.0" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Standard</text>
+  <text x="315.0" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">15 h Fast</text>
+  <rect x="425" y="220" width="110" height="110" rx="5" fill="#3b82f6"/>
+  <text x="480.0" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$48</text>
+  <text x="480.0" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Pro</text>
+  <text x="480.0" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">30 h Fast</text>
+  <rect x="590" y="109" width="110" height="221" rx="5" fill="#1d4ed8"/>
+  <text x="645.0" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">$96</text>
+  <text x="645.0" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Mega</text>
+  <text x="645.0" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">60 h Fast</text>
+  <text x="40" y="406" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook from Midjourney's published plan page. Standard and above add unlimited Relax image mode.</text>
+</svg>

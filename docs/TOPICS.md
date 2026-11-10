@@ -24,10 +24,10 @@ A1. todo | AI Assistants | Claude vs ChatGPT: free and paid plan limits compared
 A2. todo | AI Assistants | ChatGPT free vs Plus vs Pro: what each plan includes | image: ladder/step chart
 A3. todo | AI Assistants | Claude free vs Pro vs Max: what you get at each price | image: dot plot
 A4. todo | AI Assistants | Gemini vs ChatGPT vs Claude for small business tasks (pricing and limits) | image: grouped bars
-V1. in progress | AI Video | AI video generators compared: Runway, Google Flow (Veo), Kling pricing and credits (NOTE: OpenAI states Sora is no longer available as of 2026-04-26; do not include as a current option) | image: pictogram
+V1. published | AI Video | AI video generators compared: Runway, Google Flow (Veo), Kling pricing and credits (NOTE: OpenAI states Sora is no longer available as of 2026-04-26; do not include as a current option) | image: pictogram
 V2. todo | AI Video | How credits work in AI video tools, and what a 30-second clip really costs | image: flow diagram
 V3. todo | AI Video | Free AI video generators: watermarks, length caps and commercial-use terms | image: limits chart
-I1. todo | AI Image | AI image generators compared: Midjourney, DALL-E/ChatGPT images, Firefly, Canva (pricing and licence terms) | image: table diagram
+I1. published | AI Image | AI image generators compared: Midjourney, DALL-E/ChatGPT images, Firefly, Canva (pricing and licence terms) | image: table diagram
 W1. todo | AI Writing | AI writing tools for small business: Jasper, Copy.ai, Grammarly and ChatGPT compared on price | image: columns
 W2. todo | AI Writing | Can you use AI-generated text commercially? What OpenAI, Anthropic and Google terms say (not legal advice) | image: flow diagram
 M1. todo | AI Productivity | AI meeting notes tools: Otter, Fireflies, Fathom plans compared (volume declining, lower priority) | image: limits chart
