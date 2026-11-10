@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">What each tool bills for one run of a four-step workflow</title>
+  <desc id="d">Grid for one run of a workflow with a trigger and three actions. Zapier counts 3 tasks, because the trigger is not counted. Make counts 4 credits, one per module, in the cautious case. n8n counts 1 execution for the whole run.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">What one workflow run is billed as</text>
+  <text x="40" y="78" font-family="Arial, sans-serif" font-size="14" fill="#475569">One run: a form entry triggers three actions. Billing rules as published by each vendor, Nov 2026.</text>
+  <g font-family="Arial, sans-serif" fill="#0f172a" text-anchor="middle">
+    <text x="250" y="132" font-size="13" font-weight="700">New form entry</text>
+    <text x="250" y="149" font-size="13" fill="#475569">(trigger)</text>
+    <line x1="250" y1="160" x2="250" y2="176" stroke="#cbd5e1"/>
+    <text x="350" y="132" font-size="13" font-weight="700">Add row</text>
+    <text x="350" y="149" font-size="13" fill="#475569">(Sheets)</text>
+    <line x1="350" y1="160" x2="350" y2="176" stroke="#cbd5e1"/>
+    <text x="450" y="132" font-size="13" font-weight="700">Send message</text>
+    <text x="450" y="149" font-size="13" fill="#475569">(Slack)</text>
+    <line x1="450" y1="160" x2="450" y2="176" stroke="#cbd5e1"/>
+    <text x="550" y="132" font-size="13" font-weight="700">Create contact</text>
+    <text x="550" y="149" font-size="13" fill="#475569">(CRM)</text>
+    <line x1="550" y1="160" x2="550" y2="176" stroke="#cbd5e1"/>
+    <text x="690" y="132" font-size="13" font-weight="700">Billed for this run</text>
+    <text x="40" y="216" font-size="18" font-weight="700" text-anchor="start">Zapier</text>
+    <circle cx="250" cy="210" r="19" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/><text x="250" y="216" font-size="16" fill="#64748b">0</text>
+    <circle cx="350" cy="210" r="19" fill="#2563eb"/><text x="350" y="216" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <circle cx="450" cy="210" r="19" fill="#2563eb"/><text x="450" y="216" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <circle cx="550" cy="210" r="19" fill="#2563eb"/><text x="550" y="216" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <text x="690" y="217" font-size="20" font-weight="700">3 tasks</text>
+    <text x="40" y="286" font-size="18" font-weight="700" text-anchor="start">Make</text>
+    <circle cx="250" cy="280" r="19" fill="#2563eb"/><text x="250" y="286" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <circle cx="350" cy="280" r="19" fill="#2563eb"/><text x="350" y="286" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <circle cx="450" cy="280" r="19" fill="#2563eb"/><text x="450" y="286" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <circle cx="550" cy="280" r="19" fill="#2563eb"/><text x="550" y="286" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <text x="690" y="287" font-size="20" font-weight="700">4 credits</text>
+    <text x="40" y="356" font-size="18" font-weight="700" text-anchor="start">n8n</text>
+    <rect x="222" y="326" width="356" height="48" rx="24" fill="#ccfbf1" stroke="#0d9488" stroke-width="3"/>
+    <text x="400" y="356" font-size="16" font-weight="700" fill="#115e59">1 execution covers the whole run</text>
+    <text x="690" y="357" font-size="20" font-weight="700">1 execution</text>
+  </g>
+  <text x="40" y="404" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. Make is shown in the cautious case of one credit per module; real use varies by module.</text>
+</svg>

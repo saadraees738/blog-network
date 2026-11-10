@@ -1,0 +1,126 @@
+---
+title: 'n8n vs Zapier vs Make: how each counts usage and what a workflow costs'
+description: 'Zapier bills tasks, Make bills credits and n8n bills whole-workflow executions. See how each is counted, a worked example at three volumes, and where each model hurts.'
+status: published
+queueReason: ''
+publishDate: 2026-11-10
+lastVerified: 2026-11-10
+category: Automation
+author: saad-r
+heroImage: /images/site1/n8n-vs-zapier-vs-make-hero.svg
+heroAlt: Grid showing one four-step workflow run billed as 3 tasks on Zapier, 4 credits on Make and 1 execution on n8n
+imageCredit: Chart created by Stackbrook from the vendors' published billing rules
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: For one run of a trigger plus three actions, Zapier's published rules give 3 tasks, Make about 4 credits and n8n 1 execution. n8n's model favours long workflows, but a frequent schedule can still use up its allowance fast, so count your own runs first.
+sources:
+  - title: n8n plans and pricing (n8n)
+    url: https://n8n.io/pricing/
+    accessed: 2026-11-10
+  - title: New plan, no active workflow limits, n8n pricing explained (n8n blog)
+    url: https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/
+    accessed: 2026-11-10
+  - title: How can I add more workflow executions? (n8n support)
+    url: https://support.n8n.io/article/can-i-add-more-executions
+    accessed: 2026-11-10
+  - title: Build and manage agents (n8n docs)
+    url: https://docs.n8n.io/build/build-and-manage-agents
+    accessed: 2026-11-10
+  - title: Executions (n8n docs)
+    url: https://docs.n8n.io/workflows/executions/
+    accessed: 2026-11-10
+  - title: License FAQ (n8n docs)
+    url: https://docs.n8n.io/n8n-community-license/community-license/license-faq
+    accessed: 2026-11-10
+  - title: Which license do I need for my use case? (n8n support)
+    url: https://support.n8n.io/article/can-i-use-your-license-for-my-use-case
+    accessed: 2026-11-10
+  - title: What is a task in Zapier? (Zapier blog)
+    url: https://zapier.com/blog/what-is-a-task-in-zapier/
+    accessed: 2026-11-10
+  - title: How is task usage measured in Zapier? (Zapier Help)
+    url: https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier
+    accessed: 2026-11-10
+  - title: Zapier pricing overview (Zapier blog)
+    url: https://zapier.com/blog/zapier-pricing/
+    accessed: 2026-11-10
+  - title: Make pricing and subscription packages (Make)
+    url: https://www.make.com/en/pricing
+    accessed: 2026-11-10
+  - title: Make vs Zapier comparison (Make)
+    url: https://www.make.com/compare/make-vs-zapier
+    accessed: 2026-11-10
+  - title: Scheduling your scenario (Make Academy)
+    url: https://academy-content.make.com/courses/make-basics-modules/05-scheduling-your-scenario/
+    accessed: 2026-11-10
+  - title: How to use an AI agent to sort emails, plan requirements (Make)
+    url: https://www.make.com/en/how-to-guides/how-to-use-an-ai-agent-to-sort-emails
+    accessed: 2026-11-10
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Independent reviewer passes 2026-11-10 (4 rounds); all flagged items fixed or hedged; final verdict APPROVE.'
+---
+
+Zapier, Make and n8n all connect apps without much code, but each bills a different thing. Zapier counts **tasks**, Make counts **credits**, and n8n counts **workflow executions**. The same job can therefore use three very different amounts of your allowance. This guide explains what each unit means, works through one example at three volumes, and shows where each model can surprise you. It is based on the vendors' own pages, not on our own use of the tools. For plan prices, see our [Zapier vs Make pricing](/posts/zapier-vs-make-pricing) comparison and our guide to [Zapier alternatives](/posts/zapier-alternatives-pricing).
+
+## Quick comparison
+
+| | Zapier | Make | n8n |
+|---|---|---|---|
+| What is billed | A task: an action completed in another app | A credit: typically one per module that runs | An execution: one full run of a workflow, however many steps |
+| Not billed, per the vendor | Triggers, Filter and Paths steps, Formatter, built-in tools such as Looping and Delay, and steps that error or halt | Not stated on the pages we read | The number of steps or amount of data in a run; manual test runs and sub-workflow runs |
+| Entry paid plan as listed | Professional, $19.99 a month billed annually, 750 tasks | Core, $9 a month for 10,000 credits per Make's comparison page | Starter, €20 a month billed annually, 2,500 executions |
+| Free option | Free plan, 100 tasks a month | Free plan, 1,000 credits a month | Self-hosted Community edition (cloud plans are paid after a trial) |
+
+Make's pricing page is script-rendered and we could not read plan details from it, so the Core figure comes from its comparison page, which does not state a billing period. Check Make's live page and its billing toggle. Zapier's price comes from its blog; its pricing page offers several task tiers.
+
+## How Zapier counts
+
+Zapier says a task is the work it does in another app. According to Zapier, triggers, Filter and Paths steps, steps that error or halt, and built-in tools such as Looping and Delay do not count toward your task total, and its blog's examples treat Formatter steps as free too. Zapier's help article adds that successful steps inside an error-handler path do count. A workflow with a trigger and three actions therefore uses three tasks every time it runs. On Professional, 750 tasks is 250 runs of that workflow.
+
+## How Make counts
+
+Make says each module that runs in a scenario typically counts as one credit. Make's own comparison page says modules that handle several data bundles, or use its built-in AI tools, may use more than one. In our example we count one credit for every module, the cautious case, which gives four credits per run.
+
+## How n8n counts
+
+n8n's pricing page defines an execution as a single run of an entire workflow, and says it does not matter how many steps the workflow has or how much data it processes. Its blog says the same: the number of nodes or steps, the amount of data and the run time make no difference to the count. Starter lists 2,500 executions a month and Pro lists 10,000 (€50 a month, billed annually). Our example workflow counts as one execution per run.
+
+## The same workflow at three volumes
+
+The example is a form entry that adds a spreadsheet row, sends a Slack message and creates a CRM contact. These figures are our own arithmetic from the published rules, not measured bills, and we did not verify Zapier or Make prices above their entry tiers.
+
+| Runs a month | Zapier (3 tasks a run) | Make (4 credits a run) | n8n (1 execution a run) |
+|---|---|---|---|
+| 200 | 600 tasks, inside Professional's 750 | 800 credits, inside the Free plan's 1,000 | 200 executions, inside Starter's 2,500 |
+| 1,000 | 3,000 tasks, above Professional's 750 | 4,000 credits, inside Core's 10,000 | 1,000 executions, inside Starter's 2,500 |
+| 5,000 | 15,000 tasks, well above Professional | 20,000 credits, above Core's entry 10,000 | 5,000 executions, inside Pro's 10,000 |
+
+At 200 runs, Make's Free plan covers the job, though Make's Academy says the free plan's minimum interval between scheduled runs is 15 minutes, and a Make how-to guide says the Free plan caps you at two active scenarios. At 1,000 runs, Zapier needs a larger task tier than the 750 on Professional; its pricing page has a selector, and we did not verify those prices. At 5,000 runs, n8n's whole-run counting gives it the smallest number by far, and Pro's 10,000 covers it.
+
+## Where n8n's model can still cost you
+
+Counting whole runs does not make usage free, and five points matter.
+
+- **Schedules add up.** n8n's docs say a Schedule Trigger counts one execution every time it fires, and its pricing page says a workflow that runs every five minutes uses roughly 8,600 to 8,900 executions a month, which is more than three times Starter's 2,500 on its own. Polling triggers count only when they find new data.
+- **Webhooks count every request.** Per n8n's docs, each inbound request that activates a webhook trigger counts, including one with an empty body.
+- **Agents count too.** n8n's documentation says one turn with an agent counts as one execution, and that agents and workflows share the same quota.
+- **Some runs are free.** Only production executions count towards the quota. n8n's docs say manual test runs, sub-workflow runs (only the parent counts) and error-workflow runs do not.
+- **Past your allowance is unclear.** n8n's support article lists an upgrade from Starter to Pro rather than a top-up, while its pricing page lists capped overage fees for Starter and Pro without details. The two pages differ, so confirm with n8n what happens at your limit.
+
+## Self-hosting and the licence
+
+n8n's Community edition is free and self-hosted only, and it runs under the Sustainable Use License. n8n's documentation says that if only people in your organisation create or edit workflows, you can use it for free. You need a commercial licence if people outside your organisation can build or configure workflows, or if you want to host n8n as a service. Self-hosting also means you pay for the server and handle backups and updates yourself.
+
+We did not find a self-hosted option for Zapier or Make in the sources we read (Make mentions on-prem agents only for Enterprise), so for those two the per-unit bill is the route we could confirm.
+
+## Which one to choose
+
+- **Short workflows, low volume:** compare the free plans first. At 200 runs a month in our example, Make's Free plan fits and n8n's cheapest cloud plan is paid.
+- **Long workflows with many steps:** n8n's whole-run counting is the model that grows slowest as you add steps.
+- **Mostly filters, formatting and paths:** Zapier does not count those, so its bill can stay lower than the step count suggests.
+- **Frequent schedules:** count executions per month before choosing n8n cloud, or consider self-hosting.
+- **Technical help available:** self-hosting removes the per-run bill in exchange for upkeep.
+
+Before you commit, write down one real workflow, count its billable steps for each tool's own unit, multiply by your monthly runs and then confirm the figures on each vendor's live pricing page. Plans and wording change often, so treat every figure here as a snapshot.
