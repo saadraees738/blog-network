@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Claude and ChatGPT individual plan prices by tier</title>
+  <desc id="d">Table of US monthly list prices. Free: Claude $0, ChatGPT $0. Entry paid: Claude none listed, ChatGPT Go $8. Standard: Claude Pro $20 or $17 per month billed annually, ChatGPT Plus $20. Heavy use: Claude Max $100, ChatGPT Pro from $100. Top tier: Claude Ultra $200, ChatGPT Pro $200 or $500; $200 sign-ups reported paused.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Claude vs ChatGPT: individual plans by tier</text>
+  <text x="40" y="78" font-family="Arial, sans-serif" font-size="14" fill="#475569">US list prices from each vendor's published pages. *$200 sign-ups reported paused; check.</text>
+  <text x="210" y="116" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#b45309">Claude</text>
+  <text x="510" y="116" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f766e">ChatGPT</text>
+  <text x="40" y="158" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Free</text>
+  <rect x="210" y="128" width="280" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="224" y="155" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Free: $0</text>
+  <rect x="510" y="128" width="250" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6"/>
+  <text x="524" y="155" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Free: $0</text>
+  <text x="40" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Entry paid</text>
+  <rect x="210" y="180" width="280" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="224" y="207" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">None listed</text>
+  <rect x="510" y="180" width="250" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6"/>
+  <text x="524" y="207" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Go: $8</text>
+  <text x="40" y="262" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Standard</text>
+  <rect x="210" y="232" width="280" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="224" y="259" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Pro: $20 ($17 annual)</text>
+  <rect x="510" y="232" width="250" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6"/>
+  <text x="524" y="259" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Plus: $20</text>
+  <text x="40" y="314" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Heavy use</text>
+  <rect x="210" y="284" width="280" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="224" y="311" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Max: $100</text>
+  <rect x="510" y="284" width="250" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6"/>
+  <text x="524" y="311" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Pro: from $100</text>
+  <text x="40" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Top tier</text>
+  <rect x="210" y="336" width="280" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="224" y="363" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Ultra: $200</text>
+  <rect x="510" y="336" width="250" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6"/>
+  <text x="524" y="363" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Pro: $200* or $500</text>
+  <text x="40" y="404" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook. Plans, limits and prices change often; check the vendors before you buy.</text>
+</svg>
