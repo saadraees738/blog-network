@@ -23,7 +23,7 @@ Before any commit run:
 Vercel's Hobby plan BLOCKS deployments of commits whose author is not linked to the account owner. Never commit with any other author email.
 
 ## Steps
-1. Read `docs/ACTIVE_SITE.md`, `docs/TOPICS.md` (ordered backlog) and the list of existing posts. Pick the first topic not yet covered. Do not publish near-duplicates of existing posts.
+1. Read `docs/ACTIVE_SITE.md`, `docs/TOPICS.md` (ordered backlog) and the list of existing posts. Pick the first topic not yet covered, but never the same category as the previous post (see the ROTATION RULE in `docs/TOPICS.md`); prefer the AI categories (Assistants, Video, Image, Writing, Productivity, Coding) until the mix is balanced. Do not publish near-duplicates of existing posts.
 2. Research: fetch the official sources for the topic. Extract only confirmed facts into notes.
 3. Draft the post (`content/<site>/posts/<slug>.mdoc`) following `docs/STYLE.md`.
 4. Build the hero image locally (chart/SVG/diagram) into `public/images/<site>/`.

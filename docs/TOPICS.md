@@ -13,3 +13,24 @@
 8. todo | Best AI tools for small business: a pricing and use-case overview | best ai tools for small business (320/mo, KD43) | image: chart
 9. todo | AI meeting notes tools: what each plan includes | unverified | image: comparison chart
 10. todo | Project management software for small teams: free plan limits compared | unverified | image: limits chart
+
+# === Revised 10 Nov 2026 (owner: "include more topics like Claude, ChatGPT, video generation AI and more") ===
+# ROTATION RULE: never publish the same category twice in a row; no more than 2 of any 5 consecutive posts in one category.
+# Done so far: CRM x3, Automation x3. Next posts must come from the AI categories below until the mix is balanced.
+# All volumes unverified until checked (Ubersuggest/KeywordTool). Facts only from official pricing/docs pages; plans change often, date every figure.
+# Disclosure: the author uses an AI model (Claude) to draft. For Claude-vs-others posts, state vendor links and keep comparisons to published plan facts.
+
+A1. todo | AI Assistants | Claude vs ChatGPT: free and paid plan limits compared | image: table-style diagram
+A2. todo | AI Assistants | ChatGPT free vs Plus vs Pro: what each plan includes | image: ladder/step chart
+A3. todo | AI Assistants | Claude free vs Pro vs Max: what you get at each price | image: dot plot
+A4. todo | AI Assistants | Gemini vs ChatGPT vs Claude for small business tasks (pricing and limits) | image: grouped bars
+V1. todo | AI Video | AI video generators compared: Sora, Veo, Runway, Kling and Pika pricing and clip limits | image: pictogram
+V2. todo | AI Video | How credits work in AI video tools, and what a 30-second clip really costs | image: flow diagram
+V3. todo | AI Video | Free AI video generators: watermarks, length caps and commercial-use terms | image: limits chart
+I1. todo | AI Image | AI image generators compared: Midjourney, DALL-E/ChatGPT images, Firefly, Canva (pricing and licence terms) | image: table diagram
+W1. todo | AI Writing | AI writing tools for small business: Jasper, Copy.ai, Grammarly and ChatGPT compared on price | image: columns
+W2. todo | AI Writing | Can you use AI-generated text commercially? What OpenAI, Anthropic and Google terms say (not legal advice) | image: flow diagram
+M1. todo | AI Productivity | AI meeting notes tools: Otter, Fireflies, Fathom plans compared (volume declining, lower priority) | image: limits chart
+M2. todo | AI Productivity | Notion AI vs ChatGPT vs Claude for docs and notes: pricing and limits | image: columns
+C1. todo | AI Coding | AI coding assistants for small teams: Copilot, Cursor, Claude Code and Windsurf plans | image: dot plot
+# Existing backlog items 1-10 above remain, but CRM/Automation items only after at least 4 AI-category posts are published.
