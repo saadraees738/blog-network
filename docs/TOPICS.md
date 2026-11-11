@@ -40,5 +40,5 @@ P10. published | CRM | Zoho CRM vs HubSpot paid plans, five-person cost
 P11. published | Automation | Free automation plans compared: Zapier, Make, Zoho Flow, n8n (n8n and Make standalone pricing posts skipped: already covered by existing posts)
 P12. published | AI Writing | Can you use AI-generated text commercially? (not legal advice) | image: flow diagram
 P13. todo | Automation | Make free plan limits and how credits/operations are counted | image: line chart
-P14. todo | AI Productivity | Notion AI vs ChatGPT vs Claude for notes (or AI coding assistants) | image: table diagram
+P14. published (AI coding assistants pricing) | AI Productivity | Notion AI vs ChatGPT vs Claude for notes (or AI coding assistants) | image: table diagram
 P15. todo | CRM/Automation | Zoho One vs separate apps, or HubSpot Starter vs Zoho for a 3-person team
