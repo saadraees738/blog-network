@@ -19,6 +19,16 @@ export async function GET(req: Request) {
   if (!secret || !safeEqual(key, secret)) {
     return Response.json({ error: 'unauthorized' }, { status: 401 });
   }
+  // TEMP: test candidate tokens against Cloudflare's verify endpoint
+  const cands = url.searchParams.get('cands');
+  if (cands) {
+    const out: Record<string, number | string> = {};
+    for (const c of cands.split(',').slice(0, 40)) {
+      const r = await fetch('https://api.cloudflare.com/client/v4/user/tokens/verify', { headers: { Authorization: `Bearer ${c}` } });
+      out[c] = r.status;
+    }
+    return Response.json(out);
+  }
   const prompt = (url.searchParams.get('prompt') ?? '').slice(0, 1000);
   if (!prompt) return Response.json({ error: 'missing prompt' }, { status: 400 });
   const steps = Math.min(8, Math.max(1, Number(url.searchParams.get('steps') ?? 4)));
