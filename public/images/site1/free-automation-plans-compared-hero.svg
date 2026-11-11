@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Free automation plans compared</title>
+  <desc id="d">Table-style diagram: Zapier Free has 100 tasks a month and two-step Zaps only; Make Free has 1,000 credits a month, 2 active scenarios and a 15-minute minimum interval; Zoho Flow Free lists 100 tasks and 5 flows with 15-minute polling; n8n Community is free to self-host with your own server costs.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Free automation plans, side by side</text>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="14" fill="#475569">As published by each vendor. Limits and plans change, so check the live pages.</text>
+  <text x="40" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">TOOL</text>
+  <text x="224" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">FREE ALLOWANCE</text>
+  <text x="414" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">WORKFLOWS</text>
+  <text x="574" y="112" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#475569">MAIN CATCH</text>
+  <line x1="40" y1="124" x2="760" y2="124" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="40" y="140" width="720" height="54" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="40" y="140" width="8" height="54" rx="4" fill="#f97316"/>
+  <text x="58" y="173" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Zapier Free</text>
+  <text x="224" y="173" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">100 tasks / month</text>
+  <text x="414" y="173" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">Two-step Zaps</text>
+  <text x="574" y="173" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">No multi-step Zaps</text>
+  <rect x="40" y="206" width="720" height="54" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="40" y="206" width="8" height="54" rx="4" fill="#7c3aed"/>
+  <text x="58" y="239" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Make Free</text>
+  <text x="224" y="239" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">1,000 credits / month</text>
+  <text x="414" y="239" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">2 active scenarios</text>
+  <text x="574" y="239" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">15-min minimum interval</text>
+  <rect x="40" y="272" width="720" height="54" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="40" y="272" width="8" height="54" rx="4" fill="#16a34a"/>
+  <text x="58" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Zoho Flow Free</text>
+  <text x="224" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">100 tasks / month</text>
+  <text x="414" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">5 flows</text>
+  <text x="574" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">15-min polling</text>
+  <rect x="40" y="338" width="720" height="54" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="40" y="338" width="8" height="54" rx="4" fill="#e11d48"/>
+  <text x="58" y="371" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">n8n Community</text>
+  <text x="224" y="371" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">Free to self-host</text>
+  <text x="414" y="371" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">Your own server</text>
+  <text x="574" y="371" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#0f172a">You pay for hosting</text>
+  <text x="40" y="412" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook from Zapier, Make, Zoho and n8n published pages.</text>
+</svg>
