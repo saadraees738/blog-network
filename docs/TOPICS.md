@@ -42,3 +42,4 @@ P12. published | AI Writing | Can you use AI-generated text commercially? (not l
 P13. todo | Automation | Make free plan limits and how credits/operations are counted | image: line chart
 P14. published (AI coding assistants pricing) | AI Productivity | Notion AI vs ChatGPT vs Claude for notes (or AI coding assistants) | image: table diagram
 P15. todo | CRM/Automation | Zoho One vs separate apps, or HubSpot Starter vs Zoho for a 3-person team
+P14b. published (Notion AI vs ChatGPT vs Claude for notes, AI-generated hero via Cloudflare FLUX)
