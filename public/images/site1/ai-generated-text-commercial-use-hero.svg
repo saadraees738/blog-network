@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Three checks before using AI-generated text commercially</title>
+  <desc id="d">Flow diagram with three steps: the vendor terms, which say you own or the vendor claims no ownership of output; copyright law, where the US Copyright Office says purely AI-generated material is not copyrightable but human edits and arrangement can be; and your own responsibility for accuracy, third-party rights and the vendor's use rules.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Using AI-written text commercially: three checks</text>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="14" fill="#475569">Not legal advice. Terms and law differ by country and change.</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker></defs>
+  <rect x="40" y="110" width="210" height="230" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <rect x="40" y="110" width="210" height="46" rx="12" fill="#2563eb"/>
+  <rect x="40" y="140" width="210" height="16" fill="#2563eb"/>
+  <text x="56" y="141" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">1. The terms</text>
+  <text x="56" y="186" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Vendors say you own the</text>
+  <text x="56" y="210" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">output (OpenAI,</text>
+  <text x="56" y="234" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Anthropic) or that they</text>
+  <text x="56" y="258" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">claim no ownership</text>
+  <text x="56" y="282" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">(Google)</text>
+  <line x1="256" y1="225" x2="287" y2="225" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  <rect x="295" y="110" width="210" height="230" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <rect x="295" y="110" width="210" height="46" rx="12" fill="#7c3aed"/>
+  <rect x="295" y="140" width="210" height="16" fill="#7c3aed"/>
+  <text x="311" y="141" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">2. The law</text>
+  <text x="311" y="186" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">US Copyright Office:</text>
+  <text x="311" y="210" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">purely AI-generated</text>
+  <text x="311" y="234" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">material is not</text>
+  <text x="311" y="258" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">copyrightable; human</text>
+  <text x="311" y="282" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">edits and arrangement</text>
+  <text x="311" y="306" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">can be</text>
+  <line x1="511" y1="225" x2="542" y2="225" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  <rect x="550" y="110" width="210" height="230" rx="12" fill="#ffffff" stroke="#059669" stroke-width="3"/>
+  <rect x="550" y="110" width="210" height="46" rx="12" fill="#059669"/>
+  <rect x="550" y="140" width="210" height="16" fill="#059669"/>
+  <text x="566" y="141" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">3. Your duty</text>
+  <text x="566" y="186" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">You stay responsible for</text>
+  <text x="566" y="210" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">accuracy, third-party</text>
+  <text x="566" y="234" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">rights and the vendor's</text>
+  <text x="566" y="258" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">use rules</text>
+  <text x="40" y="388" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook from vendor terms and the US Copyright Office report (January 2025).</text>
+</svg>
