@@ -34,3 +34,11 @@ M1. todo | AI Productivity | AI meeting notes tools: Otter, Fireflies, Fathom pl
 M2. todo | AI Productivity | Notion AI vs ChatGPT vs Claude for docs and notes: pricing and limits | image: columns
 C1. todo | AI Coding | AI coding assistants for small teams: Copilot, Cursor, Claude Code and Windsurf plans | image: dot plot
 # Existing backlog items 1-10 above remain, but CRM/Automation items only after at least 4 AI-category posts are published.
+
+# Affiliate-oriented queue (added 2026-11-11, owner wants posts relevant to Zoho, n8n, Make, HubSpot programs)
+P10. published | CRM | Zoho CRM vs HubSpot paid plans, five-person cost
+P11. todo | Automation | n8n pricing explained: Cloud plans, executions and self-hosting costs | image: tally grid or pictogram
+P12. todo | AI Writing | Can you use AI-generated text commercially? (not legal advice) | image: flow diagram
+P13. todo | Automation | Make free plan limits and how credits/operations are counted | image: line chart
+P14. todo | AI Productivity | Notion AI vs ChatGPT vs Claude for notes (or AI coding assistants) | image: table diagram
+P15. todo | CRM/Automation | Zoho One vs separate apps, or HubSpot Starter vs Zoho for a 3-person team

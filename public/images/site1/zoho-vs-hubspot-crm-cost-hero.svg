@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Yearly cost of a five-person CRM team</title>
+  <desc id="d">Dot plot of yearly list cost for five users: Zoho CRM Standard 840 dollars, HubSpot Smart CRM Starter at list 1,200, Zoho CRM Professional 1,380, Zoho CRM Enterprise 2,400, HubSpot Smart CRM Professional on annual billing 2,700.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">A five-person CRM team, per year</text>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="14" fill="#475569">List prices, annual billing except HubSpot Starter (list). Green = Zoho, orange = HubSpot.</text>
+  <line x1="330" y1="96" x2="330" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="330" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">$0</text>
+  <line x1="400" y1="96" x2="400" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">$1,000</text>
+  <line x1="470" y1="96" x2="470" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="470" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">$2,000</text>
+  <line x1="540" y1="96" x2="540" y2="344" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="540" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">$3,000</text>
+  <text x="40" y="130" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Zoho CRM Standard</text>
+  <line x1="330" y1="125" x2="389" y2="125" stroke="#16a34a" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="389" cy="125" r="9" fill="#16a34a"/>
+  <text x="405" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">$840</text>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">HubSpot Smart CRM Starter (list)</text>
+  <line x1="330" y1="175" x2="414" y2="175" stroke="#ea580c" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="414" cy="175" r="9" fill="#ea580c"/>
+  <text x="430" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">$1,200</text>
+  <text x="40" y="230" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Zoho CRM Professional</text>
+  <line x1="330" y1="225" x2="427" y2="225" stroke="#16a34a" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="427" cy="225" r="9" fill="#16a34a"/>
+  <text x="443" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">$1,380</text>
+  <text x="40" y="280" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Zoho CRM Enterprise</text>
+  <line x1="330" y1="275" x2="498" y2="275" stroke="#16a34a" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="498" cy="275" r="9" fill="#16a34a"/>
+  <text x="514" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">$2,400</text>
+  <text x="40" y="330" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">HubSpot Smart CRM Pro (annual)</text>
+  <line x1="330" y1="325" x2="519" y2="325" stroke="#ea580c" stroke-opacity="0.35" stroke-width="3"/>
+  <circle cx="519" cy="325" r="9" fill="#ea580c"/>
+  <text x="535" y="330" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0f172a">$2,700</text>
+  <text x="40" y="402" font-family="Arial, sans-serif" font-size="13" fill="#475569">Chart by Stackbrook from Zoho and HubSpot published prices. Prices vary by region and promotion.</text>
+</svg>
