@@ -1,0 +1,93 @@
+---
+title: 'Gemini 4 Argon API pricing doubles on 1 December: what it costs before and after'
+description: 'Gemini 4 Argon costs $2 and $10 per million tokens until 30 November 2026, then $4 and $20. See Standard, Batch and Priority rates and a sample monthly bill.'
+status: published
+queueReason: ''
+publishDate: 2026-11-12
+lastVerified: 2026-11-12
+category: AI Assistants
+author: saad-r
+heroImage: /images/site1/gemini-4-argon-api-pricing-december-1-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Gemini 4 Argon price doubles on Dec 1'', with an AI-generated illustration of two stacks of gold coins, one twice as tall, beside a glowing blue crystal'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Google lists Gemini 4 Argon on the paid Gemini API at $2.00 per million input tokens and $10.00 per million output tokens through 30 November 2026, with thinking tokens counted as output. From 1 December 2026 the same page lists $4.00 and $20.00, so an identical workload costs exactly twice as much. Batch is half the Standard price at both dates, cached input is 95% off, and the model is not available on the Free tier.
+sources:
+  - title: Gemini Developer API pricing (Google AI for Developers)
+    url: https://ai.google.dev/gemini-api/docs/pricing
+    accessed: 2026-11-12
+  - title: What's new in Gemini 4 Argon (Google AI for Developers)
+    url: https://ai.google.dev/gemini-api/docs/latest-model
+    accessed: 2026-11-12
+  - title: Google AI plans (Google AI for Developers)
+    url: https://ai.google.dev/gemini-api/docs/google-ai-plans
+    accessed: 2026-11-12
+  - title: 'Gemini 4 Argon: Built to solve your hardest problems (Google blog)'
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+    accessed: 2026-11-12
+  - title: Gemini 4 Carbon is now available (Google blog)
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/
+    accessed: 2026-11-12
+  - title: Gemini 4 Argon available on Google Cloud (Google Cloud blog)
+    url: https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud
+    accessed: 2026-11-12
+  - title: Agent Platform pricing (Google Cloud)
+    url: https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing
+    accessed: 2026-11-12
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Independent AI reviewer, 1 round 2026-11-12. Core rates, ratios and sample-bill arithmetic confirmed against Google''s pricing page; 9 wording and sourcing findings applied (frontier-model wording, Flex and Contributor tiers noted, daily grounding cap removed, Cloud promotional-credit mechanism, public-access footnote, caching threshold, two near-verbatim phrases reworded). No second round run.'
+---
+
+If you build anything on the Gemini API, there is a date to put in your calendar: 30 November 2026. Google launched Gemini 4 Argon, a new frontier model, at an introductory price, and the price list on its own pricing page changes on 1 December. This guide sets out the published rates before and after that date, shows what a sample monthly workload costs at each, and lists what to check before you commit a budget. All figures are US dollars per million tokens from Google's pages as of 12 November 2026. A disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against Google's pages. Stackbrook did not test the model, and has no affiliate relationship with Google at the time of writing. The header image is AI-generated.
+
+## The price change in one table
+
+Google's Gemini Developer API pricing page lists Argon with two sets of numbers, one through 30 November 2026 and one starting 1 December 2026. Output prices include thinking tokens, meaning the tokens the model uses to reason before it answers.
+
+| Tier (per 1M tokens) | Input to 30 Nov | Output to 30 Nov | Input from 1 Dec | Output from 1 Dec |
+| --- | --- | --- | --- | --- |
+| Standard | $2.00 | $10.00 | $4.00 | $20.00 |
+| Batch | $1.00 | $5.00 | $2.00 | $10.00 |
+| Priority | $3.60 | $18.00 | $7.20 | $36.00 |
+
+The page also lists a Flex tier at the Batch rates and an invite-only Contributor preview at those rates where your data is used to improve Google's products. This guide covers Standard, Batch and Priority. Cached input follows the same pattern. The page lists $0.10 per million tokens on Standard through 30 November and $0.20 from 1 December, with $0.05 and $0.10 on Batch and $0.18 and $0.36 on Priority. Google's launch post describes cached input as 95% off the input price, and the Standard figures match that. The pricing page also says only implicit caching is supported, so you cannot pin a large prompt in the cache yourself, and Google's latest-model page says implicit caching applies to prompts of at least 4,096 tokens.
+
+![Bar chart of a sample monthly Gemini 4 Argon bill: Standard $60 before 1 December and $120 after, Batch $30 before and $60 after](/images/site1/gemini-4-argon-api-pricing-december-1-chart.svg)
+*Chart created by Stackbrook from Google's published rates, as cited in this article. The workload is an example, not a measurement.*
+
+## What the same workload costs
+
+Rates per million tokens are hard to feel, so take an example. Say an app sends 20 million input tokens and receives 2 million output tokens in a month, with thinking tokens included in that output figure. On Standard that is 20 x $2 plus 2 x $10, or $60, through 30 November. The same usage from 1 December is 20 x $4 plus 2 x $20, or $120. On Batch the numbers are $30 before and $60 after.
+
+The multiplier does not depend on the workload. Every published rate for Argon doubles, so any bill built from these rates doubles with it. What does depend on your workload is how much of it you can move to a cheaper path, which the sections below cover.
+
+## What is billed, and what is not available
+
+Several details on Google's pages change the real cost more than the headline rate:
+
+- **Thinking tokens are billed as output.** Google says all tokens the model handles are billed, which covers its thinking tokens and, when you use grounding, the tool instructions and function declarations sent behind the scenes. A short visible answer can still carry a long reasoning bill.
+- **There is no free API tier for Argon.** The pricing page shows the Free tier as not available for this model, and Google's AI plans page says Argon is not available on the Free plan.
+- **Search grounding has its own meter.** For Argon the page lists 5,000 free Google Search requests a month, shared across Gemini 3 and newer models, then $14 per 1,000 requests.
+- **Subscriptions do not cover API calls.** Google's AI plans page says the developer-usage benefits of its plans apply only inside the Google AI Studio web interface, and that direct API use with a key is billed and managed separately.
+
+## Argon and Carbon
+
+Google also released Gemini 4 Carbon, which its blog describes as aimed at the hardest coding, debugging and research tasks, using more tokens than Argon to reason deeply. The post lists Carbon at the same introductory price as Argon, $2 and $10, and its footnote says $4 and $20 apply after the introductory period expires on 30 November 2026. Google's footnotes say the introductory price applies to the model intended for public access only. Because Carbon is described as using more tokens, an identical rate card can produce a larger bill than Argon for the same task, so measure token use on your own prompts before choosing.
+
+If you use Google Cloud's enterprise platform instead of the Developer API, its pricing page lists the same global rates, with higher figures for non-global regions, for example $2.20 and $11.00 in the introductory period. On that page the lower rates are described as promotional pricing delivered as 50% credits back on net spend, so the mechanism differs from the Developer API. Check the page for the region you deploy in.
+
+## Ways to cut the bill
+
+Based on the published rates, these are the levers that exist, not guarantees of savings:
+
+- **Move non-urgent work to Batch.** Batch is exactly half the Standard rate at both dates. It suits jobs that can wait, such as overnight document processing. Check Google's documentation for the turnaround you can expect.
+- **Repeat prompts so caching can apply.** Implicit caching discounts cached input by 95%. It only helps if a large part of your prompt is the same from one request to the next, and you cannot force it.
+- **Avoid Priority unless latency pays for itself.** Priority is $3.60 and $18.00 now, which is 80% above Standard on both input and output.
+- **Budget at the December price.** If you are planning contracts or subscription prices that run past 30 November, work from $4 and $20, not the introductory rate.
+
+## What to check before you decide
+
+Google's pricing page is the source of truth, and vendors do revise these pages. Look at the live page before you sign anything. Run a few hundred of your own prompts and read the token counts in the responses, since thinking use varies by task. Compare against other vendors' current price lists for the same workload rather than relying on a benchmark ranking, because a model that costs more per token can still be cheaper if it finishes the task in fewer tokens.

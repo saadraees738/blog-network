@@ -4,7 +4,7 @@ F='/usr/share/fonts/opentype/inter/Inter-%s.otf'
 f=lambda w,s: ImageFont.truetype(F%w,s)
 W,H=1200,630
 ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI Video':(244,114,182),'AI Images':(250,204,21),
-     'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191)}
+     'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248)}
 POSTS={
 'free-crm-for-small-business-compared':('CRM','Free CRM for small business, compared'),
 'hubspot-free-crm-limits':('CRM','HubSpot free CRM: what you get and where the limits are'),
@@ -20,6 +20,8 @@ POSTS={
 'ai-video-generators-pricing-compared':('AI Video','AI video generators: pricing and credits'),
 'ai-image-generators-pricing-compared':('AI Images','AI image generators: plans and limits'),
 'ai-generated-text-commercial-use':('AI Writing','Can you use AI-generated text commercially?'),
+'gemini-4-argon-api-pricing-december-1':('AI Assistants','Gemini 4 Argon price doubles on Dec 1'),
+'ai-meeting-notetakers-pricing-compared':('AI Meetings','AI meeting notetakers: what each charges'),
 }
 def wrap(d,t,font,maxw):
     lines=[];cur=''

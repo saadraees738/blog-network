@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Bar chart of a sample monthly Gemini 4 Argon bill before and after 1 December 2026">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">Sample monthly bill, US dollars</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Example workload: 20M input tokens and 2M output tokens (thinking included) per month, at Google's published rates.</text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#1d2a2a">
+    <text x="60" y="225">Standard, to 30 Nov</text>
+    <text x="60" y="305">Standard, from 1 Dec</text>
+    <text x="60" y="415">Batch, to 30 Nov</text>
+    <text x="60" y="495">Batch, from 1 Dec</text>
+  </g>
+  <g>
+    <rect x="360" y="195" width="360" height="44" fill="#2b6f8f"/>
+    <rect x="360" y="275" width="720" height="44" fill="#c4572b"/>
+    <rect x="360" y="385" width="180" height="44" fill="#2b6f8f"/>
+    <rect x="360" y="465" width="360" height="44" fill="#c4572b"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">
+    <text x="380" y="226">$60</text>
+    <text x="380" y="306">$120</text>
+    <text x="380" y="416">$30</text>
+    <text x="380" y="496">$60</text>
+  </g>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Source: Google Gemini Developer API pricing page, 12 Nov 2026. Bars to scale; the workload is illustrative.</text>
+</svg>
