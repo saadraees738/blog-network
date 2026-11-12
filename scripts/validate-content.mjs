@@ -34,6 +34,13 @@ for (const site of fs.existsSync(contentDir) ? fs.readdirSync(contentDir) : []) 
       else if (fs.statSync(p).size < 500) bad(file, `image file suspiciously small: ${img}`);
       if (img.endsWith('.svg') && !fs.existsSync(p.replace(/\.svg$/, '.png'))) bad(file, `PNG copy for social previews missing: ${img.replace(/\.svg$/, '.png')} (run: rsvg-convert -w 1200 <svg> -o <png>)`);
     }
+    if (fm.heroImage && !/-cover\.(jpg|png)$/.test(fm.heroImage)) bad(file, 'main image must be the branded cover (<slug>-cover.jpg)');
+    for (const im of body.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) {
+      const [, alt, src] = im;
+      if (alt.trim().length < 8) bad(file, `body image alt text missing/too short: ${src}`);
+      const bp = path.join(root, 'public', src.startsWith('/') ? src : `/images/${site}/${src}`);
+      if (!fs.existsSync(bp)) bad(file, `body image file missing: ${src}`);
+    }
     if (!fm.heroAlt || fm.heroAlt.length < 8) bad(file, 'alt text missing/too short');
     if (!fm.description || fm.description.length < 80 || fm.description.length > 170) bad(file, 'meta description must be 80-170 chars');
     if (!fm.title || fm.title.length < 10 || fm.title.length > 110) bad(file, 'title length');

@@ -89,7 +89,7 @@ export default async function PostPage({ params }: P) {
           <a href="/legal/affiliate-disclosure">Learn more</a>.
         </p>
       ) : null}
-      <img className="hero-img" src={imageUrl(id, post.heroImage)} alt={post.heroAlt} />
+      <img className="hero-img" src={imageUrl(id, post.heroImage)} alt={post.heroAlt} width={1200} height={630} fetchPriority="high" />
       {post.imageCredit ? <p className="credit">{post.imageCredit}</p> : null}
       <div className="quick"><strong>Quick answer:</strong> {post.quickAnswer}</div>
       <Render tree={post.tree} affiliate={post.affiliateLinks} />

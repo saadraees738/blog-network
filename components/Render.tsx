@@ -12,6 +12,10 @@ function decorate(node: any, affiliate: boolean) {
       node.attributes.target = '_blank';
     }
   }
+  if (node.name === 'img' && node.attributes) {
+    node.attributes.loading = 'lazy';
+    node.attributes.decoding = 'async';
+  }
   if (Array.isArray(node.children)) node.children.forEach((c: any) => decorate(c, affiliate));
 }
 

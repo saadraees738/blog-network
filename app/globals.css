@@ -46,3 +46,7 @@ th { background: var(--soft); }
 
 ul.related { padding-left: 20px; }
 ul.related li { margin-bottom: 6px; font-size: 16px; }
+
+/* In-post supporting images (charts): standard Markdoc image followed by an italic caption line */
+article p > img { border-radius: 8px; margin: 14px 0 6px; width: 100%; border: 1px solid #e5e2da; }
+article p > img + em { display: block; font-size: 0.85rem; color: #5b6666; margin-bottom: 8px; }

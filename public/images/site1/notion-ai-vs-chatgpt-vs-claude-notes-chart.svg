@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Bar chart of the entry paid plan price per month for Notion, ChatGPT and Claude">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">Entry paid plan, US dollars per month</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">List prices as of 11 Nov 2026. Notion is per workspace member on annual billing; ChatGPT and Claude are per person.</text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#1d2a2a">
+    <text x="60" y="235">Notion Plus (per member)</text>
+    <text x="60" y="345">ChatGPT Plus</text>
+    <text x="60" y="455">Claude Pro</text>
+  </g>
+  <g>
+    <rect x="460" y="205" width="330" height="48" fill="#2b6f8f"/>
+    <rect x="460" y="315" width="660" height="48" fill="#c4572b"/>
+    <rect x="460" y="425" width="660" height="48" fill="#6b5b95"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">
+    <text x="480" y="237">$10</text>
+    <text x="480" y="347">$20</text>
+    <text x="480" y="457">$20</text>
+  </g>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Sources: Notion, OpenAI and Anthropic pages, as cited in the article. Bars are to scale; higher tiers not shown.</text>
+</svg>
