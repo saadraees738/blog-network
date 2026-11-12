@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Status table comparing Samsung Intelligent Eyewear and Ray-Ban Meta on display, camera, assistant, status and price, with each claim marked confirmed or reported">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="76" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Samsung glasses vs Ray-Ban Meta: confirmed or reported</text>
+  <text x="60" y="112" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Status as of 12 Nov 2026. C = confirmed by the company. R = reported by press, not confirmed by Samsung.</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">
+    <text x="60" y="170">Feature</text>
+    <text x="300" y="170" fill="#2b6f8f">Samsung Intelligent Eyewear</text>
+    <text x="740" y="170" fill="#c4572b">Ray-Ban Meta (Gen 2)</text>
+  </g>
+  <g stroke="#c9c6bc" stroke-width="2">
+    <line x1="60" y1="188" x2="1140" y2="188"/>
+    <line x1="60" y1="278" x2="1140" y2="278"/>
+    <line x1="60" y1="368" x2="1140" y2="368"/>
+    <line x1="60" y1="458" x2="1140" y2="458"/>
+    <line x1="60" y1="548" x2="1140" y2="548"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">
+    <text x="60" y="240">Display</text>
+    <text x="60" y="330">Camera</text>
+    <text x="60" y="420">Assistant</text>
+    <text x="60" y="510">Status</text>
+    <text x="60" y="590">Price</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">
+    <text x="300" y="232">None (reported)</text>
+    <text x="300" y="258" fill="#4a5656">R: audio-only, per 9to5Google</text>
+    <text x="300" y="322">Built-in camera</text>
+    <text x="300" y="348" fill="#4a5656">C: Samsung. No specs given</text>
+    <text x="300" y="412">Gemini via a Galaxy phone</text>
+    <text x="300" y="438" fill="#4a5656">C: Samsung footnote</text>
+    <text x="300" y="502">Pre-orders from 12 Nov</text>
+    <text x="300" y="528" fill="#4a5656">R: Warby Parker release, via press</text>
+    <text x="300" y="590">Not announced (no company price)</text>
+    <text x="740" y="232">No display listed</text>
+    <text x="740" y="258" fill="#4a5656">C: Meta product pages</text>
+    <text x="740" y="322">Camera, 3K video</text>
+    <text x="740" y="348" fill="#4a5656">C: Meta</text>
+    <text x="740" y="412">Meta AI</text>
+    <text x="740" y="438" fill="#4a5656">C: Meta</text>
+    <text x="740" y="502">On sale now</text>
+    <text x="740" y="528" fill="#4a5656">C: Meta</text>
+    <text x="740" y="590">From $379 (C: Meta)</text>
+  </g>
+</svg>

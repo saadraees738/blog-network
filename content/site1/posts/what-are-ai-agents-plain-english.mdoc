@@ -1,0 +1,84 @@
+---
+title: 'What are AI agents? A plain-English guide for small businesses'
+description: 'An AI agent decides its own next steps to reach a goal. Here is how it differs from a chatbot or a workflow, with examples, limits and a safe way to start.'
+status: published
+queueReason: ''
+publishDate: 2026-11-12
+lastVerified: 2026-11-12
+category: AI Explainers
+author: saad-r
+heroImage: /images/site1/what-are-ai-agents-plain-english-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''AI agents in plain English'', with an AI-generated illustration of a small robot arm choosing between three paths on a desk, with a human hand hovering over an approve button'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: An AI agent is software where a language model decides its own next steps, uses tools, and checks results while working toward a goal you set. Anthropic separates this from workflows, where code fixes the steps in advance, and OpenAI describes agents as systems that carry out tasks for you with little hand-holding. For a small business the sensible start is a narrow, low-risk task, limited permissions and a human approving anything that sends, pays or deletes.
+sources:
+  - title: Building effective AI agents (Anthropic)
+    url: https://www.anthropic.com/engineering/building-effective-agents
+    accessed: 2026-11-12
+  - title: A practical guide to building AI agents (OpenAI)
+    url: https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
+    accessed: 2026-11-12
+  - title: What are AI agents? Definition, examples, and types (Google Cloud)
+    url: https://cloud.google.com/discover/what-are-ai-agents
+    accessed: 2026-11-12
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Independent AI reviewer, 1 round 2026-11-12. Findings applied: near-verbatim Google Cloud and OpenAI wording reworded, Anthropic cost and simplicity claims aligned with the source, chart footer and caption corrected to separate sourced definitions from Stackbrook''s illustrations, chart examples matched to the body, opening claim softened, disclosure set apart. Reviewer read excerpts of the three guides. No second round run.'
+---
+
+"AI agent" is widely used, and often loosely. Vendors may apply it to products ranging from a simple chat widget to systems that work through multi-step tasks. This guide explains what the term means in plain English, how it differs from a chatbot and from ordinary automation, where it can go wrong, and how a small business can try one safely.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer. Anthropic also published one of the three guides used as sources here, so read its definitions with that in mind. Stackbrook did not test any agent products, and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What the official sources say an agent is
+
+The three vendors' guides use different words but point at the same idea: the AI, not a fixed script, decides what to do next.
+
+- **Anthropic** draws a line between workflows and agents. In its guide, workflows run language models and tools through code paths that were set in advance, while agents let the model direct its own process and tool use.
+- **OpenAI** says agents are systems that "independently accomplish tasks on your behalf." They use tools and work within guardrails.
+- **Google Cloud** describes agents as AI-powered software that works toward goals for users. It says they combine reasoning, planning and memory and can make some decisions on their own. It contrasts them with bots, which follow pre-programmed rules, and with assistants, which respond to prompts while the user makes the decisions.
+
+## Chatbot, workflow, agent: the difference
+
+A **chatbot** answers when you ask. You decide every next step, and it only produces text. A **workflow automation** follows a route you drew in advance: when X happens, do Y, then Z. A language model may handle one step, such as summarising an email, but the path is fixed. An **agent** is given a goal and works out the route itself.
+
+![Three-column comparison of a chatbot, a workflow automation and an AI agent, showing who decides the next step, an example and the main risk](/images/site1/what-are-ai-agents-plain-english-chart.svg)
+*Chart created by Stackbrook. The agent and workflow definitions draw on the Anthropic, OpenAI and Google Cloud guides; the chatbot column, the examples and the risk rows are Stackbrook's own illustrations.*
+
+The simplest picture of an agent is a loop. It takes a goal, makes a plan, uses a tool such as a search, a spreadsheet or an email draft, looks at the result, and decides whether to continue or stop. Anthropic notes that agents need real information from the environment at each step, such as the output of a tool, so they can judge their own progress.
+
+## Examples a small business might recognise
+
+These are illustrations of the pattern, not descriptions of specific products.
+
+- **Chatbot:** a customer asks when your shop opens or what your returns policy is, and the bot answers from your own FAQ.
+- **Workflow:** every new web enquiry is tagged by topic, added to a spreadsheet and acknowledged with a templated reply. The steps never change.
+- **Agent:** you ask it to find three possible suppliers for packaging, compare their published terms, and draft an enquiry email. It chooses what to search, what to read and what to skip, then hands you the draft rather than sending it.
+
+If you can write the steps down in advance, a workflow is usually the better fit. Anthropic recommends finding the simplest solution possible and adding complexity only when needed, and OpenAI says a deterministic solution may be the better choice when it can do the job. Agents suit open-ended problems where, according to Anthropic, it is hard to predict how many steps will be needed.
+
+## The limits you should know about
+
+**Errors can compound.** Anthropic warns that autonomy brings the risk of compounding errors, where one mistake carries into later steps. A wrong supplier name early in a task can end up in the final email.
+
+**Cost and speed.** Anthropic says agentic systems often trade latency and cost for better task performance, and that the autonomous nature of agents means higher costs. Check how a tool is billed before letting it run unattended.
+
+**Permissions.** OpenAI recommends layered guardrails alongside authentication and access controls, because no single safeguard is enough. A sensible way to apply this is to give an agent access only to what the task needs. Read access to one folder is a different risk from the ability to send email as you or touch your accounts.
+
+**Human approval.** OpenAI advises that people should be able to take over when an agent cannot finish a task or fails repeatedly, and that sensitive, irreversible or high-stakes actions, such as large refunds or payments, call for escalation. Anthropic suggests stopping conditions, such as a maximum number of iterations, and checkpoints where a human can step in.
+
+## How to start safely
+
+1. **Pick one narrow task.** Choose something repetitive where a mistake is cheap, such as drafting replies or researching options, not paying invoices.
+2. **Try a workflow first.** If fixed steps would do the job, use them. Move to an agent only if the task genuinely varies.
+3. **Limit access.** Give the minimum permissions, and keep payments, deletions and customer-facing sends out of reach at first.
+4. **Keep a human approving.** Have the agent produce drafts and proposals that you review before anything leaves your business.
+5. **Set limits.** Use stopping conditions and a spending cap where the tool allows one.
+6. **Check the output against reality.** Compare what it did with what you would have done for a few weeks before widening its role. OpenAI suggests launching in a limited way and expanding over time.
+
+## The takeaway
+
+Think of an agent less as a smarter chatbot and more as a system trusted to choose its own steps. That is useful for open-ended work and risky when handed too much. Treat the vendors' guides as a starting point, keep a person in the approval seat, and expand only as the results earn it.

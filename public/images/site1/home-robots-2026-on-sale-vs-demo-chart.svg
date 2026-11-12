@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Status ladder for home robots as of 12 November 2026: Apple tabletop robot is a rumor, Figure 03 is announced, 1X NEO and Weave Isaac 1 are pre-order, and Apple HomeView, which is not a robot, is the only item on sale">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">Home robots: where each one stands</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Status as of 12 Nov 2026, based on the makers' own pages and press reports cited in the article.</text>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <rect x="60" y="160" width="255" height="64" fill="#8a8f8f"/>
+    <rect x="335" y="160" width="255" height="64" fill="#6b5b95"/>
+    <rect x="610" y="160" width="255" height="64" fill="#c4572b"/>
+    <rect x="885" y="160" width="255" height="64" fill="#2b6f8f"/>
+    <text x="187" y="201">Rumor</text>
+    <text x="462" y="201">Announced</text>
+    <text x="737" y="201">Pre-order</text>
+    <text x="1012" y="201">On sale</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#8a8f8f" text-anchor="middle">
+    <text x="325" y="204">&#8594;</text>
+    <text x="600" y="204">&#8594;</text>
+    <text x="875" y="204">&#8594;</text>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#1d2a2a">
+    <rect x="60" y="250" width="255" height="270" fill="#ffffff" stroke="#d5d3cb"/>
+    <text x="75" y="285" font-size="22" font-weight="700">Apple tabletop robot</text>
+    <text x="75" y="315" font-size="18">Bloomberg, The Information</text>
+    <text x="75" y="340" font-size="18">Oct-Nov 2026 reports.</text>
+    <text x="75" y="370" font-size="18">Reported: 2027 or 2028.</text>
+    <text x="75" y="395" font-size="18">Apple: nothing announced.</text>
+
+    <rect x="335" y="250" width="255" height="270" fill="#ffffff" stroke="#d5d3cb"/>
+    <text x="350" y="285" font-size="22" font-weight="700">Figure 03</text>
+    <text x="350" y="315" font-size="18">Unveiled 9 Oct 2025.</text>
+    <text x="350" y="340" font-size="18">350+ delivered by Apr 2026</text>
+    <text x="350" y="365" font-size="18">for internal and commercial</text>
+    <text x="350" y="390" font-size="18">use, the maker says.</text>
+    <text x="350" y="420" font-size="18">No home price or order page.</text>
+
+    <rect x="610" y="250" width="255" height="270" fill="#ffffff" stroke="#d5d3cb"/>
+    <text x="625" y="285" font-size="22" font-weight="700">1X NEO</text>
+    <text x="625" y="315" font-size="18">$200 deposit (Oct 2025).</text>
+    <text x="625" y="340" font-size="18">$20,000 or $499/month.</text>
+    <text x="625" y="372" font-size="22" font-weight="700">Weave Isaac 1</text>
+    <text x="625" y="402" font-size="18">$250 deposit. $7,999 or</text>
+    <text x="625" y="427" font-size="18">$449/month. California first,</text>
+    <text x="625" y="452" font-size="18">fall 2026, the maker says.</text>
+
+    <rect x="885" y="250" width="255" height="270" fill="#ffffff" stroke="#d5d3cb"/>
+    <text x="900" y="285" font-size="22" font-weight="700">No robot on sale yet</text>
+    <text x="900" y="315" font-size="18">Nearest real product:</text>
+    <text x="900" y="340" font-size="18">Apple HomeView, a $299</text>
+    <text x="900" y="365" font-size="18">smart display (not a robot),</text>
+    <text x="900" y="390" font-size="18">pre-order, ships 13 Nov.</text>
+  </g>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="16" fill="#4a5656">Sources: 1X, Weave, Figure and Apple pages; press reports. Stackbrook did not test any robot.</text>
+</svg>

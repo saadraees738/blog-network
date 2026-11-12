@@ -1,0 +1,113 @@
+---
+title: 'What to check before giving an AI tool your customer data'
+description: 'A practical checklist for small businesses: what counts as customer data and what to check on OpenAI, Anthropic, Google and Microsoft pages before you paste.'
+status: published
+queueReason: ''
+publishDate: 2026-11-12
+lastVerified: 2026-11-12
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/ai-tool-customer-data-checklist-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Before AI sees customer data'', with an AI-generated illustration of a locked folder beside a glowing checklist with check marks'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Before pasting customer data into an AI tool, check six things on the vendor's own pages for your exact plan - whether data trains models by default, how long it is kept, where it is stored and by whom, whether a Data Processing Agreement applies, how the consumer plan differs from business or API, and whether you can delete it. Plans differ sharply. OpenAI says individual ChatGPT content may be used for training unless you opt out, while business and API data is not trained on by default. Anthropic's consumer plans depend on a setting you choose, and its commercial products are excluded by default. When in doubt, remove or replace identifiers first.
+sources:
+  - title: How your data is used to improve model performance (OpenAI)
+    url: https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/
+    accessed: 2026-11-12
+  - title: Enterprise privacy at OpenAI (OpenAI)
+    url: https://openai.com/enterprise-privacy/
+    accessed: 2026-11-12
+  - title: Is my data used for model training? Consumer products (Anthropic Privacy Center)
+    url: https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training
+    accessed: 2026-11-12
+  - title: Is my data used for model training? Commercial products (Anthropic Privacy Center)
+    url: https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training
+    accessed: 2026-11-12
+  - title: How long do you store my data? (Anthropic Privacy Center)
+    url: https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data
+    accessed: 2026-11-12
+  - title: How long do you store my organization's data? (Anthropic Privacy Center)
+    url: https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data
+    accessed: 2026-11-12
+  - title: Gemini Apps Privacy Hub (Google)
+    url: https://support.google.com/gemini/answer/13594961?hl=en
+    accessed: 2026-11-12
+  - title: Generative AI Security, Compliance and Privacy (Google Workspace)
+    url: https://workspace.google.com/security/ai-privacy/
+    accessed: 2026-11-12
+  - title: Microsoft Copilot Chat Privacy and Protections (Microsoft Learn)
+    url: https://learn.microsoft.com/en-us/copilot/plan/privacy-and-protections
+    accessed: 2026-11-12
+  - title: Data protection principles, definitions and key terms (ICO)
+    url: https://ico.org.uk/for-organisations/advice-for-small-organisations/getting-started-with-gdpr/data-protection-principles-definitions-and-key-terms/
+    accessed: 2026-11-12
+  - title: AI (and other) companies - quietly changing your terms of service could be unfair or deceptive (US FTC)
+    url: https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/02/ai-other-companies-quietly-changing-your-terms-service-could-be-unfair-or-deceptive
+    accessed: 2026-11-12
+  - title: California Consumer Privacy Act (California Attorney General)
+    url: https://oag.ca.gov/privacy/ccpa
+    accessed: 2026-11-12
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Independent AI reviewer, 1 round 2026-11-12. Findings applied: extra quotes from OpenAI and the FTC paraphrased, Gemini safety-purpose caveat added, Microsoft plan scope clarified, pseudonymisation versus anonymisation corrected, GDPR wording softened, quickAnswer aligned to the six questions, chart wording fixed. Vendor policies change often and some OpenAI help pages could not be fetched, so the post tells readers to check live pages. This is general information, not legal advice. No second round run.'
+---
+
+Pasting a customer email into an AI chatbot feels like typing into a private notebook. It is not: the text goes to a vendor, under that vendor's terms, and those terms depend on which plan you use. This guide gives small businesses a checklist to run before customer data goes into any AI tool, with examples from the vendors' own pages as of 12 November 2026. 
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, which is one of the four vendors covered, and checked by a separate AI reviewer. Each vendor's policy was read from that vendor's own pages. Stackbrook did not test these tools, and has no affiliate relationship with any of them at the time of writing. The header image is AI-generated. This is general information, not legal advice, and Stackbrook is not a law firm.*
+
+## What counts as customer data
+
+More than names and card numbers. The UK data protection regulator, the ICO, defines personal data as "information about who you are, where you live, what you do and more". In practice, treat all of these as customer data:
+
+- names, emails, phone numbers and addresses
+- order histories, invoices and support tickets
+- messages, call transcripts and recordings
+- anything a customer told you in confidence, including health, money or legal details
+- business information a client shared under a contract or NDA
+
+## The six questions to check
+
+![Six-question checklist graphic covering training, retention, location, contract, plan type and exit](/images/site1/ai-tool-customer-data-checklist-chart.svg)
+*Chart created by Stackbrook as a summary of the checklist in this article.*
+
+**1. Is data used for training by default on this plan?** This is the biggest difference between plans. OpenAI's policy page says that for individual services such as ChatGPT, "we may use your content to train our models", with an opt-out in its privacy portal, while business users (ChatGPT Team, Enterprise and the API Platform) are not trained on by default. Anthropic's consumer page says chats are used to improve Claude only if you choose to allow it in your privacy settings, while its commercial-products page says that by default it does not use inputs or outputs from those products. Both Anthropic pages list exceptions, such as feedback you submit or content flagged for safety review.
+
+**2. How long is data kept?** Anthropic's consumer page says chats may be kept in de-identified form for up to five years if training is on, that deleted conversations leave back-end storage within 30 days, and that content flagged for policy violations can be kept for up to two years. For the API, its organization page says inputs and outputs are deleted from the back end within 30 days, unless you have agreed otherwise, for example a zero data retention agreement. OpenAI says Enterprise customers control how long their data is retained. Google says that Temporary Chats, and chats with Keep Activity off, are kept for 72 hours and are not used to train its models, but they can still be used for safety purposes, including by human reviewers.
+
+**3. Where is it stored, and who else touches it?** Look for a data location statement and a list of sub-processors, the other companies the vendor uses to run the service. Google says Workspace customers can control where their data is stored and processed (EU or US). The part of OpenAI's enterprise privacy page I read does not state data residency or sub-processors, so check its other documents or ask.
+
+**4. Is there a Data Processing Agreement?** A DPA is the contract that sets out how a vendor handles personal data on your behalf. Microsoft's page says Copilot Chat's enterprise data protection works "under the Data Protection Addendum (DPA) and the Product Terms", with Microsoft acting as a data processor. Do not assume a DPA exists for a free or consumer plan; look for it on the vendor's legal pages.
+
+**5. Does the consumer plan differ from the business or API plan?** Usually yes, as the examples above show. Google's Gemini Apps page says human reviewers read a sample of chats, that reviewed chats are retained for up to three years, and warns against entering confidential information you would not want a reviewer to see. It adds that a work or school account may be subject to different terms. Google's Workspace page says data in Workspace products is not reviewed by humans and is not used for generative AI model training outside your domain without permission. For Copilot Chat with a work account (enterprise data protection), Microsoft says your data is not used to train foundation models, but that web search queries fall under separate terms, with Microsoft as an independent controller. Check the page for consumer Copilot separately.
+
+**6. Can you delete your data?** Check whether deletion is immediate, how long back-end copies last, and what survives. Google says deleting your activity does not remove chats reviewers have already seen. Anthropic says data already used in completed training runs stays included.
+
+## How to read a privacy policy without a law degree
+
+You do not need to read every line. Search the page for a few words: "train", "improve", "retain", "retention", "delete", "sub-processor", "affiliates", "review", "third parties" and "controller" or "processor". Then answer three things in a note: what happens by default, what you can switch off, and what you cannot. Look at the date, and check you are on the page for your plan, since vendors publish separate pages for consumer, business and API products.
+
+Terms change. FTC staff have written that quietly adopting more permissive data practices, such as using customer data for AI training, through a retroactive change to terms can be "unfair or deceptive". That is a staff blog post from February 2024, not a rule, and a warning to vendors, not a guarantee for you, so recheck the live pages before you rely on this article or any other.
+
+## Safer habits
+
+- **Use the least data.** Paste only what the task needs. The ICO lists data minimisation as a principle: only collect the personal data you actually need.
+- **Remove or replace identifiers first.** Swap names, emails and order numbers for placeholders such as "Customer A". If you keep a key, the data is only pseudonymised and still counts as personal data under GDPR. Real anonymisation means nobody can be re-identified.
+- **Use a business plan, with a separate account.** Do not mix personal and work chats. Where a work plan offers admin controls, use them.
+- **Turn off history or training where offered.** ChatGPT has Temporary Chat, which OpenAI says is kept out of your history and is not used for training. Claude has incognito chats, and Gemini has Temporary Chats and the Keep Activity setting. Each applies differently, so read what yours does, and note that Google says Gemini chats can still be used for safety purposes with these settings off.
+
+## When not to paste at all
+
+Skip the paste if the data is sensitive, such as health records, ID documents, payment card numbers or passwords, or if a contract forbids sharing it. Do not paste anything on a free or consumer plan if you have not checked whether it can be reviewed by humans or used for training. And do not paste if you cannot remove the identifiers and cannot name the vendor's retention period. In those cases, redact the details, use an approved business tool, or do the task by hand.
+
+## A short note on GDPR and CCPA
+
+This is general information only. If you handle personal data about people in the UK or EU, UK or EU GDPR rules may apply to you. The ICO explains that a controller is the main decision-maker on how personal information is handled, while a processor acts on a controller's instructions. A small business using an AI tool on customer data is usually the controller, and the vendor is usually, but not always, a processor, as the Microsoft example above shows, which is why the DPA question matters. In California, the Attorney General's page says the CCPA gives consumers the right to know, delete, correct and opt out of the sale or sharing of their personal information, and applies to for-profit businesses that meet certain thresholds. Whether the rules apply to you, and what you must do, depends on your facts. Ask a qualified lawyer or your data protection regulator.
+
+## A quick before-you-paste routine
+
+Name the plan you are on. Open the vendor's current data-controls and privacy pages for that plan. Answer the six questions in writing. If any answer is missing, treat the tool as not approved for customer data until the vendor confirms it.

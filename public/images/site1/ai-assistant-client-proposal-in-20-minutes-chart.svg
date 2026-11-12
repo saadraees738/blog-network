@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Six-step client proposal method with a 20-minute time budget</title>
+  <desc id="d">Flow of six steps and suggested minutes: gather inputs 4, brief the assistant 3, draft 2, challenge the numbers 5, tailor to the client 3, final human review 3. Total 20 minutes.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <text x="40" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">A client proposal in 20 minutes: suggested time budget</text>
+  <text x="40" y="106" font-family="Arial, sans-serif" font-size="18" fill="#475569">Six steps, with the most time spent checking, not generating. Minutes are a planning guide, not a measurement.</text>
+  <rect x="40" y="180" width="170" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="125" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">1</text>
+  <text x="125" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Gather</text>
+  <text x="125" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">inputs</text>
+  <text x="125" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">4 min</text>
+  <rect x="234" y="180" width="170" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="319" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">2</text>
+  <text x="319" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Brief the</text>
+  <text x="319" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">assistant</text>
+  <text x="319" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">3 min</text>
+  <rect x="428" y="180" width="170" height="230" rx="12" fill="#ccfbf1" stroke="#14b8a6" stroke-width="2"/>
+  <text x="513" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">3</text>
+  <text x="513" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Draft</text>
+  <text x="513" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">2 min</text>
+  <rect x="622" y="180" width="170" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="707" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">4</text>
+  <text x="707" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Challenge</text>
+  <text x="707" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">the numbers</text>
+  <text x="707" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">5 min</text>
+  <rect x="816" y="180" width="170" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="901" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">5</text>
+  <text x="901" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Tailor to</text>
+  <text x="901" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">the client</text>
+  <text x="901" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">3 min</text>
+  <rect x="1010" y="180" width="170" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="1095" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">6</text>
+  <text x="1095" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Final human</text>
+  <text x="1095" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">review</text>
+  <text x="1095" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">3 min</text>
+  <rect x="40" y="450" width="24" height="24" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="74" y="469" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">You do the work (inputs, checks, judgment)</text>
+  <rect x="480" y="450" width="24" height="24" rx="4" fill="#ccfbf1" stroke="#14b8a6" stroke-width="2"/>
+  <text x="514" y="469" font-family="Arial, sans-serif" font-size="18" fill="#0f172a">The assistant does the work</text>
+  <text x="40" y="540" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#0f172a">Total: 4 + 3 + 2 + 5 + 3 + 3 = 20 minutes</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="16" fill="#475569">Chart by Stackbrook. Time split is a suggestion; adjust it to the size of the job.</text>
+</svg>
