@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Two-column chart separating what Apple confirms about HomeView from what its pages leave unclear">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">Apple HomeView: confirmed vs unclear</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Based on Apple's newsroom, specs, store and support pages, checked 15 Nov 2026.</text>
+  <g>
+    <rect x="60" y="150" width="540" height="40" fill="#2b6f8f"/>
+    <rect x="630" y="150" width="510" height="40" fill="#c4572b"/>
+    <rect x="60" y="190" width="540" height="370" fill="#ffffff" stroke="#d9d6cc"/>
+    <rect x="630" y="190" width="510" height="370" fill="#ffffff" stroke="#d9d6cc"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">
+    <text x="78" y="178">Apple says</text>
+    <text x="648" y="178">Not stated or unclear</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">
+    <text x="78" y="232">Price: $299 US, tabletop and wall model</text>
+    <text x="78" y="272">On sale from 13 Nov 2026, not in the EU</text>
+    <text x="78" y="312">7-inch display, A18 chip, 12MP camera</text>
+    <text x="78" y="352">Becomes a home hub during setup</text>
+    <text x="78" y="392">Face recognition for up to six people</text>
+    <text x="78" y="432">Needs iOS or iPadOS 27.2 and Apple Account</text>
+    <text x="78" y="472">Recognition data never recorded or stored</text>
+    <text x="78" y="512">Siri AI is in beta, English only to start</text>
+    <text x="648" y="232">Prices outside the US (not checked)</text>
+    <text x="648" y="272">Delivery estimate on the store page</text>
+    <text x="648" y="312">Thread border router role for HomeView</text>
+    <text x="648" y="352">Fee and limits for paid AI access</text>
+    <text x="648" y="392">When Siri AI leaves beta</text>
+    <text x="648" y="432">Storage and memory figures</text>
+  </g>
+  <text x="60" y="598" font-family="Arial, sans-serif" font-size="16" fill="#4a5656">Chart by Stackbrook from the cited Apple pages. Not an official Apple graphic.</text>
+</svg>

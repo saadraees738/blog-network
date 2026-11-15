@@ -5,9 +5,13 @@ f=lambda w,s: ImageFont.truetype(F%w,s)
 W,H=1200,630
 ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI Video':(244,114,182),'AI Images':(250,204,21),
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
-     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191)}
+     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153)}
 POSTS={
 'gta-6-launch-week-what-is-confirmed':('Gaming','GTA 6 launch week: what is confirmed'),
+'google-vids-free-ai-video-limits-and-how-to-start':('AI Video','Google Vids free AI video'),
+'apple-homeview-explained-who-its-for':('AI Hardware','Apple HomeView, explained'),
+'ai-shopping-agents-what-is-live-and-how-to-stay-safe':('AI Agents','AI shopping agents: what is live?'),
+'gemini-4-hydrogen-explained-which-model-to-use':('AI Models','Gemini 4 Hydrogen, explained'),
 'home-robots-2026-on-sale-vs-demo':('Robots','Home robots: on sale or just demos?'),
 'ai-presentation-makers-pricing-compared':('AI Presentations','AI slide makers: what each charges'),
 'samsung-intelligent-eyewear-ai-glasses-explained':('AI Hardware',"Samsung's first AI glasses"),

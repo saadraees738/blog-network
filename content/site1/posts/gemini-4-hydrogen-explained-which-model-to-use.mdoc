@@ -1,0 +1,98 @@
+---
+title: 'Gemini 4 Hydrogen explained: what it is and which Gemini model to use'
+description: 'Gemini 4 Hydrogen is Google''s fast, lower-cost model for agentic work. See how it differs from Carbon and Argon, what it costs, and which model fits which job.'
+status: published
+queueReason: ''
+publishDate: 2026-11-15
+lastVerified: 2026-11-15
+category: AI Models
+author: saad-r
+heroImage: /images/site1/gemini-4-hydrogen-explained-which-model-to-use-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Gemini 4 Hydrogen, explained'', with an AI-generated illustration of a small glowing blue atom model on a desk next to two larger, darker crystal sculptures'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Gemini 4 Hydrogen is Google's fast, cost-efficient model for agentic work, launched on 12 November 2026. Google's announcement lists it at $1.50 per million input tokens and $7.50 per million output tokens, flat across a 1 million token context window, with four thinking levels (low, medium, high and xhigh). Google positions Carbon and Argon as the frontier models for deep reasoning, so Hydrogen is the likely default for high-volume work, while the benchmark figures are reported by Google and are not independent results.
+sources:
+  - title: Introducing Gemini 4 Hydrogen for Agentic Workflows (Google blog)
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/
+    accessed: 2026-11-15
+  - title: Build with Gemini 4 Hydrogen (Google blog, developers)
+    url: https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/
+    accessed: 2026-11-15
+  - title: Gemini 4 Hydrogen in Google Search (Google blog)
+    url: https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/
+    accessed: 2026-11-15
+  - title: 'Gemini 4 Carbon: our next frontier model (Google blog)'
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/
+    accessed: 2026-11-15
+  - title: Gemini 4 Carbon is now available (Google blog)
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/
+    accessed: 2026-11-15
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited Google pages (REVISE, 11 findings applied: Carbon availability updated from the 10 Nov post, index version wording, model card note, paraphrasing, disclosure). No second round. Google benchmark figures are vendor claims and are labelled as such. The Gemini API pricing page did not list Hydrogen at the time of checking.'
+---
+
+Google launched Gemini 4 Hydrogen on 12 November 2026, and it now sits alongside two larger models, Gemini 4 Carbon and Gemini 4 Argon. For a small team the practical questions are simple: what is it for, who can use it today, what does it cost, and when should you pick it over the bigger models? This guide answers those using Google's own announcement pages, and separates what Google says from what has been independently shown.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Google pages for figures, dates and wording. This is not a full human review. Anthropic is a competitor of Google, so read comparisons with that in mind. Stackbrook did not test any Gemini models, and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Hydrogen is
+
+Google's announcement calls Hydrogen its "daily driver for agentic workflows." In plain terms it is a fast, cost-efficient model aimed at coding, agent-style tasks where the model uses tools and works through several steps, and everyday requests. Google's developer post pitches it at coding in large repositories, building web interfaces and mixed-media tasks, and says it follows instructions more closely and invents fewer claims. That post gives no numbers for those last two points.
+
+## How it differs from Carbon and Argon
+
+Google's framing is a division of labour. It treats Carbon and Argon as the heavy-duty frontier models for hard, extended reasoning, and Hydrogen as the one meant for getting many tasks done quickly. It can work alone or be paired with the bigger models in a multi-model setup.
+
+Google gives one example. In its Antigravity coding tool, an orchestrator can switch between Carbon and Hydrogen in a single session, and in parallel setups Carbon can coordinate while Hydrogen runs worker and verifier agents. Google's Carbon announcement, dated 28 October 2026, calls Carbon its strongest model and says it builds on Argon, which launched two weeks earlier. A later Google post, dated 10 November, says Argon remains the ideal choice for most software engineering and knowledge work, while Carbon is aimed at tasks that push a model to its limits and uses more tokens to do so.
+
+## Who can use it today
+
+Google says Hydrogen is rolling out from 12 November 2026:
+
+- **Gemini app:** it appears in the model dropdown, and free users get it through automatic model selection when appropriate.
+- **Google Search:** Google's Search post says it is available globally to all users. It mentions AI Mode languages and does not mention AI Overviews.
+- **Developers:** the Gemini API in Google AI Studio and Android Studio, plus Google Antigravity for paid Google AI Pro and Ultra subscribers.
+- **Business:** Gemini for business, through the API or the model dropdown, and Gemini in Google Sheets for eligible business subscriptions.
+
+Rollouts are staged, so what you see may differ from this list.
+
+## Price, context window and thinking levels
+
+Google's announcement lists the API price at $1.50 per million input tokens and $7.50 per million output tokens. It says the price is flat across the full 1 million token context window, so a very long prompt is not billed at a higher rate. The announcement also gives 1 million tokens of input with up to 1 million tokens of output.
+
+For comparison, Google's Carbon announcement lists Carbon, which shares Argon's pricing, at $2 and $10 per million tokens as an introductory rate, then $4 and $20 afterwards. Our separate post on [Gemini 4 Argon API pricing doubling on 1 December](/posts/gemini-4-argon-api-pricing-december-1) covers the dates and the Standard, Batch and Priority rates. Whether Hydrogen's price is introductory is not stated in the pages we read, and Google's API pricing page did not list Hydrogen when we looked, so treat it as a current list price that could change.
+
+Hydrogen has four thinking levels: low, medium, high and xhigh. High is the default and xhigh is new. The names, the default and the new xhigh level come from the main announcement; the developer post says only that there are four and describes none. So the practical guidance below is general. Lower levels should generally favour speed and cost, higher levels more careful reasoning, but check the Gemini API documentation before relying on that.
+
+## Google's claims, and what they do not prove
+
+Nearly every performance figure is reported by Google, including results on third-party benchmarks. Treat them as vendor claims until independent users repeat them on their own work.
+
+- **Intelligence Index:** Google reports a score of 51 at high on the Artificial Analysis Intelligence Index, against 50 for Argon, and 54 at xhigh. Carbon's launch post gave Carbon 59 on the same index. Carbon's post names version 5.0 of the index, while the chart on Hydrogen's page is labelled 5.01, so the scores may not be strictly comparable.
+- **Against Gemini 3.8 Flash:** Google says Hydrogen finishes tasks 2.5 times faster, scores 57% against 18.2% on Terminal-Bench 4.1, and cuts fabricated claims by more than 5 times.
+- **Partner tests:** Google cites early partners seeing 2 to 2.8 times faster results with 12% to 23% lower token use than Gemini 3.8 Flash on data-heavy workloads. Methods are not given.
+- **Safety:** Google reports figures such as up to 81% less agentic overreach and 94% on an internal honesty test. The page links a model card with more detail, which we did not review, and one of the results comes from an outside benchmark.
+
+Two caveats matter. Google's page refers to both Terminal-Bench 4.0 and 4.1 without explaining the difference. And the Orchestrator result, near-Carbon success with about 24% less quota, is Google's own test of its own tool. None of this tells you how Hydrogen performs on your documents, your code or your customers.
+
+## Which model for which job
+
+The chart sums up Google's framing and prices. The "reach for it when" row is Stackbrook's suggestion, not Google's.
+
+![Three-column comparison of Gemini 4 Hydrogen, Argon and Carbon showing Google's framing, API price per million tokens and when to use each](/images/site1/gemini-4-hydrogen-explained-which-model-to-use-chart.svg)
+*Chart created by Stackbrook from the cited Google pages; the last row is Stackbrook's own suggestion.*
+
+A simple rule for a small team:
+
+1. **Start with Hydrogen** for drafting, summarising, extraction, routine coding help and agent tasks that run many times. Speed and cost matter most here.
+2. **Move up to Argon or Carbon** when one answer carries real risk or the problem needs long chains of reasoning, such as a tricky contract clause or an architecture decision. Carbon is available on the paid API and to enterprises, but Ultra-subscriber access was still rolling out in Google's 10 November post, so confirm you have access first.
+3. **Mix them** if you build your own tools. Google's own example uses the bigger model to plan and Hydrogen to carry out the steps.
+4. **Compare on your own samples.** Run 10 to 20 real tasks through each model, at more than one thinking level, and judge the results yourself before switching.
+
+## The takeaway
+
+Hydrogen looks like Google's answer to a common small-team need: a model that is quick and priced for volume, with the heavier models kept for harder work. The price and the flat context window are clear from Google's pages. The performance story is mostly Google's own, so let your own samples decide.
