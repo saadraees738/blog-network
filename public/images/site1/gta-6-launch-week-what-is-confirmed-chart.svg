@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Timeline of confirmed GTA 6 dates: pre-orders opened 25 June, pre-load from 10 November, code-in-box copies from 12 November, launch at midnight local time on 19 November, bonus offers end before 20 November">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">GTA 6 key dates, as published by Rockstar</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">All five dates come from Rockstar pages or Rockstar's support site. Times are local unless stated.</text>
+  <line x1="100" y1="330" x2="1100" y2="330" stroke="#1d2a2a" stroke-width="4"/>
+  <g fill="#2b6f8f"><circle cx="120" cy="330" r="16"/></g>
+  <g fill="#c4572b"><circle cx="480" cy="330" r="16"/><circle cx="640" cy="330" r="16"/></g>
+  <g fill="#6b5b95"><circle cx="900" cy="330" r="16"/></g>
+  <g fill="#4a5656"><circle cx="1060" cy="330" r="16"/></g>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a" text-anchor="middle">
+    <text x="120" y="270">25 Jun</text>
+    <text x="480" y="270">10 Nov</text>
+    <text x="640" y="400">12 Nov</text>
+    <text x="900" y="270">19 Nov</text>
+    <text x="1060" y="400">20 Nov</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a" text-anchor="middle">
+    <text x="120" y="440">Pre-orders open</text>
+    <text x="480" y="230">Digital pre-load starts</text>
+    <text x="480" y="204">(up to 212 GB)</text>
+    <text x="640" y="440">Code-in-box copies</text>
+    <text x="640" y="466">at retailers</text>
+    <text x="900" y="230">Launch, midnight local</text>
+    <text x="900" y="204">time in all regions</text>
+    <text x="1060" y="440">Vintage Vice City</text>
+    <text x="1060" y="466">Pack: buy before 20 Nov</text>
+  </g>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="17" fill="#4a5656">Chart created by Stackbrook from Rockstar Games pages. Xbox pre-load starts 12 a.m. GMT on 10 November; PlayStation at midnight local time.</text>
+</svg>

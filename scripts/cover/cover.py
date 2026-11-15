@@ -5,8 +5,9 @@ f=lambda w,s: ImageFont.truetype(F%w,s)
 W,H=1200,630
 ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI Video':(244,114,182),'AI Images':(250,204,21),
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
-     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249)}
+     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191)}
 POSTS={
+'gta-6-launch-week-what-is-confirmed':('Gaming','GTA 6 launch week: what is confirmed'),
 'home-robots-2026-on-sale-vs-demo':('Robots','Home robots: on sale or just demos?'),
 'ai-presentation-makers-pricing-compared':('AI Presentations','AI slide makers: what each charges'),
 'samsung-intelligent-eyewear-ai-glasses-explained':('AI Hardware',"Samsung's first AI glasses"),
