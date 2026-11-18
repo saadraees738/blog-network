@@ -1,6 +1,6 @@
-# Scheduled publishing task: standalone prompt (5 runs a day)
+# Scheduled publishing task: standalone prompt (8 runs a day)
 
-Every run starts in a fresh session with no memory, so everything it needs is here and in this repo. Updated 2026-11-18: the owner asked for 5 posts a day (one post per run, 5 runs a day).
+Every run starts in a fresh session with no memory, so everything it needs is here and in this repo. Updated 2026-11-18: the owner asked for 8 posts a day (one post per run, 8 runs a day; raised from 5 on 2026-11-18).
 
 ## Goal
 Each run adds exactly ONE new post to the site in `docs/ACTIVE_SITE.md` by committing to this GitHub repo (`saadraees738/blog-network`, branch `main`). A doubtful post is committed with `status: queue`; the run then stops (the next run tries a new topic). Never publish a weak post to hit the number. Quality beats the count: if no topic can be fully verified in this run, queue the best draft and say why.
@@ -43,7 +43,7 @@ Copy the keys of a recent post (e.g. `content/site1/posts/gemini-4-hydrogen-expl
 1. Setup, topic choice (above). 2. Research official pages. 3. Draft `.mdoc` + chart. 4. Cover. 5. Independent review, apply fixes. 6. Validate + build. 7. Commit `post: <slug>` (or `queue: <slug> (<reason>)`) with trailers `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`; `git pull --rebase origin main`; `git push origin HEAD:main`. 8. End with a 3-line summary: slug, category, published or queued (and why).
 
 ## Daily and weekly limits
-Target 5 per day (about 35 per week); this is the owner's explicit setting (2026-11-18). Count today's posts first (by `publishDate` = today). If 5 or more already exist today (for example the owner added some by hand), stop without publishing. A run that cannot produce a fully verified post queues instead.
+Target 8 per day (about 56 per week); this is the owner's explicit setting (2026-11-18). Count today's posts first (by `publishDate` = today). If 8 or more already exist today (for example the owner added some by hand), stop without publishing. A run that cannot produce a fully verified post queues instead.
 
 ## Safety brake
 `docs/PAUSED` (created by the owner after a Google manual action, AdSense policy warning, 50%+ traffic collapse or copyright complaint) turns every run into queue-only.
