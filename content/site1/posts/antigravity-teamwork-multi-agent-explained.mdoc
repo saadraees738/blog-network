@@ -1,0 +1,71 @@
+---
+title: 'Google Antigravity Teamwork explained: how its multi-agent coding mode works'
+description: 'Antigravity''s /teamwork command runs teams of AI agents for hours or days. See how it works, which plans have it, what Google claims, and what is still unknown.'
+status: published
+queueReason: ''
+publishDate: 2026-11-18
+lastVerified: 2026-11-18
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/antigravity-teamwork-multi-agent-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a faceted glass crystal at the centre of many small glowing amber orbs joined to it by thin threads of light, on a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Teamwork is a mode in Google's Antigravity coding tool where a coordinator hands a long project to teams of AI agents that write, critique and verify each other's work, usually over hours to days. Google's docs say /teamwork is available on paid plans in the Antigravity App and CLI, and give no pricing, quota or runtime limits for it. Results such as a 71 percent TCSBench score are Google's own claims, so treat them as vendor figures.
+sources:
+  - title: 'Teamwork: when AI becomes a research partner (Google Antigravity blog, 27 August 2026)'
+    url: https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner
+    accessed: 2026-11-18
+  - title: Teamwork documentation (Google Antigravity docs)
+    url: https://antigravity.google/docs/teamwork
+    accessed: 2026-11-18
+  - title: Google releases Antigravity /teamwork multi-agent tools for research and engineering (Let's Data Science, secondary report)
+    url: https://letsdatascience.com/news/google-releases-antigravity-teamwork-multi-agent-tools-for-r-7ba6bf20
+    accessed: 2026-11-18
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE, 10 findings applied: four medium, six low; wording, chart title, Lean and ParlayHash details, disclosure). No second round. Google''s 13 November research post could not be fetched, so those details rest on one secondary report and are labelled unconfirmed. All results are Google''s own claims.'
+---
+
+Most AI coding tools work one prompt at a time. Google's Antigravity has a different mode, called Teamwork, that is meant for projects too big for a single chat: you describe a goal, approve a plan, and a group of AI agents works through it for hours or even days. This guide explains how it works, who can use it, what Google says it has achieved, and what Google's own pages do not tell you.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. Google's own 13 November research post was not accessible and was not checked. This is not a full human review. Google is a competitor of Anthropic, so read comparisons with that in mind. Stackbrook did not test Antigravity or Teamwork and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Teamwork is
+
+Google's Antigravity team describes Teamwork as a multi-agent orchestration framework first announced at Google I/O. In its blog post of 27 August 2026, Google says agents suggest, challenge and improve each other's output without step-by-step prompting, while humans set the objective and make the final call on whether to accept the result. Google notes that multi-agent systems can go off track on hard problems without strong orchestration, which is the gap Teamwork is meant to fill.
+
+Two timing notes matter. First, the blog post is from August, so Teamwork is not brand new. Second, a secondary report from Let's Data Science says Google Research announced on 13 November 2026 that the tools are available to outside researchers and developers. We could not access Google's own post for that announcement, so the November details come from a secondary report and are unconfirmed.
+
+## How it works in practice
+
+Google's documentation splits a Teamwork run into two phases. In the first, the agent interviews you about scope, requirements, how each requirement will be verified, acceptance criteria and the working directory, then produces a prompt artifact you can review and approve. In the second, the system runs on its own through milestones, recording a request, a project plan and progress in structured artifacts.
+
+The docs name several roles. A Sentinel acts as coordinator and starts a Success Auditor. A Project Orchestrator breaks the brief into milestones and hands over to a fresh successor between milestones. Explorers do read-only research, Workers implement with terminal and file tools, and Critic, Challenger and Auditor agents act as verification gates. Each file has one owner, so workers do not edit the same file at the same time, and work happens in a dedicated directory that defaults to a teamwork_projects folder in the home directory.
+
+Teamwork also picks an execution path. The docs list a general path for multi-file work and large refactors, an iterative path for a lighter single change, a document review path for papers and design docs, and two math and proof paths, one of them for very large teams. Three integrity modes control how strictly the system polices shortcuts: development is lenient and only flags faked results and hollow implementations, demo adds rules such as no copying core logic from open source, and benchmark is the strictest.
+
+## Who can use it, and what it costs
+
+According to the docs, the /teamwork command is available on paid plans in both the Antigravity App and the Antigravity CLI. In the App you start a new conversation and type the command with your goal. In the CLI you run it at the terminal prompt. The August blog post names the command /teamwork-preview and says it is available on all paid plans, so the name and status may have changed since.
+
+The most important gap is cost. Google's Teamwork documentation and August post give no pricing, credit use, quotas, agent-count caps or runtime limits. Since runs are described as lasting hours to days and using many agents, check your plan's usage rules before starting one on a real project. The docs also say to use /swarm for broad, cleanly divisible tasks, /boost for hard debugging and subagents for focused side jobs, and they list different plan tiers for those, with Swarm limited to Google AI Pro and Ultra.
+
+## What Google claims it achieved
+
+![Column chart comparing a TCSBench score of 67.7 percent from the benchmark paper with the 71 percent Google reports for Teamwork](/images/site1/antigravity-teamwork-multi-agent-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+Google's August post lists seven results in mathematics and theoretical computer science, all but one reviewed by human experts, with the other, Knuth's Cycles Conjecture, checked in the Lean proof assistant. On the TCSBench benchmark it reports 71 percent using Gemini 3.7 Flash and 3.1 Pro, against 67.7 percent in the benchmark's paper, and calls this the highest score in its internal testing. A gap of about three points on a vendor-run test is a modest signal, and the two scores used different model versions. The post also lists combining Flash and Pro models in the long-proof path as still to come, and does not explain how that fits with this result.
+
+In systems work, Google says Teamwork built a cycle-level RISC-V CPU simulator that boots the xv6 operating system and has an average cycle alignment error of 0.71 percent against BOOM hardware reference results on unseen workloads. It also reports two changes merged into open-source projects: a faster path in the Eigen math library, and a Swiss Parlay hash table design that Google says gave twice the throughput of ParlayHash on initial inserts at 64 threads.
+
+All of these are Google's descriptions of its own work. Google does not publish a formal list of limitations, but it does note that some math results used more parallelism than the default setting.
+
+## Is it worth trying for a small team?
+
+Teamwork looks designed for long, well-specified jobs such as large refactors, simulations and document critique, not for quick fixes. The scoping interview and the review gates suggest it rewards clear requirements. Because the docs say development mode's verification is lenient by design, anything it produces still deserves a human code review and your own tests.
+
+A cautious approach is to try one contained project first, such as a refactor with an existing test suite, and watch how much of your plan's usage it consumes before relying on it. Keep an eye on Google's pages for pricing and limits, since none are stated in the pages cited here. The secondary report mentions free weekly calls for a Deep Review feature, which is unconfirmed. This is general information about a software product, not advice for any particular project.

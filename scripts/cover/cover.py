@@ -13,6 +13,7 @@ ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI 
 POSTS={
 'claude-sheets-whiteboards-data-what-is-beta':('AI Productivity','Claude Sheets and Whiteboards'),
 'microsoft-ai-transparency-initiative-explained':('AI Safety','Microsoft AI Transparency, explained'),
+    'antigravity-teamwork-multi-agent-explained':('AI Coding','Antigravity Teamwork, explained'),
 'gta-6-launch-week-what-is-confirmed':('Gaming','GTA 6 launch week: what is confirmed'),
 'google-vids-free-ai-video-limits-and-how-to-start':('AI Video','Google Vids free AI video'),
 'apple-homeview-explained-who-its-for':('AI Hardware','Apple HomeView, explained'),
