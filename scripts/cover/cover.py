@@ -1,7 +1,11 @@
 import sys, json
 from PIL import Image, ImageDraw, ImageFont, ImageStat
 F='/usr/share/fonts/opentype/inter/Inter-%s.otf'
-f=lambda w,s: ImageFont.truetype(F%w,s)
+import os
+def f(w,s):
+    for path in (F%w,'/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf','/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf'):
+        if os.path.exists(path): return ImageFont.truetype(path,s)
+    return ImageFont.load_default()
 W,H=1200,630
 ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI Video':(244,114,182),'AI Images':(250,204,21),
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
@@ -42,9 +46,25 @@ def wrap(d,t,font,maxw):
         if d.textlength(x,font=font)<=maxw: cur=x
         else: lines.append(cur); cur=w
     lines.append(cur); return lines
-def make(slug,out):
-    cat,head=POSTS[slug]; acc=ACC[cat]
-    bg=Image.open(f'/tmp/covers/{slug}_bg.jpg').convert('RGB').resize((H,H),Image.LANCZOS)
+def fallback_bg(acc,seed):
+    # Procedural branded background used when no AI background is available (no image key / generation failed).
+    import random,math
+    r=random.Random(seed); im=Image.new('RGB',(H,H),(14,20,34)); d=ImageDraw.Draw(im)
+    for y in range(H):
+        t=y/H; d.line([(0,y),(H,y)],fill=(int(14+acc[0]*0.18*t),int(20+acc[1]*0.18*t),int(34+acc[2]*0.22*t)))
+    ov=Image.new('RGBA',(H,H),(0,0,0,0)); od=ImageDraw.Draw(ov)
+    for _ in range(7):
+        cx,cy,rad=r.randint(0,H),r.randint(0,H),r.randint(60,240)
+        od.ellipse((cx-rad,cy-rad,cx+rad,cy+rad),fill=acc+(r.randint(18,48),))
+    for k in range(5):
+        od.line([(0,H*k//5+r.randint(-40,40)),(H,H*k//5+r.randint(-120,120))],fill=acc+(60,),width=3)
+    return Image.alpha_composite(im.convert('RGBA'),ov).convert('RGB')
+def make(slug,out,cat=None,head=None):
+    if cat is None: cat,head=POSTS[slug]
+    if cat not in ACC: ACC[cat]=(96,165,250)
+    acc=ACC[cat]
+    bgp=f'/tmp/covers/{slug}_bg.jpg'
+    bg=(Image.open(bgp).convert('RGB').resize((H,H),Image.LANCZOS) if os.path.exists(bgp) else fallback_bg(acc,slug))
     st=ImageStat.Stat(bg.crop((0,0,40,H))); pc=tuple(int(c*0.22) for c in st.mean)
     im=Image.new('RGB',(W,H),pc); im.paste(bg,(W-H,0))
     ov=Image.new('RGBA',(W,H),(0,0,0,0)); od=ImageDraw.Draw(ov)

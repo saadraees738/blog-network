@@ -1,46 +1,49 @@
-# Daily publishing task: standalone prompt
+# Scheduled publishing task: standalone prompt (5 runs a day)
 
-This is the full instruction set for the scheduled daily run. Every run starts in a fresh session with no memory, so everything the run needs is here and in this repo.
+Every run starts in a fresh session with no memory, so everything it needs is here and in this repo. Updated 2026-11-18: the owner asked for 5 posts a day (one post per run, 5 runs a day).
 
 ## Goal
-Add at most ONE new post per run to the site in `docs/ACTIVE_SITE.md`, by committing files to this GitHub repo. The run never stops because of one bad post: a doubtful post is committed with `status: queue` and the run moves to the next topic (max 6 topics per run).
+Each run adds exactly ONE new post to the site in `docs/ACTIVE_SITE.md` by committing to this GitHub repo (`saadraees738/blog-network`, branch `main`). A doubtful post is committed with `status: queue`; the run then stops (the next run tries a new topic). Never publish a weak post to hit the number. Quality beats the count: if no topic can be fully verified in this run, queue the best draft and say why.
+
+## Setup (every run)
+- Work in `/home/claude/blog-network`. If it is missing, clone `https://github.com/saadraees738/blog-network` (use the add_repo tool for push credentials if a plain clone/push is refused).
+- `git config user.name "saadraees738"` and `git config user.email "177437009+saadraees738@users.noreply.github.com"` (Vercel blocks other authors).
+- `git pull --rebase origin main` first (other runs and the owner also push). Run `npm ci` only if `node_modules` is missing.
+- If `docs/PAUSED` exists: write and queue posts but NEVER set `status: published`.
 
 ## Hard rules (never break)
-1. **Facts only from fetched sources.** Every price, feature, limit, date or number in the post must come from a page fetched in THIS run (official pricing pages, docs, changelogs, vendor announcements). If a number cannot be confirmed from a fetched page, leave it out. Record each source in `sources` with the date accessed.
-2. **No invented experience.** Never write "we tested", "I used", "hands-on" or describe how a product feels unless `testedFirstHand: true` is set by a human. Frame posts as "based on official documentation and pricing as of <date>".
-3. **No copying.** Write in original words. Quote at most one short phrase (under 15 words) per source. Never reproduce another site's tables, images or paragraphs.
-4. **Image required.** A hero image must exist in `public/images/<site>/` and be one of: a chart generated from cited data, a diagram/SVG, or a screenshot of our own calculators. Never use AI images to depict how a product looks. Write factual alt text. Fill `imageCredit`. If no valid image can be produced, the post goes to the queue.
-5. **Complete post.** At least 700 words, a quick answer, 2+ H2 sections, a sources list with 2+ https sources, a real author from `content/<site>/authors/`, and `lastVerified` set to today.
-6. **Affiliate honesty.** Set `affiliateLinks: true` only when the post actually contains affiliate links (none until we have approved programs). Never let affiliate payouts change rankings or conclusions.
-7. **Topic safety.** No medical, legal, tax or investment advice. No claims about the safety, legality or performance of a product that official sources do not support. Skip any topic where the facts are disputed.
-8. **Independent review before publishing.** After drafting, a separate review pass (a different agent that did not write the draft) checks the draft against the fetched sources, line by line: every number and claim traced to a source, no first-hand claims, no copied phrasing, image present, alt text accurate. The reviewer returns PASS or FAIL with reasons. Only PASS allows `status: published`, `factCheck.status: passed`, `factCheck.reviewStatus: approved`.
-9. **Validation.** Run `node scripts/validate-content.mjs` before committing. If it fails, set the post to `status: queue`, write the reason in `queueReason`, and commit anyway so nothing is lost.
-10. **Safety brake.** If `docs/PAUSED` exists, still write and queue posts but NEVER set `status: published`. (A human creates this file after a Google manual action, an AdSense policy warning, a traffic collapse of 50%+ in a week, or a copyright complaint, and deletes it when the cause is fixed.)
+1. **Facts only from fetched sources.** Every price, feature, limit, date or number comes from a page fetched in THIS run, preferably the official vendor page. Search snippets and aggregator sites are leads, not sources. If a number cannot be confirmed, leave it out. List each source in `sources` with the date accessed (https URLs only).
+2. **No invented experience.** Never write "we tested", "I tested", "our testing", "hands-on", or describe how a product feels. `testedFirstHand: false`.
+3. **No copying.** Original wording. At most one short quote (under 15 words) per source. No copied tables, images or sentences.
+4. **Complete post.** 700+ words, quick answer (plain scalar, never containing `: `, use ` - `), 2+ H2s, 2+ https sources, author `saad-r`, `lastVerified` = today, `publishDate` = today (never future).
+5. **Affiliate honesty.** `affiliateLinks: false` (no approved programs yet). No affiliate links.
+6. **Topic safety.** No medical, legal, tax or investment advice. Skip disputed facts. Label anything reported but not confirmed as "reported" or "unconfirmed". For payment, privacy or safety topics add "general information, not financial or legal advice".
+7. **Disclosure paragraph** (italic, right after the intro): drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording; not a full human review; mention if the vendor is a competitor of Anthropic (OpenAI, Google); Stackbrook did not test the product; no affiliate relationship at time of writing; header image AI-generated.
+8. **Independent review.** After drafting, a separate agent (Agent tool, no edit rights) checks the draft against the cited pages and returns numbered findings with severity and APPROVE or REVISE. Apply all findings. Only then set `status: published`, `factCheck.status: passed`, `factCheck.reviewStatus: approved`, and put a factCheck note stating one review round, the number of findings applied, and what could not be verified. If the reviewer finds a high-severity problem you cannot fix from sources, queue the post.
+9. **Validation.** Run `node scripts/validate-content.mjs` (not piped, check the exit code) and `npm run build` before pushing. Failure = fix, or set `status: queue` with `queueReason`.
 
-## Git identity (required, or Vercel blocks the deploy)
-Before any commit run:
-`git config user.name "saadraees738"` and `git config user.email "177437009+saadraees738@users.noreply.github.com"`.
-Vercel's Hobby plan BLOCKS deployments of commits whose author is not linked to the account owner. Never commit with any other author email.
+## Choosing the topic (trending, mixed, not repetitive)
+1. List existing posts (`content/site1/posts/*.mdoc`: title, category, publishDate). Never the same category as the newest post; at most 2 of any 5 consecutive posts in one category; no more than about 1 in 4 posts may be a pricing comparison.
+2. Mix the formats over the day and week: news with analysis, new tool or model launches, hardware and robots, how-tos, explainers, safety/policy, occasional pricing. Prefer AI categories. Topics should feel random and varied, not a cluster of launches.
+3. Find what is new and genuinely useful today: WebSearch for AI news from the last 48 hours (use the actual current date), then confirm on official pages (vendor blogs, docs, newsrooms, regulator pages). Skip rumours that only appear on aggregators. Skip near-duplicates of existing posts (search the repo first). Use `docs/TOPICS.md` as a backlog of evergreen ideas when the news is thin; mark the topic done there.
+4. Audience: small businesses and everyday users of AI tools and software; neutral, no identity targeting.
+
+## Cover and chart images (every post needs both)
+- **Chart:** one SVG chart from the cited data, `public/images/site1/<slug>-chart.svg` (1200x630, labels inside the canvas) plus PNG `rsvg-convert -o <slug>-chart.png <slug>-chart.svg`; open the PNG and check nothing is clipped. Vary the chart type from the previous post (docs/STYLE.md). Body line: `![alt of 8+ chars](/images/site1/<slug>-chart.svg) *Chart created by Stackbrook from the cited pages.*`
+- **Cover (main image, required):** `heroImage: /images/site1/<slug>-cover.jpg`, `imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'` (if the AI background was NOT used, use `'Cover image created by Stackbrook (generated background pattern, title and layout added in code)'`).
+  1. If `/home/claude/.genkey` exists and the Vercel fetch tool (`mcp__Vercel__web_fetch_vercel_url`, load via ToolSearch) is available: fetch `https://stackbrook.com/api/gen-image?key=<contents of .genkey>&steps=4&prompt=<url-encoded prompt ending "no text, no letters, no logos, no people">`, decode the base64 `image` field to `/tmp/covers/<slug>_bg.jpg`. Never print or share the key.
+  2. Render: `python3 -c "import sys; sys.path.insert(0,'scripts/cover'); import cover; cover.make('<slug>','public/images/site1/<slug>-cover.jpg','<Category>','<headline, max 40 chars>')"`. If no background file exists, `cover.py` draws a branded generated background automatically, so a cover always exists.
+  3. Add `'<slug>':('<Category>','<headline>')` to `POSTS` in `scripts/cover/cover.py` in the same commit.
+- Never depict a real person, brand logo or product look with AI art. heroAlt (single-quoted YAML, doubled apostrophes) describes the illustration honestly.
+
+## Frontmatter reference
+Copy the keys of a recent post (e.g. `content/site1/posts/gemini-4-hydrogen-explained-which-model-to-use.mdoc`): title, description (80-170 chars), status, queueReason '', publishDate, lastVerified, category, author, heroImage, heroAlt, imageCredit, affiliateLinks false, testedFirstHand false, quickAnswer, sources, factCheck. YAML: single-quote strings with apostrophes/colons and double the apostrophes.
 
 ## Steps
-1. Read `docs/ACTIVE_SITE.md`, `docs/TOPICS.md` (ordered backlog) and the list of existing posts. Pick the first topic not yet covered, but never the same category as the previous post (see the ROTATION RULE in `docs/TOPICS.md`); prefer the AI categories (Assistants, Video, Image, Writing, Productivity, Coding) until the mix is balanced. Do not publish near-duplicates of existing posts.
-2. Research: fetch the official sources for the topic. Extract only confirmed facts into notes.
-3. Draft the post (`content/<site>/posts/<slug>.mdoc`) following `docs/STYLE.md`.
-4. Build the hero image locally (chart/SVG/diagram) into `public/images/<site>/`.
-5. Run the independent review (rule 8).
-6. Set fields according to the result, run the validator (rule 9), commit to `main` with message `post: <slug>` (published) or `queue: <slug> (<reason>)`.
-7. If the post was queued, move to the next topic (up to 6 attempts) and repeat from step 2.
-8. Mark the topic done in `docs/TOPICS.md` (status: published / queued) in the same commit.
-9. End the run with a short summary: what was published, what was queued and why.
+1. Setup, topic choice (above). 2. Research official pages. 3. Draft `.mdoc` + chart. 4. Cover. 5. Independent review, apply fixes. 6. Validate + build. 7. Commit `post: <slug>` (or `queue: <slug> (<reason>)`) with trailers `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>`; `git pull --rebase origin main`; `git push origin HEAD:main`. 8. End with a 3-line summary: slug, category, published or queued (and why).
 
-## Weekly cap
-Count posts published in the last 7 days (by `publishDate`). Cap: 7 per week (owner raised it on 2026-11-10; one post a day is the pace for the scheduled task). One-time exception: on 2026-11-10 the owner asked for a content push to about 15 posts before affiliate/AdSense applications; this does not change the cap for the scheduled task. If the cap is reached, draft and queue instead of publishing.
+## Daily and weekly limits
+Target 5 per day (about 35 per week); this is the owner's explicit setting (2026-11-18). Count today's posts first (by `publishDate` = today). If 5 or more already exist today (for example the owner added some by hand), stop without publishing. A run that cannot produce a fully verified post queues instead.
 
-## Hero image variety (hard rule)
-Before building a hero, read the `heroAlt` of the 3 newest posts. The new hero must use a different chart type from the previous post. See docs/STYLE.md for the list. Render the SVG to PNG (rsvg-convert) and check that no label is clipped.
-
-## Validation (hard rule)
-Run `node scripts/validate-content.mjs` directly (never piped) and check its exit code. A failure is a hard stop: fix it or send the post to the review queue; do not commit or push.
-
-## PNG preview (hard rule)
-After building the SVG hero, create the PNG copy (`rsvg-convert -w 1200 -h 630 <name>-hero.svg -o <name>-hero.png`). Validation fails without it.
+## Safety brake
+`docs/PAUSED` (created by the owner after a Google manual action, AdSense policy warning, 50%+ traffic collapse or copyright complaint) turns every run into queue-only.
