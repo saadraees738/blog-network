@@ -15,8 +15,10 @@ function safeEqual(a: string, b: string) {
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const secret = process.env.GEN_IMAGE_SECRET ?? '';
+  const taskSecret = process.env.GEN_IMAGE_SECRET_TASK ?? '';
   const key = url.searchParams.get('key') ?? '';
-  if (!secret || !safeEqual(key, secret)) {
+  const ok = (secret && safeEqual(key, secret)) || (taskSecret && safeEqual(key, taskSecret));
+  if (!ok) {
     return Response.json({ error: 'unauthorized' }, { status: 401 });
   }
   const prompt = (url.searchParams.get('prompt') ?? '').slice(0, 1000);
