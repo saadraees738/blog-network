@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Three-part diagram of the See, Verify, Control framework described in Microsoft's AI Transparency Initiative announcement of 17 November 2026">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">See, Verify, Control: the framework</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">As described in Microsoft's 17 November 2026 announcement. No dates or deliverables were given.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="170" width="320" height="300" rx="14" fill="#ffffff" stroke="#2b7a4b" stroke-width="3"/>
+    <rect x="440" y="170" width="320" height="300" rx="14" fill="#ffffff" stroke="#c4572b" stroke-width="3"/>
+    <rect x="820" y="170" width="320" height="300" rx="14" fill="#ffffff" stroke="#6b5b95" stroke-width="3"/>
+    <text x="90" y="215" font-size="28" font-weight="700" fill="#2b7a4b">1. See</text>
+    <text x="470" y="215" font-size="28" font-weight="700" fill="#c4572b">2. Verify</text>
+    <text x="850" y="215" font-size="28" font-weight="700" fill="#6b5b95">3. Control</text>
+    <g font-size="19" fill="#1d2a2a">
+      <text x="90" y="260">What was the AI asked</text><text x="90" y="288">and allowed to do?</text>
+      <text x="90" y="326">Which model and runtime?</text>
+      <text x="90" y="364">What data and tools did</text><text x="90" y="392">it touch? What did it do?</text>
+      <text x="470" y="260">Does the evidence say</text><text x="470" y="288">where it came from?</text>
+      <text x="470" y="326">Model, runtime or an</text><text x="470" y="354">independent system?</text>
+      <text x="470" y="392">Compare model-reported</text><text x="470" y="420">signals with outside records.</text>
+      <text x="850" y="260">Enforce policy before</text><text x="850" y="288">consequential actions.</text>
+      <text x="850" y="326">Keep authority over data</text><text x="850" y="354">agents can access, whatever</text><text x="850" y="382">the model or provider.</text>
+    </g>
+    <rect x="60" y="505" width="1080" height="70" rx="12" fill="#1d2a2a"/>
+    <text x="90" y="548" font-size="22" fill="#ffffff">Stated principle: "Greater AI autonomy requires greater transparency."</text>
+  </g>
+</svg>
