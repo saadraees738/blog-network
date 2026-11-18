@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Launch status of four Claude workplace tools as reported in November 2026: Whiteboards and Sheets in beta, Data generally available, Meetings previewed only">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="80" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1d2a2a">Where each Claude workplace tool stands</text>
+<text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">As reported in November 2026 by secondary sources. Not an official Anthropic graphic.</text>
+<text x="60" y="220" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Claude Whiteboards</text>
+<rect x="380" y="180" width="760" height="60" rx="10" fill="#e8e6df"/>
+<rect x="380" y="180" width="300" height="60" rx="10" fill="#c4572b"/>
+<text x="400" y="219" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Beta</text>
+<text x="60" y="320" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Claude Sheets</text>
+<rect x="380" y="280" width="760" height="60" rx="10" fill="#e8e6df"/>
+<rect x="380" y="280" width="300" height="60" rx="10" fill="#c4572b"/>
+<text x="400" y="319" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Beta</text>
+<text x="60" y="420" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Claude Data</text>
+<rect x="380" y="380" width="760" height="60" rx="10" fill="#e8e6df"/>
+<rect x="380" y="380" width="760" height="60" rx="10" fill="#2b7a4b"/>
+<text x="400" y="419" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Generally available</text>
+<text x="60" y="520" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Claude Meetings</text>
+<rect x="380" y="480" width="760" height="60" rx="10" fill="#e8e6df"/>
+<rect x="380" y="480" width="240" height="60" rx="10" fill="#6b5b95"/>
+<text x="400" y="519" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Preview only</text>
+<text x="60" y="590" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Bar length shows stage only (preview, beta, general availability), not usage or quality.</text>
+</svg>
