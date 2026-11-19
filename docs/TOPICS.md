@@ -44,3 +44,4 @@ P14. published (AI coding assistants pricing) | AI Productivity | Notion AI vs C
 P15. todo | CRM/Automation | Zoho One vs separate apps, or HubSpot Starter vs Zoho for a 3-person team
 P14b. published (Notion AI vs ChatGPT vs Claude for notes, AI-generated hero via Cloudflare FLUX)
 P16. published | AI Privacy | How to stop Claude and Gemini training on your chats (ChatGPT omitted: help page unfetchable)
+P17. published | AI Assistants | Businesses in ChatGPT explained (claim profile, agents, limits)

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of the claim process for Businesses in ChatGPT: open Business Hub, verify, complete Persona identity check, update the profile, then optionally add a product feed and publish a business agent">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="80" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Claiming a business in ChatGPT: the path</text>
+<text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Steps from the OpenAI help article; teal = required, amber = optional</text>
+<rect x="41" y="230" width="158" height="220" rx="12" fill="#1f7a7a"/>
+<text x="120.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="120.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Business Hub</text>
+<text x="120.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Open it in the</text>
+<text x="120.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">ChatGPT sidebar</text>
+<path d="M205 340 h18" stroke="#1d2a2a" stroke-width="3"/><path d="M216 333 l8 7 l-8 7" fill="none" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="233" y="230" width="158" height="220" rx="12" fill="#1f7a7a"/>
+<text x="312.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+<text x="312.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Verify</text>
+<text x="312.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Phone, email,</text>
+<text x="312.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">DNS TXT or</text>
+<text x="312.0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Shopify</text>
+<path d="M397 340 h18" stroke="#1d2a2a" stroke-width="3"/><path d="M408 333 l8 7 l-8 7" fill="none" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="425" y="230" width="158" height="220" rx="12" fill="#1f7a7a"/>
+<text x="504.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+<text x="504.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">ID check</text>
+<text x="504.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Persona, needed</text>
+<text x="504.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">to publish or</text>
+<text x="504.0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">view insights</text>
+<path d="M589 340 h18" stroke="#1d2a2a" stroke-width="3"/><path d="M600 333 l8 7 l-8 7" fill="none" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="617" y="230" width="158" height="220" rx="12" fill="#1f7a7a"/>
+<text x="696.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+<text x="696.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Profile</text>
+<text x="696.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Website,</text>
+<text x="696.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">policies, logo</text>
+<path d="M781 340 h18" stroke="#1d2a2a" stroke-width="3"/><path d="M792 333 l8 7 l-8 7" fill="none" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="809" y="230" width="158" height="220" rx="12" fill="#d9822b"/>
+<text x="888.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+<text x="888.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Product feed</text>
+<text x="888.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">CSV or hosted</text>
+<text x="888.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">URL</text>
+<path d="M973 340 h18" stroke="#1d2a2a" stroke-width="3"/><path d="M984 333 l8 7 l-8 7" fill="none" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="1001" y="230" width="158" height="220" rx="12" fill="#d9822b"/>
+<text x="1080.0" y="285" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#fff" text-anchor="middle">6</text>
+<text x="1080.0" y="335" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Agent</text>
+<text x="1080.0" y="372" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">Preview and</text>
+<text x="1080.0" y="396" font-family="Arial, sans-serif" font-size="17" fill="#fff" text-anchor="middle">publish</text>
+<text x="60" y="520" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">Business agents: US ecommerce and online service businesses only. Agents cannot take orders or bookings.</text>
+<text x="1140" y="610" font-family="Arial, sans-serif" font-size="16" fill="#4a5656" text-anchor="end">Source: OpenAI Help Center, accessed 19 Nov 2026</text>
+</svg>
