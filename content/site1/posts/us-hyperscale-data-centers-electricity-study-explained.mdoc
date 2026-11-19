@@ -1,0 +1,70 @@
+---
+title: 'How much electricity do US hyperscale data centers use? What a new Harvard study says'
+description: 'A Harvard-led study puts 403 US hyperscale data centers at 68 to 99 TWh a year. See the headline numbers, how they were estimated, and what the study cannot tell you.'
+status: published
+queueReason: ''
+publishDate: 2026-11-19
+lastVerified: 2026-11-19
+category: AI Infrastructure
+author: saad-r
+heroImage: /images/site1/us-hyperscale-data-centers-electricity-study-explained-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Data center power use'', with an AI-generated aerial illustration of glowing server buildings linked by power lines at dusk'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: A Harvard-led study published in Nature Sustainability on 16 November 2026 estimates that 403 US hyperscale data centers used about 68 to 99 TWh of electricity between May 2024 and April 2025, roughly 1.8% of US consumption in its central scenario, with about 54% of the attributed power coming from fossil fuels. The authors could not separate AI work from other computing, and the preprint and the press release give different CO2 totals, so treat the carbon figure with caution.
+sources:
+  - title: Harvard T.H. Chan study news release (EurekAlert)
+    url: https://www.eurekalert.org/news-releases/1150191
+    accessed: 2026-11-19
+  - title: Assessing the Carbon Emissions and Energy Consumption of U.S. Hyperscale Data Centers (arXiv preprint)
+    url: https://arxiv.org/abs/2606.05420
+    accessed: 2026-11-19
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited pages (REVISE, 10 findings applied or adopted as hedged wording; chart bars redrawn to a common scale). Reviewer saw page summaries, not raw text. Not verified: the Nature Sustainability journal page itself (not opened). The release and preprint disagree on the CO2 total, so no CO2 total is stated.'
+---
+
+Every chatbot answer, image and AI agent run is carried out in a data center somewhere, and those buildings draw a lot of power. A new study led by researchers at the Harvard T.H. Chan School of Public Health tries to put a number on it for the largest US facilities. This post walks through what the study reports, how it got there, and which parts of the picture it leaves blank, so you can read the headlines with a clear head.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Anthropic operates its own AI services that rely on data centers, so keep that in mind. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## The headline numbers
+
+The study looked at 403 "hyperscale" data centers in the United States, the very large data centers that the study classes as hyperscale. According to the Harvard news release, these buildings used between 68 and 99 terawatt-hours of electricity over the twelve months from May 2024 to April 2025. A terawatt-hour is a billion kilowatt-hours, and the range exists because the authors modelled several scenarios for how hard each facility was working.
+
+![Column chart of the estimated yearly electricity use of 403 US hyperscale data centers: 68 terawatt-hours in the low scenario and 99 terawatt-hours in the high scenario](/images/site1/us-hyperscale-data-centers-electricity-study-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+In the central scenario, the preprint says these data centers accounted for about 1.8% of total US electricity consumption. The release adds that the upper estimate is close to the yearly electricity use of a single large state such as Indiana, Michigan or Tennessee. Roughly 54% of the electricity attributed to them came from fossil fuels, mainly natural gas (38%) and coal (15%), according to the release, and about a quarter of it came from grid regions that are dirtier than average.
+
+The preprint also gives a carbon intensity of about 545 grams of CO2 per kilowatt-hour for these facilities, around 48% above its figure of 370 grams for the national grid average over the same period. That is a preprint figure, and we did not find it repeated in the news release.
+
+## How the researchers estimated it
+
+Nobody publishes a meter reading for every hyperscale facility, so the team built an estimate. According to the release, they used satellite imagery to identify the facilities, estimated each building's annual electricity use under a range of operating scenarios, and then used US Environmental Protection Agency data on the mix of power plants in each regional grid to work out where the electricity likely came from and what emissions to attribute to each site. The preprint describes the result as an attributional tool built on the EPA's plant-level eGRID data.
+
+That method is a reasonable way to get a first national picture, but it is a model, not a measurement. The low and high ends of the range are the same study under different assumptions, which is why the range is wide.
+
+## Where the demand is concentrated
+
+The release says Virginia, Oregon, Ohio and Iowa together account for more than half of the electricity use the study covers. For a small business that is a useful reminder that data center demand is not spread evenly. It lands on particular regional grids, and local grids may feel it much more than a national average suggests.
+
+## What the study cannot tell you
+
+The authors list several limits. There was not enough data to study every US hyperscale data center, so the 403 are not a complete census. The data also could not separate electricity used for general-purpose computing, such as hosting websites and storing files, from electricity used for AI-specific work. That matters, because readers may assume this is an "AI power" story. On the evidence in these two pages, it measures large data centers as a group, not AI alone. The study also did not directly measure health effects, which the authors say they plan to address in future work.
+
+The release says demand is likely higher today, and describes the study as a snapshot of a rapidly expanding industry. Neither page says by how much, and neither can this post.
+
+## One number that does not line up
+
+Here is a caution. The news release gives about 25.7 million metric tons of CO2 and describes it as two to three times an earlier estimate for 2018. The arXiv preprint, submitted on 3 June 2026, gives about 37 to 54 million metric tons across its scenarios. The release came out on the journal's publication date and the preprint dates from June, so the release may reflect the published version, but that is our guess, not something either page states, and we could not open the journal page in this run to check. Because the two sources disagree, we are not putting a single CO2 total in the chart or the quick answer. If the carbon number matters to you, read the journal paper directly.
+
+## What this means for everyday AI users
+
+For most people and small businesses, nothing about your tools changes today. In the two pages we reviewed, the study does not say any individual AI request is costly, and it does not rank vendors. What it does show is that the physical footprint behind cloud services is large enough to be measured in shares of national electricity, and that it is tied to regional fossil-heavy grids in some places.
+
+If sustainability reporting matters to your organisation, a practical step is to ask your cloud and AI vendors which regions your workloads run in and whether they publish energy and emissions data for them. Treat any vendor claim as a claim until it names its method. This is general information, not financial, legal or environmental-compliance advice.
+
+Two things to watch: whether the final journal paper changes any of the figures above, and whether later studies can split AI workloads from everything else a data center does.
