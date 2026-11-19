@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of how Embodied AI says AIR learns a task: an operator runs the job, each run is recorded, software trains on the recordings, AIR takes over within about a month, and an operator handles unfamiliar cases">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">How AIR is said to learn a factory job</text>
+  <text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Company description as reported by trade press, Nov 2026 - not independently verified</text>
+  <defs><marker id="a" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1d2a2a"/></marker></defs>
+  <g font-family="Arial, sans-serif" fill="#1d2a2a" text-anchor="middle">
+    <rect x="50" y="230" width="230" height="140" rx="12" fill="#1f7a7a"/>
+    <text x="165" y="290" font-size="24" font-weight="700" fill="#fff">1. Operator</text>
+    <text x="165" y="322" font-size="20" fill="#fff">runs the job</text>
+    <text x="165" y="348" font-size="20" fill="#fff">from shift one</text>
+    <rect x="335" y="230" width="230" height="140" rx="12" fill="#1f7a7a"/>
+    <text x="450" y="290" font-size="24" font-weight="700" fill="#fff">2. Every run</text>
+    <text x="450" y="322" font-size="20" fill="#fff">is recorded as</text>
+    <text x="450" y="348" font-size="20" fill="#fff">demonstrations</text>
+    <rect x="620" y="230" width="230" height="140" rx="12" fill="#1f7a7a"/>
+    <text x="735" y="290" font-size="24" font-weight="700" fill="#fff">3. Software</text>
+    <text x="735" y="322" font-size="20" fill="#fff">trains on the</text>
+    <text x="735" y="348" font-size="20" fill="#fff">recordings</text>
+    <rect x="905" y="230" width="245" height="140" rx="12" fill="#d9822b"/>
+    <text x="1027" y="290" font-size="24" font-weight="700" fill="#1d2a2a">4. AIR takes over</text>
+    <text x="1027" y="322" font-size="20" fill="#1d2a2a">typically within</text>
+    <text x="1027" y="348" font-size="20" fill="#1d2a2a">about a month</text>
+    <line x1="282" y1="300" x2="333" y2="300" stroke="#1d2a2a" stroke-width="3" marker-end="url(#a)"/>
+    <line x1="567" y1="300" x2="618" y2="300" stroke="#1d2a2a" stroke-width="3" marker-end="url(#a)"/>
+    <line x1="852" y1="300" x2="903" y2="300" stroke="#1d2a2a" stroke-width="3" marker-end="url(#a)"/>
+    <path d="M1027 372 L1027 450 L165 450 L165 372" fill="none" stroke="#1d2a2a" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#a)"/>
+    <text x="596" y="490" font-size="22" font-weight="700">Unfamiliar situation: an operator steps back in</text>
+    <text x="596" y="580" font-size="16" fill="#4a5656">Source: Robotics and Automation News (15 Nov 2026), Thomas Insights (11 Nov 2026)</text>
+  </g>
+</svg>

@@ -43,6 +43,7 @@ POSTS={
 'ai-meeting-notetakers-pricing-compared':('AI Meetings','AI meeting notetakers: what each charges'),
 'qwen4-max-explained-what-is-claimed':('AI Models','Qwen4-Max, explained'),
 'us-hyperscale-data-centers-electricity-study-explained':('AI Infrastructure','Data center power use'),
+'embodied-ai-air-factory-robot-explained':('Robots','Swiss factory robot AIR'),
 }
 def wrap(d,t,font,maxw):
     lines=[];cur=''
