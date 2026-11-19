@@ -41,6 +41,7 @@ POSTS={
 'ai-generated-text-commercial-use':('AI Writing','Can you use AI-generated text commercially?'),
 'gemini-4-argon-api-pricing-december-1':('AI Assistants','Gemini 4 Argon price doubles on Dec 1'),
 'ai-meeting-notetakers-pricing-compared':('AI Meetings','AI meeting notetakers: what each charges'),
+'qwen4-max-explained-what-is-claimed':('AI Models','Qwen4-Max, explained'),
 }
 def wrap(d,t,font,maxw):
     lines=[];cur=''

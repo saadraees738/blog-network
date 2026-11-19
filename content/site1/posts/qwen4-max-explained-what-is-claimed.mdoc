@@ -1,0 +1,73 @@
+---
+title: 'Qwen4-Max explained: what Alibaba claims, what is open, and what is missing'
+description: 'Alibaba launched Qwen4-Max on 16 November 2026. See its size, context window and access routes, which figures are self-reported, and what the pages leave out.'
+status: published
+queueReason: ''
+publishDate: 2026-11-19
+lastVerified: 2026-11-19
+category: AI Models
+author: saad-r
+heroImage: /images/site1/qwen4-max-explained-what-is-claimed-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Qwen4-Max, explained'', with an AI-generated close-up illustration of glossy red glass beads with a few glowing gold points among many dim ones'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Qwen4-Max is Alibaba's new flagship model, announced on 16 November 2026. Alibaba describes a 2.4 trillion parameter mixture-of-experts model with about 71 billion parameters active per token, native vision and a 1 million token context window, available through QwenCloud's Token Plan and API. The headline savings (35% fewer tokens, about 60% lower cost per task) come from Alibaba's own proprietary benchmark, and the pages give no standard input or output prices and no date for the promised open-weight models.
+sources:
+  - title: Alibaba Unveils Qwen4-Max (Alibaba Cloud press room)
+    url: https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max
+    accessed: 2026-11-19
+  - title: Alibaba Unveils Qwen4-Max (Alibaba Cloud Community blog)
+    url: https://www.alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783
+    accessed: 2026-11-19
+  - title: qwen4-max-preview (Alibaba Cloud Model Studio documentation)
+    url: https://docs.modelstudio.console.alibabacloud.com/en/model-studio/qwen4-max-preview
+    accessed: 2026-11-19
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited Alibaba pages (REVISE, 6 findings applied or acknowledged: unsupported top-rankings claim removed, case-study wording, architecture wording, effort-label note, cache-price wording). No second round. Reviewer saw condensed page text, not raw pages. All performance figures are Alibaba claims and are labelled as such; Alibaba gives no standard or output prices.'
+---
+
+Alibaba announced Qwen4-Max on 16 November 2026 and calls it the most capable model in the Qwen family so far. If you run a small business or build with AI tools, the useful questions are plain ones: how big is it, how do you get at it, what does it cost, and which claims can you actually rely on? This post answers them from Alibaba's own pages and keeps Alibaba's claims separate from anything independently shown.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Alibaba pages for figures, dates and wording. This is not a full human review. Alibaba's Qwen models compete with Claude, so read comparisons with that in mind. Stackbrook did not test Qwen4-Max, and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Alibaba says Qwen4-Max is
+
+According to Alibaba's announcement, Qwen4-Max is a sparse mixture-of-experts model. That design splits a model into many specialist sub-networks and switches on only a few of them for each piece of text, so the model can be very large without using all of its capacity every time. Alibaba gives 2.4 trillion parameters in total and about 71 billion active per token. It adds that the active count is 25% lower than Qwen3.8-Max at the same 2.4 trillion scale, and it lists upgrades to the attention, residual-connection and embedding parts of the design.
+
+The model has native vision, meaning it can read images as well as text, and a context window of one million tokens. Alibaba's developer documentation for the preview version adds that it accepts video input, supports tool calling (including web search), can return structured JSON output, and can emit up to 393,216 tokens in one reply, shared between its reasoning and its final answer. It also lists compatibility with the OpenAI Chat Completions and Responses formats and with Anthropic's Messages format, which can make it easier to swap into software that already talks to those services.
+
+## How to get it, and a timing question
+
+Alibaba says Qwen4-Max is available now on QwenCloud through its Token Plan and through the API, and can also be reached through two Alibaba products named QwenWork and QwenStudio. Alibaba's pages do not explain what those two products cost or who they are for.
+
+The documentation page tells a slightly different story. It labels the model ID qwen4-max-preview, says it is available through the Token Plan only, says pay-as-you-go access is not supported, and gives a preview window from 11 November to 25 November 2026 (UTC+8), after which the page says the model will be retired. The press release does not mention a retirement date. These two pages may describe different stages of the same rollout, but nothing we read says so, so check the live documentation before building anything around the preview model ID.
+
+## What it costs: one number
+
+The announcement lists a single price: $0.075 per million input tokens when the input is served from Alibaba's implicit cache, which is the discounted rate for text the system has already processed. It gives no standard input price, no output price and no Token Plan price, and the documentation page points readers to separate Token Plan guides instead of listing rates. Anyone budgeting for Qwen4-Max therefore cannot work out a real monthly cost from these pages. Because cache-hit pricing only applies to repeated input, the one published number is best read as a best case, not an estimate of what a typical job costs.
+
+## The claims, and who measured them
+
+![Horizontal bar chart of the three reductions Alibaba reports for Qwen4-Max versus Qwen3.8-Max: 25 percent fewer active parameters, 35 percent fewer tokens and about 60 percent lower cost per task](/images/site1/qwen4-max-explained-what-is-claimed-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+Every performance figure in the announcement is Alibaba's own. The main one is a benchmark called Work360, which Alibaba describes as proprietary and as covering 721 specialised fields. On it, Alibaba reports that Qwen4-Max beats Qwen3.8-Max overall while using about 35% fewer tokens in its High effort reasoning mode (a label that does not obviously match the low, medium and xhigh settings in the developer documentation) and cutting average cost per task by around 60%. Because Work360 is not public, outsiders cannot check how tasks were chosen or scored.
+
+Alibaba also says the model ranks 6th on Code Arena, which it calls a real-world coding leaderboard. The pages give that one rank, and they describe scores on four more benchmarks (Agents' Last Exam, Vals Index, JobBench and Chartography) as strong without giving numbers.
+
+The announcement adds several case studies. A cloud-scheduling test is said to have cut data-annotation model call costs by 9% on average and sped up offline CPU rescheduling more than 14 times. A car-manufacturing example is said to have cut manual programming of a workpiece from roughly 475 minutes to about 24. Alibaba also describes a 48-hour agent run that it says produced an experimentally validated coolant molecule, and an Alzheimer's-related run with 454 tool calls and 3,239 metric evaluations across 24 candidate molecules. These are presented as case studies, and the pages give no underlying data to check them against. We treat all of them as unconfirmed.
+
+## What is promised but not yet here
+
+Alibaba says smaller, open-weight Qwen4 models will "soon be released to developers worldwide." Open weights mean the model files can be downloaded and run on your own hardware, which matters for privacy-sensitive work. No date, size or licence is given, so nothing can be planned around that promise yet. The pages describe Qwen4-Max itself only as available through Alibaba's cloud offerings.
+
+On safety, Alibaba says its software-engineering training included code security checks, that cybersecurity training data was filtered to keep defensive material and drop offensive material, and that dedicated datasets and post-training address chemical, biological, radiological and nuclear risks. No third-party audit is cited.
+
+## What this means for a small team
+
+For most small businesses the practical answer today is to wait and watch. The model may well be strong, but the evidence offered is mostly self-reported, the price is incomplete, and the access story differs between the press release and the documentation. A sensible way to evaluate it is to run your own representative tasks, record tokens used and cost, and compare against the model you already use. If you handle customer data, remember that using a model through a vendor's cloud means that data goes to that vendor; our checklist on [what to check before giving an AI tool your customer data](/posts/ai-tool-customer-data-checklist) covers the questions to ask. This is general information, not financial or legal advice.
+
+We will not know how Qwen4-Max compares until independent testers publish results, until Alibaba lists full prices, and until the open-weight models appear. Those three things are the ones to watch.
