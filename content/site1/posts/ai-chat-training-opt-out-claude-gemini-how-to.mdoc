@@ -1,0 +1,81 @@
+---
+title: 'How to stop Claude and Gemini training on your chats: steps and what the setting does not cover'
+description: 'Steps to turn off model training in Claude and Gemini, plus incognito chats, retention periods and the exceptions that still apply, from the vendors'' own help pages.'
+status: published
+queueReason: ''
+publishDate: 2026-11-19
+lastVerified: 2026-11-19
+category: AI Privacy
+author: saad-r
+heroImage: /images/site1/ai-chat-training-opt-out-claude-gemini-how-to-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Stop AI training on your chats'', with an AI-generated illustration of a glass padlock on a teal speech bubble next to a glowing switch'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: In Claude open Settings, then Privacy, and switch off the Help Improve our AI models toggle, or use an incognito chat for one-off conversations. In Gemini open Settings, then History, and turn history off, though chats are still saved for around two months. Turning training off only affects future training, and flagged conversations can still be used for safety work. ChatGPT is not covered because OpenAI's help page could not be fetched for this post.
+sources:
+  - title: How do I change my model improvement privacy settings? (Claude privacy centre)
+    url: https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings
+    accessed: 2026-11-19
+  - title: How long do you store my data? (Claude privacy centre)
+    url: https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data
+    accessed: 2026-11-19
+  - title: Use incognito chats (Claude help centre)
+    url: https://support.claude.com/en/articles/12260368-use-incognito-chats
+    accessed: 2026-11-19
+  - title: Gemini Apps Activity and privacy (Google Gemini help)
+    url: https://support.google.com/gemini/answer/13278892?hl=en
+    accessed: 2026-11-19
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the four cited pages (REVISE, 12 findings, all applied or adopted as hedged wording). Not verified: OpenAI ChatGPT data controls page (could not be fetched, so ChatGPT is omitted), Claude commercial terms, Gemini human review and temporary chats. Reviewer saw page summaries, not raw text.'
+---
+
+Claude and Gemini each have a setting that decides whether your conversations can be used to train future models, and the fine print about retention is easy to miss. This guide covers the two assistants whose official help pages we reviewed for this post and shows where the switches are and what they do and do not change.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Anthropic makes Claude and Google makes Gemini, so one of the two products covered here is made by the same company as the drafting assistant, and the other by a competitor. Stackbrook did not test either product and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## Claude: turning off model improvement
+
+Anthropic's privacy centre says the setting applies to consumer accounts, meaning Claude Free, Pro and Max, including Claude Code use from those accounts. Commercial products such as Claude for Work and the API are covered in a separate article, which we did not review.
+
+On a computer or in the browser, click your name in the settings menu, open the dropdown, choose Settings, then Privacy (or go to claude.ai/settings/data-privacy-controls), and look for the toggle labelled "Help Improve our AI models". On mobile the route is the same: your name, Settings, Privacy, then the same toggle. Switching it off means new chats and coding sessions will not be used for future model training.
+
+Two limits matter. First, the page says data that is already part of a training run that has started, or part of a model that is already trained, stays included. Previously stored chats are excluded only from future training runs. Second, if safety classifiers flag a conversation, it can still be used for safety and policy work. The setting is not a promise that nothing is ever reused.
+
+## Claude: incognito chats for one-off conversations
+
+If you only want some chats kept out of training, the help centre describes incognito chats. They are available on all plans, are not saved to your chat history, stay out of Claude's memory and are not used for model training. To start one, click the ghost icon in the upper right of a new chat outside a project; a black border and an "Incognito chat" label confirm the mode.
+
+There are trade-offs. Incognito is not available inside projects, you cannot turn an incognito chat into a regular one, and you cannot reopen it after closing. On the new Claude experience the page says incognito chats open in the previous interface, so Claude cannot create files or run code in them. Claude still keeps these chats for 30 days by default, and on Team and Enterprise plans they appear in organisation data exports for account owners.
+
+## Gemini: History controls training
+
+Google's Gemini help page ties training to a different switch. It says chat content is used for training by default for users over 18, and that this requires History to be on. To change it, go to gemini.google.com, click Settings at the bottom, then History, click On near the top and choose Turn off or Turn off and delete history. The page also says audio and Gemini Live recordings are off by default.
+
+The catch is retention. The page says that even with History off, conversations are saved with your account for around two months, and that this saved history does not appear in your Gemini History. Auto-delete is separate: history older than 18 months is deleted by default, and you can change that to 3 or 36 months or turn auto-delete off. If you use Gemini through a work or school account, the page says your administrator controls these settings and you may not be able to change retention. The page we read did not mention human review or temporary chats, so we cannot describe them here.
+
+## How long chats can stay stored
+
+Training settings and storage periods are not the same thing, which is why the numbers below look so different. Anthropic's privacy centre page, dated 1 July 2026, says deleted chats disappear from your history immediately and are purged from back-end systems within 30 days. With model improvement on, chats and coding sessions may be kept in de-identified form for up to 5 years in training pipelines, applying to new or resumed chats after the setting is enabled. Inputs and outputs flagged for usage-policy violations may be kept up to 2 years, and the page lists longer periods for classification scores and for data attached to feedback ratings.
+
+![Horizontal bar chart of retention periods stated on the Claude and Gemini help pages, from 30 days for Claude incognito chats up to 5 years for Claude training data](/images/site1/ai-chat-training-opt-out-claude-gemini-how-to-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## What the settings do not do
+
+A few things are worth keeping in mind whichever assistant you use.
+
+- Turning training off does not delete anything you already shared. Deleting chats is a separate step with its own timeline.
+- Safety exceptions exist. Claude's page says flagged conversations can still be used for safety purposes.
+- On Gemini, the page says a work or school administrator controls these settings, so personal toggles may not apply there.
+- Settings and policies change. We accessed the four pages on 19 November 2026; the Claude pages carry July and August 2026 dates. Check the date on a page before you rely on a number.
+
+## A suggested routine for small businesses
+
+This section is Stackbrook's own suggestion, not something the vendor pages recommend. If you paste client details, contracts or staff information into an AI assistant, decide once which account you use for work, confirm the training toggle on that account, use Claude's incognito chats for one-offs you do not want used for training (remembering they are still kept for 30 days by default), and avoid pasting anything you would not want stored for the retention period shown above. For business use, read the commercial terms of the plan you pay for rather than assuming the consumer settings apply. This is general information, not financial or legal advice, and it does not replace your own review of the terms that apply to you.
+
+## What we could not confirm
+
+We could not read OpenAI's ChatGPT data controls page in this run, so ChatGPT is deliberately left out rather than guessed at. We also did not review Claude's commercial terms, Gemini's handling of audio or Gemini Live beyond what the help page states, or any third-party tool that connects to these assistants. If you rely on one of those, read the vendor's own page.
