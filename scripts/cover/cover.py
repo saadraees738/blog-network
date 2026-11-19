@@ -46,6 +46,7 @@ POSTS={
 'qwen4-max-explained-what-is-claimed':('AI Models','Qwen4-Max, explained'),
 'us-hyperscale-data-centers-electricity-study-explained':('AI Infrastructure','Data center power use'),
 'embodied-ai-air-factory-robot-explained':('Robots','Swiss factory robot AIR'),
+'genie-4-project-genie-explained-who-can-use-it':('AI Video','Genie 4 explained'),
 }
 def wrap(d,t,font,maxw):
     lines=[];cur=''

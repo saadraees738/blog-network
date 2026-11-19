@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Step chart of Genie 4 access: trusted testers from 27 October 2026, eligible Google AI Ultra subscribers from 18 November 2026, Google AI Pro waitlist with no date, and Gemini API early access partners with no confirmed date">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="76" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Who can use Genie 4, step by step</text>
+  <text x="60" y="112" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">As stated on Google pages, 27 Oct and 18 Nov 2026. Dates not given by Google are marked.</text>
+  <g font-family="Arial, sans-serif" text-anchor="start">
+    <rect x="60" y="440" width="260" height="90" rx="10" fill="#1f7a7a"/>
+    <text x="80" y="475" font-size="22" font-weight="700" fill="#fff">Trusted testers</text>
+    <text x="80" y="505" font-size="19" fill="#fff">from 27 Oct 2026</text>
+    <rect x="340" y="340" width="260" height="190" rx="10" fill="#1f7a7a"/>
+    <text x="360" y="375" font-size="22" font-weight="700" fill="#fff">Google AI Ultra</text>
+    <text x="360" y="405" font-size="19" fill="#fff">eligible subscribers,</text>
+    <text x="360" y="432" font-size="19" fill="#fff">Project Genie</text>
+    <text x="360" y="505" font-size="19" font-weight="700" fill="#fff">from 18 Nov 2026</text>
+    <rect x="620" y="240" width="260" height="290" rx="10" fill="#d9822b"/>
+    <text x="640" y="275" font-size="22" font-weight="700" fill="#1d2a2a">Google AI Pro</text>
+    <text x="640" y="305" font-size="19" fill="#1d2a2a">waitlist only</text>
+    <text x="640" y="505" font-size="19" font-weight="700" fill="#1d2a2a">no date given</text>
+    <rect x="900" y="140" width="260" height="390" rx="10" fill="#d9822b"/>
+    <text x="920" y="175" font-size="22" font-weight="700" fill="#1d2a2a">Developers</text>
+    <text x="920" y="205" font-size="19" fill="#1d2a2a">early access partners,</text>
+    <text x="920" y="232" font-size="19" fill="#1d2a2a">Gemini API, AI Studio</text>
+    <text x="920" y="505" font-size="19" font-weight="700" fill="#1d2a2a">no date given</text>
+    <text x="60" y="580" font-size="16" fill="#4a5656">Teal = access confirmed with a date. Orange = planned or waitlist, no date. Sources: Google, DeepMind (27 Oct, 18 Nov 2026).</text>
+  </g>
+</svg>
