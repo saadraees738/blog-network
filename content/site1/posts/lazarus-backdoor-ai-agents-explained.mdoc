@@ -1,0 +1,70 @@
+---
+title: 'Lazarus backdoor explained: what the reported AI-agent attack means for small businesses'
+description: 'Microsoft Research reportedly described Lazarus, a backdoor that edits fewer than ten dormant neurons. What is reported, what is unconfirmed, and sensible precautions.'
+status: queue
+queueReason: 'Unverified: official Microsoft Research page could not be fetched in this run (WebFetch permission timed out); facts come only from a secondary news digest. Needs verification against the official page and an independent review before publishing.'
+publishDate: 2026-11-19
+lastVerified: 2026-11-19
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/lazarus-backdoor-ai-agents-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a translucent glass brain made of thin connected lines, with one glowing amber point at its center, on a black background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: A digest of AI news dated 16 November 2026 reports that Microsoft Research described Lazarus on 10 November, a backdoor attack that reprograms fewer than ten dormant neurons in a language model, without training, so an AI agent can be made to behave maliciously. This is reported, not confirmed from the original page. For a small business the practical lesson is to use models from sources you trust and to limit what any AI agent is allowed to do.
+sources:
+  - title: AI news digest for 16 November 2026 (ActuIA)
+    url: https://www.actuia.com/veille/2026-11-16/
+    accessed: 2026-11-19
+  - title: Microsoft Research blog post on Lazarus (listed by the digest; not fetched in this run)
+    url: https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/
+    accessed: 2026-11-19
+factCheck:
+  status: pending
+  reviewStatus: pending
+  notes: 'Drafted by Claude. No independent review round was run. The official Microsoft Research page could not be fetched, so only the neuron count, the no-training claim, the date and the agent angle are taken from a secondary digest. Attack requirements, tested models, success rates and defenses are not stated here because they were not verified.'
+---
+
+A short item in an AI news digest points to a Microsoft Research blog post about an attack called Lazarus. The headline claim is striking: a language model can reportedly be turned into a trigger for malicious behavior by changing fewer than ten of its dormant neurons, with no training step. This post explains what that claim means in plain English, what we could not confirm, and what a small business that uses AI tools can reasonably do about the risk.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic. Because the original page could not be read in this run, it has not been checked against the primary source by a separate reviewer, and it is not a full human review. Microsoft is a developer of AI models and a competitor of Anthropic. Stackbrook did not test any software described here and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not financial or legal advice.*
+
+## What is reported
+
+According to the digest, which lists the item under 10 November 2026, Microsoft Research published work on a backdoor attack named Lazarus. The digest says it reprograms fewer than ten dormant neurons in a language model, without training, in order to trigger malicious behavior in an AI agent. That is the full extent of what we can attribute, and it comes from a secondary source rather than the research page itself.
+
+![Simplified flow showing how a weight-edit backdoor is described as working, from altering a model to a trigger making an agent act maliciously](/images/site1/lazarus-backdoor-ai-agents-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages. It is a simplified restatement, not an official graphic.*
+
+Several things are not stated in what we read, so they are left out on purpose: how an attacker would gain the access needed to edit a model, which models or agents were tested, how reliably the attack worked, and what defenses the authors suggest. If you see a confident number for any of these elsewhere, check it against the original post before repeating it.
+
+## What a backdoor is, in plain terms
+
+A backdoor in an AI model is a hidden behavior that stays quiet during normal use and activates only when a specific signal appears. A model with a backdoor can pass everyday checks, because it answers ordinary questions normally. The danger is the trigger. Once the trigger appears in the input, the model does something its owner never intended.
+
+The word dormant in the report refers to neurons that rarely do much in ordinary operation. The general idea, as the digest summarises it, is that changing a very small number of such units can be enough to plant a behavior, and that this can be done directly on the model rather than by retraining it. Retraining a model is expensive and leaves traces in the data used, so an attack that skips it would, in principle, be cheaper and harder to notice. That is a reason researchers study it, not proof that attackers use it today.
+
+## Why agents raise the stakes
+
+A chatbot that misbehaves produces bad text, which a person can usually read and reject. An AI agent is different, because it takes actions: it can send messages, change records, call other software or spend money, depending on what it has been allowed to do. The digest frames Lazarus around agents for this reason. A hidden behavior that only produces a wrong sentence is an annoyance, while a hidden behavior in a system with permissions can cause real damage.
+
+This is also why the permissions you give an agent matter more than almost any other setting. An agent that can only draft text for your review has little to abuse. An agent with access to customer data, payments and email has a lot.
+
+## Sensible precautions for a small business
+
+None of the following depends on the details of Lazarus, and none is a guarantee. They are ordinary good practice for anyone relying on AI tools.
+
+1. **Prefer models and tools from sources you can identify.** The reported risk is about a model being altered. Using a major vendor's hosted service, or a model downloaded from its official publisher, narrows the ways that could happen compared with files from unknown uploaders.
+2. **Give agents the smallest permissions that let them do the job.** Read-only access first, write access only where needed, and no access to payments unless you have a clear reason.
+3. **Keep a person in the loop for consequential actions.** Sending money, deleting records and emailing customers should need a human click.
+4. **Keep logs.** If an agent does something odd, a record of what it was asked and what it did is the first thing you will want.
+5. **Treat vendor announcements as the source of truth.** Wait for the vendor or the researchers to publish details before changing a policy because of a news digest.
+
+## What we still do not know
+
+We do not know, from what we could read, whether Lazarus works on the commercial models most small businesses use, whether hosted services are exposed to it, or whether the authors propose a fix. We also have not seen the original wording, so even the headline figures should be treated as unconfirmed until the official page is read. We will update this post, or replace it, once the primary source has been checked.
+
+## The takeaway
+
+Lazarus, as reported, is research into how little it might take to plant a hidden behavior in a model. It is a prompt to review what your AI tools are allowed to do, not a reason to stop using them. The most useful habits are the unglamorous ones: trusted sources, narrow permissions, human approval and logs.

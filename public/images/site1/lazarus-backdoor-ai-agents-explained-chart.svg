@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#0f1626"/>
+<text x="60" y="70" font-size="30" font-weight="bold" fill="#ffffff">How a weight-edit backdoor is described as working (reported)</text>
+<text x="60" y="108" font-size="18" fill="#9fb0cc">Simplified flow, not an official graphic. Based on a secondary report, unverified.</text>
+<g font-size="20" fill="#ffffff" text-anchor="middle">
+<rect x="60" y="200" width="230" height="150" rx="14" fill="#1c2a45" stroke="#4ade80" stroke-width="3"/>
+<text x="175" y="262">1. Attacker alters</text><text x="175" y="292">a model (access</text><text x="175" y="322">route: unconfirmed)</text>
+<rect x="350" y="200" width="230" height="150" rx="14" fill="#1c2a45" stroke="#4ade80" stroke-width="3"/>
+<text x="465" y="262">2. Edits fewer</text><text x="465" y="292">than ten dormant</text><text x="465" y="322">neurons</text>
+<rect x="640" y="200" width="230" height="150" rx="14" fill="#1c2a45" stroke="#4ade80" stroke-width="3"/>
+<text x="755" y="262">3. Reported: no</text><text x="755" y="292">training needed;</text><text x="755" y="322">dormant until used</text>
+<rect x="930" y="200" width="210" height="150" rx="14" fill="#1c2a45" stroke="#f87171" stroke-width="3"/>
+<text x="1035" y="262">4. A trigger makes</text><text x="1035" y="292">the agent act</text><text x="1035" y="322">maliciously</text>
+</g>
+<g fill="#4ade80"><polygon points="292,275 340,275 340,265 350,275 340,285 340,275"/><polygon points="582,275 630,275 630,265 640,275 630,285 630,275"/><polygon points="872,275 920,275 920,265 930,275 920,285 920,275"/></g>
+<rect x="60" y="430" width="1080" height="110" rx="14" fill="#16213a"/>
+<text x="90" y="478" font-size="20" fill="#ffffff">What it means for you: the risk is in how a model reaches you,</text>
+<text x="90" y="512" font-size="20" fill="#ffffff">so use trusted sources and limit what an agent may do.</text>
+</svg>
