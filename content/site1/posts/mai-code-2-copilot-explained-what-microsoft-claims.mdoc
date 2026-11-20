@@ -1,0 +1,64 @@
+---
+title: 'Microsoft MAI Code 2 explained: what the company claims and what it leaves out'
+description: 'Microsoft announced MAI Code 2 and Code 2 Flash on 17 November 2026. See where they are available, the cost and benchmark claims, and what the pages do not say.'
+status: published
+queueReason: ''
+publishDate: 2026-11-20
+lastVerified: 2026-11-20
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/mai-code-2-copilot-explained-what-microsoft-claims-cover.jpg
+heroAlt: 'AI-generated illustration of a tall stack of translucent glass blocks glowing cyan with a few coral blocks, lit from above on a dark background; the AI added unreadable glyph-like marks on the blocks'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: MAI Code 2 and MAI Code 2 Flash are coding models Microsoft announced on 17 November 2026. Microsoft says both are available in GitHub Copilot, that Flash is in limited-access preview in Microsoft Foundry, and that its own benchmarks put Code 2 near GPT-6.1 Sol and Claude Opus 5.5 at a fraction of the cost, shown at a 50% promotional price. The pages give no dollar prices, no context window and no usage limits, and the figures are Microsoft-reported.
+sources:
+  - title: MAI Code 2 and Code 2 Flash - Everyday coding at scalable prices (Microsoft AI)
+    url: https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/
+    accessed: 2026-11-20
+  - title: MAI Code 2 model page (Microsoft AI)
+    url: https://microsoft.ai/models/mai-code-2/
+    accessed: 2026-11-20
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Microsoft pages (REVISE, 8 findings, all applied: two unsupported descriptive claims removed, page discrepancies and benchmark methodology added, wording softened). Not verified: exact footnote wording (reviewer saw condensed page text), Flash benchmark names, Copilot plan eligibility, dollar prices, context window and limits, none of which the pages state; the linked model card and data cards were not read.'
+---
+
+On 17 November 2026 Microsoft's AI group published MAI Code 2 and MAI Code 2 Flash, two coding models it describes as built for everyday work at lower prices. If you pay for a coding assistant or run a small development team, the useful questions are where you can actually try them, what the cost claims mean, and what Microsoft has not said. This post answers those from Microsoft's announcement and its model page, and marks what is missing.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Microsoft's comparisons name models from OpenAI and from Anthropic, which makes Claude, so read any comparison with that in mind. Stackbrook did not test MAI Code 2 and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What the two models are
+
+According to the announcement, MAI Code 2 is aimed at everyday enterprise coding. Microsoft lists taking code to production, deep debugging, changes that span several files, reasoning across a whole repository and interface work. MAI Code 2 Flash is the cheaper sibling for high-volume jobs such as explaining code, targeted edits, routine fixes and quick iterations.
+
+Microsoft also says the models are not yet tuned for harder problems, and names fundamental science research and very long-horizon agentic work as examples. That is a useful limit to keep in mind before assuming a cheaper model replaces a top-tier one for everything.
+
+## Where you can use them
+
+The announcement says both models are available in GitHub Copilot, and the model page offers a single button to try it there. Neither page names which Copilot plans include the models, so check your own plan before counting on access. Microsoft says MAI Code 2 Flash is in limited-access preview in Microsoft Foundry. It also lists OpenRouter, Vercel, Hermes, OpenCode and Kilo as coming soon, with no dates. The model page does not repeat the Foundry or coming-soon details, so treat the announcement as the only source for them.
+
+The model page also mentions a custom version of Flash for partners and carries customer quotes. Those are customer claims about their own workflows, not benchmarks, so this post does not rely on them.
+
+## The cost and benchmark claims
+
+Microsoft gives relative cost rather than prices. It says MAI Code 2 costs 40% as much as GPT-6.1 Sol and 5% as much as Claude Opus 5.5. For Flash, it says 65% of GPT-6 Luna and 20% of Claude Haiku 5.5. A footnote says these costs are shown at a 50% promotional price, and the page gives no end date for the promotion, so the gap may narrow later.
+
+![Horizontal bar chart of the cost Microsoft reports for MAI Code 2 and Code 2 Flash as a share of four comparison models, from 5 to 65 percent](/images/site1/mai-code-2-copilot-explained-what-microsoft-claims-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+On quality, Microsoft says MAI Code 2, averaged across four benchmarks it names (DeepSWE 1.1, Terminal Bench 2.1, SWE-Atlas and FrontierCode), reaches 98% of GPT-6.1 Sol's performance and 96% of Claude Opus 5.5's. In a blind frontend test it says developers preferred MAI Code 2 over GPT-6 Sol 64% of the time, with a footnote citing 258 annotators. For Flash it says performance is comparable to GPT-6 Luna and Claude Haiku 5.5 across three benchmarks it does not name in the body.
+
+Several details limit how far you can lean on this. Every figure is Microsoft-reported. The pages we read give percentages relative to other models rather than absolute scores. The footnotes say models ran at maximum reasoning effort, that three benchmarks ran on Microsoft's MSBench with the GitHub Copilot command-line tool and no subagents, and that FrontierCode scores and costs came from Artificial Analysis, so the cost percentages partly rest on a third-party source. The two pages are also not fully consistent. The model page describes Flash as 12% higher performance than Claude Haiku 5.5 rather than "comparable", names GPT-6.1 Sol in the frontend preference stat where the announcement says GPT-6 Sol, and two of its stat tiles showed 0% in our fetch, probably a display fault. Microsoft itself says results reflect specific coding tasks and configurations and that comparisons vary by workload, reasoning effort and pricing assumptions.
+
+## What the pages do not say
+
+Neither page gives a dollar price per token or per request, a context window, rate limits, or which Copilot tiers include the models. The announcement has no safety evaluation or data-handling statement specific to these models. The model page links a model card and data cards, which Stackbrook did not read, so some of these gaps may be filled there.
+
+Microsoft also says a related model, MAI Work Flash, is derived from Code 2 Flash and serves Microsoft 365 and FabricIQ products, with its own internal comparisons. Those are outside the scope of this post.
+
+## What to do with this
+
+If you already use GitHub Copilot, look for the MAI models in your model picker and compare them on your own code before changing habits; the vendor's averages cannot tell you how they handle your repositories. If you pay per token elsewhere, wait for real price lists and for the promotional period to be explained, since the savings Microsoft quotes are at a discounted rate. Treat the benchmark claims as a reason to test, not as a result. This is general information, not financial or legal advice.

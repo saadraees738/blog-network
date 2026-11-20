@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Horizontal bar chart of Microsoft-reported relative cost: MAI Code 2 at 40 percent of GPT-6.1 Sol and 5 percent of Claude Opus 5.5; MAI Code 2 Flash at 65 percent of GPT-6 Luna and 20 percent of Claude Haiku 5.5">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="76" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">MAI Code 2: cost as a share of the comparison model</text>
+  <text x="60" y="112" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Microsoft-reported figures, shown at a 50% promotional price, per its 17 Nov 2026 post</text>
+  <g font-family="Arial, sans-serif" fill="#1d2a2a" font-size="22">
+    <text x="60" y="200">MAI Code 2 vs GPT-6.1 Sol</text>
+    <rect x="500" y="172" width="440" height="40" rx="5" fill="#e4e2da"/>
+    <rect x="500" y="172" width="176" height="40" rx="5" fill="#1f7a7a"/>
+    <text x="960" y="202" font-weight="700" font-size="26">40%</text>
+    <text x="60" y="288">MAI Code 2 vs Claude Opus 5.5</text>
+    <rect x="500" y="260" width="440" height="40" rx="5" fill="#e4e2da"/>
+    <rect x="500" y="260" width="22" height="40" rx="5" fill="#1f7a7a"/>
+    <text x="960" y="290" font-weight="700" font-size="26">5%</text>
+    <text x="60" y="376">MAI Code 2 Flash vs GPT-6 Luna</text>
+    <rect x="500" y="348" width="440" height="40" rx="5" fill="#e4e2da"/>
+    <rect x="500" y="348" width="286" height="40" rx="5" fill="#d9822b"/>
+    <text x="960" y="378" font-weight="700" font-size="26">65%</text>
+    <text x="60" y="464">MAI Code 2 Flash vs Claude Haiku 5.5</text>
+    <rect x="500" y="436" width="440" height="40" rx="5" fill="#e4e2da"/>
+    <rect x="500" y="436" width="88" height="40" rx="5" fill="#d9822b"/>
+    <text x="960" y="466" font-weight="700" font-size="26">20%</text>
+    <text x="500" y="520" font-size="18" fill="#4a5656">Full bar = 100% of the comparison model's cost</text>
+    <text x="1140" y="605" font-size="16" text-anchor="end" fill="#4a5656">Source: Microsoft AI, Introducing MAI Code 2 and Code 2 Flash</text>
+  </g>
+</svg>
