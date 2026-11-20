@@ -47,3 +47,4 @@ P16. published | AI Privacy | How to stop Claude and Gemini training on your cha
 P17. published | AI Assistants | Businesses in ChatGPT explained (claim profile, agents, limits)
 P18. published | AI Developer Tools | Gemini Decisions API explained (2026-11-20)
 P19. published | AI Models | GPT-6.2 Astra and Sol explained (2026-11-20)
+P20. queued | AI Hardware | Googlebook explained (2026-11-20; one official source only)

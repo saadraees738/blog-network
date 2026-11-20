@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Table sorting Googlebook facts into stated by Google and not stated by Google">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="72" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Googlebook: what Google's announcement says</text>
+<text x="60" y="106" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: Google blog post of 12 May 2026, checked 20 Nov 2026</text>
+<rect x="60" y="140" width="520" height="56" fill="#1f6f5c"/><text x="80" y="177" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Stated by Google</text>
+<rect x="620" y="140" width="520" height="56" fill="#8a3b2e"/><text x="640" y="177" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Not stated</text>
+<g font-family="Arial, sans-serif" font-size="23" fill="#1d2a2a">
+<rect x="60" y="196" width="520" height="68" fill="#e8f1ee"/><text x="80" y="238">Android plus ChromeOS platform</text>
+<rect x="60" y="264" width="520" height="68" fill="#f7f6f2"/><text x="80" y="306">Magic Pointer, widgets, Quick Access</text>
+<rect x="60" y="332" width="520" height="68" fill="#e8f1ee"/><text x="80" y="374">Partners: Acer, ASUS, Dell, HP, Lenovo</text>
+<rect x="60" y="400" width="520" height="68" fill="#f7f6f2"/><text x="80" y="442">Devices due "this fall" (2026)</text>
+<rect x="60" y="468" width="520" height="68" fill="#e8f1ee"/><text x="80" y="510">Glowbar light-bar design</text>
+<rect x="620" y="196" width="520" height="68" fill="#f4e7e4"/><text x="640" y="238">Prices</text>
+<rect x="620" y="264" width="520" height="68" fill="#f7f6f2"/><text x="640" y="306">Processors, memory, screen sizes</text>
+<rect x="620" y="332" width="520" height="68" fill="#f4e7e4"/><text x="640" y="374">Model names</text>
+<rect x="620" y="400" width="520" height="68" fill="#f7f6f2"/><text x="640" y="442">Countries and exact release date</text>
+<rect x="620" y="468" width="520" height="68" fill="#f4e7e4"/><text x="640" y="510">Which AI features need a paid plan</text>
+</g>
+<text x="60" y="590" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Chart created by Stackbrook from the cited pages.</text>
+</svg>
