@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of the three commitments in the Paris Call for AI Safety and Security: evaluate, be accountable, share warnings">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Paris Call: three commitments, in order</text>
+  <text x="60" y="106" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Restated by Stackbrook from the declaration text signed 9 Nov 2026</text>
+  <g font-family="Arial, sans-serif" fill="#1d2a2a">
+    <rect x="60" y="150" width="320" height="330" rx="12" fill="#e3efe9" stroke="#1f7a5a" stroke-width="3"/>
+    <text x="80" y="195" font-size="26" font-weight="700">1. Evaluate</text>
+    <text x="80" y="235" font-size="20">A common framework for</text>
+    <text x="80" y="262" font-size="20">testing frontier models</text>
+    <text x="80" y="302" font-size="20">Focus: dangerous misuse,</text>
+    <text x="80" y="329" font-size="20">loss of control</text>
+    <text x="80" y="369" font-size="20">Share non-sensitive</text>
+    <text x="80" y="396" font-size="20">findings in a standard</text>
+    <text x="80" y="423" font-size="20">format</text>
+    <rect x="440" y="150" width="320" height="330" rx="12" fill="#f6ead9" stroke="#d9822b" stroke-width="3"/>
+    <text x="460" y="195" font-size="26" font-weight="700">2. Be accountable</text>
+    <text x="460" y="235" font-size="20">Safety standards set by</text>
+    <text x="460" y="262" font-size="20">national authorities</text>
+    <text x="460" y="302" font-size="20">Developers: disclose risks,</text>
+    <text x="460" y="329" font-size="20">fail-safe shutdown, internal</text>
+    <text x="460" y="356" font-size="20">red-teaming</text>
+    <text x="460" y="396" font-size="20">Clearer legal responsibility</text>
+    <text x="460" y="423" font-size="20">for large-scale harm</text>
+    <rect x="820" y="150" width="320" height="330" rx="12" fill="#e4e8f3" stroke="#4a5fa8" stroke-width="3"/>
+    <text x="840" y="195" font-size="26" font-weight="700">3. Share warnings</text>
+    <text x="840" y="235" font-size="20">Rapid alert systems</text>
+    <text x="840" y="262" font-size="20">building on existing ones</text>
+    <text x="840" y="302" font-size="20">Align how serious incidents</text>
+    <text x="840" y="329" font-size="20">are classified and reported</text>
+    <text x="840" y="369" font-size="20">Confidential whistleblower</text>
+    <text x="840" y="396" font-size="20">channels</text>
+    <path d="M385 315 L435 315 M425 303 L437 315 L425 327" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+    <path d="M765 315 L815 315 M805 303 L817 315 L805 327" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+    <text x="60" y="540" font-size="22" font-weight="700">Not specified in the text: deadlines, enforcement, a lead body, or legal force</text>
+    <text x="60" y="578" font-size="18" fill="#4a5656">Source: Canada, Netherlands and Elysee publications of the declaration. Not an official graphic.</text>
+  </g>
+</svg>
