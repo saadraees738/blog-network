@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram: one shared input and up to 1,000 questions go into one Gemini Decisions API call, which returns yes/no, choice and score answers with confidence for your code to route">
+  <rect width="1200" height="630" fill="#f7f6f2"/>
+  <text x="60" y="76" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">How one Decisions API call is shaped</text>
+  <text x="60" y="112" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Based on Google's 11 Nov 2026 launch post and its codelab</text>
+  <g font-family="Arial, sans-serif" fill="#1d2a2a">
+    <rect x="60" y="170" width="260" height="150" rx="10" fill="#fff" stroke="#1d6b6b" stroke-width="3"/>
+    <text x="190" y="214" font-size="24" font-weight="700" text-anchor="middle">One shared input</text>
+    <text x="190" y="248" font-size="19" text-anchor="middle">text, images, audio,</text>
+    <text x="190" y="274" font-size="19" text-anchor="middle">video, PDFs</text>
+    <text x="190" y="300" font-size="19" text-anchor="middle">up to 256K tokens</text>
+
+    <rect x="60" y="360" width="260" height="150" rx="10" fill="#fff" stroke="#1d6b6b" stroke-width="3"/>
+    <text x="190" y="404" font-size="24" font-weight="700" text-anchor="middle">Your questions</text>
+    <text x="190" y="438" font-size="19" text-anchor="middle">up to 1,000 per call,</text>
+    <text x="190" y="464" font-size="19" text-anchor="middle">each with instructions</text>
+    <text x="190" y="490" font-size="19" text-anchor="middle">and criteria</text>
+
+    <path d="M320 245 L420 305 M320 435 L420 375" stroke="#1d6b6b" stroke-width="4" fill="none"/>
+    <rect x="420" y="250" width="300" height="180" rx="10" fill="#1d6b6b"/>
+    <text x="570" y="305" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">gemini-decision-1</text>
+    <text x="570" y="340" font-size="20" fill="#fff" text-anchor="middle">scores options in one pass</text>
+    <text x="570" y="370" font-size="20" fill="#fff" text-anchor="middle">no answer text written</text>
+    <text x="570" y="400" font-size="20" fill="#fff" text-anchor="middle">$0 output tokens</text>
+
+    <path d="M720 305 L800 215 M720 340 L800 340 M720 375 L800 465" stroke="#1d6b6b" stroke-width="4" fill="none"/>
+    <rect x="800" y="170" width="340" height="90" rx="10" fill="#fff" stroke="#b3402a" stroke-width="3"/>
+    <text x="970" y="208" font-size="22" font-weight="700" text-anchor="middle">Yes/No</text>
+    <text x="970" y="238" font-size="18" text-anchor="middle">probability the condition holds</text>
+    <rect x="800" y="295" width="340" height="90" rx="10" fill="#fff" stroke="#b3402a" stroke-width="3"/>
+    <text x="970" y="333" font-size="22" font-weight="700" text-anchor="middle">Choice (2 to 255 options)</text>
+    <text x="970" y="363" font-size="18" text-anchor="middle">winner plus a probability per option</text>
+    <rect x="800" y="420" width="340" height="90" rx="10" fill="#fff" stroke="#b3402a" stroke-width="3"/>
+    <text x="970" y="458" font-size="22" font-weight="700" text-anchor="middle">Score (ordered rubric)</text>
+    <text x="970" y="488" font-size="18" text-anchor="middle">weighted score plus level odds</text>
+
+    <text x="600" y="570" font-size="21" text-anchor="middle">Each answer carries a 0-to-1 confidence. Your own code decides what to automate.</text>
+  </g>
+</svg>

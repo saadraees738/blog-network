@@ -45,3 +45,4 @@ P15. todo | CRM/Automation | Zoho One vs separate apps, or HubSpot Starter vs Zo
 P14b. published (Notion AI vs ChatGPT vs Claude for notes, AI-generated hero via Cloudflare FLUX)
 P16. published | AI Privacy | How to stop Claude and Gemini training on your chats (ChatGPT omitted: help page unfetchable)
 P17. published | AI Assistants | Businesses in ChatGPT explained (claim profile, agents, limits)
+P18. published | AI Developer Tools | Gemini Decisions API explained (2026-11-20)

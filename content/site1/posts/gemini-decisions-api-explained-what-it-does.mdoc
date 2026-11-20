@@ -1,0 +1,68 @@
+---
+title: 'Gemini Decisions API explained: scoring answers instead of writing them'
+description: 'Google launched the Gemini Decisions API on 11 November 2026. See what it does, the three question types, the stated price and what Google leaves unstated.'
+status: published
+queueReason: ''
+publishDate: 2026-11-20
+lastVerified: 2026-11-20
+category: AI Developer Tools
+author: saad-r
+heroImage: /images/site1/gemini-decisions-api-explained-what-it-does-cover.jpg
+heroAlt: 'AI-generated illustration of a teal beam of light falling onto a round glowing control dial with amber lights on a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: The Gemini Decisions API is a Google endpoint announced on 11 November 2026 that scores yes/no, multiple-choice and rubric questions about one shared input in a single pass, using the model gemini-decision-1. Google states a price of $0.10 per 1M input tokens and $0 for output, and lists up to 1,000 questions per request. It returns probabilities and confidence scores rather than written text, and Google's pages do not say whether it is preview or generally available.
+sources:
+  - title: 'Gemini Decisions API: Fast, calibrated multimodal decisions (Google blog)'
+    url: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/
+    accessed: 2026-11-20
+  - title: Getting Started with the Gemini Decisions API (Google Codelabs)
+    url: https://codelabs.developers.google.com/getting-started-with-gemini-decisions-api
+    accessed: 2026-11-20
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Google pages (REVISE, 10 findings, all applied: unverified quotation removed, latency range corrected, advice paragraph replaced with the codelab''s own caution, example descriptions tightened, absence claims softened). Not verified: exact wording of the pages (the reviewer saw fetched summaries, not raw HTML), preview or GA status, rate limits and quotas, and all benchmark and cost comparisons, which are Google claims.'
+---
+
+On 11 November 2026 Google announced the Gemini Decisions API, a new Gemini API endpoint that differs from a chat model in one respect: it does not write an answer. You give it an input and a list of questions, and it returns how likely each candidate answer is. This post explains what that means, what Google says it costs, and what a small team should check before building on it, using Google's launch post and its getting-started codelab.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Google pages for figures, dates and wording. This is not a full human review. Google makes Gemini, which competes with Claude, so read any comparison with that in mind. Stackbrook did not test the Decisions API and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What the API does
+
+Google presents the service as a way to make fast decisions from a fixed list of options, powered by a model called Gemini Decision 1, with the model ID `gemini-decision-1`. A closed-set decision, in other words, is one where the possible answers are fixed in advance: is this message a refund request, which of these five tools should handle the task, does this photo break a rule. The launch post names tool selection, policy checks, model routing and context grading as the intended jobs.
+
+The key difference from a chat model is how the answer is produced. According to Google, the model works out scores for all your candidate options in one pass and returns probabilities and confidence scores, rather than writing text. The codelab confirms the practical side: its examples show zero output tokens in the usage data.
+
+## The three question types
+
+A request has one shared input and a set of named questions. The input can mix text, images, audio, video and PDFs, and Google gives a limit of up to 256K tokens. The codelab gives the same window as 262,144 tokens. The launch post says a single request can carry up to 1,000 independent questions, each with its own instructions and, where needed, criteria.
+
+The examples use three question types, summarised in the chart below.
+
+![Flow diagram of one Gemini Decisions API call: a shared input and up to 1,000 questions go to gemini-decision-1, which returns yes/no, choice and score answers with confidence](/images/site1/gemini-decisions-api-explained-what-it-does-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+The yes/no type, written as `noul` in the examples, estimates the probability that a condition holds, with optional descriptions of what true and false mean. The choice type picks from 2 to 255 options and returns the winner plus a probability for each option. The score type grades against an ordered rubric starting at zero and returns a weighted score along with the probability of each level. Every answer also carries a confidence value from 0 to 1, which Google says lets your code send ambiguous cases to a fallback or a person.
+
+## Price, speed and availability as stated
+
+Google's stated price is $0.10 per 1M input tokens and $0 for output tokens. The shared input is billed once per request however many questions you ask, and each question adds only its own instruction and criteria tokens. Google also says there is a no-cost tier in Google AI Studio for prototyping. The pages do not state rate limits or quotas.
+
+On speed, Google claims 150-250 ms end to end, with 50-100 ms of model compute at the median, for contexts up to 16K tokens, and says latency stays nearly flat from 1 to 100 questions per request. It also claims the lowest calibration error on its benchmark suite and a cost nearly 5x lower than Gemini 3.5 Flash-Lite used through the Interactions API. These are vendor claims, and I did not find full benchmark data on either page. The codelab is more modest about its own runs: its sample scripts took roughly 600 to 950 ms per call across its runs, and it reports about 155-195 ms for warm calls from Cloud Run in us-central1.
+
+The API is available through the Gemini API and Google AI Studio. Google says support in Gemini in Google Cloud is coming soon, and that integrations with OpenRouter, LangChain, Vercel, LiteLLM, Pydantic AI, Pipecat, LiveKit and OpenCode are rolling out. Neither page says whether the service is in preview or generally available. The codelab says it is currently served through the `v1beta` API version and requires `google-genai` version 3.2.0 or later, which suggests a beta surface, but that is an inference and not a stated status.
+
+## What a small team could use it for
+
+Google's own examples lean toward routing and checking. The codelab walks through support-ticket routing, eight policy checks in one call, and photo and PDF inputs (shown as separate runs) with no separate text-extraction step. Google also says it uses the API inside some of its own products, for example to route everyday queries in Gemini Notebook, which it says cuts latency by up to 40%.
+
+Our reading of those examples is that they suit the routing and checking steps around an AI tool, such as sorting incoming messages, flagging content against a written policy, or choosing which model or tool takes a request. Because the output is a set of numbers, your own code decides what happens next. The codelab's sample scripts set their own thresholds, for example a 0.80 cutoff on the yes probability for automatic handling, and the page cautions that a confident category does not by itself make it safe to act automatically.
+
+## What we do not know
+
+The pages leave several things open. They do not show the full response format or error behaviour, they give no rate limits, and they do not say how the calibration claim was measured. The codelab notes that the model's probabilities are calibrated but I did not find evaluation data on the page. The terminology also varies between pages, with the name appearing as Decisions API, Decision API and Gemini Decision 1. Prices and availability can change, so check Google's current pricing page before budgeting.
+
+This is general information about a developer product, not financial or legal advice.
