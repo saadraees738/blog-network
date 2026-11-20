@@ -45,6 +45,7 @@ POSTS={
 'ai-generated-text-commercial-use':('AI Writing','Can you use AI-generated text commercially?'),
 'gemini-4-argon-api-pricing-december-1':('AI Assistants','Gemini 4 Argon price doubles on Dec 1'),
 'ai-meeting-notetakers-pricing-compared':('AI Meetings','AI meeting notetakers: what each charges'),
+'gpt-6-2-astra-sol-explained-which-one-for-everyday-work':('AI Models','GPT-6.2 Astra and Sol'),
 'qwen4-max-explained-what-is-claimed':('AI Models','Qwen4-Max, explained'),
 'us-hyperscale-data-centers-electricity-study-explained':('AI Infrastructure','Data center power use'),
 'embodied-ai-air-factory-robot-explained':('Robots','Swiss factory robot AIR'),

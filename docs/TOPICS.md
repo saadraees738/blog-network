@@ -46,3 +46,4 @@ P14b. published (Notion AI vs ChatGPT vs Claude for notes, AI-generated hero via
 P16. published | AI Privacy | How to stop Claude and Gemini training on your chats (ChatGPT omitted: help page unfetchable)
 P17. published | AI Assistants | Businesses in ChatGPT explained (claim profile, agents, limits)
 P18. published | AI Developer Tools | Gemini Decisions API explained (2026-11-20)
+P19. published | AI Models | GPT-6.2 Astra and Sol explained (2026-11-20)
