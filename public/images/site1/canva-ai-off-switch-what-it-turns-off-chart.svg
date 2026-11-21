@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="Inter,Arial,sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="60" y="80" font-size="34" font-weight="700" fill="#f8fafc">Canva's two AI settings: what each one does</text>
+<text x="60" y="118" font-size="20" fill="#94a3b8">Per Canva's help page; both are rolling out gradually</text>
+<rect x="60" y="150" width="520" height="400" rx="16" fill="#1e293b" stroke="#2dd4bf" stroke-width="3"/>
+<text x="90" y="200" font-size="28" font-weight="700" fill="#2dd4bf">AI features on/off switch</text>
+<text x="90" y="250" font-size="22" fill="#e2e8f0">Free and Pro accounts only</text>
+<text x="90" y="290" font-size="22" fill="#e2e8f0">On by default</text>
+<text x="90" y="330" font-size="22" fill="#e2e8f0">Covers features with a permission setting</text>
+<text x="90" y="370" font-size="22" fill="#e2e8f0">Low-risk tools (e.g. background remover) stay</text>
+<text x="90" y="410" font-size="22" fill="#e2e8f0">Not carried over if you change account type</text>
+<text x="90" y="470" font-size="22" fill="#fbbf24">Menu steps: not yet published</text>
+<rect x="620" y="150" width="520" height="400" rx="16" fill="#1e293b" stroke="#fb923c" stroke-width="3"/>
+<text x="650" y="200" font-size="28" font-weight="700" fill="#fb923c">Show less AI-generated content</text>
+<text x="650" y="250" font-size="22" fill="#e2e8f0">A filter for templates and elements</text>
+<text x="650" y="290" font-size="22" fill="#e2e8f0">Off by default; your account only</text>
+<text x="650" y="330" font-size="22" fill="#e2e8f0">Your account > AI personalization</text>
+<text x="650" y="370" font-size="22" fill="#e2e8f0">Some AI content may still appear</text>
+<text x="650" y="410" font-size="22" fill="#e2e8f0">Does not change existing designs</text>
+<text x="650" y="470" font-size="22" fill="#fbbf24">Global market only</text>
+<text x="60" y="595" font-size="18" fill="#64748b">Stackbrook chart from Canva's help page, accessed 21 Nov 2026</text>
+</svg>
