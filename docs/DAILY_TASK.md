@@ -28,6 +28,15 @@ Each run adds exactly ONE new post to the site in `docs/ACTIVE_SITE.md` by commi
 3. Find what is new and genuinely useful today: WebSearch for AI news from the last 48 hours (use the actual current date), then confirm on official pages (vendor blogs, docs, newsrooms, regulator pages). Skip rumours that only appear on aggregators. Skip near-duplicates of existing posts (search the repo first). Use `docs/TOPICS.md` as a backlog of evergreen ideas when the news is thin; mark the topic done there.
 4. Audience: small businesses and everyday users of AI tools and software; neutral, no identity targeting.
 
+
+## Fetching official pages (the #1 cause of failed runs: read this)
+WebFetch is refused with PROVENANCE_REQUIRED / "permission unanswered" for any URL that did not appear in a WebSearch result in THIS run (or in the owner's message). Never type, guess or recall a URL and fetch it. Do this instead:
+1. Run WebSearch with `allowed_domains` set to the vendor's official domain (e.g. ["blog.cloudflare.com"], ["blog.google","ai.google.dev"], ["openai.com"], ["anthropic.com","docs.anthropic.com"], ["code.visualstudio.com"]) and a query that uses the page's real title words. Use `mode: "extended"` if the first search is thin.
+2. Only then WebFetch the exact URL returned by that search. Fetch the vendor's pricing/docs/announcement page, not an aggregator.
+3. If a fetch is still refused, retry ONCE via a second WebSearch on that domain (a different query), then move on.
+4. Do NOT end a run with only a note in docs. If the first topic's official pages cannot be fetched after step 3, switch to the next candidate topic (try up to 4 different topics, including evergreen ones from docs/TOPICS.md such as how-tos and explainers) until one has 2+ fetched official sources. A docs-only commit counts as a failed run.
+5. Prefer topics with official pages in the search results; if a topic has only one official source plus secondary reports, it may still be published as an explainer that clearly labels unconfirmed points as "reported", provided the independent reviewer approves; otherwise queue it.
+
 ## Cover and chart images (every post needs both)
 - **Chart:** one SVG chart from the cited data, `public/images/site1/<slug>-chart.svg` (1200x630, labels inside the canvas) plus PNG `rsvg-convert -o <slug>-chart.png <slug>-chart.svg`; open the PNG and check nothing is clipped. Vary the chart type from the previous post (docs/STYLE.md). Body line: `![alt of 8+ chars](/images/site1/<slug>-chart.svg) *Chart created by Stackbrook from the cited pages.*`
 - **Cover (main image, required):** `heroImage: /images/site1/<slug>-cover.jpg`, `imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'` (if the AI background was NOT used, use `'Cover image created by Stackbrook (generated background pattern, title and layout added in code)'`).
