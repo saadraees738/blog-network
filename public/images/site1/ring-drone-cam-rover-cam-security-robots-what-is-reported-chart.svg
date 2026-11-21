@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Horizontal bars comparing the reported prices of Ring Drone Cam at 249.99 dollars and Rover Cam at 999.99 dollars, with reported ship dates">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="80" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Ring's two new patrol robots: reported price and ship date</text>
+<text x="60" y="118" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">As reported by The Neuron newsletter, 11 Nov 2026 - not checked against Ring's own page</text>
+<g font-family="Arial, sans-serif" fill="#1d2a2a">
+<text x="60" y="230" font-size="26" font-weight="700">Drone Cam (indoor)</text>
+<rect x="60" y="250" width="233" height="70" rx="8" fill="#1f7a7a"/>
+<text x="310" y="296" font-size="26" font-weight="700">$249.99</text>
+<text x="60" y="350" font-size="20" fill="#4a5656">Ships 27 Jan 2027, pending FCC authorization</text>
+<text x="60" y="440" font-size="26" font-weight="700">Rover Cam (business)</text>
+<rect x="60" y="460" width="930" height="70" rx="8" fill="#d9822b"/>
+<text x="1005" y="506" font-size="26" font-weight="700">$999.99</text>
+<text x="60" y="560" font-size="20" fill="#4a5656">Preorder now, ships 16 Dec 2026</text>
+<text x="60" y="605" font-size="16" fill="#4a5656">Bar length is proportional to price.</text>
+</g></svg>

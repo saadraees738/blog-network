@@ -11,6 +11,7 @@ ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI 
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
      'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191)}
 POSTS={
+'ring-drone-cam-rover-cam-security-robots-what-is-reported':('Robots','Ring patrol robots, explained'),
 'openai-jalapeno-inference-chip-explained-what-is-claimed':('AI Hardware','OpenAI Jalapeno chip, explained'),
 'canva-ai-off-switch-what-it-turns-off':('AI Productivity','Canva AI off switch, explained'),
 'paris-ai-safety-declaration-explained-what-it-commits-to':('AI Safety','Paris AI Safety Call, explained'),
