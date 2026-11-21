@@ -56,3 +56,4 @@ P25. todo | AI Models | Cloudflare Clairic / Clairic-flash open weights (18 Nov 
 P26. todo | AI Models | Gemini 4 Neon (18 Nov 2026; lead: blog.google Gemini 4 Neon announcement) - fetch blocked on 2026-11-21, nothing drafted
 P27. todo | AI Coding | VS Code 1.147 scheduled agent requests, Browser Use preview (lead: code.visualstudio.com/updates/v1_147) - fetch blocked on 2026-11-21, nothing drafted
 P28. todo | AI Policy | California AI safety framework next steps (18 Nov 2026; lead: gov.ca.gov 2026/11/18 release) - not fetched
+# Run 2026-11-21 14:15 UTC: official pages (blog.cloudflare.com/open-clairic, code.visualstudio.com/updates/v1_147) again returned PROVENANCE_REQUIRED (fetch permission unanswered); no post drafted. P25 and P27 remain todo.
