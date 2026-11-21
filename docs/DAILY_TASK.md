@@ -54,5 +54,10 @@ Copy the keys of a recent post (e.g. `content/site1/posts/gemini-4-hydrogen-expl
 ## Daily and weekly limits
 Target 8 per day (about 56 per week); this is the owner's explicit setting (2026-11-18). Count today's posts first (by `publishDate` = today). If 8 or more already exist today (for example the owner added some by hand), stop without publishing. A run that cannot produce a fully verified post queues instead.
 
+
+## Catch-up rule (the owner wants 8 published posts every day, no gaps)
+Runs are at 07:13, 09:13, 11:13, 13:13, 15:13, 17:13, 19:13 and 21:13 Asia/Qatar. At the start, count posts with `status: published` and `publishDate` = today (Qatar date). Let N = the number of scheduled run times that have already passed today, including this one (07:13 = 1 ... 21:13 = 8). If published_today < N - 1, you are behind: publish TWO posts in this run (one after the other, each fully reviewed), never exceeding 8 for the day. A queued draft does not count as published. Never lower quality to catch up: a post still needs 2+ fetched official sources and an independent review.
+Never stop at the first obstacle: if a source is blocked, a topic is thin or the reviewer says REVISE, fix it or switch topic and continue. End the run only with a pushed published post (or, after 4 failed topics, one queued draft plus a clear reason in the summary).
+
 ## Safety brake
 `docs/PAUSED` (created by the owner after a Google manual action, AdSense policy warning, 50%+ traffic collapse or copyright complaint) turns every run into queue-only.
