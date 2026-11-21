@@ -51,3 +51,4 @@ P20. queued | AI Hardware | Googlebook explained (2026-11-20; one official sourc
 P21. published | AI Coding | Microsoft MAI Code 2 explained (2026-11-20)
 P22. published | AI Safety | Paris Call for AI Safety and Security explained (2026-11-20)
 P23. queued | AI Productivity | Canva AI off switch explained (2026-11-21; one official source only, fetches blocked)
+P24. published | AI Hardware | OpenAI Jalapeno inference chip explained (2026-11-21)

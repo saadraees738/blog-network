@@ -1,0 +1,78 @@
+---
+title: 'OpenAI Jalapeno chip explained: what OpenAI claims about its first custom inference chip'
+description: 'OpenAI says its first custom inference chip, Jalapeno, beats Nvidia systems on speed and power use. What the claims are, what is not shown, and why it matters.'
+status: published
+queueReason: ''
+publishDate: 2026-11-21
+lastVerified: 2026-11-21
+category: AI Hardware
+author: saad-r
+heroImage: /images/site1/openai-jalapeno-inference-chip-explained-what-is-claimed-cover.jpg
+heroAlt: 'AI-generated illustration of a dark square processor chip on a circuit board with glowing red traces'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Jalapeno is OpenAI's first custom chip for running AI models (inference), built with Broadcom and announced on 24 June 2026. In August OpenAI published first results saying it gave 1.5 to 1.9 times more work per watt and 1.7 to 3.6 times lower latency than Nvidia comparison systems on three open models. These are OpenAI's own figures. It has not announced pricing, cloud access or customer availability, and says deployment inside its own data centers should begin by the end of 2026.
+sources:
+  - title: OpenAI and Broadcom unveil LLM-optimized inference chip (OpenAI, 24 June 2026)
+    url: https://openai.com/index/openai-broadcom-jalapeno-inference-chip/
+    accessed: 2026-11-21
+  - title: Jalapeño's first results show industry-leading speed and efficiency in AI inference (OpenAI, 25 August 2026)
+    url: https://openai.com/index/jalapeno-first-results/
+    accessed: 2026-11-21
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited OpenAI pages (REVISE, 10 findings applied, including a corrected claim about the 2.1 to 4.1 times range; no second round). Claims about Nvidia deployment, frontier-model advantage and design approach were re-checked against the August page text. The reviewer worked from summarised page text, so exact wording could not be confirmed character for character. Whether OpenAI has published anything newer than 25 August was not checked beyond the two cited pages, and no independent benchmark of the chip was found or used.'
+---
+
+OpenAI has been building its own computer chip, and it has now published numbers for it. The chip is called Jalapeño (written Jalapeno in this post's chart and some text), and it is designed for one job: running trained AI models quickly and cheaply, which the industry calls inference. This post explains what OpenAI says about it, what the numbers mean in plain terms, and what the company has not said. Everything below comes from two OpenAI pages, and the performance figures are OpenAI's own.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, so the author is not a neutral party. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Jalapeno is
+
+On 24 June 2026 OpenAI and Broadcom announced Jalapeno, which OpenAI describes as its first custom inference chip. OpenAI calls it a "blank-slate design" for modern large language model inference rather than a general-purpose accelerator. Broadcom handled silicon implementation and networking, and Celestica is named for the board, rack system integration and production. At the time, OpenAI said engineering samples were already running machine-learning workloads in the lab at production target frequency and power.
+
+Inference is what happens every time you send a message to a chatbot: the model reads your prompt and produces a reply. Training a model happens once, at huge cost, but inference happens constantly, so the speed and electricity cost of each answer matter a great deal to any company serving millions of users. That is the problem a chip like this targets.
+
+## The numbers OpenAI published
+
+In June OpenAI said it was still measuring final performance. On 25 August it published "first results". It tested three public models, GPT-OSS 120B, DeepSeek R1 and Kimi K2.5 1T, using InferenceX, a public benchmark from SemiAnalysis. Across them, OpenAI reports:
+
+- 1.5 to 1.9 times more AI work per watt at peak throughput.
+- 1.7 to 3.6 times lower end-to-end latency, meaning less waiting for a full response.
+- 2.1 to 4.1 times higher performance on highly interactive workloads.
+
+The comparison systems are named only in the appendix: Nvidia's GB200 for GPT-OSS 120B and GB300 for the other two. OpenAI also gives power figures: the chip is rated at 700 watts, and it says measured sustained power was at or below 550 watts on the tested workloads.
+
+![Grouped bar chart of the OpenAI-reported work-per-watt and latency gains for Jalapeno on three models](/images/site1/openai-jalapeno-inference-chip-explained-what-is-claimed-chart.svg)
+*Chart created by Stackbrook from the cited pages. The ratios are from OpenAI's appendix and are OpenAI's own claims.*
+
+The chart shows the appendix ratios for each model. Gains are largest on latency for the two bigger models. One detail worth noting: the top of OpenAI's 2.1 to 4.1 times range for interactive workloads matches the DeepSeek R1 minimum time-between-tokens row in the appendix (about 4.1 times; the other two models show about 2.7 and 3.8 times, which the chart leaves out). No appendix row shows 2.1 times, and the page does not explain how the range was derived, so treat it with extra caution.
+
+A method note: the per-watt comparison is normalized using rated power, not measured power. The appendix lists Jalapeno at 700 watts against 1,200 watts for the GB200 and 1,400 watts for the GB300, and the tests use nominal 8k-input, 1k-output workloads, with a lower-precision number format (MXFP4) for DeepSeek R1 and Kimi. A single chip is also being compared with Nvidia systems of a different scale.
+
+## How OpenAI says it was built
+
+OpenAI says the chip, memory, network, software and rack-scale system were designed together, and that a large connected network keeps a workload inside one system. It also says it used its own AI models in the work, going from initial design to tape-out in nine months, which it calls what it believes is the fastest development cycle ever for a high-performance advanced chip. On the software side, it says a team using its Codex tool with a GPT model brought three open-weight models to high performance within two months, and that AI-written code for selected pieces of two models ran 1.5 to 1.8 times faster than human-expert versions. OpenAI says those last figures apply to selected blocks, not whole models.
+
+## What is not claimed or not shown
+
+Several limits are worth keeping in mind.
+
+- **No outside verification.** The benchmark is public, but that does not mean OpenAI's runs were independently reproduced: the results are OpenAI's own, and the page cites no independent test.
+- **No availability.** Neither page states a price, a cloud offering or any way for customers or developers to buy or rent Jalapeno.
+- **Deployment is a plan.** OpenAI says it plans to begin deploying the chip in its own compute infrastructure by the end of the year, and that production qualification is continuing. As of 21 November 2026 that is still a plan on these pages. It also says it will continue to widely deploy accelerators from Nvidia and other partners for training and inference.
+- **Frontier models are not quantified.** OpenAI says internal tests on its own frontier models showed an even wider advantage, but gives no numbers.
+- **Later generations are not shown.** The company says a second generation is in development and a third is taking shape, with no specifications.
+
+## What it means for everyday users and small teams
+
+For someone who just uses AI tools, nothing changes today. The practical stake is cost and speed: if a vendor can serve answers with less electricity and less waiting, that could eventually show up as faster responses or more generous usage limits, but neither page makes any such promise. Pricing is set by the vendor, and these pages do not touch it. If you rely on a tool for time-sensitive work, the useful thing to watch is whether OpenAI publishes the detailed technical report it promised in June and whether any independent group reproduces the benchmark results.
+
+This is general information, not financial or investment advice, and it is not a recommendation about any company.
+
+## The takeaway
+
+Jalapeno is a real chip that OpenAI built with Broadcom, and the company reports efficiency and latency gains against Nvidia's GB200 and GB300 systems on three open models. Those results are self-reported, the chip is not available to the public, and deployment inside OpenAI is planned for the end of 2026. Watch for independent benchmark runs, the promised technical report and any word on whether the chip will ever be offered outside OpenAI's own infrastructure.

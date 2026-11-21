@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Grouped bar chart of OpenAI-reported Jalapeno ratios on three models: work per watt and lower end-to-end latency, as multiples of the comparison system">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">Jalapeno: OpenAI-reported gains vs comparison systems</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Ratios from OpenAI's appendix (25 Aug 2026), InferenceX benchmark; OpenAI's own claims, not independently verified</text>
+<text x="60" y="190" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">GPT-OSS 120B (vs GB200)</text>
+<rect x="330" y="150" width="285.0" height="40" rx="4" fill="#d9822b"/><text x="625.0" y="178" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">1.9x work per watt</text>
+<rect x="330" y="198" width="255.0" height="40" rx="4" fill="#1f7a5a"/><text x="595.0" y="226" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">1.7x lower latency</text>
+<text x="60" y="320" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">DeepSeek R1 (vs GB300)</text>
+<rect x="330" y="280" width="255.0" height="40" rx="4" fill="#d9822b"/><text x="595.0" y="308" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">1.7x work per watt</text>
+<rect x="330" y="328" width="540.0" height="40" rx="4" fill="#1f7a5a"/><text x="880.0" y="356" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">3.6x lower latency</text>
+<text x="60" y="450" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">Kimi K2.5 1T (vs GB300)</text>
+<rect x="330" y="410" width="225.0" height="40" rx="4" fill="#d9822b"/><text x="565.0" y="438" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">1.5x work per watt</text>
+<rect x="330" y="458" width="510.0" height="40" rx="4" fill="#1f7a5a"/><text x="850.0" y="486" font-family="Arial, sans-serif" font-size="20" fill="#1d2a2a">3.4x lower latency</text>
+<line x1="330" y1="140" x2="330" y2="530" stroke="#1d2a2a" stroke-width="2"/>
+<text x="60" y="580" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">Bar length = multiple of the comparison system (1x = parity). Peak mixed throughput per kW, and end-to-end latency, as tabulated by OpenAI.</text>
+</svg>
