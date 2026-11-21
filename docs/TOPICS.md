@@ -52,3 +52,7 @@ P21. published | AI Coding | Microsoft MAI Code 2 explained (2026-11-20)
 P22. published | AI Safety | Paris Call for AI Safety and Security explained (2026-11-20)
 P23. queued | AI Productivity | Canva AI off switch explained (2026-11-21; one official source only, fetches blocked)
 P24. published | AI Hardware | OpenAI Jalapeno inference chip explained (2026-11-21)
+P25. todo | AI Models | Cloudflare Clairic / Clairic-flash open weights (18 Nov 2026; lead: https://blog.cloudflare.com/open-clairic/; launch pricing reported to end 1 Dec) - run of 2026-11-21 could not fetch the official page (permission block), nothing drafted
+P26. todo | AI Models | Gemini 4 Neon (18 Nov 2026; lead: blog.google Gemini 4 Neon announcement) - fetch blocked on 2026-11-21, nothing drafted
+P27. todo | AI Coding | VS Code 1.147 scheduled agent requests, Browser Use preview (lead: code.visualstudio.com/updates/v1_147) - fetch blocked on 2026-11-21, nothing drafted
+P28. todo | AI Policy | California AI safety framework next steps (18 Nov 2026; lead: gov.ca.gov 2026/11/18 release) - not fetched
