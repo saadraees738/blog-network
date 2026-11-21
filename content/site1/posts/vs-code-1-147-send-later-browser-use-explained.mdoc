@@ -1,0 +1,81 @@
+---
+title: 'VS Code 1.147 explained: Send Later for agent requests and the new Browser Use preview'
+description: 'VS Code 1.147 adds scheduled agent requests (Send Later) and a Browser Use preview. What each does, what you need to switch them on, and the limits Microsoft lists.'
+status: published
+queueReason: ''
+publishDate: 2026-11-21
+lastVerified: 2026-11-21
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/vs-code-1-147-send-later-browser-use-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing clock dial between two floating panels on a dark background with warm orange light'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: VS Code 1.147, released on 18 November 2026, adds two agent features that are not yet stable. Send Later (experimental) lets you schedule a request to an agent for a chosen time, but only in the Agents window and only for sessions on your own computer, which must be awake. Browser Use (preview) lets an agent control your default Chrome or Edge browser through an extension, so it can reuse sites you are already signed in to. Each needs its own setting turned on, and Microsoft says you should complete sign-in and sensitive steps yourself.
+sources:
+  - title: Visual Studio Code 1.147 release notes (Microsoft, 18 November 2026)
+    url: https://code.visualstudio.com/updates/v1_147
+    accessed: 2026-11-21
+  - title: Create and manage agent automations (VS Code documentation)
+    url: https://code.visualstudio.com/docs/agents/run/automations
+    accessed: 2026-11-21
+  - title: Use browser tools with agents (VS Code documentation)
+    url: https://code.visualstudio.com/docs/agents/run/browser-tools
+    accessed: 2026-11-21
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the three cited Microsoft pages (REVISE, 12 findings, no high severity; all applied: overstated setting wording, unsupported glosses, disclosure sentence and clarifications). No second round. The reviewer did not inspect the chart or cover image; the chart was updated by the drafter to match the corrected wording. Whether the separate Drafts setting is needed for Send Later could not be verified from the pages.'
+---
+
+Visual Studio Code, the free code editor from Microsoft, now has built-in AI agents that can work on tasks for you. Version 1.147 adds two new ways to use them: you can schedule a request to be sent to an agent later, and an agent can drive your everyday web browser. This post explains what each feature does, what you have to switch on, and what Microsoft says it cannot do yet. All of it comes from the release notes and two VS Code documentation pages.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Anthropic, the maker of the drafting assistant, competes with some Microsoft products. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What is new in 1.147
+
+The release notes date the stable release to 18 November 2026. Their headline items are Send Later, a Browser integration preview, Draft requests, customised assisted permissions, visual chat responses and model routers. Several of these, including Send Later and Browser Use, are labelled experimental or preview and need a setting turned on. This post covers the first two, because they change how you can hand work to an agent.
+
+## Send Later: schedule a request for an agent
+
+Send Later is labelled experimental. You turn it on with the setting `sessions.sendLater.enabled`, and it works only in the Agents window, a view in VS Code for agent sessions.
+
+To use it, open the Send Later menu on the chat send button. You can pick a preset time or choose a date and time and then select Schedule. You can also ask in plain language, such as asking the agent to check a build in ten minutes. According to the release notes, the agent then sets up a one-time, text-only request in the current chat and confirms it.
+
+Where the request waits depends on the session. A scheduled request for a new session sits in a Drafts section of the sessions list, and one in an existing chat sits in that chat's Scheduled area. The pages do not say whether the separate Drafts setting (`sessions.drafts.enabled`) is needed for this. From the hover options you can edit it, send it straight away, reschedule it or cancel it. If the agent is busy when the time arrives, the request waits its turn instead of interrupting the current work.
+
+The limits matter here. Microsoft says scheduled requests work only for sessions on "This Computer", they also depend on automations being enabled (`chat.automations.enabled`, which the automations page says is on by default), and the local agent host has to be running at the scheduled time. Scheduling does not wake a sleeping computer. If a request is missed, it is processed once the host is available again. So this is a convenience for a machine you leave running, not a cloud timer.
+
+## Automations: the related feature with a cloud option
+
+Send Later is a one-off. For repeating work, the documentation describes Automations, which run an agent task from a saved prompt on demand, on a recurring schedule, or, for cloud runs only, in response to repository events. Local automations need your workspace and tools. Cloud automations run on GitHub and continue while your computer is off, and the documentation says this cloud mode is in preview and may change before general availability.
+
+Local schedules can be manual, hourly, daily or weekly, and the machine must stay awake for them to run. Cloud schedules support manual, daily and weekly, are stored in UTC, and use times with minutes of 00, 15, 30 or 45. Cloud automations also need a GitHub.com account with write access to an eligible private repository, and the page says public repositories and non-Git folders are not supported. Your Copilot plan and organisation must allow automations too.
+
+The security note is worth reading before you set anything up. Microsoft says cloud automations run with the tools you allow, tells you not to put secrets in prompts, and warns that scheduled runs, event runs and follow-ups consume service usage, so you should check GitHub billing and your organisation's policies. The pages do not say what any of this costs.
+
+## Browser Use: an agent in your own browser
+
+The second feature is Browser Use, shown as a preview. It lets an agent control your default browser, Google Chrome or Microsoft Edge, and the release notes say it lets agents work in your default browser and reuse sessions where you are already signed in.
+
+It has more requirements than Send Later. You need the GitHub Copilot browser extension, a Copilot session running on your own machine (the notes call it a Copilot harness session), and Node.js version 22 or later on your path. The setup steps are to enable `chat.agentHost.browserUse.enabled` and restart VS Code, run `/plugin enable browser-use` in a local Copilot session, ask for a browser task, and approve site access when prompted. If something fails, the notes point to a `/browser-use:doctor` command. Microsoft also says you complete sign-in and sensitive steps yourself rather than hand them to the agent.
+
+![Table comparing what Send Later and Browser Use need to run in VS Code 1.147](/images/site1/vs-code-1-147-send-later-browser-use-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## The built-in browser tools are a different thing
+
+Do not confuse Browser Use with the browser tools VS Code already ships. According to the documentation, those tools are enabled by default through `workbench.browser.enableChatTools` and let an agent open a page, read it, take screenshots, click and type, and run Playwright code inside VS Code's integrated browser. A page the agent opens itself uses a private, in-memory session. An agent can access a page you opened in the integrated browser only if you select Share with Agent, and you can revoke that by selecting it again. Administrators can switch the tools off with a policy and restrict domains with network filtering. The browser tools page does not explain how it relates to the new Browser Use preview, so treat them as separate features.
+
+## What to check before you rely on any of this
+
+- **Stability.** Send Later is experimental and Browser Use is a preview, so behaviour and settings may change.
+- **Your machine must stay on.** Local scheduling does not wake a sleeping computer.
+- **Access to your accounts.** Browser Use can reuse logged-in sessions, so approve site access carefully and keep sensitive steps in your own hands.
+- **Costs and plans.** The pages mention that runs use service usage and depend on your Copilot plan, but state no prices.
+- **Other changes.** The release notes also say the Local harness (an agent runtime that the notes do not link to these two features) will be removed in February 2027, and that macOS Ventura and Sonoma and 32-bit ARM Linux support are deprecated.
+
+## The takeaway
+
+VS Code 1.147 makes agents easier to delegate to, with scheduled requests and the option to use your signed-in browser. Both come with clear conditions: your computer has to be awake for Send Later, and Browser Use needs an extension, a recent Node.js and your supervision for anything sensitive. If you are curious, try them on a non-critical project first and read the Microsoft pages linked below for the current settings, since experimental features change quickly.
