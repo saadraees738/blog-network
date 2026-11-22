@@ -63,3 +63,4 @@ P30. published | Robots | LG robot Data Factory with Nvidia explained (2026-11-2
 P31. published | AI Meetings | Claude Meetings beta explained (2026-11-22; claude.com announcement + Help Center release notes of 12 Nov 2026)
 # Run 2026-11-22 10:13 UTC: gov.ca.gov pages loop on a 302 redirect (https<->http), P28 still todo.
 P32. published | AI Assistants | Gemini computer use on Mac explained (2026-11-22; blog.google 19 Nov + Gemini Apps Help)
+P33. published | AI Assistants | Claude Fable 5.2 explained (2026-11-22; anthropic.com announcement 9 Nov + Fable and Mythos model pages)

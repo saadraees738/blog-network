@@ -1,0 +1,84 @@
+---
+title: 'Claude Fable 5.2 explained: what Anthropic says it costs, who gets it and how it scores'
+description: 'Anthropic says Claude Fable 5.2 is its most capable model for technical work, now cheaper than Fable 5.1. Access, API pricing and vendor-reported benchmark scores.'
+status: published
+queueReason: ''
+publishDate: 2026-11-22
+lastVerified: 2026-11-22
+category: AI Assistants
+author: saad-r
+heroImage: /images/site1/claude-fable-5-2-explained-what-anthropic-says-cover.jpg
+heroAlt: 'AI-generated illustration of an open book releasing glowing blue and orange threads of light against a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Anthropic announced Claude Fable 5.2 on 9 November 2026 and calls it its most capable model for technical work. It is available to Pro, Max, Ultra, Team and Enterprise users, and in the API as claude-fable-5-2 at $8 per million input tokens and $40 per million output tokens, down from $10 and $50 for Fable 5.1. A fast mode costs $16 and $80. A restricted twin called Mythos 5.2 is limited to vetted cyber and life-science organizations. The benchmark scores are Anthropic's own and have not been independently checked here.
+sources:
+  - title: 'Introducing Claude Fable 5.2 and Claude Mythos 5.2 (Anthropic, 9 November 2026)'
+    url: https://www.anthropic.com/claude-fable-and-mythos-5-2
+    accessed: 2026-11-22
+  - title: 'Claude Fable 5.2 (Anthropic model page)'
+    url: https://www.anthropic.com/claude/fable
+    accessed: 2026-11-22
+  - title: 'Claude Mythos 5.2 (Anthropic model page)'
+    url: https://www.anthropic.com/claude/mythos
+    accessed: 2026-11-22
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the three cited Anthropic pages (the reviewer read the two model pages in full and about 40,000 of 52,000 characters of the announcement verbatim, the rest as a summary). Findings applied (6): attributed the 30% speed figure to testers with up to, added the zero-data-retention caveat, noted that Mythos prices apply to vetted access only, added the safeguard routing and blocking caveat, labelled effort settings and the AA-Briefcase rubric vs Elo difference, and attributed the risk and dual-use statements to Anthropic. Usage-limit details for Pro and Team plans, consumer plan prices, context window and the system card could not be verified and are not claimed. No independent testing was checked.'
+---
+
+Anthropic's newest general-purpose model family arrived on 9 November 2026 with a lower price than the one before it. This post reads the announcement and the two model pages and sets out what Anthropic states about access, pricing, benchmark results and safeguards, and what the pages do not say.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. This post is about an Anthropic product, so treat the author as an interested party. Stackbrook did not test Claude Fable 5.2 or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What was announced
+
+Anthropic's Fable page describes Claude Fable 5.2 as its most capable model for technical work and lists it as the generally available model of the pair. Alongside it sits Claude Mythos 5.2, which the announcement says is the same underlying model. The difference is safeguards: Mythos is the version without certain cyber and biology protections, and Anthropic describes it as its most capable model class for cybersecurity and biology research.
+
+The announcement is dated 9 November 2026. The model pages list earlier releases too, with Fable 5.1 on 1 September 2026 and Fable 5 on 9 June 2026. The announcement also says testers found the new models generate outputs up to 30% faster than Fable 5.1; that is a reported figure, not a guarantee.
+
+## Who can use it
+
+For everyday users, Anthropic's Fable page says the model is available to Pro, Max, Ultra, Team and Enterprise users. For developers it is offered on the Claude Platform, through marketplaces, and on Amazon Web Services, Google Cloud and Microsoft Foundry. The API identifier given on the page is claude-fable-5-2.
+
+Mythos 5.2 is a different story. Anthropic says it is available to vetted cyberdefenders and life scientists through trusted access programs, and the page points organizations to a Cyber Verification Program and a Life Sciences Verification Program. Anthropic also says Claude Security, a Claude Enterprise product, runs on Mythos 5.2. We did not find an API identifier for Mythos on the pages we read.
+
+One condition applies to both: the announcement says using Fable models requires 30-day data retention for safety monitoring by default. Anthropic says an Enterprise Frontier Safeguards option is compatible with zero data retention, and that until it is available eligible customers can keep using Fable 5.2 with zero data retention. If your business has strict data-handling rules, check these terms against your own policies before switching.
+
+## Pricing
+
+Anthropic lists API prices per million tokens. These figures are as stated on 9 November and checked on 22 November 2026.
+
+| Option | Input | Output |
+|---|---|---|
+| Fable 5.2 | $8 | $40 |
+| Fable 5.1 (previous price, per Anthropic) | $10 | $50 |
+| Fable 5.2 fast mode | $16 | $80 |
+| Mythos 5.2 (starts at; vetted access only) | $8 | $40 |
+
+Cache reads for Fable 5.2 are listed at $0.20 per million tokens. Anthropic says fast mode is up to 2.5 times faster and is available on the Claude Platform, Claude Models on Google Cloud, Microsoft Foundry and Claude Code. Inference restricted to the US is priced at 1.1 times the standard rate. Mythos fast mode is $16 and $80, through the trusted access programs only.
+
+For a small business that buys usage through an app plan rather than the API, none of these token prices apply directly. We did not find the monthly price of each consumer plan on the pages we read, so check Anthropic's plan page for current subscription costs.
+
+## What the benchmarks say
+
+Anthropic's announcement includes a table comparing Fable 5.2 with Fable 5.1, Opus 5.5, GPT-6 Astra and Gemini 4 Carbon. The numbers below are Anthropic's own, are not independently verified, and, per the Fable page, show results with safeguards on unless noted. Effort settings differ by test.
+
+![Grouped horizontal bars comparing Anthropic-reported benchmark scores for Claude Fable 5.2, Fable 5.1 and Opus 5.5 on four tests](/images/site1/claude-fable-5-2-explained-what-anthropic-says-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+On FrontierCode 2.0, an agentic coding test, Fable 5.2 scores 49.1% (at Xhigh effort) against 32.4% for Fable 5.1 and 45.5% for Opus 5.5. On FrontierSWE v2 it scores 69.9%, against 56.3% and 62.3%. On Humanity's Last Exam with tools the figures are 74.2%, 65.6% and 67.7%, and on the Remote Labor Index, which Anthropic lists at high effort, they are 41.3%, 17.9% and 21.3%.
+
+The table is not a clean sweep. On AutomationBench, Anthropic lists 51.4% for Fable 5.2 and 53.9% for Gemini 4 Carbon. On the AA-Briefcase v1.1 Elo rating the page lists 1785 for Fable 5.2 and 1800 for Opus 5.5, although on that test's rubric score the same table lists 66.1% for Fable 5.2 and 61.2% for Opus 5.5. Anthropic also notes that at High effort on FrontierCode, Fable 5.2 scores 45.3% against 45.5% for Opus 5.5, which it describes as roughly half the cost per task.
+
+Test names, effort settings and scoring are chosen by the vendor, and several of these benchmarks are not widely known, so treat the table as a claim to test on your own tasks rather than a ranking.
+
+## Safeguards and restrictions
+
+Anthropic says Fable 5.2 has cyber and biology safeguards. Its Fable page says many queries in those domains are automatically routed to less capable models when flagged, and the announcement says the safeguards will block most cybersecurity-related tasks. So the headline scores come with those limits in place. On the Mythos page Anthropic says that model could be used both for good and for harm, and the restricted access programs are its answer. The announcement also says Anthropic assesses the risk of these models behaving unsafely in high-stakes situations as low. Both are the company's own statements, not independent findings.
+
+## What is still unknown
+
+We did not find a stated context window on the three pages, or the monthly prices of the consumer plans. The announcement also appears to describe how much Fable use Pro and Team plans include, but we could not confirm those usage-limit details in full, so they are left out here. We did not review the system card, so details about evaluations and limitations in it are not covered here. No independent testing was reviewed, so real-world quality, speed and cost on your own work are unconfirmed. This is general information, not financial or legal advice, and the vendor describes its own product here, so weigh the claims accordingly.

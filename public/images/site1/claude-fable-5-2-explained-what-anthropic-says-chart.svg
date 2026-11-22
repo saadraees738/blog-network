@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Grouped horizontal bars comparing Anthropic-reported benchmark scores for Claude Fable 5.2, Fable 5.1 and Opus 5.5 on four tests">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="60" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">Fable 5.2 vs Fable 5.1 vs Opus 5.5: vendor-reported scores (%)</text>
+<text x="60" y="92" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Source: Anthropic announcement, 9 Nov 2026. Scores are Anthropic's own, not independently verified.</text>
+<text x="324" y="182" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">FrontierCode 2.0</text>
+<rect x="340" y="130" width="383" height="24" rx="4" fill="#1f7a5a"/>
+<text x="731" y="148" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">49.1</text>
+<rect x="340" y="160" width="253" height="24" rx="4" fill="#9aa8a4"/>
+<text x="601" y="178" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">32.4</text>
+<rect x="340" y="190" width="355" height="24" rx="4" fill="#d98c3f"/>
+<text x="703" y="208" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">45.5</text>
+<text x="324" y="297" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">FrontierSWE v2</text>
+<rect x="340" y="245" width="545" height="24" rx="4" fill="#1f7a5a"/>
+<text x="893" y="263" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">69.9</text>
+<rect x="340" y="275" width="439" height="24" rx="4" fill="#9aa8a4"/>
+<text x="787" y="293" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">56.3</text>
+<rect x="340" y="305" width="486" height="24" rx="4" fill="#d98c3f"/>
+<text x="834" y="323" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">62.3</text>
+<text x="324" y="412" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">Humanity's Last Exam (tools)</text>
+<rect x="340" y="360" width="579" height="24" rx="4" fill="#1f7a5a"/>
+<text x="927" y="378" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">74.2</text>
+<rect x="340" y="390" width="512" height="24" rx="4" fill="#9aa8a4"/>
+<text x="860" y="408" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">65.6</text>
+<rect x="340" y="420" width="528" height="24" rx="4" fill="#d98c3f"/>
+<text x="876" y="438" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">67.7</text>
+<text x="324" y="527" text-anchor="end" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">Remote Labor Index</text>
+<rect x="340" y="475" width="322" height="24" rx="4" fill="#1f7a5a"/>
+<text x="670" y="493" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">41.3</text>
+<rect x="340" y="505" width="140" height="24" rx="4" fill="#9aa8a4"/>
+<text x="488" y="523" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">17.9</text>
+<rect x="340" y="535" width="166" height="24" rx="4" fill="#d98c3f"/>
+<text x="514" y="553" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">21.3</text>
+<rect x="60" y="590" width="20" height="20" rx="3" fill="#1f7a5a"/><text x="88" y="607" font-family="Arial, sans-serif" font-size="18" fill="#1d2a2a">Fable 5.2</text>
+<rect x="250" y="590" width="20" height="20" rx="3" fill="#9aa8a4"/><text x="278" y="607" font-family="Arial, sans-serif" font-size="18" fill="#1d2a2a">Fable 5.1</text>
+<rect x="440" y="590" width="20" height="20" rx="3" fill="#d98c3f"/><text x="468" y="607" font-family="Arial, sans-serif" font-size="18" fill="#1d2a2a">Opus 5.5</text>
+</svg>
