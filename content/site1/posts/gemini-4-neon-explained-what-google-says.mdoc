@@ -1,0 +1,74 @@
+---
+title: 'Gemini 4 Neon explained: what Google says it does, what it costs and what is still open'
+description: 'Gemini 4 Neon is Google''s mid-size Gemini 4 model for long-running agent work. See who can use it, the API price, key limits and which claims are Google''s own.'
+status: published
+queueReason: ''
+publishDate: 2026-11-22
+lastVerified: 2026-11-22
+category: AI Models
+author: saad-r
+heroImage: /images/site1/gemini-4-neon-explained-what-google-says-cover.jpg
+heroAlt: 'Stackbrook cover image titled ''Gemini 4 Neon, explained'', with an AI-generated illustration of a tall glowing blue-violet crystal resting on a larger faceted crystal beside a small cyan one'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Gemini 4 Neon is a Gemini 4 model Google announced on 18 November 2026 for long-running agent and coding work. Google lists the API price at $3 per million input tokens, $0.15 per million cached input tokens and $15 per million output tokens, with a 1 million token context window. It is offered in the Gemini app to Google AI Pro and Ultra subscribers and in the paid developer tools, so there is no free tier mentioned. Nearly all benchmark results are Google's own claims, not independent tests.
+sources:
+  - title: Introducing Gemini 4 Neon (Google blog)
+    url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/
+    accessed: 2026-11-22
+  - title: Gemini 4 Neon model card (Google DeepMind)
+    url: https://deepmind.google/models/model-cards/gemini-4-neon/
+    accessed: 2026-11-22
+  - title: Gemini 4 Neon (Google Cloud documentation)
+    url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-neon
+    accessed: 2026-11-22
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the three cited Google pages (REVISE, 9 findings applied: added Chartography exception, softened claims, removed unsupported statements and advice-like wording). Benchmark figures are vendor claims and are labelled as such. The Google Cloud page was read through a summary after navigation text, so its details are labelled as such; the model card PDF and the Safety and Security Report were not reviewed.'
+---
+
+Google announced Gemini 4 Neon on 18 November 2026 as the middle model in its Gemini 4 family. If you build with the Gemini API, use the Gemini app on a paid plan, or just want to know whether this changes which model to pick, the useful questions are what it is for, who can use it, what it costs and which parts of the story are Google's own claims. This guide answers them from three official Google pages.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Google pages for figures, dates and wording. This is not a full human review. Google is a competitor of Anthropic, and Google's comparison table includes an Anthropic model, so read the comparisons with that in mind. Stackbrook did not test Gemini 4 Neon and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Neon is
+
+Google's announcement presents Neon as a model that pairs frontier-level intelligence with fast task completion across software engineering, knowledge work and science. It places Neon between two siblings: Carbon, which it says handles the hardest long-horizon projects, and Hydrogen, which handles fast everyday execution, with Neon balancing depth and efficiency. The DeepMind model card adds that Neon is adapted from Gemini 4 Carbon.
+
+Google says it is built for long agent sessions: tool-heavy tasks, fewer redundant file reads, shared progress updates and handling of long-session context compaction. It can work on its own or act as an orchestrator that directs several Hydrogen sub-agents inside Google Antigravity. The model card lists fits such as multi-step coding and debugging, multimodal knowledge work, and writing and research. It accepts text, images, audio and video as input.
+
+## Who can use it and where
+
+Google says Neon began rolling out on 18 November 2026 in these places:
+
+- **Gemini app:** in the model dropdown for Google AI Pro and Ultra subscribers.
+- **Developers:** the Gemini API and Google AI Studio on the paid tier, plus Android Studio, and Google Antigravity for paid AI Pro and Ultra subscribers.
+- **Business:** Gemini for business, through the API and the model dropdown.
+- **Enterprise cloud:** Google Cloud's documentation lists a model ID, gemini-4-neon, with global, US and EU locations, and describes availability to verified enterprise customers in select regions.
+
+No free tier is mentioned on the announcement, and Google says Pro and Ultra subscribers can also try Neon in AI Studio. A separate cyber version is going to trusted defenders in a programme called Fairwind, with access requested through a Google Cloud account team, so it is not a general release.
+
+## Price, context and limits
+
+Google's announcement lists the API price as $3 per million input tokens, $0.15 per million cached input tokens (a 95% discount, it says) and $15 per million output tokens. The context window is 1 million tokens. The model card describes it as a unified window shared by input and output, with up to 64K output tokens by default in a normal request and up to 1M through a background long-decode mode. The model card gives a March 2026 knowledge cutoff, so Neon may be less current on later events.
+
+The Google Cloud page is more detailed about the fine print. It does not list per-token rates and points to a separate pricing page. As summarised from that page, thinking has four levels (low, medium, high and xhigh), with high as the default. Setting a thinking budget or the "minimal" level returns an error. Temperature and similar sampling settings are ignored. Explicit context caching is not supported, though implicit caching is. The Live API and model tuning are listed as unsupported. These details come from one documentation page and may change.
+
+## Google's claims, and what they do not prove
+
+Almost every performance number here comes from Google's pages. The announcement says Neon scores 61 at xhigh on the Artificial Analysis Intelligence Index, ranked third overall, just behind larger and slower models. The model card's comparison table against Claude Opus 5.5 and GPT-6.2 Sol shows Neon ahead on most rows, with the index at 61 against 59 and 57 for the two rivals. The exceptions in the rows we read are Terminal-Bench 4.1 (labelled cheating-adjusted accuracy), where Neon is at 65.2% and Opus 5.5 at 65.8%, and Chartography, where GPT-6.2 Sol is at 75.1% against Neon's 73.5%. The chart below leaves Chartography out.
+
+![Dot plot of Gemini 4 Neon's reported Artificial Analysis Intelligence Index score of 61 against two comparison models at 59 and 57, and Terminal-Bench 4.1 scores of 65.2 percent against 65.8 percent](/images/site1/gemini-4-neon-explained-what-google-says-chart.svg)
+*Chart created by Stackbrook from the cited pages; figures are as shown on Google's model card, and we did not check them against Artificial Analysis directly.*
+
+Google also claims roughly 32% lower cost per task than Carbon at the default high thinking level. Treat cost per task with care: it depends on how many tokens a model uses, which varies with your prompts and the thinking level you pick. The model card says the full Safety and Security Report would be available in the coming days, so those results were not available to us. The model card says frontier-safety thresholds for cyber and biological uplift "cannot be ruled out", carried forward from an earlier Gemini 4 model, and that the model can still hallucinate.
+
+## What the pages leave open
+
+Google's pages do not say whether Neon is available on free plans. They give no results for any particular workload, such as your own documents or code, and the cost per task Google reports depends on how many tokens a model uses, which varies with the prompt and the thinking level. Output tokens are listed at five times the input rate, so long outputs at higher thinking levels cost more. Independent results for the benchmark scores were not part of the pages we read, and the scores here are as reported by Google.
+
+## The takeaway
+
+Google positions Neon between Carbon and Hydrogen, aimed at long agent and coding sessions. The price, context window and rollout channels are clear from Google's pages. How it compares with rival models on any given workload is not something those pages can show. This post is general information, not procurement advice.

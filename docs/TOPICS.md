@@ -53,7 +53,7 @@ P22. published | AI Safety | Paris Call for AI Safety and Security explained (20
 P23. queued | AI Productivity | Canva AI off switch explained (2026-11-21; one official source only, fetches blocked)
 P24. published | AI Hardware | OpenAI Jalapeno inference chip explained (2026-11-21)
 P25. todo | AI Models | Cloudflare Clairic / Clairic-flash open weights (18 Nov 2026; lead: https://blog.cloudflare.com/open-clairic/; launch pricing reported to end 1 Dec) - run of 2026-11-21 could not fetch the official page (permission block), nothing drafted
-P26. todo | AI Models | Gemini 4 Neon (18 Nov 2026; lead: blog.google Gemini 4 Neon announcement) - fetch blocked on 2026-11-21, nothing drafted
+P26. published | AI Models | Gemini 4 Neon explained (2026-11-22; blog + DeepMind model card + Google Cloud docs)
 P27. published | AI Coding | VS Code 1.147 Send Later and Browser Use explained (2026-11-21)
 P28. todo | AI Policy | California AI safety framework next steps (18 Nov 2026; lead: gov.ca.gov 2026/11/18 release) - not fetched
 # Run 2026-11-21 14:15 UTC: official pages (blog.cloudflare.com/open-clairic, code.visualstudio.com/updates/v1_147) again returned PROVENANCE_REQUIRED (fetch permission unanswered); no post drafted. P25 and P27 remain todo.
