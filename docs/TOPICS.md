@@ -60,3 +60,5 @@ P28. todo | AI Policy | California AI safety framework next steps (18 Nov 2026; 
 # Run 2026-11-21 16:20 UTC: blog.cloudflare.com/open-clairic again returned PROVENANCE_REQUIRED (fetch permission unanswered, unattended run); search gave only titles. No post drafted; P25 remains todo.
 P29. published | AI Models | Cloudflare Clairic extraction model explained (2026-11-22; changelog + blog of 19 Oct 2026)
 P30. published | Robots | LG robot Data Factory with Nvidia explained (2026-11-22; LG newsroom 21 Aug + Nvidia blog 7 Jun)
+P31. published | AI Meetings | Claude Meetings beta explained (2026-11-22; claude.com announcement + Help Center release notes of 12 Nov 2026)
+# Run 2026-11-22 10:13 UTC: gov.ca.gov pages loop on a 302 redirect (https<->http), P28 still todo.
