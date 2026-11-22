@@ -62,3 +62,4 @@ P29. published | AI Models | Cloudflare Clairic extraction model explained (2026
 P30. published | Robots | LG robot Data Factory with Nvidia explained (2026-11-22; LG newsroom 21 Aug + Nvidia blog 7 Jun)
 P31. published | AI Meetings | Claude Meetings beta explained (2026-11-22; claude.com announcement + Help Center release notes of 12 Nov 2026)
 # Run 2026-11-22 10:13 UTC: gov.ca.gov pages loop on a 302 redirect (https<->http), P28 still todo.
+P32. published | AI Assistants | Gemini computer use on Mac explained (2026-11-22; blog.google 19 Nov + Gemini Apps Help)

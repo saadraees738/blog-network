@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of the five steps Google describes for starting a Gemini computer use task on a Mac">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Gemini computer use on Mac: setup and start steps</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: Gemini Apps Help and Google blog post of 19 Nov 2026. US, English, 18+, personal accounts.</text>
+<rect x="60" y="200" width="196" height="190" rx="16" fill="#ffffff" stroke="#1f7a5a" stroke-width="3"/>
+<circle cx="158" cy="240" r="24" fill="#1f7a5a"/><text x="158" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">1</text>
+<text x="158" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Install</text>
+<text x="158" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a5656">Gemini app for Mac</text>
+<path d="M260 295 L282 295" stroke="#1d2a2a" stroke-width="4"/><path d="M282 295 l-9 -7 m9 7 l-9 7" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+<rect x="286" y="200" width="196" height="190" rx="16" fill="#ffffff" stroke="#1f7a5a" stroke-width="3"/>
+<circle cx="384" cy="240" r="24" fill="#1f7a5a"/><text x="384" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">2</text>
+<text x="384" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Switch on</text>
+<text x="384" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a5656">Settings > Computer use</text>
+<path d="M486 295 L508 295" stroke="#1d2a2a" stroke-width="4"/><path d="M508 295 l-9 -7 m9 7 l-9 7" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+<rect x="512" y="200" width="196" height="190" rx="16" fill="#ffffff" stroke="#1f7a5a" stroke-width="3"/>
+<circle cx="610" cy="240" r="24" fill="#1f7a5a"/><text x="610" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">3</text>
+<text x="610" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Start</text>
+<text x="610" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a5656">Task, then @Computer use</text>
+<path d="M712 295 L734 295" stroke="#1d2a2a" stroke-width="4"/><path d="M734 295 l-9 -7 m9 7 l-9 7" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+<rect x="738" y="200" width="196" height="190" rx="16" fill="#ffffff" stroke="#1f7a5a" stroke-width="3"/>
+<circle cx="836" cy="240" r="24" fill="#1f7a5a"/><text x="836" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">4</text>
+<text x="836" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Approve</text>
+<text x="836" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a5656">Deny, allow once or always</text>
+<path d="M938 295 L960 295" stroke="#1d2a2a" stroke-width="4"/><path d="M960 295 l-9 -7 m9 7 l-9 7" stroke="#1d2a2a" stroke-width="4" fill="none"/>
+<rect x="964" y="200" width="196" height="190" rx="16" fill="#ffffff" stroke="#1f7a5a" stroke-width="3"/>
+<circle cx="1062" cy="240" r="24" fill="#1f7a5a"/><text x="1062" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">5</text>
+<text x="1062" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d2a2a">Watch</text>
+<text x="1062" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a5656">Live preview, Stop task</text>
+<rect x="60" y="450" width="1080" height="110" rx="14" fill="#e9efe9"/>
+<text x="90" y="492" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d2a2a">Needs: Apple Silicon Mac, macOS Sequoia 15.0+, Google AI Plus, Pro or Ultra</text>
+<text x="90" y="528" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Backups are best effort and kept 24 hours or until the next prompt. Some actions cannot be undone.</text>
+</svg>

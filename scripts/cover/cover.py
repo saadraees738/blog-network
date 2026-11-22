@@ -14,6 +14,7 @@ POSTS={
 'gpt-6-cyber-daybreak-access-explained':('AI Safety','GPT-6 Cyber, explained'),
 'claude-meetings-beta-explained-what-team-enterprise-get':('AI Meetings','Claude Meetings, explained'),
 'gemini-4-neon-explained-what-google-says':('AI Models','Gemini 4 Neon, explained'),
+'gemini-computer-use-mac-explained-what-google-says':('AI Assistants','Gemini on Mac, explained'),
 'lg-nvidia-robot-data-factory-explained-what-is-confirmed':('Robots','LG robot Data Factory, explained'),
 'cloudflare-clairic-extraction-model-explained':('AI Models','Cloudflare Clairic, explained'),
 'vs-code-1-147-send-later-browser-use-explained':('AI Coding','VS Code 1.147, explained'),
