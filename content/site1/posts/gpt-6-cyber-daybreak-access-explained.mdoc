@@ -1,0 +1,68 @@
+---
+title: 'GPT-6 Cyber explained: what OpenAI says it does and who can get access'
+description: 'OpenAI says GPT-6 Cyber finds and validates software vulnerabilities and is limited to approved Daybreak users. What the pages say, and what is unverified.'
+status: published
+queueReason: ''
+publishDate: 2026-11-22
+lastVerified: 2026-11-22
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/gpt-6-cyber-daybreak-access-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing shield with a padlock and circuit lines on a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: OpenAI's page dated 5 November 2026 describes GPT-6 Cyber as a model trained to find and validate exploitable vulnerabilities. It is not a general release, and it starts with select approved Daybreak Red customers through the API and Codex, with wider Daybreak Red access promised soon but no date given. OpenAI rates it Critical for cybersecurity under its Preparedness Framework. The benchmark figures are OpenAI's own and were not independently verified here.
+sources:
+  - title: 'GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents (OpenAI, 5 November 2026)'
+    url: https://openai.com/index/introducing-gpt-6-cyber/
+    accessed: 2026-11-22
+  - title: Daybreak | OpenAI for cybersecurity (OpenAI)
+    url: https://openai.com/daybreak/
+    accessed: 2026-11-22
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited OpenAI pages. Findings applied (11): reduced quotes to none, removed the Astra-comparison, block-rate and eligible-group sentences and the candidate-patches and Mozilla-classification wording that the reviewer could not confirm, reworded the Daybreak tier descriptions, trimmed the Private Safety Processing description, softened the evaluation-provenance claim. The linked system card and the Mozilla advisory could not be fetched, so the Preparedness classification details, the Firefox and Linux counts and the evaluation methods are reported as OpenAI claims only. The Daybreak page carries no date. No independent coverage was checked.'
+---
+
+Cybersecurity models are an awkward kind of AI news: the same skill that helps a defender patch a hole could help an attacker use it. That is why OpenAI's launch of GPT-6 Cyber, announced on 5 November 2026, is as much about who may use it as about what it can do. This post reads two official OpenAI pages, the launch post and the Daybreak program page, and separates the company's claims from what has been confirmed by anyone else.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic. Stackbrook did not test GPT-6 Cyber or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What GPT-6 Cyber is
+
+OpenAI describes GPT-6 Cyber as a cybersecurity model for finding and validating exploitable vulnerabilities and helping develop fixes. Its stated design goal is to stay inside the authorized scope that a security researcher sets. It succeeds GPT-5.6 Cyber, and OpenAI compares it with GPT-6 Astra on several tests, covered below.
+
+OpenAI also says it rates the model Critical for cybersecurity under its Preparedness Framework, up from High for GPT-5.6 Cyber. In plain terms, the company is saying the model's capabilities sit at the top tier of its own risk scale, which is part of why access is restricted. We did not read the system card the launch post links to, so the detail behind that classification is not covered here.
+
+## Who can use it
+
+This is not a model you can sign up for today. According to the launch post, GPT-6 Cyber is available through the API and Codex to a select group of approved customers of Daybreak Red. OpenAI says it will widen access to all Daybreak Red customers soon, but gives no date. The post also says GPT-5.6 Cyber is being made available to all Daybreak Red customers, and states no price.
+
+The Daybreak page explains the tiers. Daybreak Blue is the defensive track, covering finding, validating and fixing weaknesses and investigating incidents. Daybreak Red is the offensive-testing track for authorized red teams and penetration testers. Applicants can be individuals or organizations, and OpenAI says it verifies them and reviews how they plan to use its models before approving access. The launch post adds that Daybreak Red API access requires IP allowlisting by default, with limited exceptions, and mentions a new Daybreak Red for Critical Infrastructure group for approved defenders. Neither page publishes detailed eligibility criteria.
+
+## The numbers OpenAI reports
+
+All figures below come from OpenAI's own launch post. They are the company's reported results, and we have seen no independent replication.
+
+![Grouped bars comparing OpenAI-reported GPT-6 Cyber scores with older models on four evaluations](/images/site1/gpt-6-cyber-daybreak-access-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+On ExploitGym, a remote exploitation test, OpenAI reports 48.5 percent for GPT-6 Cyber against 32.1 percent for GPT-5.6 Cyber. On a new offensive web pentesting recall evaluation it reports 40.3 percent against 32.0 percent for GPT-6 Astra. On RemoteExploitBench, which uses known vulnerabilities in GitLab, PostgreSQL and Jenkins in a controlled environment, OpenAI says GPT-6 Astra with Daybreak Blue refused every task while GPT-6 Cyber completed 95 percent. On an ExploitGym Honeypot test of staying out of scope, it reports 99.93 percent without deployment safety prompts, up from 94.49 percent for GPT-5.6 Cyber, and 100 percent with the prompts.
+
+The post also makes real-world claims. It says the model reproduced 1,724 Linux kernel vulnerabilities and built working exploits for 948, and that 304 critical findings were disclosed to maintainers. For Firefox it reports 81 novel high-severity vulnerabilities and says Mozilla has released fixes for many of them. We could not open the Mozilla advisory the post references, so those counts remain OpenAI's statements here. Quotes from partner companies on the page are testimonials, not audits.
+
+## The safeguards OpenAI lists
+
+Because the model is dual-use, the safeguards matter as much as the scores. OpenAI lists cyber-specific monitoring that checks whether actions match the user's authorization, targeted monitoring of emerging threats, credential-compromise monitoring, and new checks that block high-risk activity against critical systems including industrial control systems. It says API customers on Zero Data Retention generally must use Private Safety Processing, with encrypted records kept for 30 days. It also recommends sandboxing, action review and human oversight for high-risk workflows.
+
+The Daybreak page separately says OpenAI committed $1 billion in subsidized access for its Daybreak for Frontline Defenders program. The page does not say how that money will be split or when it will be spent.
+
+## What this means for a small business
+
+Most small businesses will never touch GPT-6 Cyber directly. The practical effect is indirect: the vendors and open-source projects you depend on may find and fix more flaws faster, if these claims hold up. The unchanged basics still matter more for most teams: apply updates promptly, use multi-factor sign-in and keep backups. If you run a security consultancy or manage software with real exposure, Daybreak is the route OpenAI describes, and it involves verification rather than a quick sign-up. This is general information about a vendor announcement, not security, legal or financial advice.
+
+## What to watch next
+
+Four things would firm up the picture: an actual date for wider Daybreak Red access, published pricing, independent confirmation of the Linux and Firefox findings, and third-party evaluation of the safeguards. Until then, the accurate summary is a restricted, high-capability model with impressive self-reported results and a gated rollout.

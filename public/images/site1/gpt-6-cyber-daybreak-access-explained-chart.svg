@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Grouped bars comparing OpenAI-reported GPT-6 Cyber scores with older models on four evaluations">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="58" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">GPT-6 Cyber: OpenAI-reported evaluation scores</text>
+<text x="60" y="90" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Self-reported by OpenAI (5 Nov 2026 page). Not independently verified. Bars scaled 0 to 100 percent.</text>
+<text x="60" y="144" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">ExploitGym: remote exploitation (% solved)</text>
+<rect x="60" y="158" width="288.9" height="26" fill="#9aa5a5"/>
+<text x="358.9" y="177" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">32.1%  GPT-5.6 Cyber</text>
+<rect x="60" y="192" width="436.5" height="26" fill="#1f7a5a"/>
+<text x="506.5" y="211" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">48.5%  GPT-6 Cyber</text>
+<text x="60" y="262" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">Offensive web pentesting recall (%)</text>
+<rect x="60" y="276" width="288.0" height="26" fill="#9aa5a5"/>
+<text x="358.0" y="295" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">32%  GPT-6 Astra</text>
+<rect x="60" y="310" width="362.7" height="26" fill="#1f7a5a"/>
+<text x="432.7" y="329" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">40.3%  GPT-6 Cyber</text>
+<text x="60" y="380" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">RemoteExploitBench: tasks completed (%)</text>
+<rect x="60" y="394" width="3.0" height="26" fill="#9aa5a5"/>
+<text x="73.0" y="413" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">0% (refused all tasks)  GPT-6 Astra + Daybreak Blue</text>
+<rect x="60" y="428" width="855.0" height="26" fill="#1f7a5a"/>
+<text x="925.0" y="447" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">95%  GPT-6 Cyber</text>
+<text x="60" y="498" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d2a2a">ExploitGym Honeypot: stayed in scope (%)</text>
+<rect x="60" y="512" width="850.4" height="26" fill="#9aa5a5"/>
+<text x="920.4" y="531" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">94.49%  GPT-5.6 Cyber</text>
+<rect x="60" y="546" width="899.4" height="26" fill="#1f7a5a"/>
+<text x="969.4" y="565" font-family="Arial, sans-serif" font-size="17" fill="#1d2a2a">99.93%  GPT-6 Cyber</text>
+</svg>
