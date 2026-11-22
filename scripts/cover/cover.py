@@ -11,6 +11,7 @@ ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI 
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
      'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191)}
 POSTS={
+'adobe-firefly-max-2026-agents-explained':('AI Images','Adobe Firefly at MAX, explained'),
 'claude-fable-5-2-explained-what-anthropic-says':('AI Assistants','Claude Fable 5.2, explained'),
 'gpt-6-cyber-daybreak-access-explained':('AI Safety','GPT-6 Cyber, explained'),
 'claude-meetings-beta-explained-what-team-enterprise-get':('AI Meetings','Claude Meetings, explained'),

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Column chart of Firefly items by the status Adobe gives them: 4 generally available, 3 beta, 1 preview, 1 private beta">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Firefly items Adobe labels, by release status</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: Adobe newsroom release of 10 Nov 2026. Only items with an explicit label are counted.</text>
+<line x1="120" y1="520" x2="1100" y2="520" stroke="#1d2a2a" stroke-width="3"/>
+<rect x="190" y="160" width="170" height="360" rx="8" fill="#1f7a5a"/>
+<rect x="400" y="250" width="170" height="270" rx="8" fill="#e0833a"/>
+<rect x="610" y="340" width="170" height="180" rx="8" fill="#6b5bd6"/>
+<rect x="820" y="340" width="170" height="180" rx="8" fill="#c0457a"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" font-weight="700" fill="#1d2a2a">
+<text x="275" y="148" font-size="40">4</text><text x="485" y="238" font-size="40">3</text><text x="695" y="328" font-size="40">1</text><text x="905" y="328" font-size="40">1</text>
+<text x="275" y="556" font-size="22">Generally available</text><text x="485" y="556" font-size="22">Beta</text><text x="695" y="556" font-size="22">Preview</text><text x="905" y="556" font-size="22">Private beta</text></g>
+<g font-family="Arial, sans-serif" text-anchor="middle" font-size="15" fill="#4a5656">
+<text x="275" y="582">Edit Text, Retouch,</text><text x="275" y="602">Relight, Quick Actions</text><text x="485" y="582">AI Assistant,</text><text x="485" y="602">Design, Graph</text><text x="695" y="582">Always-on agents</text><text x="905" y="582">Builder (waitlist)</text></g>
+</svg>
