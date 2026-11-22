@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Timeline of the LG and Nvidia robotics collaboration from June to end of 2026, split into done and planned">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">LG and Nvidia robotics: done vs planned</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">From Nvidia blog (7 Jun 2026) and LG newsroom release (21 Aug 2026). Dates as stated by the companies</text>
+<line x1="90" y1="300" x2="1110" y2="300" stroke="#1d2a2a" stroke-width="4"/>
+<circle cx="130" cy="300" r="16" fill="#1f7a5a"/><circle cx="400" cy="300" r="16" fill="#1f7a5a"/><circle cx="640" cy="300" r="16" fill="#1f7a5a"/><circle cx="880" cy="300" r="16" fill="#1f7a5a"/><circle cx="1070" cy="300" r="16" fill="#f7f6f2" stroke="#d9822b" stroke-width="5"/>
+<text x="130" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">7 Jun</text>
+<text x="130" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">Nvidia blog: LG Group</text>
+<text x="130" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">AI factory, robot plans</text>
+<text x="400" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">July</text>
+<text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">LG sets up Robotics</text>
+<text x="400" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">Business Center</text>
+<text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">13 Aug</text>
+<text x="640" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">LG Group and Nvidia sign</text>
+<text x="640" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">an MOU in Santa Clara</text>
+<text x="880" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">21 Aug</text>
+<text x="880" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">LG publishes progress</text>
+<text x="880" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">update on Data Factory</text>
+<text x="1070" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#d9822b">End 2026</text>
+<rect x="800" y="430" width="340" height="150" rx="10" fill="#ffffff" stroke="#d9822b" stroke-width="3"/>
+<text x="820" y="465" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#1d2a2a">LG's year-end plans</text>
+<text x="820" y="497" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">Data Factory fully operational</text>
+<text x="820" y="524" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">Several hundred robots on site</text>
+<text x="820" y="551" font-family="Arial, sans-serif" font-size="19" fill="#1d2a2a">100,000 hours of training data</text>
+<text x="60" y="470" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Green = stated as done by the companies.</text>
+<text x="60" y="498" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Orange outline = LG's plan or expectation, not yet confirmed.</text>
+<text x="60" y="540" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Neither page gives a home-robot launch date.</text>
+</svg>
