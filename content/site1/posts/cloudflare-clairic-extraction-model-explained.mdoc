@@ -1,0 +1,75 @@
+---
+title: 'Cloudflare Clairic explained: an AI model that returns typed values instead of text'
+description: 'Cloudflare''s Clairic is a preview model on Workers AI that answers with dates, numbers and estimates instead of text. What it does, what it costs and its limits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-22
+lastVerified: 2026-11-22
+category: AI Models
+author: saad-r
+heroImage: /images/site1/cloudflare-clairic-extraction-model-explained-cover.jpg
+heroAlt: 'AI-generated illustration of glowing blue ribbons of light flowing over a tidy grid of empty glass tiles'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Clairic is a preview AI model from Cloudflare, announced on 19 October 2026 and available on Workers AI as @cf/cloudflare/clairic. Instead of writing text it returns typed answers such as dates, numbers, lists, estimates and forecasts, or null when the input does not settle the answer. Cloudflare lists the price as $0.10 per million input tokens with no output charge, says open weights are intended soon, and warns that every answer is well formed but not necessarily correct.
+sources:
+  - title: Clairic on Workers AI (Cloudflare changelog, 19 October 2026)
+    url: https://developers.cloudflare.com/changelog/post/2026-10-19-clairic-workers-ai/
+    accessed: 2026-11-22
+  - title: Introducing Clairic, a new System One class of extraction models (Cloudflare blog, 19 October 2026)
+    url: https://blog.cloudflare.com/clairic-extraction-model/
+    accessed: 2026-11-22
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Cloudflare pages (REVISE, 11 findings applied: unsupported use-case paragraph rewritten to Cloudflare''s own examples, source title corrected, inferences and advice-like wording softened). The reviewer and the drafting fetch worked from model-summarised page text, so exact wording and per-field details could not be confirmed character for character; the blog post was only available as key points. No independent benchmark of Clairic was found or used.'
+---
+
+Most AI models you meet in chat tools answer by writing text. Cloudflare's new Clairic model works differently: you give it some text and a list of fields you want filled in, and it hands back typed values, such as a date in standard form, a number with the right decimals, or a range with a median. This post explains what Cloudflare says Clairic does, what it costs, and the warnings the company itself attaches. Everything below comes from two Cloudflare pages, and the claims are Cloudflare's own.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Clairic is
+
+Cloudflare announced Clairic on 19 October 2026, both in a blog post and in its developer changelog. The model runs on Workers AI, Cloudflare's hosted AI service, under the ID `@cf/cloudflare/clairic`, and it is labelled a preview. The blog post calls it a new "System One" class of extraction model, alongside Cloudflare's Clef decision model, which chooses between options defined in advance. Clairic instead fills in answers.
+
+The key design point, stated on the changelog page, is that "Clairic does not generate tokens." It reads the input in one pass and decodes each answer under the rules of that answer's type. The result is a valid value of the requested type, or null when the input does not determine the answer. Cloudflare says every answer is well formed, which in plain terms means a date field comes back as a date, not as a sentence.
+
+## What you can ask it for
+
+The changelog lists the field types. Text fields return an exact span from the input with character offsets. Numbers honour whether you want integers or a set number of decimals. Dates, times and datetimes come back in ISO form, and durations come back in the unit you pick. A list field returns every matching text, number or date in input order.
+
+Two types go beyond reading. An estimate field returns a distribution inside minimum and maximum bounds, and a forecast field returns one estimate per future step, up to 64 steps. Scalar answers come with a null probability and a confidence value, and estimates and forecasts come with a median and an 80 percent interval running from the 10th to the 90th percentile. An option can return all 99 percentiles. You can also pass up to four images alongside the text.
+
+![Table of the field types Clairic can return and what each one gives back](/images/site1/cloudflare-clairic-extraction-model-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+Cloudflare says there is no upper limit on the number of fields: fields that do not fit in one pass are split across parallel passes. Dates written without a year are resolved from context, and Cloudflare says to set a `reference_date` or add a line such as "Today" with the date to the input for anything date-dependent.
+
+## How you call it and what it costs
+
+Clairic is called through the Workers AI binding with `env.AI.run()`, or through the REST API, and Cloudflare says AI Gateway can sit in front of those endpoints. A request carries the input text as `state` and a `fields` object, where each field has a type, optional instructions and type-specific options such as decimals or unit. The response contains an `answers` map, and each answer's `value` holds the result.
+
+On price, the changelog says Clairic costs $0.10 per million input tokens, and because it generates no tokens there is no output charge. That figure is as published on 19 October 2026 and may have changed since. The blog post also says Cloudflare intends to release open weights, and the changelog repeats that "We intend to release the model with open weights soon." As far as these two pages show, no release date, licence or model size has been given, so open weights are a stated intention, not a delivered fact.
+
+## The warnings Cloudflare attaches
+
+The most useful sentence on the changelog page is a cautionary one: "Every answer is well formed, not necessarily correct." A valid date can still be the wrong date. Cloudflare suggests using the confidence values, null probability and intervals to decide what can be automated and what should go to a person for review. The page calls the endpoint an early checkpoint that it expects to improve.
+
+It also lists specific preview limits:
+
+- **Arithmetic.** One-step and two-step calculations are described as reliable, but long chains of dependent steps and totals across many table rows are not yet. Cloudflare's advice is to extract the inputs with Clairic and do the maths in code.
+- **Estimates.** These work best when the input contains evidence such as comparables or history. Without evidence, the interval is wide.
+- **Forecasts.** Described as basic: multi-step forecasts flatten toward the average, and holidays or unseen events are not anticipated. Cloudflare says this is not a replacement for a time-series model trained on your own data.
+- **Calibration.** The intervals are trained to be calibrated and hold on most held-out sets, but can run narrow on unfamiliar data.
+
+## Who might care, and what to watch
+
+Clairic is a developer tool, called through code, so most small-business owners would only meet it inside software built by someone else. Cloudflare's examples include invoice totals, delivery dates, days a shipment is late and repair costs, and the blog also mentions traffic forecasts. A model that can return null when the input does not settle an answer, and that reports confidence, gives the people building such software a way to route doubtful cases to review, which is the use Cloudflare itself describes.
+
+This is general information about a developer tool, not a recommendation to adopt it. The things worth watching are whether Cloudflare publishes the open weights it has promised, whether the price changes when the preview ends, and whether independent testers confirm the accuracy and calibration claims, since none of that has been shown on the pages cited here.
+
+## The takeaway
+
+Clairic is a preview Cloudflare model that fills in typed fields rather than writing sentences, priced on input tokens only at $0.10 per million as published on 19 October 2026. Its design guarantees well-formed answers, not correct ones, and Cloudflare says to use the confidence values to decide what needs review and to do heavy arithmetic in ordinary code. It is an early extraction tool whose open-weights release and independent accuracy checks are still to come.

@@ -58,3 +58,4 @@ P27. published | AI Coding | VS Code 1.147 Send Later and Browser Use explained 
 P28. todo | AI Policy | California AI safety framework next steps (18 Nov 2026; lead: gov.ca.gov 2026/11/18 release) - not fetched
 # Run 2026-11-21 14:15 UTC: official pages (blog.cloudflare.com/open-clairic, code.visualstudio.com/updates/v1_147) again returned PROVENANCE_REQUIRED (fetch permission unanswered); no post drafted. P25 and P27 remain todo.
 # Run 2026-11-21 16:20 UTC: blog.cloudflare.com/open-clairic again returned PROVENANCE_REQUIRED (fetch permission unanswered, unattended run); search gave only titles. No post drafted; P25 remains todo.
+P29. published | AI Models | Cloudflare Clairic extraction model explained (2026-11-22; changelog + blog of 19 Oct 2026)
