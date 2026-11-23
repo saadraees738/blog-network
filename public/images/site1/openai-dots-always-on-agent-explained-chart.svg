@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Step chart of the four custom rule behaviors for a dot, from most autonomous to hand off to you">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Four custom-rule behaviors for a dot</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: OpenAI Help Center, Getting started with your dot. Ordered here from most to least autonomy.</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="400" width="250" height="150" rx="10" fill="#1f7a5a"/>
+<rect x="340" y="320" width="250" height="230" rx="10" fill="#4f9d7a"/>
+<rect x="620" y="240" width="250" height="310" rx="10" fill="#e0833a"/>
+<rect x="900" y="160" width="250" height="390" rx="10" fill="#c0457a"/>
+<g fill="#ffffff" font-weight="700" font-size="24" text-anchor="middle">
+<text x="185" y="470">Take action</text><text x="185" y="500">without asking</text>
+<text x="465" y="430">Take action</text><text x="465" y="460">if pre-approved</text>
+<text x="745" y="390">Ask before</text><text x="745" y="420">taking action</text>
+<text x="1025" y="350">Hand off</text><text x="1025" y="380">to you</text></g>
+<g fill="#1d2a2a" font-size="20" font-weight="700" text-anchor="middle">
+<text x="185" y="385">1 Most autonomy</text><text x="465" y="305">2</text><text x="745" y="225">3</text><text x="1025" y="145">4 Least autonomy</text></g>
+<text x="60" y="598" font-size="18" fill="#4a5656">Chart created by Stackbrook from the cited page. Step height shows the order of human involvement, not a measured quantity.</text>
+</g></svg>

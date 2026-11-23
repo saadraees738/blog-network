@@ -1,0 +1,74 @@
+---
+title: 'OpenAI dots explained: what the always-on agent can do, who gets it, and what you control'
+description: 'OpenAI dots are always-on agents in ChatGPT. Plans, regions, local access, memory, texting limits and permission rules, as stated in OpenAI''s own pages.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Agents
+author: saad-r
+heroImage: /images/site1/openai-dots-always-on-agent-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a small glowing orb floating above a control panel with knobs and switches on a dark indigo background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: OpenAI introduced dots on 29 September 2026 as always-on agents in ChatGPT, each with its own cloud computer, browser and memory. Per OpenAI, Pro and Business Premium users get a first dot at no extra cost and Enterprise users need an admin to switch the beta on. OpenAI said dots usage would not count toward plan allowances for a month and gives no calendar end date, so that period may already be over. OpenAI has not published prices or limits for after that. Access is optional by design - local computer access starts off and permission rules decide when a dot asks first.
+sources:
+  - title: 'Introducing dots (OpenAI, 29 September 2026, updated 3 November 2026)'
+    url: https://openai.com/index/introducing-dots/
+    accessed: 2026-11-23
+  - title: 'Getting started with your dot (OpenAI Help Center)'
+    url: https://help.openai.com/en/articles/20001530-getting-started-with-your-dot
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited OpenAI pages (read as condensed summaries). Twelve findings (1 high, 4 medium, 7 low) applied; items the reviewer could not re-confirm from its summaries were kept only where they came from the page text read during drafting, or were softened. OpenAI''s dots privacy and safety FAQ could not be fetched, so no training or privacy claims go beyond the announcement page. No independent testing was checked.'
+---
+
+OpenAI's "dots" are one of the more unusual things inside ChatGPT right now, because a dot is not a chat window. It is an agent that keeps running, has its own computer in the cloud, remembers what it learns, and can start work without being asked. This post reads OpenAI's announcement page and its Help Center getting-started article and sorts out who can use dots, what they can reach, and which controls are yours.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, so read the comparisons with that in mind. Stackbrook did not test dots or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What a dot is
+
+OpenAI announced dots on 29 September 2026 and added an update dated 3 November 2026. The page describes them as always-on agents that work toward goals around the clock. Each dot has its own cloud computer and browser, learns from feedback, and is powered by GPT-6 Astra. The November update adds GPT-6.1 Terra as another model a dot can draw on. Through plugins a dot can connect to more than 4,000 apps, according to OpenAI.
+
+You message or call it from ChatGPT on desktop, web and mobile, and OpenAI lists Slack and Teams as places to reach it, with texting marked as coming soon on the announcement page. The Help Center adds detail the announcement does not. Dots are created in the ChatGPT desktop app or desktop web, and they can be used on mobile but not created there. They are not supported on mobile web.
+
+A separate preview covers "specialist dots" for organizations, which have their own identity, credentials and system access. OpenAI says enterprise pilots are starting.
+
+## Who can use dots and when
+
+The announcement says dots rolled out in ChatGPT to Pro and Business Premium users in eligible markets, with Enterprise (including Edu and Healthcare) able to try the beta once a workspace admin turns it on. The Help Center article is more specific about geography. It says Pro users get dots in markets that exclude the European Economic Area, Switzerland and the UK, while Business Premium users get them across all supported ChatGPT regions. For Enterprise, the beta is off by default.
+
+Rollout is gradual. The Help Center warns that access may take several days to reach your account. It uses relative wording ("starting today", "the next month") with no calendar date, so treat the regional details as current at the time we read them, 23 November 2026, and re-check before planning around them.
+
+## What it costs
+
+OpenAI says your first dot is included in Pro or Business Premium at no extra cost. The announcement mentions an allowance for deeper work, with extended limits for the first month after launch, but neither page gives a number. The Help Center says that for "the next month" dots usage does not count toward eligible Pro, Business and Enterprise allowances, and that usage terms for each plan will be shared later. Counted from the 29 September announcement, that month may already have passed, and neither page gives an end date, so check your own plan's current terms. The announcement also says conversations with a dot do not count toward ChatGPT usage limits, while tasks started in Codex or ChatGPT Work count as usual.
+
+Later, OpenAI says, more dots could be added and each could be scaled by speed or monthly work volume. No prices appear. If you are budgeting, the honest summary is that the launch-period terms may have lapsed and the long-term terms are unpublished on the pages we read.
+
+## What a dot can reach
+
+Local computer access is optional and starts off. Once you connect a computer and confirm access, the dot can reach files on it from any messaging channel, and a revoke control ends that. With local access it can create Work or Codex tasks, use local skills, and use your local browser when its cloud browser is blocked.
+
+Connected apps work differently. A dot can review connected information proactively and form memories from it. The Help Center notes that disconnecting an app does not delete data already obtained, and that deleting that data requires deleting the dot. The page says resetting (deleting) the dot removes its conversations, saved memories and scheduled tasks, and its wording on memory is not fully clear, so read it before relying on a particular deletion path. A dot can connect to Slack and to personal email, but at launch it cannot have its own email address and cannot call you.
+
+Texting is a limited beta through a third-party provider, available only to some Pro users in the US and not in Business or Enterprise workspaces. The page advises caution about sensitive information sent by text.
+
+## What you control
+
+![Step chart of the four custom rule behaviors for a dot, from most autonomous to hand off to you](/images/site1/openai-dots-always-on-agent-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+The Help Center lists four custom-rule behaviors for actions (the announcement describes the rules more briefly as allow, require approval or block) - take action without asking, take action if pre-approved, ask before taking action, and hand off to you. The announcement adds that built-in safety requirements always apply, that an automatic review step checks actions that could affect accounts or share information, and that some sensitive tasks, such as changing a password, always stay with you. Proactive research is described as read-only, so it cannot send messages, change app content or control a browser. OpenAI also says monitoring can pause or stop a dot's work if a safety concern is detected, and that saved passwords can be used to sign in to supported sites without being exposed to the model. Both pages carry the same caution in different words, that dots can make mistakes and consequential work should be reviewed.
+
+## What the pages do not say
+
+Neither page gives a dollar price, a usage figure or an end date for the free-allowance period beyond "the first month." We could not read OpenAI's privacy and safety FAQ for dots, so this post makes no claim about model training on dot data beyond what the announcement says, which is that Business, Enterprise and Edu content is not used to improve models by default, that on personal plans you can control that setting, and that proactive research and a dot's notes to itself are not trained on directly. Independent measurements of how well dots perform are also absent from both pages.
+
+## A cautious way to approach it
+
+This is general information, not legal or financial advice. For a small business, the sensible reading is to check what your plan's current usage terms say, start with read-only connections, keep local access off until you have a reason to switch it on, and pick the stricter rule behaviors for anything involving money, accounts or customers. Stackbrook has not tested any of this, so each capability above is OpenAI's description, not a verified result.
