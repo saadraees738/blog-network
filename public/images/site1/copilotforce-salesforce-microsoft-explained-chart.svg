@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Stage board of the five Copilotforce components by availability stage as stated by Microsoft on 17 November 2026">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Copilotforce: where each piece stands</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: Microsoft and Salesforce announcement, 17 November 2026. Stages as stated by the vendors.</text>
+<rect x="60" y="150" width="1080" height="72" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+<rect x="60" y="150" width="14" height="72" rx="4" fill="#1f7a5a"/>
+<text x="96" y="194" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">Data Federation (OneLake into Data 360)</text>
+<rect x="760" y="164" width="364" height="44" rx="22" fill="#1f7a5a"/>
+<text x="942" y="193" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Generally available</text>
+<rect x="60" y="238" width="1080" height="72" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+<rect x="60" y="238" width="14" height="72" rx="4" fill="#2f6fb0"/>
+<text x="96" y="282" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">Salesforce in Copilot plugin (38+ sales skills)</text>
+<rect x="760" y="252" width="364" height="44" rx="22" fill="#2f6fb0"/>
+<text x="942" y="281" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Public preview (beta)</text>
+<rect x="60" y="326" width="1080" height="72" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+<rect x="60" y="326" width="14" height="72" rx="4" fill="#2f6fb0"/>
+<text x="96" y="370" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">Data 360 shortcut into OneLake</text>
+<rect x="760" y="340" width="364" height="44" rx="22" fill="#2f6fb0"/>
+<text x="942" y="369" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Public preview</text>
+<rect x="60" y="414" width="1080" height="72" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+<rect x="60" y="414" width="14" height="72" rx="4" fill="#e0833a"/>
+<text x="96" y="458" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">Sales Cloud in Teams</text>
+<rect x="760" y="428" width="364" height="44" rx="22" fill="#e0833a"/>
+<text x="942" y="457" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Pilot; open beta 'later this year'</text>
+<rect x="60" y="502" width="1080" height="72" rx="10" fill="#ffffff" stroke="#d9d6cc"/>
+<rect x="60" y="502" width="14" height="72" rx="4" fill="#7a7f86"/>
+<text x="96" y="546" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d2a2a">Two-way Zero Copy with Fabric</text>
+<rect x="760" y="516" width="364" height="44" rx="22" fill="#7a7f86"/>
+<text x="942" y="545" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Direction, no stage given</text>
+<text x="60" y="600" font-family="Arial, sans-serif" font-size="18" fill="#4a5656">No pricing, licence requirements or general-availability dates were stated for the preview items.</text></svg>

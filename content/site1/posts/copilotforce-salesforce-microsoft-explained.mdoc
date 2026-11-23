@@ -1,0 +1,72 @@
+---
+title: 'Copilotforce explained: what Microsoft and Salesforce announced, what is live and what is still preview'
+description: 'Microsoft and Salesforce unveiled Copilotforce at Ignite on 17 November 2026. Which pieces are available, which are preview or pilot, and what has no price yet.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Productivity
+author: saad-r
+heroImage: /images/site1/copilotforce-salesforce-microsoft-explained-cover.jpg
+heroAlt: 'AI-generated illustration of two glowing cubes joined by a thin bridge of light above a grid of small data tiles on a deep teal and violet background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Copilotforce is a Microsoft and Salesforce partnership announced on 17 November 2026 that brings Salesforce customer data and actions into Microsoft Copilot, Teams and Fabric. Per the announcement, only the Data Federation link between Fabric OneLake and Salesforce Data 360 is generally available. The Salesforce in Copilot plugin (38+ sales skills) is a public preview, Sales Cloud in Teams is a pilot with an open beta planned for later this year, and neither company has published prices, licence requirements or general availability dates for the preview items.
+sources:
+  - title: 'Microsoft and Salesforce announce Copilotforce (Microsoft Source, 17 November 2026)'
+    url: https://news.microsoft.com/source/2026/11/17/microsoft-and-salesforce-announce-copilotforce-bringing-trusted-customer-context-and-action-into-microsoft-ai-experiences/
+    accessed: 2026-11-23
+  - title: 'Copilot at Microsoft Ignite (Microsoft Copilot blog, 17 November 2026, modified 18 November 2026)'
+    url: https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Microsoft pages (read as condensed summaries). Seven findings (2 medium, 5 low) applied. Pricing, licence requirements, regional availability and general availability dates are not stated on either page and are not claimed here. The GigaOm cost comparison methodology sits on a separate page that was not read. No independent testing was checked.'
+---
+
+Many small businesses keep customer records in Salesforce and spend their day in Microsoft 365, so an announcement that joins the two deserves a careful read. On 17 November 2026, at Microsoft Ignite, Microsoft and Salesforce announced a partnership called Copilotforce. This post reads the joint press release and Microsoft's Copilot blog post from the same event and sorts out what exists today, what is a preview, and what neither company has said.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Microsoft's Copilot offers Anthropic and OpenAI models and Microsoft's own page compares Copilot with Claude and ChatGPT on cost, so read that claim as Microsoft's. Stackbrook did not test Copilotforce or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Copilotforce is
+
+According to the press release, Copilotforce brings Salesforce customer context, business processes and actions into Microsoft Copilot, Teams and Fabric. The idea is that a salesperson can ask Copilot about a deal and get an answer that draws on both Salesforce records and the work context Microsoft holds, without switching apps. Microsoft calls that context layer Work IQ, which pulls from Teams meetings, Outlook email and SharePoint or OneDrive documents.
+
+The release describes several separate pieces, and they are at very different stages. That is the key point for anyone deciding whether to plan around it.
+
+## What is available and what is not
+
+The announcement says the Salesforce in Copilot plugin entered public preview (beta) on the day of the announcement. It ships with more than 38 prebuilt sales skills, and the named examples include Pipeline Review, Close Planning, Deal Review, Customer Health, Renewal Radar and Call Follow-Up. Sellers can reach customer data and take supported actions through authenticated Salesforce MCP access, within their existing Salesforce permissions. The release says supported writeback actions to the CRM need explicit user confirmation and respect existing validation rules.
+
+Sales Cloud in Teams is further back. It is in pilot with enterprise customers, with an open beta planned for "later this year" according to the release. It is described as showing pipeline and quota progress, deal notifications and briefing materials inside Teams.
+
+On the data side, Data Federation from Microsoft Fabric OneLake into Salesforce Data 360 is described as generally available. It lets joint customers query supported OneLake data inside Data 360 without moving it. A shortcut running the other direction, from Data 360 into OneLake, is in public preview. A two-way Zero Copy integration between Data 360 and Fabric is described only as something the companies are bringing, with no stage given.
+
+![Stage board of the five Copilotforce components, from generally available to direction only](/images/site1/copilotforce-salesforce-microsoft-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Who is involved
+
+Accenture is named as design and implementation partner and as a pilot customer, and the release quotes its chief executive describing Accenture as "customer zero." The release cites Accenture figures of roughly 814,000 people, 13 industries, 55,000 Salesforce users and Copilot scaled to more than 740,000 people. Those are Accenture and vendor figures from the release, not independent measurements.
+
+## The wider Copilot announcements
+
+Microsoft's Copilot blog post from the same day covers more than Salesforce. Per the post, Home (Chat and Cowork combined), Office in Copilot and Copilot Managed Runtime are generally available now, while Copilot Code is due to reach general availability "in the coming weeks." Autopilot, an always-on agent with its own Microsoft Entra agent identity and a named manager, is rolling out to Frontier customers. Workspaces is available in Frontier, and a command-center experience called Today is in private preview.
+
+For people who use Dynamics 365 rather than Salesforce, the post says updated Sales, Customer Service and Finance and Operations plugins bring more than 100 prebuilt skills into Copilot. It lists 44 sales skills, 13 customer service skills and 30 finance skills, and the page does not break the 100-plus total down further. It separately mentions more than 20 legal skills. It also says Agent 365 now gives visibility across platforms including Anthropic, Databricks, OpenAI and Salesforce, with new controls over MCP servers, plugins and skills.
+
+Microsoft says Office in Copilot, which creates and co-authors Word, Excel and PowerPoint files inside the Copilot app, is "already included in your Copilot subscription license." The post describes the commercial model for Copilot as a per-user subscription plus usage-based consumption for the most demanding tasks.
+
+## The cost claim to treat with care
+
+The Copilot post cites a GigaOm report and says that, for comparable quality, Copilot is 84 percent cheaper than Claude and 63 percent cheaper than ChatGPT for an everyday user, and 68 percent and 35 percent cheaper for an advanced user. This is Microsoft's own summary of a report it cites. We did not read the underlying report, so these figures are vendor-cited and unverified, and we cannot say how it defined everyday use, which plans it compared or how it measured quality. Until you can read that method yourself, treat the numbers as a vendor claim rather than a finding.
+
+## What neither page says
+
+Neither page gives prices or licence terms for the Salesforce in Copilot plugin, including whether it needs a separate licence. Microsoft does say Office in Copilot is already included in a Copilot subscription licence, but neither page names the specific subscription edition needed for the rest. They do not say which Microsoft 365 Copilot plans or Salesforce editions are required, or what usage limits apply. There is no general availability date for the Salesforce plugin or Sales Cloud in Teams. The press release says regional availability and customer access are governed by applicable customer agreements, which means you would need to check your own contracts. Microsoft's Autopilot and Copilot Code pricing are also unstated.
+
+## A cautious way to approach it
+
+This is general information, not legal or financial advice. For a small team already on both products, a reasonable first step is to read your current Salesforce and Microsoft agreements and ask your account contacts about licensing for the preview items. Because the plugin is a beta, try it first on non-critical records, and keep the confirmation step on for any writeback to your CRM. Stackbrook has not tested any of this, so each capability above is the vendors' description, not a verified result.
