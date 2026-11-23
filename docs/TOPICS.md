@@ -72,3 +72,4 @@ P38. published | AI Infrastructure | Google agent sandboxes: Agent Compute Engin
 P39. published | AI Hardware | Nvidia Vera CPU explained (2026-11-23; Nvidia newsroom 16 Mar + Nvidia blog updated 27 Aug 2026)
 P40. published | AI Assistants | Personal Finance in Claude beta explained (2026-11-23; claude.com launch article 5 Nov + Help Center)
 # 2026-11-23: EU AI Act digital omnibus considered; final status could not be confirmed (Council page 4xx, EP legislative train error). Still todo.
+P41. published | AI Models | Cloudflare Clef decision models explained (2026-11-23; two Cloudflare blog posts of 1 and 9 Oct 2026)

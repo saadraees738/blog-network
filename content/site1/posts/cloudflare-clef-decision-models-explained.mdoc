@@ -1,0 +1,74 @@
+---
+title: 'Cloudflare Clef explained: the decision models, Clef-omni and a cheaper Clef-flash'
+description: 'Cloudflare''s Clef models pick one option from a list instead of writing text. What Clef, Clef-flash and Clef-omni are, what they cost and what is still unclear.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Models
+author: saad-r
+heroImage: /images/site1/cloudflare-clef-decision-models-explained-cover.jpg
+heroAlt: 'AI-generated illustration of three glossy glass spheres of different sizes joined by thin beams of light in orange and deep blue'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Clef is a family of open decision models from Cloudflare that choose among options you define instead of writing text. The 1 October 2026 post introduced Clef and Clef-flash, and a 9 October post added Clef-omni, which also reads audio and video. Cloudflare lists input prices of $0.24 (Clef), $0.15 (Clef-omni, launch price) and $0.038 (Clef-flash) per million tokens, but the benchmarks are Cloudflare's own and mixed.
+sources:
+  - title: Introducing Clef - our open-source decision models, and new RL fine-tuning platform (Cloudflare blog, 1 October 2026; page last modified 9 November 2026)
+    url: https://blog.cloudflare.com/clef-decision-models
+    accessed: 2026-11-23
+  - title: Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash (Cloudflare blog, 9 October 2026)
+    url: https://blog.cloudflare.com/clef-faster-cheaper-multimodal/
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Cloudflare blog pages (REVISE, 9 findings applied: unconfirmed details softened or removed, an unfavourable benchmark noted, speculative closing removed). Figures were checked against the text of both pages, read through a summarising fetch tool, so exact wording is second-hand. Items the pages do not state (Clef-omni licence, size and context, Clef-omni hosting, Jev maker) are left out or marked unconfirmed. Benchmarks are Cloudflare''s own; no independent evaluation was found or used.'
+---
+
+Most AI models you meet in chat tools write text. Cloudflare's Clef models do something narrower: you describe a set of options, give the model some input, and it picks one. This post explains what Cloudflare says Clef, Clef-flash and Clef-omni are, what they cost per million input tokens, and where the company's own numbers show trade-offs. Everything below comes from two Cloudflare blog posts, and the claims are Cloudflare's.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What a decision model is
+
+The first post, dated 1 October 2026, introduces Clef as an open-source family of "decision models". Rather than generating a reply token by token, a decision model scores the options you supply and returns the best match. The second post says the newer Clef-omni "skips output token generation" and scores options directly, so it is not a language model in the usual chat sense.
+
+That makes Clef a fit for jobs where the answer is one of a known set: which tool a request should call, which support category a message belongs to, whether an email looks like phishing. Cloudflare's benchmark list reflects this, with tool-calling tests (BFCL, API-Bank), intent classification (BANKING77, CLINC150) and a phishing test among them. Cloudflare compares Clef mainly against Jev, another decision model.
+
+## The three models
+
+According to the first post, Clef is built on a frozen Qwen3.8-27B backbone, and has a 64k-token context. Clef-flash is a smaller sibling built on Qwen3.5-9B. Both are listed on Hugging Face under Apache 2.0. Hosted versions run on Workers AI.
+
+The second post, dated 9 October 2026, adds Clef-omni, built on Qwen3-Omni-30B-A3B-Instruct, a mixture-of-experts model. It accepts text, images, audio (WAV or MP3) and video (MP4 or WebM). Cloudflare says weights are on Hugging Face; hosting details for Clef-omni were not confirmed from the text reviewed. The second post does not state a parameter count or licence for Clef-omni in the text I could review, so treat those as unconfirmed.
+
+The same post reports faster hosted median times for Clef. The figures Cloudflare gives: about 800 tokens fell from 262 ms to 152 ms, about 3,400 tokens from 616 ms to 305 ms, and about 16,000 tokens from 2,721 ms to 1,635 ms.
+
+## What each one costs
+
+Cloudflare publishes prices per million input tokens. The 9 October post says Clef-flash dropped from $0.09 to $0.038, Clef stays at $0.24, and Clef-omni launched at $0.15. No output-token prices appear, which fits models that do not generate output. Prices are as published on 9 October 2026 and may have changed, so check Cloudflare's developer docs before budgeting.
+
+![Bar chart of Cloudflare's listed input prices per million tokens for Clef-flash, Clef-omni and Clef](/images/site1/cloudflare-clef-decision-models-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+There is a catch behind the lowest price. Clef-flash was trained for a 256k context, but the hosted version is limited to 24k tokens, cut from an advertised 64k. Cloudflare says about 0.24 percent of Clef-flash requests exceed 24k input tokens.
+
+## What the benchmarks show
+
+Cloudflare says Clef is "currently the leader" on the Jev Decision Index, but its own tables show a mixed picture. Scores below are as published by Cloudflare for Clef, Clef-flash and Jev.
+
+| Test | Clef | Clef-flash | Jev |
+|---|---|---|---|
+| BFCL (exact case) | 98.47 | 98.76 | 95.75 |
+| API-Bank accuracy | 91.93 | 93.11 | 88.19 |
+| When2Call accuracy | 72.37 | 65.58 | 80.97 |
+| CLINC150+OOS macro-F1 | 97.43 | 66.77 | 89.27 |
+| PhishNChips accuracy | 79.60 | 75.05 | 62.55 |
+
+On PhishNChips, Cloudflare's table also shows a model it calls DiffusionGemma Jev (85.35) ahead of both Clef models. Jev wins When2Call, and the small Clef-flash drops sharply on CLINC150 compared with Clef. Clef beat Jev on three of four TypeSafe workflow tests but lost on agent trace observability. Cloudflare also cites one internal workflow where Clef took 2.2 seconds against 4.7 seconds for gpt-oss-120b; that is a single example, not a general speed claim.
+
+## Limits and open questions
+
+Fine-tuning is early. The first post says Cloudflare's new reinforcement-learning platform is offered first through a forward-deployed engineering team, with self-serve planned later. It also says Cloudflare does not read, store or train on requests and responses, but that this promise does not apply if a customer opts into fine-tuning.
+
+Other details are unclear from these pages: Clef's total parameter count is not stated, only its backbone, and no independent evaluation was found. Anyone considering Clef for a real workflow should test it on their own options and data, since benchmark wins on public sets may not carry over. This is general information about a product announcement, not a recommendation.
