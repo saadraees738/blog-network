@@ -1,0 +1,78 @@
+---
+title: 'Google agent sandboxes explained: Agent Compute Engine vs Substrate vs Sandbox'
+description: 'Google now names three ways to run AI agents in isolation. See what each is, which one is available today, and what Google has not said about price or limits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Infrastructure
+author: saad-r
+heroImage: /images/site1/google-agent-compute-engine-substrate-sandbox-explained-cover.jpg
+heroAlt: 'AI-generated illustration of two glowing translucent glass cubes with amber and teal light standing in a dark server room'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Google describes three separate ways to run AI agents in isolated sandboxes - Agent Compute Engine, a managed microVM service that is only targeted for preview in the coming months, plus Agent Substrate and Agent Sandbox, two open-source options on GKE. Google's 5 November post says Agent Substrate reached 1.0 and is generally available on GKE. Google's pages state no prices, so a small team should treat all three as infrastructure for platform engineers rather than something to buy today.
+sources:
+  - title: 'Inside Agent Compute Engine: Building the compute foundation for the agentic era (Google Cloud blog, 22 Oct 2026)'
+    url: https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive
+    accessed: 2026-11-23
+  - title: 'Open infrastructure for autonomous agents comes to CNCF (Google Cloud blog, 5 Nov 2026)'
+    url: https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf
+    accessed: 2026-11-23
+  - title: 'Agent Substrate available on GKE (Google Cloud blog, 15 Sep 2026)'
+    url: https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke
+    accessed: 2026-11-23
+  - title: About Agent Sandbox on GKE (Google Cloud documentation)
+    url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the four cited Google pages (REVISE, 8 findings, all applied: chart status corrected, credential-handling and identity wording aligned to the page, timing wording softened, attribution fixed). Not verified: exact page wording (the reviewer saw fetched summaries, not raw HTML), the absence of pricing and benchmark methods, and all performance figures, which are Google claims.'
+---
+
+When an AI agent can run code, browse the web and touch your files, the question stops being "how smart is it" and becomes "where does it run, and what can it reach". Google Cloud has been answering that with three similarly named products, and the names are easy to mix up. This post sorts out Agent Compute Engine, Agent Substrate and Agent Sandbox using four Google pages, and flags what Google has not said.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Google pages for figures, dates and wording. This is not a full human review. Google makes Gemini, which competes with Claude, so read any comparison with that in mind. Stackbrook did not test any of these products and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## The three names, in plain terms
+
+A sandbox, in this context, is a sealed environment where an agent runs commands so that a mistake or a hostile instruction cannot spread to the rest of your systems. Google offers three routes to one.
+
+Agent Compute Engine is the newest and the least available. Google's engineering post of 22 October 2026 describes it as a service that gives each agent "its own hardware-isolated microVM". A microVM is a very small virtual machine that starts quickly. Google's 5 November post adds that it is a dedicated microVM compute service reached through an API, "without having to manage clusters", with fast hibernation and the ability to fork environments for evaluation and reinforcement-learning work.
+
+Agent Substrate on GKE is an open-source runtime for Google Kubernetes Engine. According to the 5 November post, it can isolate agents with either Cloud Hypervisor microVMs or gVisor, runs standard OCI containers, and is built from three parts: Actors, which hold memory, files and an identity, Workers, which are reusable sandboxes from a warm pool, and Gateways, which control inbound and outbound access and inject secrets based on the Actor's identity.
+
+Agent Sandbox on GKE is an open-source Kubernetes project under SIG Apps. Google's documentation says you install and upgrade its controller yourself, and recommends Agent Substrate instead for most agent workloads. Agent Sandbox fits better when each agent needs its own Pod, GPUs or TPUs, a full Pod specification, or Autopilot.
+
+![Table-style diagram comparing Google's Agent Compute Engine, Agent Substrate on GKE and Agent Sandbox on GKE by what each is and the status Google states](/images/site1/google-agent-compute-engine-substrate-sandbox-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## What is available today
+
+The status picture is uneven, and Google's pages describe different points in time.
+
+For Agent Compute Engine, the 22 October post says it is "coming soon" and targeted for preview in the coming months, with an interest sign-up. It gives no preview date. Nothing on the pages we read says it can be used now.
+
+For Agent Substrate, Google's 15 September post said it was open source and available to all GKE customers for non-production workloads, with production GA support available through an allowlist. The 5 November post then says it reached its 1.0 milestone and is generally available as Agent Substrate on GKE. The later post is the better guide to the current state, but the earlier allowlist wording suggests the rollout came in stages, so check Google's current documentation before planning production use.
+
+For Agent Sandbox, the documentation page we read does not state a launch stage for the project itself, and it says some underlying features, such as Pod snapshots, might be in preview or limited to certain regions. It lists concrete limits: Pod snapshots need GKE version 1.35.3-gke.1234000 or later, do not support E2 machine types, require gVisor and do not work with microVMs, and GPUs and TPUs work only with gVisor.
+
+## How the isolation and credentials work
+
+The most useful idea in Google's Agent Compute Engine post is where secrets live. Google says the sandbox holds "zero persistent secrets", no OAuth refresh tokens and no cloud service account keys, and cannot reach the instance metadata server. Sandbox traffic uses a short-lived, cryptographically attested workload identity instead. Google says credentials never enter the microVM and that an Agent Gateway enforces policies and identities on all network traffic.
+
+The same post says the microVMs have no standard virtual network interface or direct VPC access, so traffic goes through a local mediation proxy to an external proxy, and Google calls Agent Gateway the control point for network traffic. It also describes four identity types: the user, a delegated on-behalf-of identity, a short-lived workload identity for sandbox traffic, and a separate identity for agents acting on their own. The Substrate design echoes this, since its Gateways inject secrets based on Actor identity, and the September post mentions egress proxies that inject credentials outside the agent.
+
+On cost and speed, Google makes performance claims for Substrate: restores in under 500 ms, 10x the density of standard container runtimes, more than 500 suspend-and-resume activations per second, and "millions of sandboxes". These are Google's figures for its own system, and the summaries of the pages we read showed no benchmark method. The September post also claims up to 30% better price-performance on Axion Arm processors, another vendor claim. For Agent Compute Engine, the only cost wording is that you "don't pay for idle VMs" because idle sessions are checkpointed. Google does not state prices for any of the three.
+
+## What a small team should take from this
+
+For most small businesses, none of this is a purchase decision. These are building blocks for companies that run their own agent platforms. The practical value is the checklist the designs imply: keep long-lived credentials out of the place where an agent runs code, give each session its own short-lived identity, control outbound traffic through one gateway, and log what the agent does. If you buy agent tools from a vendor, those are fair questions to ask them.
+
+If your team does run workloads on GKE, Google's documentation gives the clearest starting point: Agent Substrate for most agents, and Agent Sandbox when you need per-agent Pods or accelerators. Agent Compute Engine, by Google's blog post, is not yet open for preview. Note too that Agent Sandbox's docs say it does not detect idle agents, and that suspending a sandbox deletes the Pod and loses in-memory state unless you took a Pod snapshot first.
+
+## What we could not confirm
+
+Google's separate announcement post for Agent Compute Engine could not be retrieved in this run, so facts here come from the four cited pages. We found no pricing, regions list, quotas or named third-party framework support for Agent Compute Engine. The performance numbers above are vendor claims. This is general information about cloud products, not security, financial or legal advice.
