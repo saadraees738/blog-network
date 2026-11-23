@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of the proposed Worken formula: active robots times autonomous working hours times output efficiency ratio">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">How AGIBOT's proposed Worken is calculated</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Source: AGIBOT Innovation Day 2026 release (29 Oct 2026). A proposed framework; no measured values published</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="60" y="190" width="300" height="200" rx="14" fill="#e3efec" stroke="#1f6f66" stroke-width="2"/>
+<text x="210" y="250" font-size="26" font-weight="700" fill="#1d2a2a">Active robots</text>
+<text x="210" y="290" font-size="18" fill="#3d4a4a">Units actually doing tasks</text>
+<text x="210" y="316" font-size="18" fill="#3d4a4a">in real settings, not units</text>
+<text x="210" y="342" font-size="18" fill="#3d4a4a">built or in stock</text>
+<text x="410" y="300" font-size="48" font-weight="700" fill="#b8651b">×</text>
+<rect x="450" y="190" width="300" height="200" rx="14" fill="#e3efec" stroke="#1f6f66" stroke-width="2"/>
+<text x="600" y="250" font-size="26" font-weight="700" fill="#1d2a2a">Autonomous hours</text>
+<text x="600" y="290" font-size="18" fill="#3d4a4a">Time spent working on its</text>
+<text x="600" y="316" font-size="18" fill="#3d4a4a">own, not total powered-on</text>
+<text x="600" y="342" font-size="18" fill="#3d4a4a">time</text>
+<text x="800" y="300" font-size="48" font-weight="700" fill="#b8651b">×</text>
+<rect x="840" y="190" width="300" height="200" rx="14" fill="#e3efec" stroke="#1f6f66" stroke-width="2"/>
+<text x="990" y="250" font-size="26" font-weight="700" fill="#1d2a2a">Output efficiency</text>
+<text x="990" y="290" font-size="18" fill="#3d4a4a">Output versus a reference</text>
+<text x="990" y="316" font-size="18" fill="#3d4a4a">benchmark for a defined</text>
+<text x="990" y="342" font-size="18" fill="#3d4a4a">task</text>
+<path d="M600 400 L600 450" stroke="#1d2a2a" stroke-width="3"/><path d="M588 440 L600 456 L612 440 Z" fill="#1d2a2a"/>
+<rect x="340" y="466" width="520" height="90" rx="14" fill="#fdf1e3" stroke="#b8651b" stroke-width="2"/>
+<text x="600" y="506" font-size="26" font-weight="700" fill="#1d2a2a">Worken</text>
+<text x="600" y="536" font-size="18" fill="#3d4a4a">"Effective Intelligent Work Hours" (AGIBOT's description)</text>
+</g></svg>

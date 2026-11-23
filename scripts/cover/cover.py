@@ -25,6 +25,7 @@ POSTS={
 'gemini-4-neon-explained-what-google-says':('AI Models','Gemini 4 Neon, explained'),
 'gemini-computer-use-mac-explained-what-google-says':('AI Assistants','Gemini on Mac, explained'),
 'lg-nvidia-robot-data-factory-explained-what-is-confirmed':('Robots','LG robot Data Factory, explained'),
+'agibot-worken-robot-work-metric-explained':('Robots','AGIBOT Worken, explained'),
 'cloudflare-clairic-extraction-model-explained':('AI Models','Cloudflare Clairic, explained'),
 'vs-code-1-147-send-later-browser-use-explained':('AI Coding','VS Code 1.147, explained'),
 'ring-drone-cam-rover-cam-security-robots-what-is-reported':('Robots','Ring patrol robots, explained'),
