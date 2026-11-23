@@ -1,0 +1,70 @@
+---
+title: 'Nvidia Vera CPU explained: what Nvidia says its agent processor does'
+description: 'Nvidia says its Vera CPU is built for AI agents and is now shipping. See the specs, who got the first units, and which claims have no stated test behind them.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Hardware
+author: saad-r
+heroImage: /images/site1/nvidia-vera-cpu-agents-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a large abstract processor chip with glowing teal circuit traces on a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Vera is Nvidia's own server CPU, designed to run the non-GPU work around AI agents such as tool calls, code sandboxes and data handling. Nvidia lists 88 custom cores and up to 1.2 TB/s of memory bandwidth, and says the first units were hand-delivered in May 2026. Its headline speed and efficiency figures name no test setup, and the pages give no price, so this is infrastructure news for data-centre buyers rather than something a small business can order.
+sources:
+  - title: 'NVIDIA Launches Vera CPU, Purpose-Built for Agentic AI (NVIDIA Newsroom, 16 Mar 2026)'
+    url: https://nvidianews.nvidia.com/news/nvidia-launches-vera-cpu-purpose-built-for-agentic-ai
+    accessed: 2026-11-23
+  - title: 'Delivering Vera: NVIDIA''s First CPU Built for Agents Is Shipping Now (NVIDIA Blog, updated 27 Aug 2026)'
+    url: https://blogs.nvidia.com/blog/vera-cpu-delivery/
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Nvidia pages (REVISE, 12 findings, all applied: delivery date softened to May, unconfirmed delivery details and quoted phrase removed, power claim added, availability wording updated). Not verified: exact quoted wording beyond the two short quotes (reviewer saw fetched summaries), the absence of clock speed and process node, and all performance figures, which are Nvidia or partner claims.'
+---
+
+Most AI headlines are about GPUs, the chips that run the models. Agents add a second kind of work: calling tools, running code, moving data and keeping track of long tasks. Nvidia says that work needs a different processor, and it has built one. This post explains Vera using two Nvidia pages and marks which statements are claims.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited Nvidia pages for figures, dates and wording. This is not a full human review. Anthropic is named on one of the pages as a recipient of early Vera units, so treat any link between the companies with that in mind. Stackbrook did not test the product and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Vera is
+
+Vera is a central processing unit, or CPU, designed by Nvidia for data centres. Nvidia's 16 March 2026 launch release describes it as built for agentic AI and says it is "in full production". The 27 August 2026 update of Nvidia's blog says it is the company's first CPU built for agents and is shipping now. The blog lists the jobs it targets: orchestration, tool-calling, reinforcement-learning workloads, data analytics, agent sandboxing and long-context state management.
+
+The idea is simple. A GPU does the heavy model maths, but something has to feed it data, run the code an agent writes and manage many sessions at once. A CPU handles that, and Nvidia says Vera feeds GPUs more efficiently.
+
+## The specs Nvidia publishes
+
+Both pages agree on 88 custom Nvidia-designed cores, which the launch release calls Olympus. The launch release adds that each core can run two tasks using what Nvidia calls Spatial Multithreading, and that memory is LPDDR5X with up to 1.2 TB/s of bandwidth. The blog repeats the 1.2 TB/s figure.
+
+When paired with GPUs in the Vera Rubin NVL72 platform, the release says the link between CPU and GPU is NVLink-C2C with 1.8 TB/s of coherent bandwidth, which Nvidia puts at 7x PCIe Gen 6. The blog describes Vera as the host processor there, sharing a unified memory design with two Rubin GPUs.
+
+A Vera rack, per the release, holds 256 liquid-cooled CPUs and can sustain more than 22,500 concurrent CPU environments, each running independently. Configurations come in single and dual socket. Neither page gives memory capacity, absolute power draw, clock speed, process node or price. The release does claim the memory delivers twice the bandwidth at half the power of general-purpose CPUs, with no named baseline.
+
+![Timeline of key Vera CPU dates from Nvidia's launch release and delivery blog, from March to August 2026 and a second-half 2026 availability promise](/images/site1/nvidia-vera-cpu-agents-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Who has it so far
+
+The blog, first published on 18 May 2026, says Nvidia's Ian Buck hand-delivered the first units in May. Anthropic received the first delivery at its San Francisco offices. OpenAI received a delivery at its San Francisco headquarters, SpaceXAI received one in Palo Alto, and Oracle Cloud Infrastructure received one at its AI Customer Excellence Center. In August, the blog says, Amazon Web Services received its first Vera CPU server and a Vera Rubin GPU system in Seattle.
+
+Two forward-looking items need care. Oracle says it plans to deploy hundreds of thousands of Vera CPUs beginning in 2026, which is a plan, not a count of installed chips. The same blog says AWS and Nvidia announced an expansion the day before, including plans for 2 million more Nvidia GPUs and work to bring Vera-based infrastructure to AWS. That, too, is intent.
+
+The March release lists many collaborators: Alibaba Cloud, CoreWeave, Meta and Oracle among hyperscalers, plus cloud providers such as Cloudflare, Crusoe, Lambda, Nebius and Together.AI, and system makers including Dell, HPE, Lenovo and Supermicro. It said partner availability would start in the second half of 2026; we found no confirmation of general availability. A listing as a collaborator is not proof that a product is on sale.
+
+## The claims, and what is missing
+
+Nvidia's headline numbers are vendor figures. The release says Vera delivers "twice the efficiency and 50% faster than traditional rack-scale CPUs", without naming the comparison chips or the test. The blog says up to 1.8x faster per-core performance on agentic workloads and twice the energy efficiency of traditional infrastructure, again with no benchmark, workload or baseline stated. Those two sets of figures are not identical and the pages do not reconcile them, so read each as a separate, unverified claim.
+
+The release also quotes partners. Redpanda reports up to 5.5x lower latency on Kafka-compatible workloads against other systems it has benchmarked, and the Texas Advanced Computing Center describes "impressive early results" without numbers. These are the companies' own statements and the comparison systems are not detailed.
+
+## What this means for a small business
+
+Probably nothing directly. You cannot buy a Vera chip off a shelf, and the pages list no price. The practical effect, if the claims hold, would arrive through your cloud or AI vendor: cheaper or faster agent services, in time. Until independent benchmarks appear, treat the speed and efficiency numbers as unverified vendor claims. If a vendor says it runs on Vera, a fair question is what it measured against.
+
+## What we could not confirm
+
+Nvidia's product page for Vera blocked automated reading in this run, so only the two cited pages were used. We did not find independent benchmarks, a general-availability date, or pricing. All statements above are Nvidia's or its partners' own. This is general information about computer hardware, not financial or investment advice.

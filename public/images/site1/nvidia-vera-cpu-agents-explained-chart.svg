@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="50" y="62" font-size="30" font-weight="700" fill="#f8fafc">Nvidia Vera CPU: key dates in Nvidia's own posts</text>
+<text x="50" y="96" font-size="18" fill="#94a3b8">Timeline from two Nvidia pages, checked 23 Nov 2026</text>
+<line x1="90" y1="330" x2="1110" y2="330" stroke="#475569" stroke-width="4"/>
+<g fill="#38bdf8"><circle cx="150" cy="330" r="14"/><circle cx="450" cy="330" r="14"/><circle cx="750" cy="330" r="14"/></g>
+<circle cx="1050" cy="330" r="14" fill="none" stroke="#fbbf24" stroke-width="4"/>
+<g font-size="22" font-weight="700" fill="#f8fafc" text-anchor="middle">
+<text x="150" y="270">16 Mar 2026</text><text x="450" y="270">May 2026</text><text x="750" y="270">27 Aug 2026</text><text x="1050" y="270">2H 2026</text></g>
+<g font-size="17" fill="#cbd5e1" text-anchor="middle">
+<text x="150" y="385">Launch at GTC:</text><text x="150" y="410">"in full production"</text>
+<text x="450" y="385">First Vera CPUs</text><text x="450" y="410">hand-delivered to</text><text x="450" y="435">Anthropic and others</text><text x="450" y="460">(blog first posted 18 May)</text>
+<text x="750" y="385">Blog updated: AWS</text><text x="750" y="410">gets first Vera</text><text x="750" y="435">server</text>
+<text x="1050" y="385">Partner availability</text><text x="1050" y="410">promised (a plan,</text><text x="1050" y="435">not a date)</text></g>
+<text x="50" y="560" font-size="17" fill="#94a3b8">Filled dot = event stated as done on the page. Open dot = forward-looking statement.</text>
+</svg>

@@ -69,3 +69,4 @@ P35. published | AI Agents | OpenAI dots always-on agent explained (2026-11-23; 
 P36. published | AI Productivity | Copilotforce (Microsoft + Salesforce) explained (2026-11-23; Microsoft Source release + Copilot Ignite blog, 17 Nov 2026)
 P37. published | AI Assistants | Meta Muse personal agent and voice explained (2026-11-23; three about.fb.com posts)
 P38. published | AI Infrastructure | Google agent sandboxes: Agent Compute Engine vs Substrate vs Sandbox explained (2026-11-23; three Google Cloud blog posts + GKE docs)
+P39. published | AI Hardware | Nvidia Vera CPU explained (2026-11-23; Nvidia newsroom 16 Mar + Nvidia blog updated 27 Aug 2026)
