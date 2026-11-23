@@ -67,3 +67,4 @@ P33. published | AI Assistants | Claude Fable 5.2 explained (2026-11-22; anthrop
 P34. published | AI Images | Adobe Firefly at MAX 2026 explained (2026-11-22; two Adobe newsroom releases of 10 Nov 2026)
 P35. published | AI Agents | OpenAI dots always-on agent explained (2026-11-23; OpenAI announcement + Help Center getting-started)
 P36. published | AI Productivity | Copilotforce (Microsoft + Salesforce) explained (2026-11-23; Microsoft Source release + Copilot Ignite blog, 17 Nov 2026)
+P37. published | AI Assistants | Meta Muse personal agent and voice explained (2026-11-23; three about.fb.com posts)

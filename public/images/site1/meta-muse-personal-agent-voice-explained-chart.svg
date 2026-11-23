@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Timeline of three Meta Muse announcements in 2026: launch on 8 September, voice and avatars on 5 November, Australia on 17 November">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">Meta Muse: three announcements in ten weeks</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: Meta newsroom posts of 8 Sep, 5 Nov and 17 Nov 2026. Dates as published by Meta.</text>
+<line x1="100" y1="330" x2="1100" y2="330" stroke="#9aa5a5" stroke-width="4"/>
+<circle cx="140" cy="330" r="16" fill="#c2503a"/>
+<circle cx="800" cy="330" r="16" fill="#2f6fb0"/>
+<circle cx="937" cy="330" r="16" fill="#1f7a5a"/>
+<text x="140" y="300" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#c2503a" text-anchor="middle">8 Sep</text>
+<text x="800" y="300" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#2f6fb0" text-anchor="middle">5 Nov</text>
+<text x="937" y="300" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1f7a5a" text-anchor="middle">17 Nov</text>
+<rect x="60" y="370" width="300" height="190" rx="12" fill="#ffffff" stroke="#d9d6cc"/>
+<text x="80" y="406" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">Launch</text>
+<text x="80" y="440" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Personal agent on its own</text>
+<text x="80" y="466" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">cloud VM, rolling out in</text>
+<text x="80" y="492" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">the US (iOS, Android, web)</text>
+<rect x="640" y="370" width="300" height="190" rx="12" fill="#ffffff" stroke="#d9d6cc"/>
+<text x="660" y="406" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">Voice and avatars</text>
+<text x="660" y="440" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Real-time voice, expressive</text>
+<text x="660" y="466" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">avatar, hundreds of voices,</text>
+<text x="660" y="492" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">US to start</text>
+<rect x="800" y="140" width="260" height="120" rx="12" fill="#ffffff" stroke="#d9d6cc"/>
+<text x="820" y="176" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2a2a">Australia</text>
+<text x="820" y="206" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Available from 17 Nov,</text>
+<text x="820" y="232" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">with local connectors</text>
+</svg>
