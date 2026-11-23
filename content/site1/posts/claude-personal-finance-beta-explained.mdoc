@@ -1,0 +1,64 @@
+---
+title: 'Personal Finance in Claude explained: what the beta can see and do'
+description: 'Anthropic has launched a US-only beta that lets Claude read your linked bank accounts. See who can use it, what it can read, and what happens to your data.'
+status: published
+queueReason: ''
+publishDate: 2026-11-23
+lastVerified: 2026-11-23
+category: AI Assistants
+author: saad-r
+heroImage: /images/site1/claude-personal-finance-beta-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glass padlock resting on stacked translucent coins and flowing chart lines in teal and amber light'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Personal Finance is a beta feature in Claude for Pro, Max and Ultra plans in the US only, announced by Anthropic on 5 November 2026. You link accounts by signing in to your bank through Plaid, and Anthropic says access is read-only - Claude cannot move, manage or invest your money. Anthropic says chats in the Personal Finance hub are not used to train its models, and that it is not designed to give investment advice. Anthropic says to check important figures against your bank.
+sources:
+  - title: 'Introducing Personal Finance in Claude (Claude, 5 Nov 2026)'
+    url: https://claude.com/resources/articles/introducing-personal-finance-in-claude
+    accessed: 2026-11-23
+  - title: 'Use Personal Finance in Claude (Claude Help Center)'
+    url: https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude
+    accessed: 2026-11-23
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Anthropic pages (REVISE, 12 findings, applied: unsupported claims about asking before linking, duplicate-charge detection and per-account consent removed, unlinking and reset wording corrected, attribution tightened). Not verified: exact wording of the live pages (the reviewer saw fetched summaries), Plaid-setting details and data-freshness notes not covered, and the two pages differing on account types.'
+---
+
+Linking bank data to a chatbot raises questions about safety and privacy. Anthropic has put out a beta that does this inside Claude. This post lays out what the two official pages say about who can use it, what Claude can read, and what happens to the data, and it notes where the pages differ.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Because Anthropic makes both Claude and this feature, read this as a summary of the company's own statements, not independent verification. Stackbrook did not test the feature and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## Who can use it
+
+Anthropic's launch article, dated 5 November 2026, says Personal Finance is rolling out in beta on the Pro, Max and Ultra plans in the US. The Help Center page adds that it is not available on Free, Team or Enterprise plans, works in Claude, Claude Desktop and the iOS and Android apps, and is being released gradually, so some eligible people will not see it yet. It also says the feature does not appear outside the US, including when connecting through a VPN from another country. Personal Finance is not part of Claude Duet.
+
+## How accounts are connected
+
+Linking goes through Plaid, a service that connects apps to banks. Per the launch article, accounts are only connected once you sign in to your bank yourself through Plaid. The Help Center page says Claude does not ask for or see your bank password. You can link up to 16 banks, only US banks are supported, and the Plaid connection window lasts 10 minutes.
+
+![Flow diagram showing a user signing in at their bank, Plaid connecting the bank to Claude, and Claude reading balances and transactions only, with what it can and cannot do](/images/site1/claude-personal-finance-beta-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## What Claude can see, and what it cannot do
+
+Both pages say access is read-only: Personal Finance cannot move, manage or invest your money. For the accounts you choose to share, the launch article says Claude sees the bank name, account name, type and last four digits, balances and credit limits, and up to two years of transactions. The Help Center states this as up to 24 months. The Help Center describes customisable widgets, questions you can ask in chat, and artifacts such as dashboards.
+
+The two pages differ on scope. The launch article lists bank name, account name, type, last four digits, balances, credit limits and transactions, and does not mention loans or investments. The Help Center says you can also link loans, including mortgages and student loans, and investment and retirement accounts, and lists extra details Claude may read for them, such as interest rates, due dates and holdings. The launch article says you sign in and approve read-only access through Plaid, for the accounts you choose.
+
+## What happens to your data
+
+Anthropic says conversations in the Personal Finance hub are not used to train its models. Chats outside the hub follow your normal privacy settings. The Help Center says chats that use linked accounts are designed not to save anything to memory or let you search that chat later, but the data stays in your chat history until you delete the chat, subject to Anthropic's retention practices. Artifacts built from those chats stay until you delete them, even if the chat is gone.
+
+The launch article says you can unlink an account at any time, after which Claude can no longer see its data. The Help Center speaks of unlinking a bank, and we did not find a way to unlink single accounts described there, so treat unlinking as bank by bank. Unlinking the last bank also resets your widgets, their settings such as budgets, and your setup answers, and the page says this cannot be undone. Deleting your Claude account unlinks banks automatically. If a paid plan ends, banks stay linked until you unlink them. The page also notes that service providers hosting Claude handle bank data, that Plaid handles data under its own terms, and that shared chat links or artifacts can expose figures from your accounts.
+
+## Limits worth knowing
+
+Linked accounts cannot be used in scheduled tasks, Cowork tasks or Claude Code, and may not work inside a project. Data exports do not yet include the dashboard. Anthropic also warns that spending figures leave out accounts that cannot be linked, so a budget can show more money left than you actually have.
+
+On accuracy and advice, Anthropic says Personal Finance helps you understand your money and is not designed to give investment advice. It tells users to check important figures against their bank's own app or statements. The launch article says people are best served by Claude working alongside licensed professionals and regulated firms.
+
+## What we could not confirm
+
+We read only the two Anthropic pages. We did not test the feature, so we cannot say how accurate its answers are, and we found no independent security review of it. The pages are not fully consistent on supported account types or on unlinking, and the wording of some details may differ from the live pages, and the Help Center page carries only a relative "Updated this week" note. Because the feature is in beta and rolling out gradually, details may change. This is general information, not financial or legal advice.

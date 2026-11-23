@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="50" y="62" font-size="30" font-weight="700" fill="#f8fafc">How Claude's Personal Finance beta connects, per Anthropic</text>
+<text x="50" y="96" font-size="18" fill="#94a3b8">Flow from Anthropic's launch article and Help Center page, checked 23 Nov 2026</text>
+<g fill="#1e293b" stroke="#38bdf8" stroke-width="3">
+<rect x="50" y="200" width="250" height="130" rx="14"/><rect x="375" y="200" width="250" height="130" rx="14"/><rect x="700" y="200" width="250" height="130" rx="14"/></g>
+<g fill="#38bdf8"><polygon points="308,255 345,255 345,243 368,265 345,287 345,275 308,275"/><polygon points="633,255 670,255 670,243 693,265 670,287 670,275 633,275"/></g>
+<g font-size="22" font-weight="700" fill="#f8fafc" text-anchor="middle">
+<text x="175" y="255">You sign in</text><text x="500" y="255">Plaid</text><text x="825" y="255">Claude</text></g>
+<g font-size="16" fill="#cbd5e1" text-anchor="middle">
+<text x="175" y="285">at your bank</text><text x="175" y="308">(no password to Claude)</text>
+<text x="500" y="285">connects apps</text><text x="500" y="308">to banks</text>
+<text x="825" y="285">reads balances and</text><text x="825" y="308">transactions only</text></g>
+<g font-size="19" font-weight="700"><text x="50" y="430" fill="#34d399">Can: read balances, limits, up to 24 months of transactions</text>
+<text x="50" y="470" fill="#fb7185">Cannot: move, manage or invest money; not designed for investment advice</text>
+<text x="50" y="510" fill="#fbbf24">Limits: US only, Pro/Max/Ultra, beta, up to 16 banks</text></g>
+</svg>

@@ -70,3 +70,5 @@ P36. published | AI Productivity | Copilotforce (Microsoft + Salesforce) explain
 P37. published | AI Assistants | Meta Muse personal agent and voice explained (2026-11-23; three about.fb.com posts)
 P38. published | AI Infrastructure | Google agent sandboxes: Agent Compute Engine vs Substrate vs Sandbox explained (2026-11-23; three Google Cloud blog posts + GKE docs)
 P39. published | AI Hardware | Nvidia Vera CPU explained (2026-11-23; Nvidia newsroom 16 Mar + Nvidia blog updated 27 Aug 2026)
+P40. published | AI Assistants | Personal Finance in Claude beta explained (2026-11-23; claude.com launch article 5 Nov + Help Center)
+# 2026-11-23: EU AI Act digital omnibus considered; final status could not be confirmed (Council page 4xx, EP legislative train error). Still todo.
