@@ -21,7 +21,10 @@ export default async function SiteLayout({
     <>
       <header className="site">
         <div className="wrap">
-          <a className="brand" href="/">{site.name}</a>
+          <a className="brand" href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            <img src="/icon.png" alt="" width={28} height={28} style={{ borderRadius: 6 }} />
+            {site.name}
+          </a>
           <nav>
             <a href="/">Latest</a>
             <a href="/legal/about">About</a>
