@@ -76,3 +76,4 @@ P41. published | AI Models | Cloudflare Clef decision models explained (2026-11-
 P42. published | Robots | AGIBOT Worken robot-work metric explained (2026-11-23; AGIBOT newsroom + PR Newswire copy of 29 Oct 2026 release)
 P43. published | AI Privacy | Signal Screen Security vs Windows Recall explained (2026-11-24; Signal support page + Signal blog 21 May 2025; Nov 2026 Gemini/Siri help page and Hacker News report not readable)
 P44. published | AI Assistants | Gemini Task mode (Chat to Task toggle) explained (2026-11-24; Google blog 17 Nov 2026 + Gemini Spark help page)
+P45. published | AI Developer Tools | Gemini API Tool Retrieval explained (2026-11-24; Google blog 19 Nov 2026 + function-calling docs; guide page unfetchable)

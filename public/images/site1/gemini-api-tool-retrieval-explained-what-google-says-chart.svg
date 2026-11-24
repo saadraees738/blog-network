@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of the default server-side Tool Retrieval steps in the Gemini Interactions API, from request to function result">
+<rect width="1200" height="630" fill="#f6f5fb"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#241f3d">Tool Retrieval, server-side mode: the flow</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a4766">Source: Google blog post of 19 Nov 2026 (preview, Interactions API). Step names as shown in its code samples</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="150" width="200" height="250" rx="14" fill="#ffffff" stroke="#5b4bc4" stroke-width="3"/>
+<circle cx="160" cy="190" r="22" fill="#5b4bc4"/><text x="160" y="198" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="160" y="250" font-size="17" font-weight="700" fill="#241f3d" text-anchor="middle">Your request</text>
+<text x="160" y="290" font-size="16" fill="#4a4766" text-anchor="middle">Adds tool_search and</text>
+<text x="160" y="314" font-size="16" fill="#4a4766" text-anchor="middle">sets defer_loading: true</text>
+<path d="M264 275 L292 275" stroke="#5b4bc4" stroke-width="4"/><path d="M292 275 l-9 -7 v14 z" fill="#5b4bc4"/>
+<rect x="280" y="150" width="200" height="250" rx="14" fill="#ffffff" stroke="#5b4bc4" stroke-width="3"/>
+<circle cx="380" cy="190" r="22" fill="#5b4bc4"/><text x="380" y="198" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="380" y="250" font-size="17" font-weight="700" fill="#241f3d" text-anchor="middle">Model sees a list</text>
+<text x="380" y="290" font-size="16" fill="#4a4766" text-anchor="middle">Sees each tool's name</text>
+<text x="380" y="314" font-size="16" fill="#4a4766" text-anchor="middle">and description only</text>
+<path d="M484 275 L512 275" stroke="#5b4bc4" stroke-width="4"/><path d="M512 275 l-9 -7 v14 z" fill="#5b4bc4"/>
+<rect x="500" y="150" width="200" height="250" rx="14" fill="#ffffff" stroke="#5b4bc4" stroke-width="3"/>
+<circle cx="600" cy="190" r="22" fill="#5b4bc4"/><text x="600" y="198" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="600" y="250" font-size="17" font-weight="700" fill="#241f3d" text-anchor="middle">Model asks by name</text>
+<text x="600" y="290" font-size="16" fill="#4a4766" text-anchor="middle">tool_search_call</text>
+<text x="600" y="314" font-size="16" fill="#4a4766" text-anchor="middle">with function_names</text>
+<path d="M704 275 L732 275" stroke="#5b4bc4" stroke-width="4"/><path d="M732 275 l-9 -7 v14 z" fill="#5b4bc4"/>
+<rect x="720" y="150" width="200" height="250" rx="14" fill="#ffffff" stroke="#5b4bc4" stroke-width="3"/>
+<circle cx="820" cy="190" r="22" fill="#5b4bc4"/><text x="820" y="198" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="820" y="250" font-size="17" font-weight="700" fill="#241f3d" text-anchor="middle">API loads schemas</text>
+<text x="820" y="290" font-size="16" fill="#4a4766" text-anchor="middle">tool_search_result</text>
+<text x="820" y="314" font-size="16" fill="#4a4766" text-anchor="middle">returns the schema</text>
+<path d="M924 275 L952 275" stroke="#5b4bc4" stroke-width="4"/><path d="M952 275 l-9 -7 v14 z" fill="#5b4bc4"/>
+<rect x="940" y="150" width="200" height="250" rx="14" fill="#ffffff" stroke="#5b4bc4" stroke-width="3"/>
+<circle cx="1040" cy="190" r="22" fill="#5b4bc4"/><text x="1040" y="198" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="1040" y="250" font-size="17" font-weight="700" fill="#241f3d" text-anchor="middle">Model calls the tool</text>
+<text x="1040" y="290" font-size="16" fill="#4a4766" text-anchor="middle">function_call, then</text>
+<text x="1040" y="314" font-size="16" fill="#4a4766" text-anchor="middle">you send function_result</text>
+<rect x="60" y="440" width="1080" height="130" rx="14" fill="#ece9fa"/>
+<text x="84" y="482" font-size="20" font-weight="700" fill="#241f3d">Client-side mode (execution: client)</text>
+<text x="84" y="516" font-size="18" fill="#4a4766">Your app answers the search and returns matching function schemas in a function_result.</text>
+<text x="84" y="544" font-size="18" fill="#4a4766">Google says this adds one round trip per search. No token-savings figure is published.</text>
+</g>
+</svg>

@@ -1,0 +1,77 @@
+---
+title: 'Gemini API Tool Retrieval explained: how deferred tool loading works and what Google does not say'
+description: 'Google put Tool Retrieval in preview in the Gemini Interactions API on 19 November 2026. How its two modes work, what it costs, and which numbers are missing.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Developer Tools
+author: saad-r
+heroImage: /images/site1/gemini-api-tool-retrieval-explained-what-google-says-cover.jpg
+heroAlt: 'AI-generated illustration of a long glowing library of shelves in violet and cyan with one stack of cards lit up at the center'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Google said on 19 November 2026 that Tool Retrieval is in preview in the Gemini Interactions API. It lets an agent keep a large tool library on standby and load a tool's parameter schema only when the model asks for it. Google says there is no separate charge, and that loaded schemas are billed as input tokens. It publishes no token-savings figure, no tool-count limit and no latency numbers.
+sources:
+  - title: 'Introducing Tool Retrieval in the Gemini API (Google blog, 19 November 2026)'
+    url: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/
+    accessed: 2026-11-24
+  - title: 'Function calling with the Gemini API (Google AI for Developers)'
+    url: https://ai.google.dev/gemini-api/docs/function-calling
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round (verdict REVISE, 8 findings, all applied): reworded the 10 to 20 tools line to a maximum and removed the partial-read caveat, removed the model name and the previous_interaction_id sentence, removed the query-string detail, cut the same-as-declared-up-front and appended-later explanations and the unsupported savings-when-unloaded claim, added Google latency claim, softened the chart title to flow. The reviewer could only read a summary of the blog post, so code-sample details (step names, parameter names, execution client) rest on our own fetch of the article body and were not re-checked verbatim. The linked Tool Retrieval guide could not be fetched, so limits and a GA date remain unverified. No independent testing was checked.'
+---
+
+Agents get slower and more expensive as their tool lists grow, because every tool normally ships its full parameter schema with every request. On 19 November 2026 Google announced a way to hold most of that back. This post reads Google's announcement and its function-calling documentation, explains the two modes in plain language, and lists what the sources leave out.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Google is a competitor of Anthropic. Stackbrook did not test the Gemini API or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Google announced
+
+Google's blog post, written by a Gemini API product manager and a DeepMind research scientist, says Tool Retrieval is now in preview in the Gemini Interactions API. The idea is that an agent keeps its full tool library on standby and loads a tool's parameter schema only when the task needs it. Google says it reduces input tokens and latency and helps keep tool selection accurate as an agent scales, though it gives no figures for any of these.
+
+The post says the feature works with Gemini 3.6 and later, including all Gemini 4 models, Only the Interactions API is named. The post does not say whether the older generateContent route supports it, so treat that as unknown.
+
+## How to switch it on
+
+According to the post, you add a tool of type tool_search to the request and set defer_loading to true on any function tool you want held back. For a remote MCP server, you set defer_loading on the mcp_server tool, and every tool that server exposes is then loaded on demand. Those are the parameter names shown in Google's code samples, so check the current documentation before relying on them in production code.
+
+## Server-side mode, the default
+
+In the default mode the model sees only the name and description of each deferred tool, not its parameter schema. When it decides it needs one, it asks for the tool by name. Google's samples show this as a tool_search_call step carrying the function names, followed by a tool_search_result step with the schema, and then the function_call itself, all inside one request. Google says there is no index to build or host, because Gemini runs the search on its side.
+
+![Flow diagram of the server-side Tool Retrieval and a note on client-side mode](/images/site1/gemini-api-tool-retrieval-explained-what-google-says-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Client-side mode
+
+The alternative is to declare the tool_search tool with execution set to client, and its own description. When the model calls it, your own application decides what matches and returns the matching function schemas in a function_result. Google says this adds one round trip per search. In exchange, tools do not have to be declared up front, so new ones can be added mid-conversation.
+
+| | Server-side (default) | Client-side |
+|---|---|---|
+| Who runs the search | Gemini, on Google's servers | Your application |
+| Index to build | None, per Google | Yours to build |
+| Extra round trips | Within one request | One per search, per Google |
+| Tools declared up front | Yes, with defer_loading | Not required, per Google's note on adding tools mid-conversation |
+
+## Price and caching
+
+Google's post says Tool Retrieval has no separate charge. Input and output tokens are billed at the standard rates for the model you call. Turning on tool_search adds what the post calls a small, fixed block of input tokens, without giving a number. Each schema the model loads is billed as input for the rest of the conversation. The post also claims that deferring schemas keeps the cached prompt prefix stable across turns. That is Google's claim, and it gives no measurement.
+
+## What the sources do not say
+
+The announcement tells readers to measure against their own traffic. It publishes no token-savings percentage, no accuracy figure, no latency figure, no maximum number of tools and no schema-size limit. It gives no general-availability date for the preview.
+
+The function-calling documentation is a useful counterweight. As we read it on 24 November 2026, it shows examples built on the Interactions API and, in its best-practices section, advises keeping the active set to no more than 10 to 20 tools. A reviewer read the full page and found no mention of tool search there. Google's blog also links a dedicated Tool Retrieval guide, which we could not open, so limits may be documented there.
+
+## Practical questions for teams
+
+This is general information about a developer feature, not a recommendation to adopt it. If you run an agent with a long tool list, a few questions follow from Google's description. How many of your tools does a typical task actually use? If most requests touch only a handful, deferred loading has the most room to help. Do you need new tools to appear mid-conversation? That points to client-side mode. Can you tolerate an extra round trip per search? And since the feature is a preview, are you comfortable with the interface changing? Stackbrook's own suggestion, not Google guidance, is to compare token counts on a sample of real conversations before and after switching it on.
+
+## Bottom line
+
+Tool Retrieval is a sensible answer to a real cost problem: stop sending every schema every time. The mechanism is clearly described, and the billing rule is simple. What is missing is evidence of how much it saves, how many tools it can handle and when it will leave preview. Until Google or independent developers publish measurements, it is best read as a promising preview feature with an unquantified benefit.
