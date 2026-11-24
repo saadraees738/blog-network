@@ -1,0 +1,68 @@
+---
+title: 'Google TPU 8tx and 8i Max explained: what Google says about its newest AI chip systems'
+description: 'Google added TPU 8tx and TPU 8i Max to its eighth-generation AI chips. What each is for, which figures are published, and what Google has not said yet.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Hardware
+author: saad-r
+heroImage: /images/site1/google-tpu-8tx-8i-max-explained-what-google-says-cover.jpg
+heroAlt: 'AI-generated illustration of two glowing translucent processor tiles joined side by side on a dark circuit grid'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: On 9 November 2026 Google announced two more systems in its eighth generation of TPU AI chips - TPU 8tx for secure, confidential inference and TPU 8i Max, which puts two TPU 8i chips in one package. Google gives only relative figures for them (up to 2x lower latency for 8tx, double the compute for 8i Max) and no availability date, region or price. All numbers are Google's own claims.
+sources:
+  - title: Our newest TPUs - 8tx and 8i Max, built for the agentic era (Google, 9 November 2026)
+    url: https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/
+    accessed: 2026-11-24
+  - title: TPU 8t and TPU 8i technical deep dive (Google Cloud blog, 22 April 2026)
+    url: https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Google pages (REVISE, 6 findings applied: benchmark wording, TPU 8i workload description, 8i pod-size note, source of the performance-per-dollar wording, author title, call-to-action wording; no second round). The reviewer did not open the SemiAnalysis pages linked from the November post, so their content is not used or assessed. No independent benchmark of TPU 8tx or 8i Max was found or used.'
+---
+
+Google has been building its own AI chips, called TPUs, for years, and it has just widened its newest family. In November it described two more systems, TPU 8tx and TPU 8i Max, on top of the TPU 8t and TPU 8i chips it introduced in April. This post explains in plain terms what each one is meant for, which numbers Google has published, and which questions are still open. Everything below comes from two Google pages, and every performance figure is Google's own claim.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Google is a competitor of Anthropic, so the author is not a neutral party. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## The four systems in Google's eighth generation
+
+The April deep dive from Google Cloud introduced two chips with different jobs. TPU 8t is built for pre-training, the expensive stage where a model learns from huge amounts of data. TPU 8i is listed for sampling, serving and reasoning, and the page also describes it as optimized for post-training and high-concurrency reasoning, which is the work of producing answers from a trained model. The November post, written by Amin Vahdat, Google's SVP and Chief Technologist for AI and Infrastructure, adds a third and fourth system.
+
+TPU 8tx is described as the third eighth-generation system. Google says it is optimized for secure and confidential inference and is also suited to small-scale training, and it points to regulated enterprises and governments as the audience. It uses the same silicon as TPU 8t, is paired with 5th Generation AMD EPYC host CPUs, and uses the Boardfly network design also found in TPU 8i. Google claims up to 2x lower latency than TPU 8t with a near-zero performance penalty, which it ties to multi-step AI agents.
+
+TPU 8i Max is the fourth system. It combines two TPU 8i chips in a single package, aimed at what Google calls the memory wall and very large context windows. Google says it has double the compute, double the SRAM and double the memory bandwidth of TPU 8i, and that it fits twice the silicon into the existing rack footprint.
+
+## What the April specifications say
+
+The deep dive gives the only absolute numbers, and they are for the original two chips. Google lists TPU 8t with 216 GB of high-bandwidth memory, 6,528 GB/s of memory bandwidth, 128 MB of on-chip SRAM and a peak of 12.6 petaflops at 4-bit precision (FP4). A single TPU 8t superpod links 9,600 chips.
+
+TPU 8i is listed with 288 GB of memory, 8,601 GB/s of bandwidth, 384 MB of on-chip SRAM and a peak of 10.1 petaflops at FP4. Google says that SRAM is three times the previous generation. Both chips use Arm-based Axion host CPUs in the April description. Note that the November post pairs TPU 8tx with AMD EPYC hosts instead, so the host processor depends on the system.
+
+One inconsistency is worth flagging. The deep dive says TPU 8i chips can be connected up to 1,152 together in one place and up to 1,024 active chips in another, and the page does not reconcile the two, so the exact pod size is unclear. Because TPU 8i Max is described only as "double" the 8i, no absolute figures for it can be derived from Google's pages, and this post does not guess them.
+
+## The claims, side by side
+
+Google states most gains against its previous generation, the seventh-generation Ironwood TPU. In the April deep dive, Google claims for TPU 8t up to 2.7x better performance per dollar for large-scale training and for TPU 8i up to 80 percent better performance per dollar, especially for large mixture-of-experts models at low-latency targets. It also claims up to 2x better performance per watt for both. The November post restates the same generation's gains slightly differently, as up to 2.7 times better training performance and 80 percent better inference price performance versus the previous generation, so the exact metric depends on which page you read.
+
+![Column chart of Google-claimed improvement multipliers for the eighth-generation TPUs versus the previous generation](/images/site1/google-tpu-8tx-8i-max-explained-what-google-says-chart.svg)
+*Chart created by Stackbrook from the cited pages. All multipliers are Google's own claims; the 8tx and 8i Max figures are relative to other eighth-generation systems, not to Ironwood.*
+
+The chart mixes claims that use different baselines, so read each column on its own. The deep dive does not name the model, workload or benchmark behind the performance-per-dollar and performance-per-watt figures, which means outsiders cannot reproduce them from the page.
+
+## What Google has not said
+
+The November post gives no availability date, no regions, no preview or general-availability status and no pricing for TPU 8tx or TPU 8i Max. It names no customers for them. It says only that there are "nearly 100 customers" for TPUs, including frontier labs, trading firms, retailers and universities. The April page offers several calls to action, the first being an interest form for the eighth-generation TPUs, which suggests access at that point meant asking Google rather than simply buying capacity.
+
+Neither page quantifies any third-party benchmark result for these systems. The November post refers to industry benchmarks (InferenceX and AgentX) and links to SemiAnalysis pages, and claims strong price-performance marks without giving numbers; Stackbrook did not open those linked pages. Claims such as "near-zero performance penalty" for confidential inference are Google's wording, and the page does not describe what security guarantees the hardware-level confidential computing provides beyond that phrase.
+
+## Why this matters for everyday users
+
+Most people and small businesses will never rent a TPU directly. The relevance is indirect: faster and cheaper chips can lower the cost of running AI services, and secure inference hardware is aimed at organizations that have so far kept sensitive data away from cloud AI. If you use Google's AI products or tools built on Google Cloud, these chips may eventually sit behind them, but nothing in the sources says when or whether prices will change.
+
+A sensible way to treat this announcement is as a roadmap signal. Google is splitting its chips by job - training, serving, confidential inference and very large memory - and putting numbers on gains relative to its own earlier hardware. Until it publishes availability and independent results, treat the figures as vendor claims. This is general information, not financial or investment advice.

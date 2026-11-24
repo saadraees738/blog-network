@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Column chart of Google-claimed TPU eighth-generation improvement multipliers">
+<rect width="1200" height="630" fill="#f3f7fd"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#10264a">Google's claimed gains for eighth-generation TPUs</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="19" fill="#44587a">Source: Google blog (9 Nov 2026) and Google Cloud deep dive (22 Apr 2026). Vendor claims, "up to".</text>
+<line x1="90" y1="520" x2="1130" y2="520" stroke="#44587a" stroke-width="2"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="130" y="446" width="120" height="74" fill="#2f6fdd"/><text x="190" y="436" font-size="26" font-weight="700" fill="#10264a">1.8x</text>
+<text x="190" y="550" font-size="17" fill="#10264a">8i perf/$</text><text x="190" y="572" font-size="15" fill="#44587a">vs Ironwood</text>
+<rect x="320" y="409" width="120" height="111" fill="#2f6fdd"/><text x="380" y="399" font-size="26" font-weight="700" fill="#10264a">2x</text>
+<text x="380" y="550" font-size="17" fill="#10264a">8t/8i perf/W</text><text x="380" y="572" font-size="15" fill="#44587a">vs Ironwood</text>
+<rect x="510" y="370" width="120" height="150" fill="#2f6fdd"/><text x="570" y="360" font-size="26" font-weight="700" fill="#10264a">2.7x</text>
+<text x="570" y="550" font-size="17" fill="#10264a">8t perf/$</text><text x="570" y="572" font-size="15" fill="#44587a">vs Ironwood</text>
+<rect x="700" y="409" width="120" height="111" fill="#e0912b"/><text x="760" y="399" font-size="26" font-weight="700" fill="#10264a">2x</text>
+<text x="760" y="550" font-size="17" fill="#10264a">8tx latency cut</text><text x="760" y="572" font-size="15" fill="#44587a">vs TPU 8t</text>
+<rect x="890" y="409" width="120" height="111" fill="#e0912b"/><text x="950" y="399" font-size="26" font-weight="700" fill="#10264a">2x</text>
+<text x="950" y="550" font-size="17" fill="#10264a">8i Max compute</text><text x="950" y="572" font-size="15" fill="#44587a">vs TPU 8i</text>
+</g>
+<text x="60" y="610" font-family="Arial, sans-serif" font-size="15" fill="#44587a">Blue: versus previous-generation Ironwood. Orange: versus other eighth-generation systems. 8i is 80% better, shown as 1.8x.</text>
+</svg>

@@ -80,3 +80,4 @@ P45. published | AI Developer Tools | Gemini API Tool Retrieval explained (2026-
 P46. published | AI Safety | OpenAI perplexity as a shared progress metric explained (2026-11-24; two OpenAI essays, 22 Nov and 6 Sep 2026)
 P47. published | AI Coding | OpenAI Codex sandbox explained (2026-11-24; two OpenAI engineering articles, 18 Nov and 13 May 2026; developers.openai.com approvals page unfetchable)
 P48. published | AI Video | Seedance 2.5 explained (2026-11-24; ByteDance Seed blog 31 Jul 2026 + ByteDance newsroom + two Runway pages)
+P49. published | AI Hardware | Google TPU 8tx and 8i Max explained (2026-11-24; Google blog 9 Nov 2026 + Google Cloud TPU 8t/8i deep dive 22 Apr 2026)
