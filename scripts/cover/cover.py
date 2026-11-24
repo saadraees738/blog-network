@@ -11,6 +11,7 @@ ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI 
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
      'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191),'AI Infrastructure':(56,189,248)}
 POSTS={
+ 'seedance-2-5-explained-what-bytedance-says':('AI Video','Seedance 2.5, explained'),
  'openai-codex-sandbox-explained-how-it-limits-commands':('AI Coding','Codex sandbox, explained'),
  'openai-perplexity-intelligence-metric-explained':('AI Safety','OpenAI perplexity metric, explained'),
  'gemini-api-tool-retrieval-explained-what-google-says':('AI Developer Tools','Gemini Tool Retrieval, explained'),

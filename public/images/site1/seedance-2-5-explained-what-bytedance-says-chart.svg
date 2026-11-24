@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Horizontal bar chart of Runway credits per second of Seedance 2.5 output at 480p, 720p, 1080p and 4K">
+<rect width="1200" height="630" fill="#fdf4f8"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#3b1530">Seedance 2.5 on Runway: credits per second of output</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#6b4a5d">Source: Runway developer guide, prices as of 23 Nov 2026 (1 credit = $0.01). 4K appears only on this page</text>
+<g font-family="Arial, sans-serif">
+<text x="60" y="202" font-size="26" font-weight="700" fill="#3b1530">480p</text>
+<rect x="170" y="160" width="102" height="64" rx="8" fill="#db2777"/>
+<text x="287" y="202" font-size="24" fill="#3b1530">20 credits ($0.20 per sec)</text>
+<text x="60" y="302" font-size="26" font-weight="700" fill="#3b1530">720p</text>
+<rect x="170" y="260" width="153" height="64" rx="8" fill="#db2777"/>
+<text x="338" y="302" font-size="24" fill="#3b1530">30 credits ($0.30 per sec)</text>
+<text x="60" y="402" font-size="26" font-weight="700" fill="#3b1530">1080p</text>
+<rect x="170" y="360" width="346" height="64" rx="8" fill="#db2777"/>
+<text x="532" y="402" font-size="24" fill="#3b1530">68 credits ($0.68 per sec)</text>
+<text x="60" y="502" font-size="26" font-weight="700" fill="#3b1530">4K</text>
+<rect x="170" y="460" width="560" height="64" rx="8" fill="#db2777"/>
+<text x="746" y="502" font-size="24" fill="#3b1530">110 credits ($1.10 per sec)</text>
+<text x="60" y="580" font-size="18" fill="#6b4a5d">A 5-second clip: $1.00 at 480p, $1.50 at 720p, $3.40 at 1080p, $5.50 at 4K, before video-reference charges</text>
+</g></svg>

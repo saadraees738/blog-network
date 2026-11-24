@@ -1,0 +1,81 @@
+---
+title: 'Seedance 2.5 explained: 30-second AI video clips, 50 references, and what ByteDance and Runway say'
+description: 'ByteDance announced Seedance 2.5 on 31 July 2026. What the video model does, where it is offered, what Runway charges per second, and what the sources leave out.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Video
+author: saad-r
+heroImage: /images/site1/seedance-2-5-explained-what-bytedance-says-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing film strip curving through indigo space, with amber ribbons of light running along its frames'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: ByteDance announced Seedance 2.5 on 31 July 2026 as a video model that makes up to 30 seconds of video with synchronized audio in one pass, from text plus up to 50 references. ByteDance says it is rolling out on its own apps and a newsroom post lists regional availability. Runway also offers it, and its developer guide lists API prices of 20 credits per second at 480p up to 110 credits at 4K, with 1 credit equal to $0.01.
+sources:
+  - title: 'Introducing Seedance 2.5 (ByteDance Seed blog, 31 July 2026)'
+    url: https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5
+    accessed: 2026-11-24
+  - title: 'Giving creators more control with Dreamina Seedance 2.5 and Dola Seedream 5.0 Pro (ByteDance newsroom)'
+    url: https://www.bytedance.com/newsroom/dreamina-seedance-2-5-dola-seedream-5
+    accessed: 2026-11-24
+  - title: 'Creating with Seedance 2.5 (Runway Help Center)'
+    url: https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5
+    accessed: 2026-11-24
+  - title: 'Seedance 2.5 API: access, pricing and code (Runway developer guide, updated 16 November 2026)'
+    url: https://dev.runwayml.com/learn/seedance-2-5-api
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round (verdict REVISE, 8 findings, all applied): attributed the several-minutes claim to Seed and noted Runway returns each extension as a standalone clip, noted Runway says timestamps guide pacing and are not frame-accurate, dated the BytePlus API statement to 31 July and noted Runway API availability from 7 August, named the developer guide as the source of moderation codes, reworded the three-areas sentence to Seed wording, and removed vendor hype wording. Not verified: the newsroom post has no readable date, Runway plan eligibility is not stated, and no benchmarks exist on any page. No independent testing was checked.'
+---
+
+AI video tools have mostly produced short clips that you stitch together yourself. Seedance 2.5, from ByteDance, is pitched at the opposite problem: longer takes with sound, guided by a pile of reference material. This post reads ByteDance's own announcement and newsroom post and the two Runway pages that describe the model, then lists what none of them say.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test Seedance 2.5 or any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What ByteDance announced
+
+ByteDance's Seed team dated its announcement 31 July 2026. It calls Seedance 2.5 a new-generation video creation model built on the joint audio-and-video architecture of Seedance 2.0, and says the model centers on foundational generation and reference-based generation, and it lists long-form storytelling, multimodal reference and editing as the areas where it claims advances.
+
+The headline number is length. Seed says a single generation can now run up to 30 seconds, up from 15 in Seedance 2.0, and that one pass can hold several logically connected shots. It also claims outputs lasting several minutes are possible through multiple rounds of extension. Runway's help article describes it differently: each extension comes back as a standalone clip made of only the new footage, which you join to the original yourself. Audio is generated in the same pass, and Seed says sound and picture stay in sync.
+
+## References and editing
+
+The second claim is control. Seed says one generation accepts up to 30 images, 10 video clips and 10 audio clips as references. ByteDance's newsroom post describes the same idea as up to 50 references per clip, which matches the sum. Seed also mentions untextured 3D "clay" renders as references for blocking and lighting.
+
+For editing, Seed lists timestamp-level control, green-screen style background replacement, camera-perspective changes and reference-based edits. The newsroom post describes editing particular timestamps, characters or elements. Neither page gives a test result, so these are product claims rather than measured performance. Runway's help article adds a caution: timestamps guide pacing rather than mark frame-accurate edit points.
+
+## Where you can use it
+
+The sources describe three routes. Seed says the model is rolling out on Jimeng AI and Doubao Pro, and that API access through BytePlus ModelArk was "coming soon" as of its 31 July post. Runway's developer guide says its own API became generally available on 7 August 2026. The newsroom post says Dreamina users with subscriber accounts aged over 16 would get it "in the coming week" across Europe, Asia, the Middle East and South America. It mentions no US launch for Seedance 2.5, and it carries no date we could read, so check your own region.
+
+The third route is Runway, which offers Seedance 2.5 as a third-party model inside its own tools. Runway's help article says it works in Tools, Workflows and its Agent, and does not name which subscription plans qualify. Runway's developer guide, published 19 October and updated 16 November 2026, covers the API.
+
+## What Runway charges
+
+Runway's developer guide gives prices as of 23 November 2026, with one credit equal to one US cent. Output costs 20 credits per second at 480p, 30 at 720p, 68 at 1080p and 110 at 4K. The help article lists the first three of those figures and does not mention 4K, so the 4K price rests on the developer guide alone.
+
+![Horizontal bar chart of Runway credits per second for Seedance 2.5 at four resolutions](/images/site1/seedance-2-5-explained-what-bytedance-says-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+| Resolution | Credits per second | Cost per second | 5-second clip |
+|---|---|---|---|
+| 480p | 20 | $0.20 | $1.00 |
+| 720p | 30 | $0.30 | $1.50 |
+| 1080p | 68 | $0.68 | $3.40 |
+| 4K | 110 | $1.10 | $5.50 |
+
+The guide adds some billing rules worth knowing before you generate. A generation has a minimum of 80 credits. Video references cost extra per second, for example 34 credits at 1080p, while image and audio references add nothing. If you leave duration on auto, Runway bills for 30 seconds up front and refunds the unused part. Its draft mode makes a cheap 480p preview that you can later enhance to 1080p, and both steps are billed. The guide also says inputs rejected by moderation are still billed.
+
+## Safety and labels
+
+ByteDance's newsroom post says its models carry invisible watermarks, C2PA Content Credentials and visible AI labels, and that policies cover hateful content, nudity, non-consensual sexual content, unauthorized likenesses and harmful misinformation, enforced through prompt blocking, moderation and reporting. The Seed blog has no such statements, and Runway's developer guide describes only its moderation error codes; the help article has nothing on moderation. Whether the same labels apply to clips made through Runway is not stated in the pages we read.
+
+## What the sources do not say
+
+Seed itself notes room for improvement, naming the physical plausibility of complex motion and the stability of scenes with several interacting subjects. None of the pages publishes a benchmark, a side-by-side comparison with other video models, or a clip-quality measurement. Regional availability depends on wording with no calendar date. The Runway help article gives credit costs but no plan names, so what a subscriber can generate each month is unconfirmed. Prices and availability change often, so verify on the vendor pages before you budget.
+
+This is general information about a software product, not financial or legal advice. If you plan commercial use of generated video, read the licence terms of the service you actually use.
