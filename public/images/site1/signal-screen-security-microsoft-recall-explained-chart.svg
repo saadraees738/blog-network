@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Table-style diagram of where Signal Screen Security applies: Windows 11 desktop default on, iPhone and Android toggle, other people's devices not covered">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">Where Signal's Screen Security applies</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Source: Signal Support (Screen Security) and Signal blog post of 21 May 2025</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="130" width="1080" height="56" rx="8" fill="#1f6f66"/>
+<text x="84" y="165" font-size="22" font-weight="700" fill="#ffffff">Where</text>
+<text x="400" y="165" font-size="22" font-weight="700" fill="#ffffff">Default per sources</text>
+<text x="760" y="165" font-size="22" font-weight="700" fill="#ffffff">What it does</text>
+<rect x="60" y="196" width="1080" height="96" rx="8" fill="#e3efec"/>
+<text x="84" y="236" font-size="22" font-weight="700" fill="#1d2a2a">Signal Desktop, Windows 11</text>
+<text x="400" y="236" font-size="22" fill="#1d2a2a">On by default</text>
+<text x="760" y="226" font-size="19" fill="#3d4a4a">Screenshots of Signal show nothing,</text>
+<text x="760" y="254" font-size="19" fill="#3d4a4a">so Recall cannot store them</text>
+<rect x="60" y="302" width="1080" height="96" rx="8" fill="#eef2f1"/>
+<text x="84" y="342" font-size="22" font-weight="700" fill="#1d2a2a">Signal on iPhone</text>
+<text x="400" y="332" font-size="22" fill="#1d2a2a">Not stated on the page</text>
+<text x="400" y="360" font-size="19" fill="#3d4a4a">Toggle: Hide Screen in App Switcher</text>
+<text x="760" y="332" font-size="19" fill="#3d4a4a">Privacy screen over Signal in the</text>
+<text x="760" y="360" font-size="19" fill="#3d4a4a">app switcher; blocks local screenshots</text>
+<rect x="60" y="408" width="1080" height="96" rx="8" fill="#e3efec"/>
+<text x="84" y="448" font-size="22" font-weight="700" fill="#1d2a2a">Signal on Android</text>
+<text x="400" y="438" font-size="22" fill="#1d2a2a">Not stated on the page</text>
+<text x="400" y="466" font-size="19" fill="#3d4a4a">Toggle: Screen Security</text>
+<text x="760" y="438" font-size="19" fill="#3d4a4a">Same privacy screen; blocks local</text>
+<text x="760" y="466" font-size="19" fill="#3d4a4a">screenshots of Signal</text>
+<rect x="60" y="514" width="1080" height="80" rx="8" fill="#fbeedd" stroke="#b8651b" stroke-width="2"/>
+<text x="84" y="548" font-size="22" font-weight="700" fill="#1d2a2a">Someone else's device</text>
+<text x="400" y="548" font-size="22" fill="#1d2a2a">Not covered</text>
+<text x="760" y="548" font-size="19" fill="#3d4a4a">Setting is local to your device only</text>
+</g>
+</svg>

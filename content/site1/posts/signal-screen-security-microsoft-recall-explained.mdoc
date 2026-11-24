@@ -1,0 +1,68 @@
+---
+title: 'Signal Screen Security explained: what Signal says it does about Windows Recall'
+description: 'What Signal says its Screen Security setting does on Windows 11, iPhone and Android, how to turn it off, and what it cannot protect against.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Privacy
+author: saad-r
+heroImage: /images/site1/signal-screen-security-microsoft-recall-explained-cover.jpg
+heroAlt: 'AI-generated abstract illustration of a glowing chat bubble inside a frosted glass panel with streaks of cyan and amber light passing around it'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Signal has a setting called Screen Security that, per Signal, stops screenshots of the app. On Signal Desktop for Windows 11 it is on by default, and Signal says the reason is to keep Microsoft Recall from automatically capturing and storing chats. On iPhone and Android it is a toggle that hides Signal in the app switcher and blocks screenshots on your own device. It only protects your own device, and Signal says it does not stop someone else from capturing a conversation on theirs.
+sources:
+  - title: Screen Security (Signal Support)
+    url: https://support.signal.org/hc/en-us/articles/360043469312-Screen-Security
+    accessed: 2026-11-24
+  - title: By Default, Signal Doesn't Recall (Signal blog, 21 May 2025)
+    url: https://signal.org/blog/signal-doesnt-recall/
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited pages (REVISE, 10 findings applied: title and description attributed to Signal, unsourced news-headline section replaced by a plain note, tone words removed, Recall wording softened, warning and footnote wording loosened, opening generalisation deleted). The reviewer saw condensed page summaries from its fetch tool, so some wording-level details could not be confirmed character for character. The Signal help page is undated. The mobile default and any November 2026 Signal changes could not be verified.'
+---
+
+Signal, the encrypted messenger, has a setting called Screen Security that is aimed at stopping screenshots of the app, including automatic ones. This post walks through what Signal's own pages say the setting does, where it is switched on by default, how to change it, and where its protection stops. It is based on two Signal pages; nothing here comes from our own testing.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test Signal or any other product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Screen Security is
+
+Signal's help page describes Screen Security as a way to stop Signal previews appearing in the app switcher on your phone. On a phone, turning it on puts a blue privacy screen with the Signal logo over Signal's text. The same page says this also blocks screenshots of Signal on your own device. It adds that it does not stop another person from taking a screenshot on their device.
+
+The setting is named differently by platform. The help page gives the toggle as "Screen Security" on Android and "Hide Screen in App Switcher" on iPhone. To reach it, the help page says to tap your profile, then Settings (iPhone) or Privacy (Android), and tap the slider. The page does not say whether the phone setting is on or off by default, so check the toggle on your own device rather than assuming.
+
+![Table-style diagram of where Signal Screen Security applies on Windows 11, iPhone, Android and other people's devices](/images/site1/signal-screen-security-microsoft-recall-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Why Windows 11 is different
+
+The Windows case is where the AI link is clearest. Signal's help page says Signal Desktop prevents screenshots on Windows 11 by default, so that Microsoft Recall does not automatically capture and store Signal messages. Signal's longer blog post, dated 21 May 2025 by its byline, gives the background. It describes Recall as taking periodic screenshots of your apps and keeping them in a searchable database, and says apps like Signal have little control over what Recall captures.
+
+According to the blog post, Signal uses a DRM flag on its window. Signal quotes Microsoft's developer documentation as saying content marked this way will not show up in Recall or any other screenshot application. In practice, Signal says, a screenshot of Signal Desktop with the setting on shows nothing. Signal says the setting is Windows-only because it targets Recall.
+
+The post explains why Signal went this route. It says Microsoft launched Recall without granular settings for app developers, and Signal describes the DRM flag as the tool available to it. That also means the protection relies on Microsoft honouring the flag; the pages do not describe any independent test of this.
+
+## How to turn it off, and when you might
+
+On Signal Desktop the path is Settings, then Privacy, then Screen security. The blog post says Signal shows a warning and asks you to confirm when you disable it. The help page advises that before disabling it on Windows, you should either turn Recall off completely or add a filter for the Signal app, following Microsoft's latest instructions.
+
+There is a cost to leaving it on. Signal says accessibility software such as screen readers and magnifiers may not work correctly with the setting enabled, and it leaves the choice to the user. If you rely on such tools, the trade-off is yours to make.
+
+## What it does not cover
+
+The limits matter as much as the feature. First, it is local. Signal says it does not apply to screenshots on other devices, so a contact who captures the conversation on their own phone or computer is outside its reach. Second, the blog post notes in a footnote that a local AI model with the right permissions could still access files on your computer, and that running on your own computer does not by itself make something secure. Third, Screen Security is about screenshots and previews; it is not a statement about message encryption, which these pages do not discuss.
+
+## What these pages do not tell us
+
+Both pages describe Windows Recall and phone screenshots. Neither mentions specific AI assistants on phones or other desktop systems, and the help page is undated. If you use Signal on a device with a built-in AI assistant, check the Screen Security toggle and Signal's own help center for current wording, because this post cannot say how the setting behaves with other assistants.
+
+## What to take from this
+
+For everyday users, the practical step is small: know where the toggle lives, confirm it is on if you want screenshots blocked, and remember that it protects your device, not the other person's. For businesses that discuss sensitive matters in Signal, the more important point is policy: a setting on one device cannot control what colleagues or contacts capture on theirs. This is general information about a software setting, not legal, security-compliance or financial advice.
+
+One sourcing note: the Signal help page carried no date, and the blog post is from May 2025, so the details here describe what Signal's pages said when read on 24 November 2026 and may have changed since.

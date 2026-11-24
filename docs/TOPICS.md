@@ -74,3 +74,4 @@ P40. published | AI Assistants | Personal Finance in Claude beta explained (2026
 # 2026-11-23: EU AI Act digital omnibus considered; final status could not be confirmed (Council page 4xx, EP legislative train error). Still todo.
 P41. published | AI Models | Cloudflare Clef decision models explained (2026-11-23; two Cloudflare blog posts of 1 and 9 Oct 2026)
 P42. published | Robots | AGIBOT Worken robot-work metric explained (2026-11-23; AGIBOT newsroom + PR Newswire copy of 29 Oct 2026 release)
+P43. published | AI Privacy | Signal Screen Security vs Windows Recall explained (2026-11-24; Signal support page + Signal blog 21 May 2025; Nov 2026 Gemini/Siri help page and Hacker News report not readable)
