@@ -1,0 +1,84 @@
+---
+title: 'OpenAI wants perplexity as a shared AI progress metric: what that means and what the numbers show'
+description: 'OpenAI''s chief scientist proposed perplexity as a common yardstick for AI progress on 22 November 2026. What it measures, the figures shared, and the limits he admits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/openai-perplexity-intelligence-metric-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a long glowing staircase of amber steps rising into a dark blue distance'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: On 22 November 2026 OpenAI chief scientist Jakub Pachocki argued that perplexity, a measure of how well a model predicts the next token, should be a shared metric for comparing AI developers and for setting common safety limits. OpenAI published its own figures on an internal dataset, about 0.99 for GPT-3.5 and about 0.91 for GPT-4 in log terms, and says transformative capabilities appeared below 0.8. It admits the numbers are hard to compare across labs and do not map directly to tasks.
+sources:
+  - title: 'Perplexity and Intelligence (OpenAI, Jakub Pachocki, 22 November 2026)'
+    url: https://openai.com/index/perplexity-and-intelligence/
+    accessed: 2026-11-24
+  - title: 'An Alien Mind (OpenAI, Jakub Pachocki, 6 September 2026)'
+    url: https://openai.com/index/an-alien-mind/
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round (verdict REVISE, 10 findings, all applied): removed the reader-advice sentence, softened attributions of the author''s expectations and the safety-bars wording, corrected the Anthropic mention in the disclosure, stated that the figures come from OpenAI''s internal codebase data, and reworded process notes. The reviewer saw only summaries of the pages, so fine-grained wording was checked against our own fuller read. Both OpenAI pages were read via a fetch helper; figures are as stated on those pages and were not independently verified. Other labs'' figures and any third-party response were not checked. No independent testing was involved.'
+---
+
+Most AI benchmarks go stale within a year or two, because models improve until the test is easy. On 22 November 2026 OpenAI's chief scientist argued for something older and simpler: perplexity, the score of how well a model guesses the next piece of text. This post reads his essay and a related one from September, explains the idea in plain terms, shows the figures OpenAI chose to publish, and lists the limits the author states himself.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, and the September essay mentions Anthropic's Responsible Scaling Policy. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What perplexity is
+
+In the essay, "Perplexity and Intelligence", Jakub Pachocki describes modern AI as training a "compressor" on a very large body of data. He uses that word to mean something that predicts unseen data well, not a file like a zip archive. Perplexity is the score for that job: it measures how well a model predicts the next token on average, and lower is better. A token is a small chunk of text, often part of a word.
+
+OpenAI tracks the logarithm of perplexity, which is the same thing as cross-entropy loss, and it measures it on a held-out dataset, meaning text the model was not trained on. If you have seen a "loss curve" in a technical paper, this is that number.
+
+## The figures OpenAI published
+
+OpenAI gave log-perplexity values measured on held-out data drawn from its own internal codebase, which it uses to gauge pretraining progress. The essay says GPT-3.5, the basis of the original ChatGPT, sat at about 0.99, and GPT-4 at about 0.91. It says models below 0.8 began to show what it calls transformative capabilities in areas such as cybersecurity and mathematics, and that at about 0.76 OpenAI's models started producing results on open math problems the team had posed for over a year.
+
+Looking ahead, the author expects further transformative capabilities in a window of roughly 0.68 to 0.70, adding that he does not know what they will be and that they may not be tested for today. That is an expectation, not a measurement.
+
+![Dot plot of the log-perplexity values OpenAI reports for GPT-3.5, GPT-4 and a newer model, with a marked threshold at 0.8](/images/site1/openai-perplexity-intelligence-metric-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Why propose it as a shared metric
+
+His case is that new capabilities appear mainly as models get better at prediction, so tracking that number tells you where the field is heading. Downstream benchmarks, by contrast, change quickly. The essay notes that GPT-2 and GPT-3 fit modern benchmarks poorly and that benchmarks were largely saturated around GPT-4, whereas pretraining progress is likely to stay informative.
+
+He also says publishing OpenAI's own numbers was a deliberate choice. It shows competitors where OpenAI stands, but he judged that cost outweighed by the urgency of shared safety measures. He describes it as a first step toward a common scientific basis for what the essay calls pacing efforts.
+
+## What he asks the industry to do
+
+The recommendations are directed at frontier developers. They include jointly setting norms for evaluating such models, red-teaming safety cases before first use, and agreeing shared transparency standards. The most concrete idea is "common limits": thresholds, based on perplexity and other measurements, that developers commit not to cross until their ability to understand and monitor models reaches a stated milestone. The example given is a successor to chain-of-thought monitors, which are tools that read a model's written reasoning to spot problems.
+
+The target is an industry standard that names a first limit, a metric that can be tracked across labs, and what must be achieved before going beyond it, eventually extending to a series of limits.
+
+The September essay, "An Alien Mind", supplies the background. There the author says internal results lead him to expect that the current pace of progress could continue into recursive self-improvement, where AI increasingly drives its own development. He writes that no lab has solved alignment and monitoring well enough to keep scaling at maximum speed for long, and says he expects and hopes voluntary slowdowns become commonplace until shared safety bars exist. He also suggests that commitments such as OpenAI's Preparedness Framework and Anthropic's Responsible Scaling Policy could evolve into widely mandated safety bars, enforced by a network of third-party auditors, government agencies or international bodies. These are one researcher's published positions, and the pages do not say whether other labs have agreed.
+
+## Limits the author admits
+
+The essay is open about the weaknesses of the metric, which is useful context for reading the numbers above.
+
+| Limit | What the essay says |
+|---|---|
+| Hard to compare across labs | Developers use different evaluation datasets and data mixtures; OpenAI reports its own main dataset. |
+| Not tied to a task | Perplexity does not map directly to what a model can do; it matters because progress is expected to bring new capabilities. |
+| Misses non-pretraining gains | Chain-of-thought reasoning does not lower perplexity yet greatly increases capability. |
+| Unknown floor | A loss of zero is not expected, but the data's inherent entropy is unknown, and small gains near the floor may still mean large leaps. |
+| Dataset choice | A footnote says the main held-out sets since GPT-3.5 come from OpenAI's internal codebase, and GPT-2 and GPT-3 predict code poorly relative to their general skills. |
+
+The dataset point matters most for readers. The numbers in the chart come from OpenAI's own codebase data, so they cannot simply be set beside another company's published loss figures.
+
+## What this means for everyday users and small businesses
+
+Nothing here changes a plan, price or feature of any product, and the essay does not claim it does. The pages do not say which labs, if any, will adopt the proposal, or when.
+
+This post gives general information, not financial, legal or safety advice.
+
+## What we could not confirm
+
+We did not verify the figures independently, and we did not check any other lab's response. The essay's claims about future capability windows are the author's expectations, and so is its suggestion that AI could drive pretraining research advances as soon as 2027. We also did not review the other OpenAI posts it links to.
