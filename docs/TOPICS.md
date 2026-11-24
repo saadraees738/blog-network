@@ -78,3 +78,4 @@ P43. published | AI Privacy | Signal Screen Security vs Windows Recall explained
 P44. published | AI Assistants | Gemini Task mode (Chat to Task toggle) explained (2026-11-24; Google blog 17 Nov 2026 + Gemini Spark help page)
 P45. published | AI Developer Tools | Gemini API Tool Retrieval explained (2026-11-24; Google blog 19 Nov 2026 + function-calling docs; guide page unfetchable)
 P46. published | AI Safety | OpenAI perplexity as a shared progress metric explained (2026-11-24; two OpenAI essays, 22 Nov and 6 Sep 2026)
+P47. published | AI Coding | OpenAI Codex sandbox explained (2026-11-24; two OpenAI engineering articles, 18 Nov and 13 May 2026; developers.openai.com approvals page unfetchable)

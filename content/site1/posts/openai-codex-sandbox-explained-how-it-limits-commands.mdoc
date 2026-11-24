@@ -1,0 +1,62 @@
+---
+title: 'OpenAI explains how the Codex sandbox limits what coding agents can do on your computer'
+description: 'OpenAI''s 18 November 2026 article on the Codex sandbox: permission profiles, network modes, how each operating system enforces them, and the gaps it admits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/openai-codex-sandbox-explained-how-it-limits-commands-cover.jpg
+heroAlt: 'AI-generated illustration of a translucent glass cube holding glowing blue circuit lines above a dark grid'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: OpenAI says Codex runs commands directly on your machine, with no virtual machine or container, and limits them using each operating system's own sandbox features and named permission profiles. The built-in workspace profile allows writes in the project, keeps .git and .codex read-only and turns network access off by default. OpenAI also lists known gaps, such as deny rules being resolved once before each command.
+sources:
+  - title: 'Inside the Codex sandbox (OpenAI, Michael Bolin, 18 November 2026)'
+    url: https://openai.com/index/inside-the-codex-sandbox/
+    accessed: 2026-11-24
+  - title: 'Building a safe, effective sandbox to enable Codex on Windows (OpenAI, David Wiesen, 13 May 2026)'
+    url: https://openai.com/index/building-codex-windows-sandbox/
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round (verdict REVISE, 8 findings, all applied: updated the stale ''current'' Windows wording, corrected setup and network-approval wording, clarified sandbox-exec and deny-glob and node_modules points). Both OpenAI pages were read via a fetch helper; the Windows section of the November article was only partly readable, so Windows details rely on the May 2026 article and are worded cautiously. The OpenAI developer documentation page on approvals and security could not be fetched. Figures and settings are as stated on the cited pages and were not independently verified. No independent testing was involved.'
+---
+
+Coding agents such as Codex run shell commands for you, and the obvious question is what stops one from touching files it should not. On 18 November 2026 OpenAI published "Inside the Codex sandbox", a technical walk-through of how Codex limits its commands. This post summarises that article and an earlier OpenAI post on the Windows version, in plain terms, and lists the weak spots OpenAI itself points out.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not security or legal advice.*
+
+## The basic design
+
+According to the article, Codex runs commands directly on the user's machine rather than inside a virtual machine or container. To keep that safe, it relies on the sandboxing features of each operating system, and the rules are grouped into what OpenAI calls permission profiles. A profile says which paths can be read, written or denied, and what network access is allowed.
+
+The built-in profile named `:workspace` applies when a project sits in a Git repository. It lets commands write inside the workspace, keeps `.git` and `.codex` read-only (the article's config examples also protect folders such as `.agents` and `.aws`), allows broad reads subject to normal operating-system permissions, and turns the network off by default. The article says the command-line tool treats its working directory as the workspace, while the ChatGPT desktop app uses the project's source folders.
+
+## Custom profiles and network modes
+
+Profiles are set in a `config.toml` file under a `[permissions]` section. OpenAI's example profile, `dev`, extends `:workspace`, gives write access to a build-cache folder and denies any `.env` files. Each path entry can be `read`, `write` or `deny`.
+
+Network access has three modes in the article: disabled, which is the default for the workspace profile; full direct access, which is the default for the `:danger-full-access` profile; or a restricted proxy. The proxy is switched on with `network_proxy = true` under `[features]`, supports domain rules with wildcards, and lets deny rules win over allow rules. OpenAI notes that without the proxy, direct access applies and domain rules are not enforced. Requests to unmatched domains require approval or are blocked.
+
+For organisations, the article describes a `requirements.toml` file where administrators can list allowed profiles and switch off the full-access profile. A `codex sandbox --permission-profile <name> -- <command>` command lets you test a profile; on macOS a blocked write fails with "Operation not permitted".
+
+## How each operating system enforces it
+
+![Table-style diagram of the sandbox mechanism Codex uses on macOS, Linux and Windows, with one notable detail for each](/images/site1/openai-codex-sandbox-explained-how-it-limits-commands-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+On macOS, Codex uses Seatbelt through `/usr/bin/sandbox-exec`, starting from a deny-by-default policy. The article notes that the `sandbox-exec` man page marks the command as deprecated, and that Codex still plans to keep using Seatbelt. On Linux it combines bubblewrap with seccomp-bpf through an internal helper, sets `no_new_privs`, and uses a separate network namespace when networking is off or proxied. With networking off, the `connect` and `bind` system calls are blocked.
+
+Windows has its own story. The May 2026 article says Windows users previously had to approve nearly every command or use full access. The design described there, called the "elevated sandbox", requires elevated administrator permissions at setup time. It creates two local sandbox users, one of which is targeted by firewall rules that block all outbound traffic, and runs commands through a helper that applies a restricted token. OpenAI says it rejected AppContainer, Windows Sandbox and integrity-level labelling for fit and trust reasons. The November article adds that this Windows sandbox is being replaced by one built on Microsoft's MXC library, so the May description is no longer the latest. Part of the November page was only partly readable in our fetch, so treat that detail as a summary.
+
+## Limits OpenAI says remain
+
+The article is open about gaps. Deny patterns are expanded into concrete paths before each command launches, so paths that start matching later are not added to that command's restrictions. Reads are wide by default. Standard-input MCP servers are not sandboxed unless you wrap them with the sandbox command. OpenAI also describes a case where malicious code injected into a locally installed package such as `node_modules/prettier` might not show in `git status` and could run outside the sandbox when an editor runs it on save.
+
+## What this means for ordinary users
+
+None of this replaces your own judgement about what an agent should be allowed to do. The practical takeaways from OpenAI's own text are that the defaults are restrictive, that wider access is an explicit setting, and that the network switch matters because it also controls whether domain rules apply. We have not tested these controls, and OpenAI's developer documentation page on approvals and security could not be fetched for this post, so check that page before relying on any specific setting.
