@@ -1,0 +1,70 @@
+---
+title: 'ChatGPT Wallet explained: how OpenAI lets agents pay without seeing your card, and who can use it'
+description: 'OpenAI launched ChatGPT Wallet on 13 November 2026 for agent purchases. Who gets it, how each payment is approved, what stays with the merchant, and what is unannounced.'
+status: published
+queueReason: ''
+publishDate: 2026-11-24
+lastVerified: 2026-11-24
+category: AI Agents
+author: saad-r
+heroImage: /images/site1/openai-chatgpt-wallet-agent-payments-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing translucent payment card dissolving into small token tiles that flow toward a shopping basket'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: On 13 November 2026 OpenAI introduced ChatGPT Wallet, a payment method that lets an AI agent buy things for you without being given your real card details. At launch it is limited to ChatGPT Pro subscribers aged 18 and over in the US with eligible US-issued cards, it works inside dots, and every purchase needs your approval with a security check. OpenAI names no fees, no spending limits and no dates for wider availability.
+sources:
+  - title: Introducing ChatGPT Wallet (OpenAI, 13 November 2026)
+    url: https://openai.com/index/introducing-chatgpt-wallet/
+    accessed: 2026-11-24
+  - title: Partner Playbook Overview (OpenAI developer docs, commerce guide)
+    url: https://developers.openai.com/commerce/guides/overview
+    accessed: 2026-11-24
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited OpenAI pages (REVISE, 8 findings applied: removed or softened claims about a defective-item example, token components, an always-on description of dots, a rollout-day statement, per-approval records, checkout filling and widened access that the review could not confirm; one omission left as is; no second round). The OpenAI Help Center article on making purchases with ChatGPT Wallet could not be fetched in this run, so no help-center detail is used. Part of the developer overview page was only available as a tool-generated extract, so the post uses only its high-level list of business steps. No independent testing of the product was done or claimed.'
+---
+
+AI agents are starting to do more than answer questions, and the awkward part is paying. If an assistant is going to book a table or buy a pair of shoes for you, it needs some way to complete the checkout without you handing it your card number. On 13 November 2026 OpenAI announced its answer, ChatGPT Wallet. This post explains what OpenAI says it is, who can use it today, how a purchase is approved, and which questions the announcement leaves open. It draws on two OpenAI pages, and every claim about the product is OpenAI's own.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, so the author is not a neutral party. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What ChatGPT Wallet is
+
+OpenAI describes ChatGPT Wallet as a payment method for AI agents to complete purchases on a user's behalf. Its main selling point, in OpenAI's words, is that the agent can pay without ever having access to your actual card details. OpenAI says it built the wallet with American Express, Chase, Mastercard and Visa, and the post carries statements from Mastercard, Visa and American Express. Chase appears only in the partner list.
+
+The wallet appears first in dots, a ChatGPT feature that Stackbrook has covered separately. OpenAI describes it as rolling out. It also says existing card rewards and protections for eligible disputes are preserved. The post does not spell out how a dispute is filed or what counts as eligible, so that part is worth checking with your card issuer rather than assuming.
+
+## Who can use it today
+
+Availability is narrow. OpenAI says the first release is limited to ChatGPT Pro subscribers who are 18 or older, in the United States, using eligible US-issued cards. It describes the small start as a way to learn from real-world use. The page names no other plans, countries or platforms, and it says nothing about Plus, Business or free accounts. If you are outside the US or on another plan, nothing in the announcement says you can use it yet.
+
+OpenAI also does not mention any fee for the wallet, and it gives no per-purchase or monthly spending cap for this version. Absence from the page is not proof that none exists, so treat both as unknown until OpenAI publishes terms.
+
+## How a purchase works
+
+The announcement describes a short sequence. You add a card once. Before each purchase you review the items, the total and the card selected, then approve with a security check, with Face ID or a fingerprint scan given as examples.
+
+Behind that, OpenAI says a payment token is used in place of your card details, so the card is charged without the wallet or the agent passing your real card details to the business. You still deal directly with the business, which keeps the customer relationship, pricing, fulfillment, returns and customer service.
+
+![Flow diagram of four steps, from adding a card once to the card being charged through a payment token](/images/site1/openai-chatgpt-wallet-agent-payments-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages. It shows the order of steps as OpenAI describes them; OpenAI gives no timings.*
+
+The key design choice is that approval stays with you for every purchase. Delegating purchases to an agent with preset limits is described as a later step, which suggests the first version does not spend without your approval.
+
+## What OpenAI says is coming
+
+The post is explicit that this is a starting point. OpenAI says the limited start is meant to help it learn from early use while it works with businesses, banks and payment networks. It also says that over time you may be able to delegate purchases to an agent within parameters you set, such as spending limits, purchase categories or time periods, with what it calls enhanced safeguards, including biometric checks and authorization records, that build on the current protections. No dates are given for any of this, so none of it should be counted on yet.
+
+## What it means for businesses
+
+The announcement is also a message to merchants. OpenAI points them to a Commerce Partner Playbook, and its developer overview lists steps for businesses that want to be reachable by ChatGPT: submitting product feeds if they sell physical goods, checking that their CDN or firewall does not block verified ChatGPT browser visits, accepting ChatGPT Wallet payments on their existing website, building a plugin that exposes actions such as checking availability, integrating Sign in with ChatGPT where an account is needed, and claiming their business.
+
+The announcement itself adds a caution. OpenAI says some sites may unintentionally block purchases, and that risk systems may decline legitimate agent purchases. For a small shop, that means an agent checkout could fail for reasons that have nothing to do with the customer, which is worth knowing if you sell online.
+
+## What is not confirmed
+
+Several things are not in the sources. There are no published spending limits, no fee information and no list of supported merchants. The announcement does not describe how to remove a card or switch the wallet off, and OpenAI's Help Center article on making purchases with the wallet could not be read while preparing this post, so its contents are not used here. No independent testing or security review is cited, which means the claim that agents never see card details is OpenAI's description of its design.
+
+If you are tempted to try it, a sensible habit is to read each approval screen as carefully as you would a normal checkout, since that screen is the control OpenAI says you keep. This is general information, not financial or legal advice.

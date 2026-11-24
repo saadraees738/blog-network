@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Flow diagram of four steps from adding a card to the card being charged, as OpenAI describes ChatGPT Wallet purchases">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="64" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1d2a2a">How a ChatGPT Wallet purchase works</text>
+<text x="60" y="98" font-family="Arial, sans-serif" font-size="20" fill="#4a5656">Source: OpenAI, Introducing ChatGPT Wallet (13 Nov 2026). The steps as OpenAI describes them.</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<rect x="50" y="220" width="250" height="230" rx="12" fill="#1f7a5a"/>
+<rect x="330" y="220" width="250" height="230" rx="12" fill="#4f9d7a"/>
+<rect x="610" y="220" width="250" height="230" rx="12" fill="#e0833a"/>
+<rect x="890" y="220" width="260" height="230" rx="12" fill="#c0457a"/>
+<g fill="#ffffff" font-weight="700" font-size="22">
+<text x="175" y="266" font-size="40">1</text><text x="175" y="316">You add a</text><text x="175" y="346">card once</text>
+<text x="455" y="266" font-size="40">2</text><text x="455" y="316">You review items,</text><text x="455" y="346">total and card</text>
+<text x="735" y="266" font-size="40">3</text><text x="735" y="316">You approve with</text><text x="735" y="346">a security check</text>
+<text x="1020" y="266" font-size="40">4</text><text x="1020" y="316">A payment token is</text><text x="1020" y="346">used, then the</text><text x="1020" y="376">card is charged</text></g>
+<g fill="#ffffff" font-size="17"><text x="175" y="410">Eligible US cards</text><text x="455" y="410">Every purchase</text><text x="735" y="410">e.g. Face ID</text><text x="1020" y="414">Agent never gets the</text><text x="1020" y="436">actual card details</text></g>
+<g fill="#1d2a2a" font-size="22" font-weight="700"><text x="175" y="190">You</text><text x="455" y="190">You</text><text x="735" y="190">You</text><text x="1020" y="190">Payment network</text></g>
+<text x="60" y="560" font-size="18" fill="#4a5656" text-anchor="start">Chart created by Stackbrook from the cited page. Shows the order of steps only; OpenAI gives no timings.</text>
+</g></svg>
