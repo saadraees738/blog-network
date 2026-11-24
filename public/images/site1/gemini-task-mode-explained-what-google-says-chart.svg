@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Table-style diagram of what Google says about Task mode in the Gemini app: free in six countries, and US-only ways to start tasks">
+<rect width="1200" height="630" fill="#f7f6f2"/>
+<text x="60" y="66" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1d2a2a">Gemini Task mode: what Google's post says, by area</text>
+<text x="60" y="100" font-family="Arial, sans-serif" font-size="19" fill="#4a5656">Source: Google blog post of 17 Nov 2026. Limits, spending-cap amount and free-period length are not stated</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="130" width="1080" height="56" fill="#1f6f66"/>
+<text x="84" y="166" font-size="22" font-weight="700" fill="#ffffff">Area</text>
+<text x="360" y="166" font-size="22" font-weight="700" fill="#ffffff">What the post states</text>
+<g font-size="20" fill="#1d2a2a">
+<rect x="60" y="186" width="1080" height="72" fill="#e3efec"/>
+<text x="84" y="228" font-weight="700">Free access</text>
+<text x="360" y="218">Rolling out free of charge in the U.S., Japan, Korea,</text>
+<text x="360" y="244">Canada, Australia and India</text>
+<rect x="60" y="258" width="1080" height="72" fill="#f7f6f2"/>
+<text x="84" y="300" font-weight="700">Start a task</text>
+<text x="360" y="288">Flip the home-screen toggle from Chat to Task;</text>
+<text x="360" y="314">texting and email forwarding start in the U.S.</text>
+<rect x="60" y="330" width="1080" height="72" fill="#e3efec"/>
+<text x="84" y="372" font-weight="700">Connected apps</text>
+<text x="360" y="362">More than 60 apps; developers can apply to the</text>
+<text x="360" y="388">Connected Apps Platform</text>
+<rect x="60" y="402" width="1080" height="72" fill="#f7f6f2"/>
+<text x="84" y="444" font-weight="700">Payments</text>
+<text x="360" y="432">AP2 with Mastercard and Visa; American Express</text>
+<text x="360" y="458">listed as coming soon; hard spending cap upfront</text>
+<rect x="60" y="474" width="1080" height="72" fill="#e3efec"/>
+<text x="84" y="516" font-weight="700">Safety controls</text>
+<text x="360" y="506">Isolated virtual machine per account; Gemini is</text>
+<text x="360" y="532">designed to ask before Buy; Always allow is optional</text>
+</g>
+<text x="60" y="590" font-size="18" fill="#4a5656">Chart created by Stackbrook from the cited page. Paraphrased, not a copy of Google's table.</text>
+</g>
+</svg>
