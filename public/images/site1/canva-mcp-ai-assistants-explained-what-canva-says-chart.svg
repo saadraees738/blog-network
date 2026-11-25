@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Horizontal bar chart of Canva MCP rate limits in requests per minute for five tools and the default cap">
+<rect width="1200" height="630" fill="#faf5fb"/>
+<text x="60" y="62" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#2a1233">Canva MCP: requests per minute, per user</text>
+<text x="60" y="96" font-family="Arial, sans-serif" font-size="19" fill="#6a5272">Source: Canva Developers, MCP tools and rate limits page. 46 tools; 300 per minute default cap per user.</text>
+<line x1="470" y1="130" x2="470" y2="520" stroke="#e3d3e8" stroke-width="2"/><text x="470" y="552" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#6a5272">0</text>
+<line x1="687" y1="130" x2="687" y2="520" stroke="#e3d3e8" stroke-width="2"/><text x="687" y="552" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#6a5272">100</text>
+<line x1="903" y1="130" x2="903" y2="520" stroke="#e3d3e8" stroke-width="2"/><text x="903" y="552" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#6a5272">200</text>
+<line x1="1120" y1="130" x2="1120" y2="520" stroke="#e3d3e8" stroke-width="2"/><text x="1120" y="552" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#6a5272">300</text>
+<text x="450" y="177" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">generate-image</text>
+<rect x="470" y="150" width="22" height="40" rx="5" fill="#00899a"/>
+<text x="502" y="178" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">10</text>
+<text x="450" y="239" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">generate-design</text>
+<rect x="470" y="212" width="43" height="40" rx="5" fill="#00899a"/>
+<text x="523" y="240" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">20</text>
+<text x="450" y="301" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">export-design</text>
+<rect x="470" y="274" width="43" height="40" rx="5" fill="#00899a"/>
+<text x="523" y="302" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">20</text>
+<text x="450" y="363" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">perform-editing-operations</text>
+<rect x="470" y="336" width="108" height="40" rx="5" fill="#00899a"/>
+<text x="588" y="364" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">50</text>
+<text x="450" y="425" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">search-designs</text>
+<rect x="470" y="398" width="217" height="40" rx="5" fill="#00899a"/>
+<text x="697" y="426" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">100</text>
+<text x="450" y="487" font-family="Arial, sans-serif" font-size="19" text-anchor="end" fill="#2a1233">Default cap, per user</text>
+<rect x="470" y="460" width="650" height="40" rx="5" fill="#e0674f"/>
+<text x="1130" y="488" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#2a1233">300</text>
+<text x="600" y="595" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#6a5272">Requests per minute (req/min)</text></svg>
