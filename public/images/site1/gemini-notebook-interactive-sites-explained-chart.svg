@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#0e1a1f"/>
+<text x="60" y="64" font-size="30" font-weight="700" fill="#ffffff">Gemini Notebook outputs: what Google's pages describe</text>
+<text x="60" y="98" font-size="18" fill="#9fb4bb">Three outputs built from your sources, as of 25 Nov 2026</text>
+<g font-size="17" font-weight="700" fill="#2dd4bf">
+<text x="60" y="150">Output</text><text x="330" y="150">Start it with</text><text x="660" y="150">Review step before it renders</text>
+</g>
+<line x1="60" y1="164" x2="1140" y2="164" stroke="#2c4650" stroke-width="2"/>
+<g font-size="19" fill="#ffffff">
+<rect x="60" y="180" width="1080" height="120" rx="12" fill="#16282f"/>
+<text x="80" y="226" font-weight="700">Interactive site</text><text x="80" y="256" font-size="15" fill="#9fb4bb">Web; mobile soon</text>
+<text x="330" y="226">Type "make me a site"</text><text x="330" y="256" font-size="15" fill="#9fb4bb">plus a description</text>
+<text x="660" y="226">None described</text><text x="660" y="256" font-size="15" fill="#9fb4bb">Open in a new tab or share</text>
+<rect x="60" y="316" width="1080" height="120" rx="12" fill="#16282f"/>
+<text x="80" y="362" font-weight="700">Slide deck</text><text x="80" y="392" font-size="15" fill="#9fb4bb">PDF or PPTX download</text>
+<text x="330" y="362">Studio panel or chat</text><text x="330" y="392" font-size="15" fill="#9fb4bb">choose format, language, length</text>
+<text x="660" y="362">"Review outline notes" toggle</text><text x="660" y="392" font-size="15" fill="#9fb4bb">then Proceed; Revise later</text>
+<rect x="60" y="452" width="1080" height="120" rx="12" fill="#16282f"/>
+<text x="80" y="498" font-weight="700">Video overview</text><text x="80" y="528" font-size="15" fill="#9fb4bb">Separate help page</text>
+<text x="330" y="498">Studio panel or chat</text><text x="330" y="528" font-size="15" fill="#9fb4bb">Notebook suggests topics first</text>
+<text x="660" y="498">"Review producer notes" toggle</text><text x="660" y="528" font-size="15" fill="#9fb4bb">then Proceed</text>
+</g>
+<text x="60" y="605" font-size="14" fill="#6f8a93">Source: Google blog posts of 16 Nov and 19 Oct 2026; Gemini Notebook Help Center. Chart by Stackbrook.</text>
+</svg>
