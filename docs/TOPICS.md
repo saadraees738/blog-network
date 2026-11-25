@@ -83,3 +83,4 @@ P48. published | AI Video | Seedance 2.5 explained (2026-11-24; ByteDance Seed b
 P49. published | AI Hardware | Google TPU 8tx and 8i Max explained (2026-11-24; Google blog 9 Nov 2026 + Google Cloud TPU 8t/8i deep dive 22 Apr 2026)
 P50. published | AI Agents | ChatGPT Wallet explained (2026-11-24; OpenAI announcement 13 Nov 2026 + developers.openai.com commerce overview; Help Center article unfetchable)
 P51. published | AI Safety | Shirudo (OpenAI + Cisco eBPF shields) explained (2026-11-25; OpenAI post + Cisco newsroom + Cisco blog of 23 Nov 2026; repo/docs not read)
+P52. published | AI Research | DeepMind Gemini 4 quantum-algorithm agents explained (2026-11-25; DeepMind blog 23 Nov 2026 + arXiv 2611.09822 abstract; GitHub Lean repo unfetchable; Canva MCP and GLM-5.4 pages were unfetchable this run, still todo)

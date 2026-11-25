@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Dot plot on a log scale of the improvement multipliers Google DeepMind reports for five quantum algorithm tasks">
+<rect width="1200" height="630" fill="#f4f6fb"/>
+<text x="60" y="62" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#14203d">Claimed gains from Gemini 4 agent teams, by task</text>
+<text x="60" y="96" font-family="Arial, sans-serif" font-size="19" fill="#4a5878">Source: Google DeepMind blog (23 Nov 2026) and arXiv 2611.09822. Log scale; baselines are not named.</text>
+<line x1="470" y1="130" x2="470" y2="500" stroke="#d3d9e8" stroke-width="2"/><text x="470" y="530" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5878">1x</text>
+<line x1="687" y1="130" x2="687" y2="500" stroke="#d3d9e8" stroke-width="2"/><text x="687" y="530" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5878">10x</text>
+<line x1="903" y1="130" x2="903" y2="500" stroke="#d3d9e8" stroke-width="2"/><text x="903" y="530" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5878">100x</text>
+<line x1="1120" y1="130" x2="1120" y2="500" stroke="#d3d9e8" stroke-width="2"/><text x="1120" y="530" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5878">1000x</text>
+<text x="60" y="176" font-family="Arial, sans-serif" font-size="19" fill="#14203d">Arcsin routine (number loading)</text>
+<line x1="470" y1="170" x2="1004" y2="170" stroke="#9db2e8" stroke-width="3"/>
+<circle cx="1004" cy="170" r="14" fill="#3b5bdb"/>
+<text x="980" y="177" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="end" fill="#14203d">290x <tspan font-size="16" font-weight="400" fill="#4a5878">speedup</tspan></text>
+<text x="60" y="250" font-family="Arial, sans-serif" font-size="19" fill="#14203d">Fusion circuit (laser-fuel simulation)</text>
+<line x1="470" y1="244" x2="702" y2="244" stroke="#9db2e8" stroke-width="3"/>
+<circle cx="702" cy="244" r="14" fill="#3b5bdb"/>
+<text x="726" y="251" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#14203d">11.8x <tspan font-size="16" font-weight="400" fill="#4a5878">lower computing cost</tspan></text>
+<text x="60" y="324" font-family="Arial, sans-serif" font-size="19" fill="#14203d">Light-sensitive molecule simulation</text>
+<line x1="470" y1="318" x2="666" y2="318" stroke="#9db2e8" stroke-width="3"/>
+<circle cx="666" cy="318" r="14" fill="#3b5bdb"/>
+<text x="690" y="325" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#14203d">8x <tspan font-size="16" font-weight="400" fill="#4a5878">cheaper simulation</tspan></text>
+<text x="60" y="398" font-family="Arial, sans-serif" font-size="19" fill="#14203d">Grover implementation</text>
+<line x1="470" y1="392" x2="559" y2="392" stroke="#9db2e8" stroke-width="3"/>
+<circle cx="559" cy="392" r="14" fill="#3b5bdb"/>
+<text x="583" y="399" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#14203d">2.57x <tspan font-size="16" font-weight="400" fill="#4a5878">speedup</tspan></text>
+<text x="60" y="472" font-family="Arial, sans-serif" font-size="19" fill="#14203d">Cytochrome P450 (drug metabolism)</text>
+<line x1="470" y1="466" x2="556" y2="466" stroke="#9db2e8" stroke-width="3"/>
+<circle cx="556" cy="466" r="14" fill="#3b5bdb"/>
+<text x="580" y="473" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#14203d">2.5x <tspan font-size="16" font-weight="400" fill="#4a5878">improvement</tspan></text>
+<text x="60" y="590" font-family="Arial, sans-serif" font-size="16" fill="#4a5878">Resource estimates for circuits that cannot yet be run on hardware. Fusion figure is 11.8x in the blog and about 12x in the abstract.</text>
+</svg>

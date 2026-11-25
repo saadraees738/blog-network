@@ -1,0 +1,82 @@
+---
+title: 'DeepMind''s Gemini 4 quantum agents explained: what was proved and what has not been run'
+description: 'Google DeepMind says teams of Gemini 4 agents found cheaper quantum circuits and checked them in Lean. What the 23 November 2026 post claims, and what it leaves out.'
+status: published
+queueReason: ''
+publishDate: 2026-11-25
+lastVerified: 2026-11-25
+category: AI Research
+author: saad-r
+heroImage: /images/site1/deepmind-quantum-agents-lean-verified-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing amber lattice of linked hexagonal circuit tiles on a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: On 23 November 2026 Google DeepMind and Google Quantum AI said teams of Gemini 4 agents cut the required computing cost of several quantum algorithms, for example 11.8x for a fusion-research circuit and 290x for a number-loading routine, and that every result was proved correct in the Lean theorem prover. The post says these circuits cannot be tested on classical computers or today's small quantum processors, so the cost figures are not measured runs. No baselines are named, and the paper is an arXiv preprint with no stated peer review. It is research, not a product you can use.
+sources:
+  - title: 'Finding faster quantum algorithms with agents and formal verification (Google DeepMind blog, 23 November 2026)'
+    url: https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/
+    accessed: 2026-11-25
+  - title: 'Discovering formally verified quantum programs with AI (arXiv 2611.09822, abstract page)'
+    url: https://arxiv.org/abs/2611.09822
+    accessed: 2026-11-25
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited pages (verdict REVISE, 10 findings: 8 applied, 2 needed no change). Fixes: removed the claim that cost figures sit outside the proof, replaced estimate wording with the post''s own wording, tightened the Grover and arithmetic labels, clarified that only the fusion figure is rounded in the abstract, aligned the conference and Lean library wording with the blog. Not verified: the full paper body (baselines, models, run counts) and the GitHub repository, which could not be fetched. No first-hand testing is claimed.'
+---
+
+Quantum computers are still small and error-prone, so much of the work on them today is about finding better recipes to run later, when the hardware catches up. On 23 November 2026 Google DeepMind described an attempt to automate part of that work with teams of AI agents. This post reads DeepMind's announcement and the abstract of its arXiv paper, explains what was claimed in plain language, and lists what neither page says. It is a research story, not a product launch, so there is nothing to buy or switch on.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Google is a competitor of Anthropic. Stackbrook did not test any software mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What DeepMind announced
+
+According to the blog post, the work is a collaboration between Google DeepMind and Google Quantum AI. Teams of Gemini 4 agents were pointed at well-known quantum algorithms and asked to find cheaper versions. The post says humans chose the problems and supervised progress, while the agents searched for improvements.
+
+The arXiv paper, titled "Discovering formally verified quantum programs with AI", has 25 authors. Its abstract says the authors built a quantum program library in Lean and had Gemini 4 agents write programs against formal specifications, then check both correctness and cost. The page shows three versions, the first submitted on 6 November 2026 and the latest on 16 November 2026.
+
+## How the agent teams worked
+
+DeepMind says separate agent teams worked on each problem independently. Ideas were checked in Lean before they went into a shared notebook. Every four hours, agents from each team met in what the post calls a virtual conference to trade, debate and compare ideas, and the computing cost of the circuits gradually fell as the ideas improved. The paper's abstract describes the same pattern as shared wikis and organized conferences.
+
+Lean is an interactive theorem prover, software that checks a mathematical proof step by step. The post says each result was proved in Lean, and that the team built an open-source Lean library for quantum algorithms that collaborating agent teams could use, so their ideas were backed by correctness guarantees. The practical point is that an agent's claim does not have to be taken on trust: the prover either accepts the proof or it does not.
+
+## The numbers DeepMind reports
+
+The post gives these figures for what the agent teams achieved. The paper's abstract gives rounded versions for some of them, and says "up to 2.57x" for parallel search (a Grover's algorithm implementation, per the blog) and 290x for quantum arithmetic. Only the fusion figure differs, shown as 12x in the abstract against 11.8x in the blog.
+
+| Task | Claimed result |
+|---|---|
+| Circuit for a property in laser-driven fusion research | 11.8x lower computing cost, with memory cut from 5,650 to 4,338 error-corrected qubits |
+| Simulation of a common light-sensitive molecule | 8x cheaper |
+| Cytochrome P450, an enzyme involved in drug metabolism | 2.5x improvement, memory from 481 to 333 qubits |
+| One implementation of Grover's search algorithm | 2.57x speedup |
+| Arcsin routine, used to load numbers into quantum states | 290x speedup |
+
+![Dot plot on a log scale of the improvement multipliers DeepMind reports for five quantum algorithm tasks](/images/site1/deepmind-quantum-agents-lean-verified-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+The post describes its computing-cost metric for the fusion circuit as one that combines the number of qubits and the number of operations. A qubit is the basic unit of a quantum computer, and error-corrected means it is protected against the noise that ruins calculations on current machines.
+
+## What is proved, and what has not been run
+
+This is the point most worth holding on to. The post says each result was proved in Lean. It also says resource-intensive quantum circuits cannot be tested on classical computers or on today's small quantum processors, so the savings cannot be measurements from a run on real hardware. Neither page says whether the cost figures are themselves proved in Lean: the abstract says the agents verify "correctness and cost", but we read only the abstract, not the full paper.
+
+The post also adds a limit of its own. It says running these algorithms in scientific simulations would still demand more computing resources than the first error-corrected quantum computers are likely to provide, even after the improvements. In other words, the circuits are cheaper than before, but not yet cheap enough to be practical on early machines.
+
+## What the sources do not say
+
+Several things a careful reader would want are missing from both pages. Neither names the baselines behind the multipliers; the paper's abstract refers only to prior baselines, so it is unclear whether a number such as 290x compares against the best published circuit or a simpler one. The post does not name the fusion algorithm or the light-sensitive molecule. The post does not say which Gemini 4 model was used, how much computing the agents consumed, or how many runs it took.
+
+On review status, the arXiv abstract page we read mentions no journal, conference or acceptance, so we treat the paper as a preprint whose peer review status is unknown. We could not open the GitHub page for the open-source Lean library, so we cannot say what licence it carries or exactly what it contains beyond what the blog post states. The blog post names no product, API or public access to the agent system itself.
+
+## Why it matters, and how to read it
+
+For a small business or an everyday user of AI tools, this changes nothing today. Its interest is as a pattern: AI agents proposing ideas, with a formal checker deciding which ones survive. That is a stronger kind of check than a human skimming an AI's answer, though it can only guarantee what the formal specification says, and neither page says exactly how the cost figures are covered.
+
+A sensible way to read the announcement is as a credible method with unaudited headline numbers. Until independent researchers publish comparisons against named baselines, the multipliers are best treated as DeepMind's own claims. This is general information about a research announcement, not advice on any technology investment.
+
+## Bottom line
+
+DeepMind says Gemini 4 agent teams found cheaper quantum circuits and proved them correct in Lean. The verification step is the most distinctive part, and the numbers range from 2.5x to 290x depending on the task. But the savings have not been run on hardware, the baselines are unnamed, the paper's peer review status is unstated, and even the improved circuits are expected to exceed what the first error-corrected machines can run.
