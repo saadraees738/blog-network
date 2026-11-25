@@ -88,3 +88,4 @@ P53. published | AI Developer Tools | Canva MCP explained (2026-11-25; Canva Dev
 P54. published | AI Images | OpenAI Images 2.6 (GIFs, Flare and Sunburst) explained (2026-11-25; OpenAI launch post + system card of 4 Nov 2026 + Sunburst API model page; help article unfetchable)
 P55. published | AI Coding | Claude Ship (Code Review, PR Steward, Claude Approvals) explained (2026-11-25; claude.com launch article 23 Nov 2026 + three code.claude.com docs pages; setup and credit-terms pages not read)
 P56. published | AI Productivity | Gemini Notebook interactive sites explained (2026-11-25; Google blog 16 Nov 2026 + Google blog 19 Oct 2026 + Gemini Notebook Help slide decks article; video help page not read)
+P57. published | AI Shopping | Black Friday how-to with Google price tracking and Universal Cart (2026-11-25; Google blog 16 Nov and 15 Oct 2026 + Shopping, Chrome, Wallet and Google Pay help pages)

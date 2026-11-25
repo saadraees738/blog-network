@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#ffffff"/>
+<text x="40" y="58" font-size="32" font-weight="700" fill="#101a2e">Google shopping tools: where they work and what they need</text>
+<text x="40" y="94" font-size="20" fill="#4a5568">As listed on Google help pages, checked 25 November 2026</text>
+<rect x="40" y="120" width="1120" height="52" fill="#101a2e"/>
+<text x="60" y="154" font-size="21" font-weight="700" fill="#ffffff">Tool</text>
+<text x="460" y="154" font-size="21" font-weight="700" fill="#ffffff">Listed availability</text>
+<text x="800" y="154" font-size="21" font-weight="700" fill="#ffffff">What you need</text>
+<rect x="40" y="172" width="1120" height="98" fill="#eef6f6" stroke="#d5dde5"/>
+<text x="60" y="229" font-size="21" font-weight="700" fill="#101a2e">Price tracking on Google</text>
+<text x="460" y="214" font-size="21" font-weight="400" fill="#101a2e">US, Canada, Australia,</text>
+<text x="460" y="244" font-size="21" font-weight="400" fill="#101a2e">Japan, India</text>
+<text x="800" y="214" font-size="21" font-weight="400" fill="#101a2e">Signed in to a Google</text>
+<text x="800" y="244" font-size="21" font-weight="400" fill="#101a2e">Account, notifications on</text>
+<rect x="40" y="270" width="1120" height="98" fill="#ffffff" stroke="#d5dde5"/>
+<text x="60" y="312" font-size="21" font-weight="700" fill="#101a2e">Chrome price tracking</text>
+<text x="60" y="342" font-size="21" font-weight="700" fill="#101a2e">(Android help page)</text>
+<text x="460" y="312" font-size="21" font-weight="400" fill="#101a2e">Australia, Canada,</text>
+<text x="460" y="342" font-size="21" font-weight="400" fill="#101a2e">India, Japan, US</text>
+<text x="800" y="312" font-size="21" font-weight="400" fill="#101a2e">Sign-in, tab and history</text>
+<text x="800" y="342" font-size="21" font-weight="400" fill="#101a2e">sync, and a browsing setting</text>
+<rect x="40" y="368" width="1120" height="98" fill="#eef6f6" stroke="#d5dde5"/>
+<text x="60" y="425" font-size="21" font-weight="700" fill="#101a2e">Chrome discount badge</text>
+<text x="460" y="425" font-size="21" font-weight="400" fill="#101a2e">US users only</text>
+<text x="800" y="410" font-size="21" font-weight="400" fill="#101a2e">A discount being</text>
+<text x="800" y="440" font-size="21" font-weight="400" fill="#101a2e">available</text>
+<rect x="40" y="466" width="1120" height="98" fill="#ffffff" stroke="#d5dde5"/>
+<text x="60" y="523" font-size="21" font-weight="700" fill="#101a2e">Universal Cart</text>
+<text x="460" y="523" font-size="21" font-weight="400" fill="#101a2e">US only</text>
+<text x="800" y="508" font-size="21" font-weight="400" fill="#101a2e">Help page lists no</text>
+<text x="800" y="538" font-size="21" font-weight="400" fill="#101a2e">other requirement</text>
+<text x="40" y="600" font-size="18" fill="#4a5568">Features may differ by device and surface. Source: Google Shopping, Chrome and Wallet Help.</text></svg>
