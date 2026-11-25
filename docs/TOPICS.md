@@ -82,3 +82,4 @@ P47. published | AI Coding | OpenAI Codex sandbox explained (2026-11-24; two Ope
 P48. published | AI Video | Seedance 2.5 explained (2026-11-24; ByteDance Seed blog 31 Jul 2026 + ByteDance newsroom + two Runway pages)
 P49. published | AI Hardware | Google TPU 8tx and 8i Max explained (2026-11-24; Google blog 9 Nov 2026 + Google Cloud TPU 8t/8i deep dive 22 Apr 2026)
 P50. published | AI Agents | ChatGPT Wallet explained (2026-11-24; OpenAI announcement 13 Nov 2026 + developers.openai.com commerce overview; Help Center article unfetchable)
+P51. published | AI Safety | Shirudo (OpenAI + Cisco eBPF shields) explained (2026-11-25; OpenAI post + Cisco newsroom + Cisco blog of 23 Nov 2026; repo/docs not read)

@@ -1,0 +1,69 @@
+---
+title: 'Shirudo explained: the open-source Linux "shield" project from OpenAI and Cisco, and what it claims'
+description: 'OpenAI and Cisco announced Shirudo on 23 November 2026, an open-source Linux runtime the vendors say can block exploits while a patch is prepared. What is claimed.'
+status: published
+queueReason: ''
+publishDate: 2026-11-25
+lastVerified: 2026-11-25
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/shirudo-openai-cisco-ebpf-shields-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing translucent blue shield made of hexagonal tiles floating above a dark network of lines with small amber lights'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Shirudo is an open-source runtime for Linux, announced on 23 November 2026 by OpenAI and Cisco, that loads small temporary "shields" built on eBPF to block an exploit on a running server while the real patch is prepared. The vendors say AI agents can help write and test shields, and that each shield is signed before loading. The only test results are the vendors' own, and the pages name no supported kernels or performance limits.
+sources:
+  - title: OpenAI and Cisco introduce Shirudo (OpenAI, 23 November 2026)
+    url: https://openai.com/index/introducing-shirudo/
+    accessed: 2026-11-25
+  - title: Cisco and OpenAI Launch Shirudo, A New Project to Safeguard Agentic AI (Cisco Newsroom, 23 November 2026)
+    url: https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html
+    accessed: 2026-11-25
+  - title: Expanding the Defender's Window with Self-defending Infrastructure (Cisco Blogs, 23 November 2026)
+    url: https://blogs.cisco.com/news/expanding-the-defenders-window-with-self-defending-infrastructure
+    accessed: 2026-11-25
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the three cited pages (REVISE, 9 findings applied: removed an unsupported attribution to Cisco, softened a description that stated a vendor claim as fact, removed an unstated claim that a person writes shields, labelled the unsourced 70% estimate, attributed the temporary-shield wording, clarified and split chart rows, lightly reworded close paraphrases; no second round). The GitHub repository, docs.shirudo.dev and the Isovalent pages were not read. All test results are vendor claims and no independent testing was done or claimed.'
+---
+
+When a serious software flaw is disclosed, there is usually a gap between the news and the moment a patch is safely running on every server. Attackers try to use that gap. On 23 November 2026 OpenAI and Cisco announced Shirudo, an open-source project aimed at that window. This post explains what the three official pages say it is, how the "shield" idea works, what the vendors say they have shown, and what the pages leave unstated. Everything about the product is the vendors' own description.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, so the author is not a neutral party. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Shirudo is
+
+OpenAI describes Shirudo as an open-source runtime for Linux that helps teams protect running systems while a patch is being prepared. The name is Japanese for "shield", and a shield here means a temporary safeguard rather than a fix. Cisco's release calls it an open-source project built on eBPF, a Linux kernel technology, and says it helps protect running Linux systems without a reboot. Cisco's blog describes it as a project the two companies are co-developing.
+
+This is infrastructure software, not a chatbot feature. It matters mainly to people who run Linux servers, which includes some small businesses that host their own services or rely on a provider that does. If you only use hosted apps, you will not install Shirudo yourself, but the idea may eventually show up in the tools your provider uses.
+
+## How a shield works, as described
+
+The sequence in the announcements goes like this. A flaw is identified. An AI agent builds a small targeted shield aimed at the specific behavior the exploit relies on, and the pages say people approve what gets deployed. The shield is then tested to see whether it stops the attack while legitimate requests still get through. Cisco's release says a shield is meant to go live only once the test evidence shows it is safe, and Cisco's blog says it retires when the real patch lands.
+
+OpenAI says an operator approves a shield before it is deployed, and that deployment can happen while the service keeps running. It says shields are cryptographically signed and verified before loading, and it cites the eBPF verifier and kernel controls as part of the safety story. It also says a TPM, a hardware security chip, can support a verifiable record of protections being loaded or removed. Cisco's release adds that signing lets the host verify a shield even after an attacker has gained administrator rights. That is a vendor claim this post cannot check.
+
+Both companies stress that people stay in charge. OpenAI says security teams control what gets deployed, and Cisco's blog says self-defending infrastructure does not mean replacing security teams.
+
+## What the vendors say they have shown
+
+OpenAI reports one demonstration. In what it calls a controlled test, a shield generated by its Codex tool blocked a Java4Shell exploit against a running Elasticsearch service with no restart, by adding an input check to Java's Base64 decoder. Cisco's pages say the approach has also blocked exploit attempts against a PHP flaw. Cisco's blog adds, as context, an unsourced estimate that about 70% of websites were affected by the PHP flaw; this post could not confirm that figure from a primary source.
+
+![Table showing which of the three vendor pages state each Shirudo detail, such as license, signing, the Elasticsearch demo and kernel support](/images/site1/shirudo-openai-cisco-ebpf-shields-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages. It records only whether each page states a detail, not whether the detail has been independently confirmed. The signing cell for Cisco's blog marks a general principle, not a Shirudo-specific statement.*
+
+The chart shows how uneven the coverage is. The license, the Elasticsearch demo and the TPM record appear only on OpenAI's page, while the PHP result appears only on Cisco's pages. None of the three pages names supported kernel versions or performance overhead.
+
+## Availability and licensing
+
+OpenAI states that the code is licensed under BSD 2-Clause, with the BPF programs dual-licensed under BSD and GPL. The code is hosted on GitHub under shirudo-dev, with documentation, a virtual-machine quickstart, a self-guided lab with Isovalent, and a Linux Plumbers Conference walkthrough linked from the announcement. A technical webinar is scheduled for 15 December. Cisco's release invites developers and enterprises to contribute reproducer tests, run shields on kernel builds they use, and report where a shield breaks legitimate traffic. The repository and linked docs were not read for this post.
+
+## What is not confirmed
+
+Several things remain open. No page gives a version number, a list of supported kernels or distributions, or measured performance impact. The test results are the vendors' own and no independent evaluation is cited. OpenAI frames the release as a first step, and describes goals still in progress, such as giving agents programmable controls and making tested shields available alongside vulnerability disclosures. Those are plans, not features you can use today.
+
+A fair reading is that Shirudo is an early open-source project with an interesting idea, backed by two large vendors, and with limited public evidence so far. Both companies describe shields as temporary, in place until the patch lands.
+
+If you run Linux servers, the practical step is to read the project's documentation and test any shield in a non-production environment first, since the vendors themselves ask users to report cases where it blocks legitimate traffic. This is general information, not legal or professional security advice.
