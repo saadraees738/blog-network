@@ -1,0 +1,80 @@
+---
+title: 'Claude Ship explained: Code Review, PR Steward and Claude Approvals for GitHub pull requests'
+description: 'Anthropic announced Claude Ship on 23 November 2026, a set of agents for GitHub pull requests. What its launch article and docs say about setup, billing and limits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-25
+lastVerified: 2026-11-25
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/claude-ship-pr-review-steward-approvals-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing track of small code tiles running through a row of translucent blue archways on a dark indigo background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Claude Ship is a beta announced by Anthropic on 23 November 2026 for Claude Team and Enterprise plans on GitHub. It bundles Code Review (generally available), PR Steward (beta, fixes failing checks and conflicts) and Claude Approvals (beta, applies an approval policy file). Usage is billed on tokens, an Owner turns on Code Review and PR Steward (Approvals starts when a policy file is on the default branch), and it is not available with Zero Data Retention, the HIPAA configuration or customer-managed keys. Anthropic says it may miss bugs.
+sources:
+  - title: Introducing Claude Ship (Claude, 23 November 2026)
+    url: https://claude.com/resources/articles/introducing-claude-ship
+    accessed: 2026-11-25
+  - title: Claude Ship (Claude Code Docs)
+    url: https://code.claude.com/docs/en/claude-ship
+    accessed: 2026-11-25
+  - title: PR Steward (Claude Code Docs)
+    url: https://code.claude.com/docs/en/pr-steward
+    accessed: 2026-11-25
+  - title: Get a pull request ready with /ship and /steward (Claude Code Docs)
+    url: https://code.claude.com/docs/en/ship-command
+    accessed: 2026-11-25
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the four cited pages (REVISE, 7 findings applied: corrected who turns on each agent including Approvals, removed advice and the word safest from the closing, reworded a near-verbatim sentence and several close paraphrases, softened the /ship commit claim, neutralised tone; no second round). The Code Review setup page, the Approvals setup and availability pages, the troubleshooting page and the credit terms article were not read. All details are vendor statements and no testing was done or claimed.'
+---
+
+On 23 November 2026 Anthropic announced Claude Ship, a set of agents that work on GitHub pull requests: one reviews code, one pushes fixes, and one helps decide what is ready to merge. This post goes through what Anthropic's launch article and three Claude Code documentation pages say, covering what each part does, who can switch it on, what it costs and where it does not apply. Everything about the product comes from Anthropic's own pages.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Claude is made by Anthropic, the company that makes Claude Ship, so this is not an independent view. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## The three agents
+
+Anthropic describes Claude Ship as a beta that reviews pull requests, fixes them and decides what is ready to merge, following policies each team sets. It has three parts.
+
+**Code Review** is the one part that is generally available. The docs say its targets are logic errors, security holes and edge cases that break, and it posts findings as inline comments ranked by severity. The launch article adds that it reviews through several lenses, checks its own findings adversarially, and offers three levels per repository: Quick, Standard or Deep.
+
+**PR Steward** is in public beta. It works on open pull requests: it can push commits that respond to review comments, and it attempts to repair failing checks and merge conflicts. It runs in a cloud session, and the docs say it is designed not to approve or merge. While it watches a pull request it labels it `claude-pr-steward-watching`, and it pushes commits and replies to comments without asking first. After each push it comments on what it changed and how to undo it.
+
+**Claude Approvals** is also in beta. A team writes an approval policy as a file in the repository, and Anthropic compares it to a smarter CODEOWNERS file. The policy can set how many people must approve changes to a path, and where Claude may post an approving review. According to the launch article, it can approve routine changes on its own if the policy allows, or require a person for certain cases. Its check blocks a merge only if the team makes it a required check in GitHub, and the docs say that is normally not the case in observe mode.
+
+![Flow diagram of a pull request moving through Code Review, PR Steward and Claude Approvals, with notes on what each does and what stays with people](/images/site1/claude-ship-pr-review-steward-approvals-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Two ways to start
+
+Developers can run `/ship` in Claude Code on their own pull requests. Per the docs, it opens a pull request if the branch has none, has Claude review it, and then starts a "watch" that works on feedback and failing checks. You merge the pull request yourself. A companion command, `/steward`, skips the review and starts the watch on a pull request you already opened.
+
+The docs list prerequisites: Claude Code v2.1.330 or later, GitHub CLI 2.63 or later, and git 2.38 or later. They also note that `/ship` can commit all uncommitted changes, new files included (in some cases, such as public repositories, it does not), and that it looks for secrets only by file name, such as `.env`. A deny rule on reading a file does not keep that file out of the commit.
+
+Admins have a separate route. The docs say an organization Owner uses the Claude Ship settings page to turn on one agent at a time in a repository, in this order: Code Review, then PR Steward, then Claude Approvals. The launch article says Approvals starts once a connected repository has a policy file on its default branch, and that an admin can turn it off. The docs suggest starting PR Steward in its manual setting, where it acts when asked, and starting Approvals in observe mode. Admins set review levels, when reviews run and spend limits, and Anthropic says it works with existing branch protection and required checks.
+
+## What it costs
+
+Anthropic says usage is billed on tokens, so costs can rise with the number and size of pull requests, the review level, how often reviews run and how much PR Steward does. Each agent is billed through organization usage credits, separate from the usage included in a plan. Spend limits can be set for Code Review and PR Steward, and the docs warn PR Steward has no spend limit until an Owner sets one.
+
+Claude Approvals has no base charge, but its classifiers are billed on tokens, and a policy that calls on Claude's review sets off a billed Code Review even in observe mode. Running `/ship` counts as regular Claude Code usage. The docs also warn that turning off usage credits does not stop an agent that is still switched on, so agents must be turned off to stop charges.
+
+The launch article mentions a promotion: eligible Enterprise organizations can claim at least $10,000 in Claude Ship credits, usable within 30 days of claiming, with a claim deadline of 15 January 2027 and terms that apply. The terms article was not read for this post.
+
+## Limits and warnings
+
+Availability is limited. Claude Ship is for Team and Enterprise plans and for GitHub repositories. The pages say it is not available to organizations with Zero Data Retention, the HIPAA configuration or customer-managed encryption keys.
+
+Anthropic's pages state that Claude Ship "uses AI and may miss bugs, security vulnerabilities, or other issues." The docs also warn that with GitHub auto-merge or a merge queue, and a policy that does not require a person's approval, a change can merge without anyone acting. The `/ship` page adds that a watch runs with your own sign-ins on your computer, and the page warns that anyone with merge or push access to those branches could run programs on your computer with your credentials. During a watch, commands that merge, approve, enable auto-merge or force-push are blocked, but the page says those blocks do not cover everything.
+
+The launch article cites an internal figure, that merged pull requests on the Claude Code team "more than doubled" between June and September, with the share reverted falling by more than 40%. That is Anthropic's own measurement of its own team, with no method given in the pages read.
+
+## What is not confirmed
+
+This post did not read the setup pages for Code Review, PR Steward or Approvals, the troubleshooting page, or the credit terms. The pages do not say how much a typical pull request costs, so a team cannot estimate spend from them alone. They also give no independent evaluation of how many real issues the agents catch.
+
+In short, Claude Ship adds token-billed agents to a GitHub workflow. The docs suggest beginning PR Steward in its manual setting and Approvals in observe mode, and note that PR Steward has no spend limit until an Owner sets one. PR Steward and Approvals are in beta, so details may change. This post is general information about a software product, not legal or security advice.

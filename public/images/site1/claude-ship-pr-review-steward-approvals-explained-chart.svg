@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#0f1424"/>
+<text x="60" y="64" font-size="30" font-weight="700" fill="#ffffff">Claude Ship: three agents on one pull request</text>
+<text x="60" y="98" font-size="18" fill="#aab3c8">Flow as described in Anthropic's launch article and Claude Code docs, Nov 2026</text>
+<g font-size="20" font-weight="700" text-anchor="middle">
+<rect x="60" y="150" width="230" height="110" rx="14" fill="#1d2640" stroke="#8b7cf6" stroke-width="2"/>
+<text x="175" y="198" fill="#fff">Open PR</text><text x="175" y="228" font-size="15" font-weight="400" fill="#aab3c8">/ship or a person</text>
+<rect x="355" y="150" width="230" height="110" rx="14" fill="#1d2640" stroke="#4cc9f0" stroke-width="2"/>
+<text x="470" y="198" fill="#fff">Code Review</text><text x="470" y="228" font-size="15" font-weight="400" fill="#aab3c8">GA - findings on PR</text>
+<rect x="650" y="150" width="230" height="110" rx="14" fill="#1d2640" stroke="#ffb347" stroke-width="2"/>
+<text x="765" y="198" fill="#fff">PR Steward</text><text x="765" y="228" font-size="15" font-weight="400" fill="#aab3c8">beta - fixes CI, conflicts</text>
+<rect x="945" y="150" width="195" height="110" rx="14" fill="#1d2640" stroke="#7bd88f" stroke-width="2"/>
+<text x="1042" y="198" fill="#fff">Approvals</text><text x="1042" y="228" font-size="15" font-weight="400" fill="#aab3c8">beta - policy file</text>
+</g>
+<g stroke="#aab3c8" stroke-width="3" fill="#aab3c8">
+<line x1="290" y1="205" x2="345" y2="205"/><polygon points="355,205 340,197 340,213"/>
+<line x1="585" y1="205" x2="640" y2="205"/><polygon points="650,205 635,197 635,213"/>
+<line x1="880" y1="205" x2="935" y2="205"/><polygon points="945,205 930,197 930,213"/>
+</g>
+<g font-size="17" fill="#e6e9f2">
+<rect x="60" y="310" width="1080" height="2" fill="#2b3558"/>
+<text x="60" y="352" font-weight="700" fill="#fff">What it is designed to do</text>
+<text x="60" y="384">Code Review: ranked inline comments (Quick, Standard or Deep level per repository)</text>
+<text x="60" y="414">PR Steward: pushes fixes and comments after each push; designed not to approve or merge</text>
+<text x="60" y="444">Claude Approvals: applies a team-written policy; can approve routine changes if the policy allows</text>
+<text x="60" y="490" font-weight="700" fill="#fff">What stays with people</text>
+<text x="60" y="522">Owner role sets up agents and spend limits; branch protection decides merges</text>
+<text x="60" y="552">Team and Enterprise plans, GitHub repositories; billed on tokens (org usage credits)</text>
+</g>
+<text x="60" y="605" font-size="14" fill="#7d86a0">Chart created by Stackbrook from the cited pages. stackbrook.com</text>
+</svg>

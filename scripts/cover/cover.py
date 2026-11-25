@@ -15,6 +15,7 @@ POSTS={
     'deepmind-quantum-agents-lean-verified-explained':('AI Research','AI agents and quantum algorithms'),
     'canva-mcp-ai-assistants-explained-what-canva-says':('AI Developer Tools','Canva inside AI assistants'),
  'shirudo-openai-cisco-ebpf-shields-explained':('AI Safety','Shirudo shields, explained'),
+ 'claude-ship-pr-review-steward-approvals-explained':('AI Coding','Claude Ship, explained'),
  'openai-chatgpt-wallet-agent-payments-explained':('AI Agents','ChatGPT Wallet, explained'),
  'seedance-2-5-explained-what-bytedance-says':('AI Video','Seedance 2.5, explained'),
     'google-tpu-8tx-8i-max-explained-what-google-says':('AI Hardware','Google TPU 8tx and 8i Max'),
