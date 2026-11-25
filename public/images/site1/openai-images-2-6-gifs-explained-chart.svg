@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="Inter,Arial,sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="60" y="70" font-size="30" font-weight="700" fill="#f8fafc">OpenAI offline safety test, 3,077 adversarial prompts</text>
+<text x="60" y="104" font-size="18" fill="#94a3b8">Share of prompts by outcome, per OpenAI system card (4 Nov 2026)</text>
+<text x="60" y="202" font-size="22" font-weight="600" fill="#e2e8f0">2.5 Sunburst</text>
+<rect x="300.0" y="170" width="624.4" height="50" fill="#38bdf8"/>
+<text x="612.2" y="202" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">76.15%</text>
+<rect x="924.4" y="170" width="179.9" height="50" fill="#fbbf24"/>
+<text x="1014.4" y="202" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">21.94%</text>
+<rect x="1104.3" y="170" width="15.7" height="50" fill="#f87171"/>
+
+<text x="1116" y="242" font-size="15" fill="#f87171" text-anchor="end">unsafe, not blocked 1.92%</text>
+<text x="60" y="297" font-size="22" font-weight="600" fill="#e2e8f0">2.6 Sunburst</text>
+<rect x="300.0" y="265" width="619.1" height="50" fill="#38bdf8"/>
+<text x="609.5" y="297" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">75.50%</text>
+<rect x="919.1" y="265" width="186.8" height="50" fill="#fbbf24"/>
+<text x="1012.5" y="297" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">22.78%</text>
+<rect x="1105.9" y="265" width="14.1" height="50" fill="#f87171"/>
+
+<text x="1116" y="337" font-size="15" fill="#f87171" text-anchor="end">unsafe, not blocked 1.72%</text>
+<text x="60" y="392" font-size="22" font-weight="600" fill="#e2e8f0">2.5 Flare</text>
+<rect x="300.0" y="360" width="642.6" height="50" fill="#38bdf8"/>
+<text x="621.3" y="392" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">78.36%</text>
+<rect x="942.6" y="360" width="165.2" height="50" fill="#fbbf24"/>
+<text x="1025.2" y="392" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">20.15%</text>
+<rect x="1107.8" y="360" width="12.2" height="50" fill="#f87171"/>
+
+<text x="1116" y="432" font-size="15" fill="#f87171" text-anchor="end">unsafe, not blocked 1.49%</text>
+<text x="60" y="487" font-size="22" font-weight="600" fill="#e2e8f0">2.6 Flare</text>
+<rect x="300.0" y="455" width="615.3" height="50" fill="#38bdf8"/>
+<text x="607.7" y="487" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">75.04%</text>
+<rect x="915.3" y="455" width="187.0" height="50" fill="#fbbf24"/>
+<text x="1008.8" y="487" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">22.81%</text>
+<rect x="1102.4" y="455" width="17.5" height="50" fill="#f87171"/>
+
+<text x="1116" y="527" font-size="15" fill="#f87171" text-anchor="end">unsafe, not blocked 2.14%</text>
+<rect x="60" y="554" width="20" height="20" fill="#38bdf8"/><text x="90" y="570" font-size="18" fill="#e2e8f0">Safe generation</text>
+<rect x="320" y="554" width="20" height="20" fill="#fbbf24"/><text x="350" y="570" font-size="18" fill="#e2e8f0">Unsafe, blocked</text>
+<rect x="580" y="554" width="20" height="20" fill="#f87171"/><text x="610" y="570" font-size="18" fill="#e2e8f0">Unsafe, not blocked</text>
+</svg>

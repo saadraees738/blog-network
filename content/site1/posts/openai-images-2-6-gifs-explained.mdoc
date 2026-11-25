@@ -1,0 +1,73 @@
+---
+title: 'OpenAI Images 2.6 explained: GIF creation, Flare and Sunburst models, and what the safety card says'
+description: 'OpenAI released Images 2.6 on 4 November 2026 with GIF creation, two API models and a complexity setting. What its launch post and system card say, and what they omit.'
+status: published
+queueReason: ''
+publishDate: 2026-11-25
+lastVerified: 2026-11-25
+category: AI Images
+author: saad-r
+heroImage: /images/site1/openai-images-2-6-gifs-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a grid of glowing orange picture frames on a dark teal background, some holding a small owl-like paper creature in slightly different poses'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Images 2.6 is OpenAI's image update announced on 4 November 2026. It adds GIF creation, image markup and SVG export in the API, a complexity setting, and two API models called GPT-Image-2.6 Flare (quick renders) and GPT-Image-2.6 Sunburst (higher quality). OpenAI says it is 50% faster than before and available in ChatGPT and Codex on all subscription tiers. The post gives no GIF length or size limits, and the safety numbers are OpenAI's own offline tests.
+sources:
+  - title: Introducing Images 2.6 (OpenAI, 4 November 2026)
+    url: https://openai.com/index/introducing-images-2-6/
+    accessed: 2026-11-25
+  - title: ChatGPT Images 2.6 System Card (OpenAI Deployment Safety Hub, 4 November 2026)
+    url: https://deploymentsafety.openai.com/chatgpt-images-2-6
+    accessed: 2026-11-25
+  - title: GPT-Image-2.6 Sunburst model page (OpenAI API documentation)
+    url: https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst
+    accessed: 2026-11-25
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the three cited pages (REVISE, 15 findings applied: corrected how the unsafe-not-blocked rate is described, removed claims not found on the cited pages, corrected the order of the safety checks, added the Sunburst page prices, reworded close paraphrases, removed process wording and editorial phrases, aligned the frontmatter; no second round). The OpenAI help article, image-generation guide, pricing page and system card PDF were not read. The Sunburst page prices come from that page only. All results are vendor claims and no independent testing was done or claimed.'
+---
+
+On 4 November 2026 OpenAI announced Images 2.6, which adds animated GIF creation to its image tool. This post goes through what OpenAI's launch post, its system card and one API model page say, covering what is new, how the two models differ, which safety measures are described, and which details the pages do not state. Everything about the product is OpenAI's own description.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. OpenAI is a competitor of Anthropic, so the author is not a neutral party. Stackbrook did not test any product mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What is new in Images 2.6
+
+OpenAI's headline claims are speed, GIFs and finer control. It says Images 2.6 generates images 50% faster than before, and that Flare, its quicker model, can produce an image in as little as six seconds at low quality. It also says people now make about 4 billion images a week across ChatGPT, Codex and the API, which is a usage figure from OpenAI that this post cannot check.
+
+OpenAI pitches the GIF feature at mascots, reactions and memes, and storyboards. Its sample prompts ask for a set number of frames laid out in a grid, but those are examples of how to phrase a request, not documented limits. The launch post does not state a maximum GIF length, frame count or resolution, and the system card does not either.
+
+Other additions listed are image markup, which OpenAI says already existed in ChatGPT and now reaches the API, SVG export in the API, and a new "complexity" parameter. OpenAI separates the two settings: quality sets how detailed the image is, while complexity sets how much is asked of the model for the scene. For most edits OpenAI recommends low complexity, and medium or high for scenes with many elements or constraints.
+
+## Flare and Sunburst: the two API models
+
+The API offers two models. GPT-Image-2.6 Flare is the model OpenAI describes with the six-second figure, and it says Flare handles layout better for things like posters and product imagery. GPT-Image-2.6 Sunburst is the higher-quality option, which OpenAI says stays more consistent from one edit to the next, and it ties Sunburst to the medium and high quality settings.
+
+The model page for Sunburst gives its identifier as gpt-image-2.6-sunburst. It lists text and image as inputs and image as the output, and it names the complexity setting, markup-guided edits, SVG output and animated GIF output among its features. The page points to OpenAI's image-generation guide for details. The identifier for Flare is not given on the three cited pages, so check OpenAI's documentation before using it in code.
+
+On pricing, the Sunburst model page lists image output at $30 per million tokens, image input at $8 per million and text input at $5 per million, as of 25 November 2026. Flare prices are not on the cited pages, so see OpenAI's pricing page, which the launch post links.
+
+## Where you can use it
+
+OpenAI says Images 2.6 is available globally in ChatGPT and Codex across all subscription tiers, on desktop, mobile and web. The launch post does not name individual plans or list any region exceptions. The cited pages give no per-plan limits, so check OpenAI's help article on images in ChatGPT for daily caps. The post quotes OpenArt, Figma Weave and Picsart, and credits the two sample GIFs to OpenArt.
+
+## What the system card says about safety
+
+The system card describes policy checks that can refuse a request before generation, and a safety reasoning model that acts as a monitor on image inputs and generated outputs. New in this release, according to the card, is synchronous CSAM classification running alongside the existing image moderation in ChatGPT. The card also lists a continued commitment to C2PA provenance metadata and says SynthID watermarking applies across ChatGPT, Codex and the API.
+
+The card says GIFs bring risks that may not be apparent in individual still images. It adds that motion-related violations "remain challenging to detect" and that the safeguards may not catch all of them.
+
+![Stacked bars comparing outcomes for Images 2.5 and 2.6 Sunburst and Flare on 3,077 adversarial prompts: safe generation, unsafe blocked and unsafe not blocked](/images/site1/openai-images-2-6-gifs-explained-chart.svg)
+*Chart created by Stackbrook from the cited system card. These are OpenAI's adversarial-prompt evaluation results, which the card says are not representative of production traffic.*
+
+The chart shows OpenAI's evaluation on 3,077 adversarial prompts. The share of all test requests that produced an unsafe output that was not blocked was 1.72% for Sunburst 2.6 against 1.92% for Sunburst 2.5. For Flare it was 2.14% against 1.49%, which the card puts at 66 requests against 46. The card says neither overall difference in that rate was statistically significant, while the drop in Flare's safe-generation share, from 78.36% to 75.04%, was. In OpenAI's test, Flare 2.6 therefore blocked a larger share of unsafe requests (22.81% against 20.15%) but also let through a somewhat larger, statistically insignificant share of unsafe outputs.
+
+The card also says neither model crosses its Bio High or Cyber High thresholds, though the team applies biological-risk mitigations as a precaution. This post reports no GIF detection rates, because none appear in the card text cited here.
+
+## What is not confirmed
+
+Several practical details are missing from the pages read. The cited pages give no GIF limits on length, frame count or size, no Flare model identifier, no per-plan usage caps and no Flare prices. All performance and safety numbers come from OpenAI, with no independent evaluation cited. The 50% speed claim has no stated baseline beyond "before".
+
+For small businesses and everyday users, the main point is that OpenAI has added animation to an image tool already inside ChatGPT, while details such as GIF limits and per-plan caps are still to be checked in its documentation and help pages. If you plan to use AI-generated images commercially, read OpenAI's current terms yourself, since this post gives general information, not legal advice.

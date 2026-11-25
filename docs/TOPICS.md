@@ -85,3 +85,4 @@ P50. published | AI Agents | ChatGPT Wallet explained (2026-11-24; OpenAI announ
 P51. published | AI Safety | Shirudo (OpenAI + Cisco eBPF shields) explained (2026-11-25; OpenAI post + Cisco newsroom + Cisco blog of 23 Nov 2026; repo/docs not read)
 P52. published | AI Research | DeepMind Gemini 4 quantum-algorithm agents explained (2026-11-25; DeepMind blog 23 Nov 2026 + arXiv 2611.09822 abstract; GitHub Lean repo unfetchable; Canva MCP and GLM-5.4 pages were unfetchable this run, still todo)
 P53. published | AI Developer Tools | Canva MCP explained (2026-11-25; Canva Developers blog 27 Oct 2026 + access and tools docs pages; newsroom and AI connector pages returned fetch errors; GLM-5.4 z.ai docs also unfetchable, still todo)
+P54. published | AI Images | OpenAI Images 2.6 (GIFs, Flare and Sunburst) explained (2026-11-25; OpenAI launch post + system card of 4 Nov 2026 + Sunburst API model page; help article unfetchable)
