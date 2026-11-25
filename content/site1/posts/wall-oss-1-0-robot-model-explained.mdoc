@@ -1,0 +1,90 @@
+---
+title: 'WALL-OSS-1.0 explained: what X Square Robot says its new robot model can do'
+description: 'X Square Robot announced WALL-OSS-1.0 on 23 November 2026. The company benchmark claims, the comparison caveats, and which early files you can download so far.'
+status: published
+queueReason: ''
+publishDate: 2026-11-25
+lastVerified: 2026-11-25
+category: Robots
+author: saad-r
+heroImage: /images/site1/wall-oss-1-0-robot-model-explained-cover.jpg
+heroAlt: 'AI-generated illustration of two simple robotic arms sorting glowing blocks on a table against a dark background'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: WALL-OSS-1.0 is a robot foundation model that X Square Robot announced on 23 November 2026. The company reports a 55.1 percent zero-shot success rate across 312 tasks chosen by evaluators and 50.67 percent on a 15-task real-robot benchmark, against 24.0 percent for a baseline called π0.5. These are company-reported figures. The release gives no date for opening the code and weights. Two Lite checkpoints for the RoboDojo benchmark are on Hugging Face, one labelled a preview, but we found no weights for the main model.
+sources:
+  - title: 'WALL-OSS-1.0: Understand More, Act Better (X Square Robot blog, 23 November 2026)'
+    url: https://x2robot.com/blogs/wall-oss-1-en/
+    accessed: 2026-11-25
+  - title: X Square Robot Introduces WALL-OSS-1.0 (company press release on GlobeNewswire, 23 November 2026)
+    url: https://www.globenewswire.com/news-release/2026/11/23/3408046/0/en/x-square-robot-introduces-wall-oss-1-0-understand-more-act-better-a-native-foundation-model-for-the-physical-world.html
+    accessed: 2026-11-25
+  - title: X-Square-Robot wall-x code repository (GitHub)
+    url: https://github.com/X-Square-Robot/wall-x
+    accessed: 2026-11-25
+  - title: X Square Robot organisation page (Hugging Face)
+    url: https://huggingface.co/x-square-robot
+    accessed: 2026-11-25
+  - title: Wall-OSS-1.0-lite RoboDojo base model page (Hugging Face)
+    url: https://huggingface.co/x-square-robot/wall-oss-1.0-lite-robodojo-base
+    accessed: 2026-11-25
+  - title: WALL-OSS 1.0 Lite RoboDojo model page (Hugging Face)
+    url: https://huggingface.co/x-square-robot/wall-oss-1.0-lite-robodojo
+    accessed: 2026-11-25
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE, 7 findings applied, including a corrected account of which Lite checkpoints are downloadable, reworded near-verbatim sentences, a missing chart value and added qualifiers; no second round). Fetch tools returned extracted or summarised text for parts of these pages, so wording and several blog figures were not checked verbatim. Only 10 of 14 Hugging Face models were shown. Benchmark figures are company-reported and not independently replicated, and no testing was done or claimed.'
+---
+
+X Square Robot, a company with a Shenzhen dateline on its release, announced a robot model called WALL-OSS-1.0 on 23 November 2026. Its pitch is that one model can attempt many physical tasks without being retrained for each one. This post sets out what the company says, how far its comparisons go, and what a curious reader can actually get today. Everything comes from the company's blog, its press release, and its public code and model pages.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test any model or robot mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What was announced
+
+A robot foundation model takes in instructions and camera views and produces movements. According to the release, WALL-OSS-1.0 starts from a Qwen3.5 base model. The blog says language, vision-language and robot-action data are brought into one training process in which the model predicts sequences step by step, and a separate action component then produces the movements.
+
+The headline claim is a 55.1 percent zero-shot success rate across 312 unique tasks that evaluators chose freely. "Zero-shot" here means, in the release's description, without task-specific demonstrations or fine-tuning. Put the other way round, the same figure means that a large share of attempts did not succeed. The blog also reports a mean score of 6.45 out of 10 across 377 evaluations in that open-ended test.
+
+## The benchmark numbers
+
+The most detailed comparison uses ManipArena, which the company describes as a real-robot benchmark of 15 tabletop tasks. The blog says each task was run 10 times. The company reports these results:
+
+- Overall success rate of 50.67 percent for WALL-OSS-1.0, against 19.33 percent for the earlier WALL-OSS-0.5 and 24.0 percent for π0.5, the baseline model it compares with.
+- A score of 1,101 out of 1,500 points for the new model.
+- On the tasks that depend on understanding meaning, such as sorting or pairing objects, 78 percent success against 44 percent for π0.5 and, in the blog, 20 percent for WALL-OSS-0.5.
+
+![Dot plot of company-reported ManipArena success rates, overall and on semantic tasks, for WALL-OSS-1.0, WALL-OSS-0.5 and the π0.5 baseline](/images/site1/wall-oss-1-0-robot-model-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+The blog's own task table shows how uneven the results are. It says the new model leads or ties on 14 of the 15 tasks, with the exception of placing glasses on a shelf, where π0.5 scored 87 points out of 100 and WALL-OSS-1.0 scored 70. Scores for the new model range from 100 on tasks such as putting a spoon in a bowl down to 38 on pressing buttons in order.
+
+## Why the comparison needs care
+
+The blog states that the WALL-OSS models were evaluated directly after pretraining, while π0.5 was fine-tuned on multiple tasks. That is not an identical setup, and it is the company running and reporting the comparison. We found no independent replication in the pages we read.
+
+The company also reports results in simulation. On the public RoboDojo leaderboard, it says a smaller version, WALL-OSS-1.0-Lite, scored 42.59 overall and ranked first among policies without agent systems as of 5 November 2026. That is a dated snapshot of a leaderboard we did not check ourselves, and rankings can change. The matching Hugging Face page says its RoboDojo checkpoint was fine-tuned on RoboDojo demonstrations, so do not read this score as a zero-shot result.
+
+## The factory-style claim
+
+The release describes parcel sorting for a logistics customer that it does not name. According to the release, when the adapted system was evaluated across sites it held on to over nine tenths of the sorting speed and success it had at the original one. The version built without pretraining lost more than nine tenths of its success rate. The blog adds that about 10 hours of task data were enough to reach what it calls a usable level, compared with more than 1,000 hours without pretraining. The company also says its optimisations made the model run over four times faster in its own test setup. None of this tells a business what it would see at its own site, with its own parcels, lighting and equipment.
+
+## Model sizes and hardware
+
+The blog names a 4 billion parameter Lite version and a 2 billion parameter Nano version, plus variants called Gen and AR. In the company's serving test, one NVIDIA Blackwell GPU, which the blog calls a consumer GPU, handled 18 robots running Nano. The pages we read give no memory requirement for the main model and no list of supported robot models.
+
+The company also introduced XR Harness, a framework that splits work between a planning layer, the model and lower-level controllers. The release says a developer preview is available. It also mentions an interface called WALL-API-1.0 without saying when or how anyone can use it.
+
+## What you can get today
+
+This is the part to read before planning anything. The release says the code and weights "will open-source soon" and gives no date. Some early files are already public, though.
+
+Two Lite checkpoints on Hugging Face are marked Apache-2.0. The base one calls itself a preview of Wall-OSS-1.0-lite, published ahead of that release and not identical to it, differing mainly in the number of training iterations. The other is fine-tuned on RoboDojo demonstrations. Its page says it was trained for that simulation benchmark, works with the dual-arm ARX X5 setup and has not been validated on real robots.
+
+When we looked on 25 November, we found no weights for the main WALL-OSS-1.0 model among the models shown on the company's Hugging Face page, which displayed only part of its list in our fetch. The wall-x repository on GitHub, which carries an Apache-2.0 licence, listed news and model links for earlier releases such as Wall-OSS-0.5, with nothing for WALL-OSS-1.0. We found no stated licence for the main model, so do not assume the licence on the repository or the Lite files will cover it.
+
+## What to watch for
+
+If you follow robotics for a small business, the practical checks are simple. Wait for the full weights and their licence to appear on an official page. Look for results from people outside the company. Check whether your robot hardware is supported. And treat a success rate near half as a research result, not a promise that a machine will do a job unattended.
