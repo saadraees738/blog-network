@@ -9,6 +9,7 @@ export type SiteConfig = {
   contactEmail: string; // PLACEHOLDER
   twitter?: string;
   affiliateDisclosure: boolean;
+  gaId?: string; // Google Analytics 4 measurement ID (G-XXXXXXXXXX)
 };
 
 export const sites: SiteConfig[] = [
@@ -19,6 +20,7 @@ export const sites: SiteConfig[] = [
     domains: ['localhost', 'stackbrook.com'],
     contactEmail: 'contact@stackbrook.com',
     affiliateDisclosure: true,
+    gaId: 'G-NDWRL5WZY4',
   },
 ];
 

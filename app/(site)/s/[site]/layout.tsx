@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { siteById, sites } from '../../../../sites.config';
 import { legalSlugs, legalPages } from '../../../../lib/legal';
 
@@ -17,8 +18,21 @@ export default async function SiteLayout({
   const site = siteById(id);
   if (!site) notFound();
   const pages = legalPages(site);
+  const EEA = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'];
   return (
     <>
+      {site.gaId && (
+        <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} strategy="afterInteractive" />
+          <Script id="ga4" strategy="afterInteractive">{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',region:${JSON.stringify(EEA)}});
+            gtag('js', new Date());
+            gtag('config','${site.gaId}');
+          `}</Script>
+        </>
+      )}
       <header className="site">
         <div className="wrap">
           <a className="brand" href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
