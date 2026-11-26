@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+<text x="50" y="60" font-size="32" fill="#f8fafc" font-weight="700" text-anchor="start">An agent attack loop, and eight questions in response</text>
+<text x="50" y="94" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="start">Paraphrased from the UK NCSC blog of 24 November 2026</text>
+<text x="50" y="140" font-size="19" fill="#fca5a5" font-weight="700" text-anchor="start">What the framework does</text>
+<rect x="50" y="158" width="240" height="86" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+<text x="170" y="194" font-size="22" fill="#f8fafc" font-weight="700" text-anchor="middle">Plan</text>
+<text x="170" y="222" font-size="16" fill="#cbd5e1" font-weight="400" text-anchor="middle">AI model picks steps</text>
+<line x1="294" y1="201" x2="331" y2="201" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="337" y="158" width="240" height="86" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+<text x="457" y="194" font-size="22" fill="#f8fafc" font-weight="700" text-anchor="middle">Run tools</text>
+<text x="457" y="222" font-size="16" fill="#cbd5e1" font-weight="400" text-anchor="middle">against a target</text>
+<line x1="581" y1="201" x2="618" y2="201" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="624" y="158" width="240" height="86" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+<text x="744" y="194" font-size="22" fill="#f8fafc" font-weight="700" text-anchor="middle">Read results</text>
+<text x="744" y="222" font-size="16" fill="#cbd5e1" font-weight="400" text-anchor="middle">including errors</text>
+<line x1="868" y1="201" x2="905" y2="201" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="911" y="158" width="240" height="86" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+<text x="1031" y="194" font-size="22" fill="#f8fafc" font-weight="700" text-anchor="middle">Decide</text>
+<text x="1031" y="222" font-size="16" fill="#cbd5e1" font-weight="400" text-anchor="middle">what to try next</text>
+<path d="M1031 248 L1031 278 L170 278 L170 250" fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<text x="600" y="302" font-size="16" fill="#94a3b8" font-weight="400" text-anchor="middle">and repeat</text>
+<text x="50" y="346" font-size="19" fill="#86efac" font-weight="700" text-anchor="start">What to ask about your own systems</text>
+<rect x="50" y="366" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="70" y="400" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">1</text>
+<text x="70" y="432" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">What is exposed?</text>
+<rect x="329" y="366" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="349" y="400" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">2</text>
+<text x="349" y="432" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Off the public web?</text>
+<rect x="608" y="366" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="628" y="400" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">3</text>
+<text x="628" y="432" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Would you notice?</text>
+<rect x="887" y="366" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="907" y="400" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">4</text>
+<text x="907" y="432" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Are flaws patched?</text>
+<rect x="50" y="466" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="70" y="500" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">5</text>
+<text x="70" y="532" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Bot challenges?</text>
+<rect x="329" y="466" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="349" y="500" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">6</text>
+<text x="349" y="532" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">APIs protected?</text>
+<rect x="608" y="466" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="628" y="500" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">7</text>
+<text x="628" y="532" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Sign-ups and logins?</text>
+<rect x="887" y="466" width="263" height="84" rx="12" fill="#14332a" stroke="#4ade80" stroke-width="2"/>
+<text x="907" y="500" font-size="22" fill="#4ade80" font-weight="700" text-anchor="start">8</text>
+<text x="907" y="532" font-size="20" fill="#f8fafc" font-weight="400" text-anchor="start">Traps and decoys?</text>
+<text x="50" y="598" font-size="16" fill="#94a3b8" font-weight="400" text-anchor="start">Chart by Stackbrook. Labels shortened; read the NCSC page for full advice.</text>
+</svg>

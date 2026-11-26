@@ -89,3 +89,4 @@ P54. published | AI Images | OpenAI Images 2.6 (GIFs, Flare and Sunburst) explai
 P55. published | AI Coding | Claude Ship (Code Review, PR Steward, Claude Approvals) explained (2026-11-25; claude.com launch article 23 Nov 2026 + three code.claude.com docs pages; setup and credit-terms pages not read)
 P56. published | AI Productivity | Gemini Notebook interactive sites explained (2026-11-25; Google blog 16 Nov 2026 + Google blog 19 Oct 2026 + Gemini Notebook Help slide decks article; video help page not read)
 P57. published | AI Shopping | Black Friday how-to with Google price tracking and Universal Cart (2026-11-25; Google blog 16 Nov and 15 Oct 2026 + Shopping, Chrome, Wallet and Google Pay help pages)
+P58. published | AI Safety | UK NCSC eight checks for AI agent attacks explained (2026-11-26; NCSC blog 24 Nov + NCSC news 3 Nov + Cyber Essentials and sole-trader pages)

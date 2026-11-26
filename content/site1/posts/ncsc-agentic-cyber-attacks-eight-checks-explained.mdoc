@@ -1,0 +1,90 @@
+---
+title: 'AI agent cyber attacks: the UK NCSC''s eight checks, in plain English'
+description: 'On 24 November 2026 the UK cyber agency reported a marked rise in AI-assisted attacks. Its eight defence questions, explained for small teams.'
+status: published
+queueReason: ''
+publishDate: 2026-11-26
+lastVerified: 2026-11-26
+category: AI Safety
+author: saad-r
+heroImage: /images/site1/ncsc-agentic-cyber-attacks-eight-checks-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing green padlock on a dark surface linked by amber lines of light, with small lock icons behind it'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: The UK National Cyber Security Centre (NCSC) said on 24 November 2026 that it has seen a marked rise in AI-assisted attacks since September. It says the exploited weaknesses are not new, but attacks are now faster, more persistent and low-cost to run. Its eight questions cover exposed systems, access limits, detection, patching, bots, APIs, sign-ups and decoys. Stackbrook suggests small firms start by listing what faces the internet, applying updates and replacing default passwords.
+sources:
+  - title: 'Familiar weaknesses, exploited faster: defending against agentic cyber attacks (NCSC blog, 24 November 2026)'
+    url: https://www.ncsc.gov.uk/blogs/familiar-weaknesses-exploited-faster-defending-against-agentic-cyber-attacks
+    accessed: 2026-11-26
+  - title: 'Cyber chief: UK facing AI-powered attacks on critical infrastructure within two years (NCSC news, 3 November 2026)'
+    url: https://www.ncsc.gov.uk/news/cyber-chief-uk-facing-ai-powered-attacks-on-critical-infrastructure-in-two-years
+    accessed: 2026-11-26
+  - title: Cyber Essentials overview (NCSC)
+    url: https://www.ncsc.gov.uk/cyberessentials/overview
+    accessed: 2026-11-26
+  - title: Respond and recover advice for sole traders and small organisations (NCSC)
+    url: https://www.ncsc.gov.uk/section/respond-recover/sole-small
+    accessed: 2026-11-26
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the four cited NCSC pages (REVISE, 11 findings applied, including two high-severity wording corrections; no second round). The reviewer read the pages through a fetch tool that returns extracted text, so the check for close wording was limited. The Microsoft report cited by the NCSC, the IASME pages and the State of the Cyber Nation report itself were not read. No product was tested.'
+---
+
+On 24 November 2026 the UK National Cyber Security Centre (NCSC) published a blog about attacks that use AI agents to find and exploit weak spots. The headline message is less dramatic than it sounds: the weaknesses are old, but they are being found and used much faster. This post explains what the agency reported, walks through its eight defence questions in plain English, and shows where a small business might start. The NCSC blog is written for cyber security professionals, so the small-team suggestions here are Stackbrook's own reading and are marked as such.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test any tool or service mentioned and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What the NCSC says is happening
+
+The agency says it has seen a marked rise in AI-assisted attacks since September 2026. Organisations have reported incidents involving what it calls agentic offensive frameworks. These are tools originally built for red teaming (authorised attack practice) that are now being used for real attacks. According to the blog, the incidents involved automated discovery and exploitation attempts across internet-facing services in quick succession. Some services went down, some systems were compromised, and attackers gained footholds for further activity.
+
+A framework of this kind lets an AI model work with ordinary security tools. The model plans the steps, runs tools against a target, reads the results and decides what to do next. The NCSC says that as of November 2026 the framework called ARTEX is synonymous with this activity, and it names several others.
+
+Two points matter most. First, the NCSC says none of the weaknesses being exploited are new. Second, it says the security tools these agents use are common and give a typical attacker nothing they could not already get. What has changed is speed, persistence and cost. Compared with a person working without tools, an agent can move from discovery to exploitation in minutes, try many routes, learn from errors, and run cheaply at scale. The blog also notes that current frameworks are noisy, trading stealth for speed, and that this could change.
+
+![Diagram of the attack loop the NCSC describes - plan, run tools, read results, decide again - above eight defence questions](/images/site1/ncsc-agentic-cyber-attacks-eight-checks-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages. Question labels are shortened paraphrases.*
+
+## The kinds of weaknesses involved
+
+The NCSC says current exploitation is not about novel memory bugs, or even known but unpatched flaws. It points to long-standing weaknesses, often left from years of technical debt: passwords or keys saved in code repositories, badly configured cloud setup files, default passwords or no login at all, and weaknesses in APIs (the doors that let programs talk to each other). Once inside, agents take advantage of accounts with more access than they need and networks where everything is connected to everything else. Patching still appears among the eight questions below.
+
+## The eight questions
+
+The NCSC frames its advice as questions. Here they are in shortened, plain-language form.
+
+**1. Do you know what is exposed?** List every system reachable from the internet and who owns it. The blog says compromised services are sometimes ones an organisation has forgotten, such as old websites and legacy equipment.
+
+**2. Can you take it off the public internet?** Options include placing a service behind a login gateway with strong, phishing-resistant authentication, limiting access to a company VPN or known addresses with a firewall, or requiring certificates on both ends. The NCSC says that in most organisations, the majority of services reachable from outside can be locked down quickly.
+
+**3. Would you notice an agent?** Warning signs include bursts of requests separated by short pauses, probing of many addresses and settings, and unusually high error rates. Keep logs, and keep error messages shown to outsiders vague.
+
+**4. Are known flaws patched?** Patch internet-facing systems quickly, fix misconfigurations, and watch for access permissions drifting over time. The blog also mentions professional penetration testing, and suggests smaller organisations consider adversary simulation.
+
+**5. Do you challenge bots where abuse happens?** Protect sign-up and login pages, stock and checkout steps, and costly features such as search or AI functions. Use light challenges unless risk rises, and offer an accessible alternative.
+
+**6. Are your APIs protected?** If the API behind a page does not enforce a browser check, an attacker can call it directly and skip the check. Agents also rotate addresses, so blocking by IP often fails. Limit request rates by account, token and session, and watch behaviour. The blog also advises scanning code for secrets before it is committed to public repositories.
+
+**7. Who can create an account, and how fast?** Slow down mass sign-ups and be stricter with disposable email addresses. Deal with default or weak passwords, and protect accounts with strong authentication and appropriate access controls.
+
+**8. Can you turn persistence against the attacker?** Decoy credentials and tripwires can raise reliable alerts, and traps or fake successes can waste an agent's attempts. The NCSC cites a Microsoft report in support; this post did not read that report.
+
+## Where a small team might start
+
+This section is Stackbrook's suggestion, not NCSC wording. If you have no security staff, begin with questions 1, 4 and 7: write down what is online, switch off anything nobody uses, apply updates, and replace default or shared passwords. Then ask whoever hosts your website or software how they handle the other five. If you rely entirely on hosted apps, many of these controls sit with the provider, but your accounts and passwords remain yours.
+
+## Cyber Essentials, the baseline scheme
+
+The NCSC blog points to Cyber Essentials, a UK certification scheme. The overview page presents it as the government-recommended baseline for any size of organisation. Its five controls are firewalls, secure configuration, security update management, user access control and malware protection.
+
+There are two levels. Cyber Essentials combines self-assessment with independent audit and, as of 26 November 2026, starts at £320 plus VAT, with pricing tiered by size. Cyber Essentials Plus adds independent technical testing and is priced by the size and complexity of the network. The page also says UK organisations with turnover under £20m that certify the whole organisation are automatically entitled to cyber liability insurance; check the terms before relying on it. A free readiness tool is linked from the same page. In a 3 November announcement, the NCSC said its chief executive would urge organisations to treat Cyber Essentials as a first step rather than the finish line.
+
+## The wider forecast
+
+That 3 November announcement also carried a forecast tied to the agency's State of the Cyber Nation report. The NCSC judges it highly likely that, before 2028 is out, ransomware using AI-powered malware will have hit the UK's critical national infrastructure. It is a forecast about infrastructure, not a prediction about any particular small firm.
+
+## What is not known
+
+The 24 November blog gives no count of incidents, no list of victims and no figure for how much faster attacks have become. It also says defensive AI will take time to mature, and that AI does not make established controls obsolete. If you think you have been attacked, the NCSC has response pages for sole traders and small organisations covering phishing, hacked accounts, ransomware and more, and it points UK readers to the government's cyber reporting service. Readers outside the UK should use their own national reporting channels. This is general information, not legal or professional security advice.
