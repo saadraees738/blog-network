@@ -93,3 +93,4 @@ P58. published | AI Safety | UK NCSC eight checks for AI agent attacks explained
 P59. published | AI Music | Tidal fully-AI music removal from 9 Dec explained (2026-11-26; four Tidal pages + TechCrunch and Hypebot; Tidal X announcement unfetchable, new rules labelled reported)
 P60. published | AI Phones | Android Gemini Intelligence November update and Pixel Drop explained (2026-11-26; two Google blog posts of 10 Nov + five Google help pages)
 P61. published | AI Social Media | Facebook Your algorithm controls explained (2026-11-26; Meta Newsroom 13 Oct + Engineering at Meta 10 Nov; Instagram blog body unreadable)
+P62. published | Robots | XPENG IRON humanoid robot dates and specs explained (2026-11-26; two XPENG GlobeNewswire releases of 25 Nov + XPENG pressroom 8 Sep; CNBC article unfetchable)
