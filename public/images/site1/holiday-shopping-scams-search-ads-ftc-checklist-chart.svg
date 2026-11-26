@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#ffffff"/>
+<text x="40" y="58" font-size="32" font-weight="bold" fill="#14213d">Paid a scammer? Who to contact first</text>
+<text x="40" y="92" font-size="19" fill="#4a5568">Based on FTC advice for US consumers, read 26 November 2026</text>
+<rect x="40" y="116" width="1120" height="50" fill="#14213d"/>
+<g font-size="20" font-weight="bold" fill="#ffffff"><text x="60" y="148">How you paid</text><text x="390" y="148">Contact</text><text x="790" y="148">Ask or do</text></g>
+<g fill="#eef2f7"><rect x="40" y="166" width="1120" height="68"/><rect x="40" y="302" width="1120" height="68"/><rect x="40" y="438" width="1120" height="68"/></g>
+<g font-size="20" fill="#1a202c">
+<g font-weight="bold"><text x="60" y="207">Credit or debit card</text><text x="60" y="275">Gift card</text><text x="60" y="343">Wire transfer</text><text x="60" y="411">Payment app</text><text x="60" y="479">Bank transfer or Zelle</text><text x="60" y="547">Cryptocurrency</text></g>
+<text x="390" y="207">Card issuer or your bank</text><text x="790" y="207">Ask for a refund</text>
+<text x="390" y="275">Gift card issuer</text><text x="790" y="275">Ask refund; keep card, receipt</text>
+<text x="390" y="343">The wire transfer company</text><text x="790" y="343">Ask for a refund</text>
+<text x="390" y="411">The payment app</text><text x="790" y="411">Ask to reverse it</text>
+<text x="390" y="479">Your bank or credit union</text><text x="790" y="479">Ask to reverse it</text>
+<text x="390" y="547">The exchange or ATM operator</text><text x="790" y="547">Ask to reverse it</text>
+</g>
+<line x1="40" y1="574" x2="1160" y2="574" stroke="#14213d" stroke-width="2"/>
+<text x="40" y="606" font-size="19" fill="#4a5568">Then report it at ReportFraud.ftc.gov. Recovery is not guaranteed.</text>
+</svg>
