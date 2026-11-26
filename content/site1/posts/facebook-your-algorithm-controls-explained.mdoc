@@ -1,0 +1,94 @@
+---
+title: 'Facebook Your Algorithm: how to tell Feed and Reels what you want'
+description: 'Meta lets Facebook users describe interests in plain words to steer Feed and Reels. What Your Algorithm does, how it works and what Meta leaves unsaid.'
+status: published
+queueReason: ''
+publishDate: 2026-11-26
+lastVerified: 2026-11-26
+category: AI Social Media
+author: saad-r
+heroImage: /images/site1/facebook-your-algorithm-controls-explained-cover.jpg
+heroAlt: 'AI-generated illustration of two glowing slider controls with translucent cards floating above them'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Your Algorithm is a Facebook feature that Meta announced on 13 October 2026 as rolling out. It gives you one place to add topics you want, or do not want, in Feed and Reels, written in your own words. You can find it through the three-dot menu on a post. Meta says changes apply to both Feed and Reels. The two Meta posts we read do not list countries, languages or an age limit, and do not say whether ads are affected.
+sources:
+  - title: 'Your Algorithm, Your Words: New Ways to Shape What You See on Facebook (Meta Newsroom, 13 October 2026)'
+    url: https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/
+    accessed: 2026-11-26
+  - title: 'Your Algorithm: Giving People More Ways to Personalize Facebook Recommendations (Engineering at Meta, 10 November 2026)'
+    url: https://engineering.fb.com/2026/11/10/ml-applications/your-algorithm-giving-people-more-ways-to-personalize-facebook-recommendations/
+    accessed: 2026-11-26
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the two cited Meta pages (REVISE with no high-severity findings; all 8 findings, 3 medium and 5 low, applied; no second round). The reviewer relied on fetch-tool extracts rather than full page text, so absence claims and copying checks are not exhaustive. Availability by country, ad effects, retention and filtering accuracy could not be confirmed. The feature was not tested.'
+---
+
+Facebook has long guessed what you like from what you do: the posts you react to, comment on and watch. Meta now says you can also just tell it. The company announced Your Algorithm on 13 October 2026, and on 10 November its engineering blog explained the machinery behind it. This explainer covers what you can change, how a request is handled, and which questions remain open.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, whose AI products compete with Meta's, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test the feature and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What Meta announced
+
+The newsroom post describes three changes to Facebook Feed and Reels:
+
+- **A Your algorithm space.** A single spot for choosing and editing the subjects you would like more of.
+- **More feedback on individual posts.** After you tap "Interested" or "Not interested", Facebook may then ask what appealed to you or put you off, and you can reply in free text.
+- **An updated three-dot menu.** Every post has it, and Meta says it makes these tools easier to reach. Meta says you can find Your algorithm there too.
+
+Meta says large language models (the kind of AI behind chatbots) read what you type, so recommendations can adjust within the same session. It still uses engagement and, in its words, "thousands of other signals". Your typed requests are an extra input, not a replacement for ranking.
+
+## What the Your Algorithm page shows
+
+According to the engineering post, the page has three parts:
+
+1. A one-sentence "Lately Summary" of your recent viewing.
+2. An "Interested In" list, prefilled with topics inferred from your past activity.
+3. A "Not Interested In" list, holding topics you marked that way, removed with an X or hid on Facebook.
+
+You can add topics in ordinary language, move them from one list to the other, or remove them. Meta says each change applies to both Feed and Reels, and the page keeps updating as you give feedback on posts.
+
+That prefilled list is worth a look even if you never type anything. It is a readable view of some of the interests that shape what Facebook recommends to you.
+
+## How to try it
+
+1. Open Facebook and find any post in Feed or Reels.
+2. Open the three-dot menu on it and look for Your algorithm.
+3. Read the inferred topics. Move or remove any that are wrong.
+4. Add what you want more of, and add what you want less of. Be specific, for example "bread baking at home" and not only "food".
+5. Use "Interested" and "Not interested" on posts, and answer follow-up questions if they appear.
+
+These steps are assembled from the two Meta posts, which do not give a full click-by-click path. The wording and example in step 4 are our suggestion. The feature was announced as rolling out, so you may not have it yet.
+
+## How your request is handled
+
+![Flow diagram of how Meta says a Your Algorithm change moves from a typed topic to the Feed and Reels results](/images/site1/facebook-your-algorithm-controls-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages. Labels are shortened paraphrases.*
+
+Meta names four parts: profile generation, preference management, ranking and delivery optimisation. A small model checks that what you typed makes sense as a topic, spots duplicates and gives it a clean name. A separate integrity and safety component also runs. The result is saved in one store that both Feed and Reels read.
+
+For a topic you **want**, Meta says the system fetches candidate posts from four dedicated sources, checks that each one matches the meaning of your interest, and gives those that pass a boost late in ranking. New interests get extra weight for a limited period. A later control layer spaces out repeats and caps how much one interest can contribute in a day. Meta does not publish the daily cap or how long the extra weight for new interests lasts.
+
+For a topic you **do not want**, filtering happens in more than one place. Posts too close in meaning are removed during ranking and near matches are pushed down. A fine-tuned language model then checks the ranked list and removes what it judges to be related to a recently added topic. When you add one, matching posts already queued on your device are dropped.
+
+Two kinds of see-less request work differently. Requests about quality, such as less AI-generated or sexually suggestive content, are handled by signals that push such posts down, instead of by matching topics. And if a see-less request names a creator, Facebook removes that creator's posts without relying on topic matching.
+
+## What Meta does not say
+
+Neither post answers several practical questions:
+
+- **Where it works.** No countries, languages, age requirement or rollout completion date are listed.
+- **Ads.** Neither post says whether your topics affect advertising. Do not assume they do or do not.
+- **Friends, Pages and groups.** The posts do not explain how these lists treat content from people and Pages you follow.
+- **Privacy and retention.** We found no statement in either article about how long your typed requests are kept or what else they are used for.
+- **Results.** The engineering post gives no figures showing how well the filtering works. It also lists reading ambiguous requests better as future work.
+
+Treat "Not Interested" as a strong preference, not a guaranteed block. Because we did not find privacy details on these pages, it is sensible to avoid typing anything sensitive about yourself into the topic box. This is general information, not legal advice.
+
+## If you post for a business
+
+Page owners should not read this as a new ranking trick. Meta describes tools that let viewers say what they want, matched against the meaning of posts. A reasonable, though unproven, takeaway is that clear and honest captions that say what a post is about are good practice. Meta's posts offer no advice to publishers and report no effect on reach, so avoid anyone selling a guaranteed method based on this feature.
+
+The engineering post also says Meta is exploring more entry points for shaping preferences, without giving dates. Check the three-dot menu now and then if you do not see the option today.
