@@ -95,3 +95,4 @@ P60. published | AI Phones | Android Gemini Intelligence November update and Pix
 P61. published | AI Social Media | Facebook Your algorithm controls explained (2026-11-26; Meta Newsroom 13 Oct + Engineering at Meta 10 Nov; Instagram blog body unreadable)
 P62. published | Robots | XPENG IRON humanoid robot dates and specs explained (2026-11-26; two XPENG GlobeNewswire releases of 25 Nov + XPENG pressroom 8 Sep; CNBC article unfetchable)
 P63. published | AI Search | Google AI Mode Wallet and Drive connection explained (2026-11-26; Google blog 23 and 13 Nov + four Google help pages)
+P64. published | AI Assistants | ChatGPT and Codex shared usage allowance from December explained (2026-11-26; three OpenAI help articles + ChatGPT Learn pricing page + TechCrunch 25 Nov)
