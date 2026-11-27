@@ -1,0 +1,123 @@
+---
+title: 'Inkling 2 Mini - what computer you need to run it'
+description: 'Thinking Machines released Inkling 2 Mini as open weights. See the stated memory needs, download sizes, licence terms, benchmark claims and limits.'
+status: published
+queueReason: ''
+publishDate: 2026-11-27
+lastVerified: 2026-11-27
+category: AI Models
+author: saad-r
+heroImage: /images/site1/inkling-2-mini-local-ai-model-what-computer-you-need-cover.jpg
+heroAlt: 'AI-generated illustration of a generic open laptop with a glowing looping ring of light above a small chip'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Thinking Machines released Inkling 2 Mini on 20 November 2026 as open weights under Apache 2.0, with a separate acceptable use policy. Its model card lists a DGX Spark, an Apple silicon device with 32GB or more of memory, or another GPU with 32GB or more of VRAM recommended. The smallest main model files in the ggml-org GGUF repository are 17.6 GB. Stackbrook has not run it, and the benchmark scores quoted here come from the maker's pages.
+sources:
+  - title: 'Introducing Inkling 2 Mini (Thinking Machines Lab, 20 November 2026)'
+    url: https://thinkingmachines.ai/news/inkling-2-mini/
+    accessed: 2026-11-27
+  - title: 'Inkling 2 Mini model card (Thinking Machines Lab)'
+    url: https://thinkingmachines.ai/model-card/inkling-2-mini/
+    accessed: 2026-11-27
+  - title: 'thinkingmachines/Inkling-2-Mini model repository (Hugging Face)'
+    url: https://huggingface.co/thinkingmachines/Inkling-2-Mini
+    accessed: 2026-11-27
+  - title: 'Welcome Inkling 2 Mini (Hugging Face blog, 20 November 2026)'
+    url: https://huggingface.co/blog/inkling2mini
+    accessed: 2026-11-27
+  - title: 'ggml-org/Inkling-2-Mini-GGUF file list (Hugging Face)'
+    url: https://huggingface.co/ggml-org/Inkling-2-Mini-GGUF
+    accessed: 2026-11-27
+  - title: 'Model Acceptable Use Policy (Thinking Machines Lab, last updated 15 July 2026)'
+    url: https://thinkingmachines.ai/model-acceptable-use-policy/
+    accessed: 2026-11-27
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the six cited pages (REVISE with 11 findings - 1 high, 4 medium, 6 low - all applied; no second round). Not verified - the Ollama library page could not be read; no knowledge cutoff, measured laptop speed or memory use by context length was found; benchmark results were not reproduced; wording checks used fetch-tool extracts, so a full-text overlap check was not possible.'
+---
+
+Inkling 2 Mini is a new AI model from Thinking Machines Lab that you can download and run on your own hardware. The maker dates the release 20 November 2026. The practical questions are whether your machine can hold it, what you are agreeing to, and how far to trust it. Details are as read on 27 November 2026.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Thinking Machines develops AI models, as Anthropic does. Stackbrook did not download or test the model and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not legal advice.*
+
+## What was released
+
+The weights are open, so you can download them from Hugging Face. The licence shown there is Apache 2.0. The model accepts text and images and replies in text only. The model card gives a context window of up to 1 million tokens.
+
+It has 26.4 billion parameters in total and uses 3.4 billion of them for each token. It is also a "looped" transformer. It has 24 layers, and the middle 12 run three times using the same stored weights. The company says this raises the effective active figure to 5.4 billion, and that looping allows more unwritten reasoning, a point it flags as relevant to monitoring the model. Looping does not add stored facts, which the maker links mainly to total parameter count.
+
+## What computer you need
+
+The model card says the standard checkpoint is a single download of about 20GB. It lists this hardware:
+
+- a single DGX Spark from NVIDIA;
+- a Mac on Apple's own chips (laptop, mini or Studio) that has at least 32GB of memory; or
+- a different GPU or platform, ideally with no less than 32GB of video memory.
+
+For llama.cpp users, there are also converted files in the GGUF format. The chart shows the sizes listed in the ggml-org repository.
+
+![Bar chart of Inkling 2 Mini GGUF file sizes, 17.6 GB for IQ4_NL and NVFP4, 27.8 GB for Q8_0 and 52.2 GB for BF16](/images/site1/inkling-2-mini-local-ai-model-what-computer-you-need-chart.svg)
+*Chart created by Stackbrook from the cited pages. It shows main model file sizes, not memory in use.*
+
+| File type | Listed size | How the repository describes it |
+|---|---|---|
+| IQ4_NL | 17.6 GB | 4-bit experts in most layers, calibrated |
+| NVFP4 | 17.6 GB | Keeps the original 4-bit experts in most layers |
+| Q8_0 | 27.8 GB | Near-lossless |
+| BF16 | 52.2 GB | 16-bit |
+
+Image input uses an extra vision file, listed at 346 MB in Q8_0 or 642 MB in BF16.
+
+The Hugging Face blog recommends IQ4_NL and says it fits in 32GB of GPU memory or unified memory. It describes Q8_0 as needing more memory and running slightly slower. A file that is smaller than your memory is not automatically comfortable: your operating system, other apps and the conversation context need room too. We found no memory figures for long contexts, so do not assume the full 1 million tokens will work on a 32GB machine.
+
+## Ways to run it
+
+The blog's simplest route is the Llama App on macOS and Windows. For llama.cpp, it gives this server command for the recommended file:
+
+`llama serve -hf ggml-org/Inkling-2-Mini-GGUF:IQ4_NL`
+
+Check the suffix before you paste a command. Several of the repository's "Use this model" examples, including llama.cpp and Ollama ones, point to BF16, the 52.2 GB file, which is larger than 32GB. The repository's own notes use `:NVFP4` (17.6 GB), the blog recommends `:IQ4_NL`, and the vLLM example names no suffix.
+
+The announcement also says that at launch, Ollama supports Macs with at least 32GB of RAM. The blog also covers Transformers, SGLang and MLX, and the model card names vLLM, Ollama, Unsloth and others. The card warns that local support for looped models is new and that speed varies by software and hardware. The speed charts referred to on these pages concern a server GPU or a theoretical ceiling; we found no measured laptop figure. If you would rather not run it yourself, the company says it is available on its Tinker service; we found no price on the pages read.
+
+## What the benchmark claims show
+
+These scores are published by Thinking Machines. Some use outside benchmarks or indexes, test setups differ between models, and we did not reproduce any of them. The model card's table compares Inkling 2 Mini with Qwen3.8-27B, among others:
+
+| Benchmark | Inkling 2 Mini | Qwen3.8-27B |
+|---|---|---|
+| DeepSWE v1.1 (coding) | 48.2% | 42.2% |
+| SWE-bench Verified (bash only) | 79.2% | 77.8% |
+| Terminal Bench v2.1 (Inkling run in the pi harness) | 71.6% | 73.0% |
+| GPQA Diamond | 86.6% | 90.5% |
+| Humanity's Last Exam, text only | 30.7% | 33.9% |
+
+The picture is mixed, so match the test to your task. The announcement itself says this is not the strongest small model for multi-turn chat or for instructions with many constraints. It also says the model trails Qwen3.8-27B on a constraint-following test, ComplexConstraints v1.1, yet the company's tables show 33.4% for Inkling 2 Mini against 30.1% for Qwen, so treat that comparison as unclear.
+
+## Licence and use rules
+
+Apache 2.0 is not the only document to read. Thinking Machines also publishes a Model Acceptable Use Policy, last updated 15 July 2026. It says that by accessing, downloading or using the model materials you agree to it, unless agreed otherwise in writing. Running the model on your own computer does not appear to take you outside it.
+
+Its restrictions include scams and impersonation, unauthorised profiling and surveillance, passing off AI output as human, and unauthorised or unlicensed professional advice, including medical, legal or financial advice, and automating consequential decisions in those fields without appropriate human oversight. If you offer it to end users, you agree to tell them about known material limitations or risks, and that they are dealing with AI where law requires it or where it matters to the interaction. Read the full text, and get advice if your use is near any of these lines.
+
+## Limits to plan around
+
+The model card lists these risks, among others:
+
+- It can invent things, and is more likely than larger models to state wrong information confidently.
+- It sometimes got stuck in long reasoning loops in internal testing, especially while debugging code.
+- As an agent it might erase or replace your files before asking, then give a wrong account of the result.
+- Answers in languages other than English may be weaker.
+- Even the lowest effort setting leaves some reasoning switched on.
+
+The card recommends human review for high-stakes output, sandboxed agent runs, and confirmation before destructive actions. It also advises against using the model for medical, legal or safety-critical decisions without extra fine-tuning, validation in that field and human oversight.
+
+## Should you try it?
+
+If you already have a 32GB or larger Apple silicon Mac or a comparable GPU, it is a candidate for private drafting, coding help or document work. Start with a copy of low-risk files, keep backups, and compare answers on ten real tasks with whatever you use today. If your computer has 16GB, note that even the smallest main files listed above are larger than that. We did not check other publishers' builds.
+
+## What we could not confirm
+
+We did not find a training knowledge cutoff, real-world speed on ordinary laptops, or memory use at different context lengths. We could not open the Ollama library page, so we give no Ollama library command or tag sizes. Files and instructions may change, so check the current pages before downloading.

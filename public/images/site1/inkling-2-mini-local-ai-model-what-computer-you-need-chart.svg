@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="60" y="68" fill="#f8fafc" font-size="36" font-weight="700">Inkling 2 Mini GGUF files: listed download sizes</text>
+<text x="60" y="106" fill="#94a3b8" font-size="22">Main model file by format, in GB (ggml-org repository, read 27 November 2026)</text>
+<line x1="720.0" y1="140" x2="720.0" y2="520" stroke="#f8fafc" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="220" y="207" text-anchor="end" fill="#e2e8f0" font-size="26">IQ4_NL</text>
+<rect x="240" y="170" width="264" height="56" rx="6" fill="#38bdf8"/>
+<text x="518" y="207" fill="#f8fafc" font-size="26" font-weight="700">17.6 GB</text>
+<text x="220" y="297" text-anchor="end" fill="#e2e8f0" font-size="26">NVFP4</text>
+<rect x="240" y="260" width="264" height="56" rx="6" fill="#38bdf8"/>
+<text x="518" y="297" fill="#f8fafc" font-size="26" font-weight="700">17.6 GB</text>
+<text x="220" y="387" text-anchor="end" fill="#e2e8f0" font-size="26">Q8_0</text>
+<rect x="240" y="350" width="417" height="56" rx="6" fill="#38bdf8"/>
+<rect x="665" y="360" width="108" height="36" fill="#0f172a"/>
+<text x="671" y="387" fill="#f8fafc" font-size="26" font-weight="700">27.8 GB</text>
+<text x="220" y="477" text-anchor="end" fill="#e2e8f0" font-size="26">BF16</text>
+<rect x="240" y="440" width="783" height="56" rx="6" fill="#fb923c"/>
+<text x="1037" y="477" fill="#f8fafc" font-size="26" font-weight="700">52.2 GB</text>
+<text x="720.0" y="552" text-anchor="middle" fill="#f8fafc" font-size="22">32 GB memory mark</text>
+<text x="60" y="598" fill="#94a3b8" font-size="20">File size is not memory in use. The optional vision file and conversation context need extra room.</text>
+</svg>
