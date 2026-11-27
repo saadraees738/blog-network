@@ -97,3 +97,4 @@ P62. published | Robots | XPENG IRON humanoid robot dates and specs explained (2
 P63. published | AI Search | Google AI Mode Wallet and Drive connection explained (2026-11-26; Google blog 23 and 13 Nov + four Google help pages)
 P64. published | AI Assistants | ChatGPT and Codex shared usage allowance from December explained (2026-11-26; three OpenAI help articles + ChatGPT Learn pricing page + TechCrunch 25 Nov)
 P65. published | Online Safety | Holiday shopping scam search ads, FTC-based checklist (2026-11-26; five FTC consumer pages + FTC business blog + FTC press release of 24 Sep; SHEIN release and Federal Register notice not opened)
+P66. published | AI Policy | New York AI chatbot toy ban explained (2026-11-27; Governor releases 24 Nov and 28 Oct + S9408A text and bill page + GBL 1700 + FTC release of 11 Sep 2025; PIRG pages unfetchable)

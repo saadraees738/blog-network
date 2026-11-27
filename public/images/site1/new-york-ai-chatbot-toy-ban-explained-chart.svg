@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#f8fafc"/>
+<text x="40" y="52" font-size="30" font-weight="bold" fill="#0f172a">Is it a chatbot toy under New York's definition?</text>
+<text x="40" y="84" font-size="18" fill="#475569">Simplified from S9408-A and General Business Law section 1700(4); exclusions not shown</text>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#334155"/></marker></defs>
+<rect x="60" y="112" width="600" height="84" rx="12" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="360.0" y="149.0" font-size="18" text-anchor="middle" fill="#0f172a">Is it a children's toy</text>
+<text x="360.0" y="173.0" font-size="18" text-anchor="middle" fill="#0f172a">(as defined in federal law)?</text>
+<line x1="360" y1="196" x2="360" y2="237" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="374" y="224" font-size="16" font-weight="bold" fill="#334155">Yes</text>
+<line x1="660" y1="154" x2="797" y2="154" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="712" y="144" font-size="16" font-weight="bold" fill="#334155">No</text>
+<rect x="60" y="240" width="600" height="84" rx="12" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="360.0" y="277.0" font-size="18" text-anchor="middle" fill="#0f172a">Is its AI designed to simulate a sustained</text>
+<text x="360.0" y="301.0" font-size="18" text-anchor="middle" fill="#0f172a">human or human-like relationship?</text>
+<line x1="360" y1="324" x2="360" y2="365" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="374" y="352" font-size="16" font-weight="bold" fill="#334155">Yes</text>
+<line x1="660" y1="282" x2="797" y2="282" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="712" y="272" font-size="16" font-weight="bold" fill="#334155">No</text>
+<rect x="60" y="368" width="600" height="84" rx="12" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+<text x="360.0" y="405.0" font-size="18" text-anchor="middle" fill="#0f172a">Does it remember past sessions, ask unprompted</text>
+<text x="360.0" y="429.0" font-size="18" text-anchor="middle" fill="#0f172a">emotional questions AND keep up personal dialogue?</text>
+<line x1="360" y1="452" x2="360" y2="493" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="374" y="480" font-size="16" font-weight="bold" fill="#334155">Yes</text>
+<line x1="660" y1="410" x2="797" y2="410" stroke="#334155" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="712" y="400" font-size="16" font-weight="bold" fill="#334155">No</text>
+<rect x="60" y="496" width="600" height="84" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+<text x="360.0" y="533.0" font-size="18" text-anchor="middle" fill="#0f172a">Falls within the chatbot toy definition:</text>
+<text x="360.0" y="557.0" font-size="18" text-anchor="middle" fill="#0f172a">sale banned once the law takes effect</text>
+<rect x="800" y="112" width="340" height="340" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="970.0" y="241.0" font-size="18" text-anchor="middle" fill="#0f172a">Outside this definition</text>
+<text x="970.0" y="265.0" font-size="18" text-anchor="middle" fill="#0f172a">on a plain reading</text>
+<text x="970.0" y="289.0" font-size="18" text-anchor="middle" fill="#0f172a"></text>
+<text x="970.0" y="313.0" font-size="18" text-anchor="middle" fill="#0f172a">(our interpretation,</text>
+<text x="970.0" y="337.0" font-size="18" text-anchor="middle" fill="#0f172a">not official guidance)</text>
+<text x="40" y="612" font-size="15" fill="#475569">Effective 90 days after the 24 November 2026 signature. Chart by Stackbrook. Not legal advice.</text></svg>
