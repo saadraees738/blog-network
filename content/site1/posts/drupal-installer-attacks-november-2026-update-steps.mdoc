@@ -1,0 +1,137 @@
+---
+title: 'Drupal installer attacks - update and block install.php now'
+description: 'Drupal reports live attacks through its installer. See the affected versions, the 25 November fix, why update.php matters and how to block install.php.'
+status: published
+queueReason: ''
+publishDate: 2026-11-27
+lastVerified: 2026-11-27
+category: Online Safety
+author: saad-r
+heroImage: /images/site1/drupal-installer-attacks-november-2026-update-steps-cover.jpg
+heroAlt: 'AI-generated illustration of a glowing shield with a keyhole in front of abstract server blocks'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: If your website runs Drupal, ask whoever maintains it to update to the release for its branch (11.4.14, 11.3.23 or 10.6.23, with older branches needing an upgrade), run update.php, block public access to the installer and check logs for signs of intrusion. Drupal's security team says the 25 November flaw is being exploited, and an 18 November update on its own may not be enough.
+sources:
+  - title: 'SA-CORE-2026-019, access bypass (Drupal.org, 25 November 2026)'
+    url: https://www.drupal.org/sa-core-2026-019
+    accessed: 2026-11-27
+  - title: 'SA-CORE-2026-017, remote code execution (Drupal.org, 18 November 2026)'
+    url: https://www.drupal.org/sa-core-2026-017
+    accessed: 2026-11-27
+  - title: 'SA-CORE-2026-018, gadget chain (Drupal.org, 18 November 2026)'
+    url: https://www.drupal.org/sa-core-2026-018
+    accessed: 2026-11-27
+  - title: 'Securing the installer, install.php (Drupal.org documentation)'
+    url: https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal/securing-the-installer-installphp
+    accessed: 2026-11-27
+  - title: 'Security support for Drupal core minor versions, PSA-2026-11-02 (Drupal.org)'
+    url: https://www.drupal.org/psa-2026-11-02
+    accessed: 2026-11-27
+  - title: 'Drupal 11.4.14 release notes (Drupal.org)'
+    url: https://www.drupal.org/project/drupal/releases/11.4.14
+    accessed: 2026-11-27
+  - title: 'Drupal 10.6.23 release notes (Drupal.org)'
+    url: https://www.drupal.org/project/drupal/releases/10.6.23
+    accessed: 2026-11-27
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE with 12 findings - 1 high, 3 medium, 3 low-medium, 5 low - all applied, and PSA-2026-11-02 added as a source for 11.3 coverage; no second round). Not verified - pages were read through fetch-tool extracts, so full-text overlap and character-level code checks were not possible; the 11.3.23 release notes and the hacked-site guide were not read; CISA pages could not be read and are not cited.'
+---
+
+Drupal is a content management system that runs websites, and its security team has issued two highly critical fixes within eight days. Both involve the installer, the `install.php` file used to set up a new site. The team says attackers are using these weaknesses. If someone else looks after your website, you can forward this page to them today. Details are as read on 27 November 2026.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Drupal credits one of the flaws below to a scanner from Anthropic. Stackbrook did not test the software or the attacks and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not professional security, legal or financial advice.*
+
+## What happened
+
+On 18 November, Drupal published SA-CORE-2026-017 (CVE-2026-132165), rated highly critical at 20 out of 25. Under conditions the advisory does not spell out, the installer can be abused to start a fresh install. That could hand an attacker control of the site or let them run their own code on your server, known as remote code execution. An update on the advisory says the team received a report of exploitation on live sites as early as 19:00 UTC on 19 November. Drupal credits the discovery to Anthropic's OSS Scanner.
+
+On 25 November came SA-CORE-2026-019 (CVE-2026-136716), rated 21 out of 25. It says some sites in unusual or incomplete install states, including production sites, could still be taken over after the first fix. The advisory states that the flaw is being exploited in the wild.
+
+![Timeline from 18 to 25 November 2026 showing the first Drupal fix, reported exploitation from 19 November and the second fix](/images/site1/drupal-installer-attacks-november-2026-update-steps-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## Which versions to install
+
+Update to the release that matches your branch:
+
+| Your branch | Update to (25 November) | Security coverage listed by Drupal |
+|---|---|---|
+| 11.4.x | 11.4.14 | Until April 2027 |
+| 11.3.x | 11.3.23 | Until December 2026 |
+| 10.6.x | 10.6.23 | Until December 2026, when 11.5.0 is released |
+
+The second advisory lists as affected every version below 10.6.23, 11.0.0 up to but not including 11.3.23, and 11.4.0 up to but not including 11.4.14. Drupal says 11.2.x and older 11 releases, 10.5.x and below, and Drupal 8 and 9 are end of life. A site on one of those needs a move to a supported branch, so raise that with your developer now. Coverage for 11.3 and 10.6 also runs out next month, so plan the next upgrade.
+
+If you cannot update straight away, including on an end-of-life branch, block the installer now using the steps below. The second advisory says sites that have already secured the installer are not vulnerable to its flaw. That does not undo an earlier break-in, and it is no reason to skip the update, update.php or the log check.
+
+The 18 November releases (11.4.13, 11.3.22 and 10.6.22) are no longer the target. The 11.4.14 and 10.6.23 releases also fix a theme registry error that their notes trace to 11.4.13 and 11.3.22 respectively. It could show "Theme hook field not found" or "Theme hook time not found" messages with some add-on or custom code.
+
+## Installing the update is not the whole job
+
+The 25 November advisory sets out three steps.
+
+1. **Install the new release.**
+2. **Run update.php.** The advisory says an update hook has to run to fix existing production sites that are in the vulnerable state. Copying new files and stopping there can leave the problem in place. Drush users run database updates with `drush updatedb`.
+3. **Secure the installer.** Drupal strongly recommends this for all new and existing sites.
+
+The release notes also say a Symfony security update published the same day is not included. Symfony is a third-party component Drupal relies on, and the notes recommend updating it alongside Drupal, since site owners are responsible for those dependency updates.
+
+## How to block the installer
+
+Drupal's guide, last updated 26 November, gives three routes. Never leave a half-finished installation reachable from the internet, and complete the installation before you block the file. Some hosts already block it, so test first using the commands below.
+
+If Drupal sits in a subfolder, such as `/drupal/`, add that folder to the paths in the rules and test addresses. Otherwise a test of the wrong path can look like success while the real installer stays open.
+
+**At the web server (the recommended option).** For Apache, put this in each virtual host configuration that serves the site, including the HTTPS one, not in `.htaccess`:
+
+```
+<Location "/core/install.php">
+  Require all denied
+</Location>
+```
+
+For Nginx, add this inside the HTTPS server block:
+
+```
+location ^~ /core/install.php { return 404; }
+```
+
+Test the configuration before reloading the server, with `apachectl configtest` or `nginx -t`. For Apache, the guide also allows adding the rule once outside any virtual host block.
+
+**In .htaccess.** On Apache shared hosting, a rule denying access to `install.php` can go in the web root file, if the host's settings allow it. On Composer-managed sites, every scaffold run, including a plain `composer install`, overwrites that file, so the rule has to be added through Drupal's scaffold settings in `composer.json` to survive.
+
+**Delete the file.** Removing `core/install.php` works, but Composer restores it on each install or update unless you add a script to remove it again. That script does not run when Composer is used with `--no-scripts`, and browser-based installs stop working until the file is restored. The guide suggests doing both, deleting the file and blocking it at the server.
+
+Do not block `update.php` by mistake, because you need it for database updates. To check the block, run these against your own domain:
+
+```
+curl -I https://example.com/core/install.php
+curl -IL https://example.com/install.php
+curl -I https://example.com/core/install.php/foo
+```
+
+Each should end in a 403 or 404 response. If you get 200, the installer is still reachable. Afterwards, confirm the site loads and database updates still run.
+
+## Check whether anyone got in
+
+Drupal warns that a site which left its installer reachable after the first advisory may already be compromised, and that a compromised site may no longer look vulnerable. Nor can you tell from the site's screens whether it is in the vulnerable state. The 25 November advisory recommends checking logs for unauthorised access, especially changes to or made by user 1 (the original administrator account), making sure that account's email address is one you control, and considering a password reset. If something looks wrong, follow Drupal's guidance for hacked sites, which the advisory links to, and get experienced help.
+
+## The other fix, and protected sites
+
+A third notice from 18 November, SA-CORE-2026-018, is rated moderately critical (14 out of 25). It cannot be exploited directly and would need a separate flaw to work, according to Drupal.
+
+Drupal says sites using its Drupal Steward protection, with the recommended mitigations, are already covered against known attack methods for both installer flaws. It still tells them to upgrade soon in case new methods appear.
+
+## Questions to send your web maintainer
+
+- Which Drupal version are we running today, and is that branch still supported?
+- Has update.php run since the 25 November update?
+- What does a request to `core/install.php`, including any subfolder in its path, return?
+- Did you review the logs from at least 18 November, and what did you find?
+- Has the Symfony update been applied?
+
+Ask for written answers with dates. These advisories can be updated, so read the current versions before you act. We did not find a count of affected or compromised sites on the pages we read.

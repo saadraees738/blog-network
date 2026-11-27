@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="60" y="70" font-size="34" fill="#fff" font-weight="700" text-anchor="start">Drupal security fixes, 18 to 25 November 2026</text>
+<text x="60" y="108" font-size="20" fill="#94a3b8" font-weight="400" text-anchor="start">Dates and versions from Drupal.org advisories</text>
+<line x1="150.0" y1="320" x2="1050.0" y2="320" stroke="#475569" stroke-width="6"/>
+<line x1="278.57142857142856" y1="320" x2="1050.0" y2="320" stroke="#f87171" stroke-width="6"/>
+<circle cx="150.0" cy="320" r="6" fill="#cbd5e1"/>
+<text x="150.0" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">18 Nov</text>
+<circle cx="278.57142857142856" cy="320" r="6" fill="#cbd5e1"/>
+<text x="278.57142857142856" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">19 Nov</text>
+<circle cx="407.14285714285717" cy="320" r="6" fill="#cbd5e1"/>
+<text x="407.14285714285717" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">20 Nov</text>
+<circle cx="535.7142857142858" cy="320" r="6" fill="#cbd5e1"/>
+<text x="535.7142857142858" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">21 Nov</text>
+<circle cx="664.2857142857143" cy="320" r="6" fill="#cbd5e1"/>
+<text x="664.2857142857143" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">22 Nov</text>
+<circle cx="792.8571428571429" cy="320" r="6" fill="#cbd5e1"/>
+<text x="792.8571428571429" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">23 Nov</text>
+<circle cx="921.4285714285716" cy="320" r="6" fill="#cbd5e1"/>
+<text x="921.4285714285716" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">24 Nov</text>
+<circle cx="1050.0" cy="320" r="6" fill="#cbd5e1"/>
+<text x="1050.0" y="355" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="middle">25 Nov</text>
+<line x1="150.0" y1="320" x2="150.0" y2="270" stroke="#38bdf8" stroke-width="2"/>
+<rect x="60" y="150" width="390" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+<text x="255.0" y="184" font-size="22" fill="#fff" font-weight="700" text-anchor="middle">18 Nov - first fixes</text>
+<text x="255.0" y="214" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">SA-CORE-2026-017 and 018</text>
+<text x="255.0" y="244" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">10.6.22, 11.3.22, 11.4.13</text>
+<circle cx="150.0" cy="320" r="11" fill="#38bdf8"/>
+<line x1="278.57142857142856" y1="364" x2="278.57142857142856" y2="410" stroke="#f87171" stroke-width="2"/>
+<rect x="200" y="410" width="460" height="120" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+<text x="430.0" y="444" font-size="22" fill="#fff" font-weight="700" text-anchor="middle">19 Nov, 19:00 UTC</text>
+<text x="430.0" y="474" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">Earliest reported exploitation</text>
+<text x="430.0" y="504" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">of SA-CORE-2026-017</text>
+<circle cx="278.57142857142856" cy="320" r="11" fill="#f87171"/>
+<line x1="1050.0" y1="320" x2="1050.0" y2="270" stroke="#4ade80" stroke-width="2"/>
+<rect x="750" y="150" width="390" height="120" rx="12" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
+<text x="945.0" y="184" font-size="22" fill="#fff" font-weight="700" text-anchor="middle">25 Nov - second fix</text>
+<text x="945.0" y="214" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">SA-CORE-2026-019, exploited</text>
+<text x="945.0" y="244" font-size="19" fill="#cbd5e1" font-weight="400" text-anchor="middle">10.6.23, 11.3.23, 11.4.14</text>
+<circle cx="1050.0" cy="320" r="11" fill="#4ade80"/>
+<text x="60" y="590" font-size="18" fill="#94a3b8" font-weight="400" text-anchor="start">Red line marks the period from the earliest reported exploitation to the second fix.</text>
+</svg>

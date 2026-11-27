@@ -99,3 +99,4 @@ P64. published | AI Assistants | ChatGPT and Codex shared usage allowance from D
 P65. published | Online Safety | Holiday shopping scam search ads, FTC-based checklist (2026-11-26; five FTC consumer pages + FTC business blog + FTC press release of 24 Sep; SHEIN release and Federal Register notice not opened)
 P66. published | AI Policy | New York AI chatbot toy ban explained (2026-11-27; Governor releases 24 Nov and 28 Oct + S9408A text and bill page + GBL 1700 + FTC release of 11 Sep 2025; PIRG pages unfetchable)
 P67. published | AI Business | OpenAI OpenWorks free small-business AI help explained (2026-11-27; OpenWorks page + Help Center apply article + OpenAI SBDC post of 30 Sep; ChatGPT Business billing help pages unfetchable)
+P68. published | Online Safety | Drupal installer attacks, update and block steps (2026-11-27; three Drupal advisories, installer guide, PSA-2026-11-02, 11.4.14 and 10.6.23 release notes; CISA pages unfetchable)
