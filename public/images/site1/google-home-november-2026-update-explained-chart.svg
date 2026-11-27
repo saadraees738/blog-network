@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, Arial, sans-serif">
+<rect width="1200" height="630" fill="#ffffff"/>
+<text x="40" y="58" font-size="32" font-weight="700" fill="#0f172a">Google Home Premium: Standard and Advanced</text>
+<rect x="40" y="86" width="1120" height="56" rx="8" fill="#0f172a"/>
+<text x="62" y="122" font-size="22" font-weight="700" fill="#fff">What you get</text><text x="760" y="122" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Standard</text><text x="1010" y="122" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">Advanced</text>
+<rect x="40" y="142" width="1120" height="54" fill="#f1f5f9"/>
+<text x="62" y="177" font-size="22" fill="#0f172a">US price per month</text>
+<text x="760" y="177" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">$10</text>
+<text x="1010" y="177" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">$20</text>
+<rect x="40" y="196" width="1120" height="54" fill="#ffffff"/>
+<text x="62" y="231" font-size="22" fill="#0f172a">US price per year</text>
+<text x="760" y="231" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">$100</text>
+<text x="1010" y="231" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">$200</text>
+<rect x="40" y="250" width="1120" height="54" fill="#f1f5f9"/>
+<text x="62" y="285" font-size="22" fill="#0f172a">Event video history</text>
+<text x="760" y="285" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">30 days</text>
+<text x="1010" y="285" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">60 days</text>
+<rect x="40" y="304" width="1120" height="54" fill="#ffffff"/>
+<text x="62" y="339" font-size="22" fill="#0f172a">24/7 history (wired Nest devices; limits apply)</text>
+<text x="760" y="339" font-size="22" font-weight="600" text-anchor="middle" fill="#64748b">Not listed</text>
+<text x="1010" y="339" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">10 days</text>
+<rect x="40" y="358" width="1120" height="54" fill="#f1f5f9"/>
+<text x="62" y="393" font-size="22" fill="#0f172a">Familiar face alerts (not everywhere)</text>
+<text x="760" y="393" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<text x="1010" y="393" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<rect x="40" y="412" width="1120" height="54" fill="#ffffff"/>
+<text x="62" y="447" font-size="22" fill="#0f172a">Gemini Live (compatible speakers, displays)</text>
+<text x="760" y="447" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<text x="1010" y="447" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<rect x="40" y="466" width="1120" height="54" fill="#f1f5f9"/>
+<text x="62" y="501" font-size="22" fill="#0f172a">Descriptive notifications</text>
+<text x="760" y="501" font-size="22" font-weight="600" text-anchor="middle" fill="#64748b">Not listed</text>
+<text x="1010" y="501" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<rect x="40" y="520" width="1120" height="54" fill="#ffffff"/>
+<text x="62" y="555" font-size="22" fill="#0f172a">Home Brief evening summary</text>
+<text x="760" y="555" font-size="22" font-weight="600" text-anchor="middle" fill="#64748b">Not listed</text>
+<text x="1010" y="555" font-size="22" font-weight="600" text-anchor="middle" fill="#1d4ed8">Yes</text>
+<text x="40" y="604" font-size="17" fill="#475569">Google Store (US) and Google Home Help, read 27 November 2026. "Not listed" = not shown for that plan on those pages.</text></svg>
