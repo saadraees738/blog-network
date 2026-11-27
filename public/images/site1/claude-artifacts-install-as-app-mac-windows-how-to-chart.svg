@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#0f172a"/>
+<text x="60" y="68" fill="#f8fafc" font-size="36" font-weight="700">From chat to desktop app</text>
+<text x="60" y="106" fill="#94a3b8" font-size="22">Claude for Mac or Windows, version 6.28899.0 or later (beta, read 27 November 2026)</text>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5eead4"/></marker></defs>
+<g fill="#1e293b" stroke="#5eead4" stroke-width="2">
+<rect x="60" y="160" width="300" height="130" rx="14"/><rect x="450" y="160" width="300" height="130" rx="14"/><rect x="840" y="160" width="300" height="130" rx="14"/>
+<rect x="840" y="390" width="300" height="130" rx="14"/><rect x="450" y="390" width="300" height="130" rx="14"/></g>
+<rect x="60" y="390" width="300" height="130" rx="14" fill="#431407" stroke="#fb923c" stroke-width="2"/>
+<g stroke="#5eead4" stroke-width="4" marker-end="url(#a)"><line x1="366" y1="225" x2="442" y2="225"/><line x1="756" y1="225" x2="832" y2="225"/><line x1="990" y1="296" x2="990" y2="382"/><line x1="834" y1="455" x2="758" y2="455"/><line x1="444" y1="455" x2="368" y2="455"/></g>
+<g fill="#f8fafc" font-size="25" font-weight="700" text-anchor="middle">
+<text x="210" y="215">1. Describe it</text><text x="600" y="215">2. Try it</text><text x="990" y="215">3. Open in Desktop</text>
+<text x="990" y="445">4. Install as app</text><text x="600" y="445">5. Confirm</text><text x="210" y="445">6. Permissions</text></g>
+<g fill="#cbd5e1" font-size="20" text-anchor="middle">
+<text x="210" y="252">in a Claude chat</text><text x="600" y="252">ask for changes</text><text x="990" y="252">main window</text>
+<text x="990" y="482">title menu or Share</text><text x="600" y="482">choose Install</text><text x="210" y="482">Allow or Don't allow</text></g>
+<text x="60" y="582" fill="#94a3b8" font-size="20">Permission requests appear when an app asks for them. Full computer access carries the most risk.</text>
+</svg>

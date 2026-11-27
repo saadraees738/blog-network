@@ -101,3 +101,4 @@ P66. published | AI Policy | New York AI chatbot toy ban explained (2026-11-27; 
 P67. published | AI Business | OpenAI OpenWorks free small-business AI help explained (2026-11-27; OpenWorks page + Help Center apply article + OpenAI SBDC post of 30 Sep; ChatGPT Business billing help pages unfetchable)
 P68. published | Online Safety | Drupal installer attacks, update and block steps (2026-11-27; three Drupal advisories, installer guide, PSA-2026-11-02, 11.4.14 and 10.6.23 release notes; CISA pages unfetchable)
 P69. published | AI Models | Inkling 2 Mini local open-weights model explained (2026-11-27; Thinking Machines announcement, model card, AUP + Hugging Face blog and two repos; Ollama library page unreadable)
+P70. published | AI Productivity | Install a Claude artifact as a Mac or Windows app (2026-11-27; Claude announcement 24 Nov + Help Center install, admin, sharing and artifacts articles)

@@ -1,0 +1,129 @@
+---
+title: 'How to install a Claude artifact as a Mac or Windows app'
+description: 'Installing Claude artifacts as desktop apps is rolling out in beta. Steps, version needed, plans, permissions, admin settings, limits and removal.'
+status: published
+queueReason: ''
+publishDate: 2026-11-27
+lastVerified: 2026-11-27
+category: AI Productivity
+author: saad-r
+heroImage: /images/site1/claude-artifacts-install-as-app-mac-windows-how-to-cover.jpg
+heroAlt: 'AI-generated illustration of a generic laptop with a glowing red-outlined screen showing a rounded square and a circle'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Open the artifact in the main Claude Desktop window, choose Install as app from its title menu or Share menu, then confirm with Install. Anthropic's Help Center says the feature is in beta on Claude for Mac and Windows, version 6.28899.0 or later, and is rolling out on Free, Pro, Max, Ultra, Team and Enterprise plans. Enterprise owners must switch it on first. Think carefully before allowing full computer access.
+sources:
+  - title: 'Install an artifact as an app (Claude Help Center)'
+    url: https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app
+    accessed: 2026-11-27
+  - title: 'Turn artifacts into Mac and Windows apps (Claude, 24 November 2026)'
+    url: https://claude.com/resources/articles/install-as-app
+    accessed: 2026-11-27
+  - title: 'Artifacts admin guide for Team and Enterprise plans (Claude Help Center)'
+    url: https://support.claude.com/en/articles/16994751-artifacts-admin-guide-for-team-and-enterprise-plans
+    accessed: 2026-11-27
+  - title: 'Share artifacts (Claude Help Center)'
+    url: https://support.claude.com/en/articles/9547008-share-artifacts
+    accessed: 2026-11-27
+  - title: 'What are artifacts and how do I use them? (Claude Help Center)'
+    url: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
+    accessed: 2026-11-27
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the five cited pages (REVISE with 14 findings - 1 high, 8 medium, 5 low - all applied; no second round). Not verified - the feature was not installed or tested; pages were read through a fetch tool that returns extracts, so a full-text overlap check was not possible; no figure for the usage consumed by building an app was found.'
+---
+
+You can now turn something Claude builds for you, such as a timer or a small team tool, into an app with its own window and icon on a Mac or Windows PC. Anthropic announced the feature on 24 November 2026 and calls it a beta that is rolling out, so you may not see it yet. The steps below come from Anthropic's pages as read on 27 November 2026.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. The product covered here is Anthropic's own, so the drafter has an obvious interest in it. Stackbrook did not install or test the feature and has no affiliate relationship with Anthropic at the time of writing. The header image is AI-generated. This is general information, not security or legal advice.*
+
+## What an installed artifact app is
+
+An artifact is something Claude makes that you can open, use and share, such as a small interactive tool. Once installed as an app, it appears in its own window, outside the Claude chat. It stays linked to the original artifact, so edits by you or other editors update the app too.
+
+It is not a fully standalone program. You must be online and signed in to Claude Desktop to open it. Apps can use Claude and your connectors, and, with your permission, can do things on your computer that a web page normally cannot.
+
+## What you need
+
+- Claude for Mac or Claude for Windows, version 6.28899.0 or later.
+- Artifacts switched on. Anthropic's artifacts article ties them to the code execution and file creation setting.
+- A plan the rollout covers. The Help Center lists Free, Pro, Max, Ultra, Team and Enterprise.
+- On Team, the install option is on by default, but full computer access is off until an admin enables it.
+- On Enterprise, the feature is off until an owner enables it under Organization settings, then Artifacts.
+
+## How to build and install one
+
+1. Describe the app you want in a Claude chat. Anthropic's examples include a menu bar Pomodoro timer, an hourly stretch reminder for Mac and a Windows app that renames photos by date.
+2. Try the artifact and ask for changes until it does the job.
+3. Open the artifact in the main Claude Desktop window.
+4. Open its title menu, or right-click it, and choose **Install as app**. The same option is under Share.
+5. Choose **Install** to confirm.
+
+![Flow diagram of installing a Claude artifact as an app: describe it, try it, choose Install as app, confirm, then answer each permission request](/images/site1/claude-artifacts-install-as-app-mac-windows-how-to-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+If the option is missing, update the desktop app. On a Mac, use Claude, then Check for Updates. On Windows, open the menu button and use Help, then Check for Updates. Team and Enterprise members can also ask an owner whether the feature is switched on.
+
+Watch for look-alikes in your web browser. According to the Help Center, its "Add to Dock", "Add browser shortcut" and "Add to Home Screen" choices make a plain shortcut that lacks the desktop abilities described here.
+
+## Where to find it afterwards
+
+On a Mac, look in the Claude Apps folder inside the Applications folder in your home folder, or search with Spotlight or the Apps launcher. To keep it in the Dock, right-click its icon, choose Options, then Keep in Dock. On Windows, look in the Claude Apps folder in the Start menu or use the desktop shortcut. Claude Desktop lists installed apps too: choose File, then Apps, select one and press Open. On Windows, the File menu sits behind the menu button (☰).
+
+Closing the window does not always end the program. If it placed an icon in the menu bar or system tray, it stays running. Mac users can shut it down through its Dock icon or with Cmd+Q when it is in front; Windows users pick Exit on the tray icon's menu.
+
+## Permissions: the part to read slowly
+
+Extra abilities are granted one request at a time, and each prompt offers Allow or Don't allow.
+
+| Permission | In plain words |
+|---|---|
+| Notifications | Alerts can reach you when you are working elsewhere |
+| Keyboard shortcuts | Chosen key combinations trigger it even from another program |
+| Float over other windows | It can sit on top of other programs and see where your pointer is |
+| Menu bar or tray item | It gets a small icon by the system clock or menu bar during use |
+| Full access to this computer | It may launch software and view, alter or remove your files, with no further prompt each time |
+
+Full access is the one that deserves real caution. Granting it brings the other abilities along, except any that you or your organization have disabled. Nobody at Anthropic vets an app before it lands on your machine, and the company's guidance is to grant this level only when you have confidence in all of its authors.
+
+Who can receive it is limited. The announcement says full access can be given only to apps you made or, on Team and Enterprise, apps made by colleagues in your organization. The Help Center words it less absolutely, saying Claude generally blocks such requests when an outsider contributed to the app or authorship cannot be established. On Free, Pro, Max and Ultra, an outsider means any other user. Permission prompts also carry a warning when the app comes from outside your organization or its maker is unknown.
+
+Approvals are tied to a single version, so expect to be asked afresh once the app changes, even if you made the edit. Declining is remembered until you reverse it. Code pulled in from another website is a gap here: it may change without triggering a new prompt.
+
+To review or withdraw permissions, have the app open. Then use File, Apps and Permissions in Claude Desktop. You can also get there from the app: on a Mac, click its name in the menu bar; on Windows, right-click the title bar or press Alt+Space; then choose Permissions. Withdrawing full access may restart or shut the app, so finish saving first. Programs it launched are stopped, although any that broke away from the app may carry on, and earlier changes to your computer stay in place.
+
+## Settings for Team and Enterprise owners
+
+The controls are under Organization settings, then Artifacts. The admin guide lists three switches, and Artifacts itself must be on.
+
+| Setting | Team default | Enterprise default |
+|---|---|---|
+| Install as app | On | Off |
+| App permissions | On | Off |
+| Full access to the computer | Off | Off |
+
+The other two switches depend on Install as app. The guide says changes can take up to about an hour. These settings apply only while your organization is selected in Claude. Covering personal accounts on company computers takes a device management policy, which can only switch features off and has its own minimum desktop version listed in the guide. Organizations with customer-managed encryption keys or organization-wide zero data retention start with all three off, and HIPAA-ready and hybrid deployments cannot turn them on. Note that zero data retention does not cover installed artifact apps. The guide also says that opening an app is logged as an artifact view in the Compliance API, while installs, permission answers, setting changes and what an app does on the computer are not logged.
+
+## Sharing, usage limits and cost
+
+Your plan allowance pays for this in two ways: creating the app draws on it, and so does any call the finished app makes to Claude. For shared artifacts that use Claude, Anthropic says usage counts against each person's own limits, not the creator's. People also use their own connected apps, so a colleague without access to a data source sees an error there. The sharing article describes an exception for some live-shared data dashboards.
+
+Who you can share with depends on the plan. For Free, the sharing article lists only the publishing of legacy chat artifacts, and legacy artifacts cannot be installed as apps. Team and Enterprise artifacts stay inside the organization by default, and owners control sharing beyond it. Email invitations to outsiders are a separate setting that the admin guide shows as on by default for Team and off for Enterprise.
+
+## Current limits
+
+- No Linux, web or mobile versions.
+- Anything built from a template (Docs, Slides and Sheets are examples) is excluded, as are legacy artifacts and older Cowork live artifacts.
+- Not available to HIPAA-ready organizations or hybrid deployments.
+- Claude for Teachers and K-12 organizations do not get full access, and installing may be off or unavailable in education settings.
+- When Claude operates a Mac through computer use, installed apps are view-only to it, with no clicking or typing.
+
+## How to uninstall
+
+In Claude Desktop, choose File, then Apps, pick the app and press Uninstall. A Mac sends it to the Trash, while Windows drops its shortcuts. Pins on the Dock, taskbar or Start menu are left for you to clear. The permissions you granted are removed, and the underlying artifact survives.
+
+## A sensible first project
+
+Start with something low-risk that needs no file access, such as a countdown timer or a reminder. Allow only the permission it plainly needs, such as notifications. Treat an app someone else made like any unfamiliar program: check who wrote it, read each prompt and any warning, and decline whatever the job does not need. On personal plans, full access is not meant to be available for other people's apps at all. We found no figure on the pages read for how much usage building a typical app consumes, so watch your limits on the first one.
