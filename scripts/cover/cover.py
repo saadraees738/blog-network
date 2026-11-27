@@ -11,6 +11,7 @@ ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI 
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
      'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191),'AI Infrastructure':(56,189,248),'AI Shopping':(250,204,21),'AI Music':(244,114,182),'AI Phones':(96,165,250),'AI Social Media':(129,140,248),'AI Search':(96,165,250),'AI Business':(45,212,191),'Online Safety':(74,222,128)}
 POSTS={
+'copilot-code-review-billing-organization-december-30-how-to':('AI Coding','Copilot review billing changes'),
 'magi-2-video-model-explained-price-and-limits':('AI Video','MAGI-2 video model, explained'),
 'google-home-november-2026-update-explained':('Smart Home','Google Home: what changed'),
 'claude-artifacts-install-as-app-mac-windows-how-to':('AI Productivity','Claude artifacts as desktop apps'),

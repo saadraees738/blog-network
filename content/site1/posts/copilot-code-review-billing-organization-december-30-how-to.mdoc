@@ -1,0 +1,118 @@
+---
+title: 'Copilot code review billing default changes on 30 December: what to set'
+description: 'From 30 December 2026, unset Copilot Business and Enterprise code review billing defaults to the repository owner. See exceptions, costs and settings.'
+status: published
+queueReason: ''
+publishDate: 2026-11-27
+lastVerified: 2026-11-27
+category: AI Coding
+author: saad-r
+heroImage: /images/site1/copilot-code-review-billing-organization-december-30-how-to-cover.jpg
+heroAlt: 'AI-generated flat illustration in purple and pink of a desk with a blank laptop screen, a calculator, a lamp and stacks of coins'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: From 30 December 2026, Copilot Business and Copilot Enterprise accounts with no saved billing choice will have code reviews by members with a paid Copilot license billed to the organization that owns the repository, not to the member's Copilot entitlement. Saving Member in the Copilot policies keeps today's arrangement. As an exception, unset accounts without AI Credits paid usage, with a billing lock or with no billable customer will be set to Member.
+sources:
+  - title: 'Copilot code review billing will default to the organization (GitHub Changelog, 25 November 2026)'
+    url: https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/
+    accessed: 2026-11-27
+  - title: 'Configuring code review by GitHub Copilot (GitHub Docs)'
+    url: https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review
+    accessed: 2026-11-27
+  - title: 'GitHub Copilot code review (GitHub Docs)'
+    url: https://docs.github.com/en/copilot/concepts/agents/code-review
+    accessed: 2026-11-27
+  - title: 'Copilot code review - Merge with confidence with Max and approvals (GitHub Changelog, 28 October 2026)'
+    url: https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/
+    accessed: 2026-11-27
+  - title: 'Copilot code review - Adaptive effort, secret detection, and more (GitHub Changelog, 17 November 2026)'
+    url: https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more/
+    accessed: 2026-11-27
+  - title: 'Budgets for usage-based billing (GitHub Docs)'
+    url: https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets
+    accessed: 2026-11-27
+  - title: 'Models and pricing for GitHub Copilot (GitHub Docs)'
+    url: https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing
+    accessed: 2026-11-27
+  - title: 'GitHub Copilot code review will start consuming GitHub Actions minutes on June 1, 2026 (GitHub Changelog)'
+    url: https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/
+    accessed: 2026-11-27
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE with 13 findings - 1 medium-high, 4 medium, 2 medium-low or low-medium, 6 low - all applied; no second round). Not verified - settings were not opened in a live account, no dollar range was found for Max or Adaptive, the pool draw order for organization-billed reviews and budget behaviour outside enterprises were not confirmed, and pages were read through a fetch tool that returns summaries and selected quotes, so menu paths and the wording overlap check rest on that.'
+---
+
+GitHub announced on 25 November 2026 that the default payer for some Copilot code reviews is about to change. Starting 30 December 2026, reviews that currently draw on the Copilot entitlement of a member with a paid license will be billed to the organization, unless a choice has been saved or an exception applies. If you run a small software team, or pay the bill for one, there is about a month to decide. This guide covers what GitHub's changelog and documentation said when read on 27 November 2026.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. GitHub Copilot competes with Anthropic's coding tools. Stackbrook did not test this feature and has no affiliate relationship with GitHub at the time of writing. The header image is AI-generated. This is general information, not financial or legal advice.*
+
+## What changes on 30 December
+
+The change concerns organizations and enterprises on Copilot Business or Copilot Enterprise, and code reviews by members who have a paid Copilot license.
+
+| Your situation | Who pays from 30 December |
+| --- | --- |
+| No choice saved, and no exception below | The organization that owns the repository |
+| Member already saved | The member's Copilot entitlement, as chosen |
+| Organization already saved | The organization, as chosen |
+| No choice saved, and no AI Credits paid usage, a billing lock or no billable customer | Will be set to Member |
+
+Before then, GitHub labels an unsaved option "Default (Member)" and flags the coming switch. The announcement says the separate setting for members without a Copilot license is not affected. It also warns that organization billing needs AI Credits paid usage and can increase what the organization spends. It gives no price in that notice.
+
+Today the member route has its own limit. According to the configuration page, if a member's quota runs out under Member billing, the review fails. Organization billing charges the organization that owns the repository instead. The same page says it changes billing only and does not give anyone access to the feature.
+
+## How to keep the current behaviour, or opt in early
+
+Saving Member in the Copilot policies, at organization or enterprise level, carries today's arrangement past 30 December. Where the enterprise controls this, the decision belongs to an enterprise owner.
+
+The documentation names the setting "Choose how members with a Copilot license are billed". The paths below are our summary of the configuration page, so confirm the labels on screen:
+
+1. For an organization, open its Settings, find Copilot under "Code, planning, and automation", then open Code review.
+2. For an enterprise, open AI controls, choose Copilot, then "Configure features & clients", and find Copilot code review.
+3. Pick Member or Organization. At enterprise level there is also "Let organizations decide".
+
+Choosing Organization on purpose can make sense if you would rather not have reviews fail when one person's quota is used up. It needs AI Credits paid usage, and reviews can still be blocked if an enforced budget runs out. Choosing Member keeps reviews tied to each member's Copilot entitlement and user budget. On Business and Enterprise, included credits are a shared pool, so a member entitlement does not necessarily mean the person pays out of pocket. Either way, saving a choice means the 30 December default no longer decides for you.
+
+## What a review costs
+
+GitHub bills Copilot usage in AI Credits, and its pricing page puts one credit at 0.01 US dollars. The code review page gives rough per-review ranges by effort level. Lite is about 0.05 to 1 dollar. Balanced, listed as the default, is about 0.25 to 5 dollars. These figures leave out GitHub Actions usage, and the page says cost generally rises with the size of the pull request and with repository custom instructions.
+
+There is also a Max level for the highest-effort review. GitHub's 28 October announcement introduced it as a public preview that takes longer and uses more AI credits than Lite or Balanced. A 17 November announcement added an Adaptive option that picks Lite, Balanced or Max for each pull request, within any maximum you set. Balanced stays the default. We found no dollar range for Max or Adaptive.
+
+![Range chart of GitHub's approximate AI credit cost per Copilot code review, Lite from 0.05 to 1 US dollar and Balanced from 0.25 to 5 US dollars](/images/site1/copilot-code-review-billing-organization-december-30-how-to-chart.svg)
+*Chart created by Stackbrook from the cited pages. Approximate AI credit ranges only, as read on 27 November 2026.*
+
+As an illustration of our own, 40 reviews a month would come to roughly 2 to 40 dollars of credits at Lite, or 10 to 200 dollars at Balanced. That is simple multiplication of the published estimates for Lite and Balanced only, not a forecast, and individual reviews may differ. The pricing page says the review model is chosen automatically and not disclosed, so cost per token can differ between reviews.
+
+Plans also come with credits. The budgets page lists 1,900 included AI credits per Copilot Business license and 3,900 per Copilot Enterprise license, and treats them as a shared pool. Once it is used up, metered charges begin if paid usage is enabled; otherwise usage is blocked. We did not find a plain statement about the order in which organization-billed reviews draw on those pooled credits, so check a billing report before assuming how your pool will be used.
+
+### Actions usage on private repositories
+
+Since 1 June 2026, reviews on private repositories also use GitHub Actions minutes from the plan's allowance, with extra usage charged at normal Actions rates. GitHub's April announcement says public repositories are not affected. The code review documentation says standard GitHub-hosted runners are the default, larger hosted runners cost more per minute, and reviews run on your own self-hosted machines use no Actions minutes.
+
+## Set a spending limit before the date
+
+The budgets page describes controls for individual users, cost centres, organizations and the whole enterprise. Enterprise owners and billing managers can set all of them, and organization owners can set organization-level budgets.
+
+Setting a budget is optional, but one detail deserves attention. For enterprise, cost centre and organization budgets, the option "Stop usage when budget limit is reached" is off by default. With it off, charges continue past the limit. These three budget types limit metered charges, not use of the included pool.
+
+User-level budgets always stop usage at the limit. The code review page ties that user limit to reviews billed to a user. For organization-billed reviews it names the organization, cost centre and enterprise limits: when an enforced one is exhausted, reviews are blocked along with other features that consume AI credits.
+
+## Review automatic reviews too
+
+Manual and automatic reviews both use credits, and automatic review affects how often that happens. It can be switched on in a person's own Copilot settings (not available for managed user accounts), or through a ruleset rule called "Automatically request Copilot code review", which can apply to a repository or across an organization. These routes can include new pushes and draft pull requests. A review runs if either route enables it, and users cannot switch off push or draft reviews that a ruleset requires.
+
+Administrators can also set a "Maximum review effort" for an enterprise, organization or repository: No limit, Lite, Balanced or Max. A repository cannot go above a maximum set at a higher level. Capping effort is one way to narrow the cost per review without turning the feature off.
+
+## A short checklist
+
+- Check whether your plan is Copilot Business or Enterprise, and whether a billing choice is already saved.
+- Decide between Member and Organization, and save it before 30 December.
+- See whether AI Credits paid usage is on.
+- Set a budget and confirm the stop option is in the state you want.
+- Look at rulesets that request reviews on every push or on drafts.
+- Compare a billing report after the first weeks.
+
+Still comparing tools? Our [AI coding assistant pricing comparison](/posts/ai-coding-assistants-pricing-compared) covers plan prices, with figures checked on an earlier date. GitHub's changelog does not give a per-review price or detailed menu steps, and settings pages change, so read the linked documentation again before you save anything.

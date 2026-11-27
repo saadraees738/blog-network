@@ -103,3 +103,4 @@ P68. published | Online Safety | Drupal installer attacks, update and block step
 P69. published | AI Models | Inkling 2 Mini local open-weights model explained (2026-11-27; Thinking Machines announcement, model card, AUP + Hugging Face blog and two repos; Ollama library page unreadable)
 P70. published | AI Productivity | Install a Claude artifact as a Mac or Windows app (2026-11-27; Claude announcement 24 Nov + Help Center install, admin, sharing and artifacts articles)
 P71. published | Smart Home | Google Home November 2026 update explained (2026-11-27; Google blog 17 Nov + five Google Home help and store pages; community release-note threads unreadable)
+P72. published | AI Coding | Copilot code review billing default moves to organizations on 30 Dec, how-to (2026-11-27; GitHub changelogs 25 Nov, 17 Nov, 28 Oct, 27 Apr + four GitHub Docs pages)
