@@ -20,7 +20,12 @@ img { max-width: 100%; height: auto; display: block; }
 header.site { border-bottom: 1px solid var(--line); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 header.site .brand { font-weight: 800; font-size: 20px; color: var(--ink); text-decoration: none; }
-header.site nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; }
+header.site nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; white-space: nowrap; }
+@media (max-width: 640px) {
+  header.site .wrap { height: auto; flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 12px; padding-bottom: 10px; }
+  header.site nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  header.site nav a { margin-left: 0; }
+}
 footer.site { border-top: 1px solid var(--line); margin-top: 64px; padding: 32px 0; background: var(--soft); font-size: 14px; color: var(--muted); }
 footer.site a { margin-right: 14px; }
 h1 { font-size: 2.1rem; line-height: 1.2; margin: 28px 0 12px; }
