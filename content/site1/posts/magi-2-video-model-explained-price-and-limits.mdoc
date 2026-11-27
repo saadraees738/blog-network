@@ -1,0 +1,98 @@
+---
+title: 'MAGI-2 video model explained: price, limits and what is not open yet'
+description: 'Sand.ai says MAGI-2 makes 30-second 1080p clips with sound. See the listed API price, request limits and what is still unreleased, from official pages.'
+status: published
+queueReason: ''
+publishDate: 2026-11-27
+lastVerified: 2026-11-27
+category: AI Video
+author: saad-r
+heroImage: /images/site1/magi-2-video-model-explained-price-and-limits-cover.jpg
+heroAlt: 'AI-generated illustration of a dim studio desk with a blank glowing widescreen monitor, speakers, a keyboard and an office chair'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: MAGI-2 is a video model Sand.ai launched on 24 November 2026. The company says it produces up to 30 seconds of 1080p video at 25 frames per second with sound generated alongside. The API price list shows 0.08 US dollars per second, so a 30-second clip works out to 2.40 dollars. The pricing page says top-up is not supported for now, although the billing page describes payment methods. Sand.ai says it will open-source MAGI-2 but gives no date.
+sources:
+  - title: 'MAGI-2: A 480B Frontier Video Generation Model (Sand.ai, 24 November 2026)'
+    url: https://sand.ai/blog/magi-2/
+    accessed: 2026-11-27
+  - title: 'Model and pricing (Sand AI Platform docs)'
+    url: https://platform.sand.ai/docs/model-pricing/
+    accessed: 2026-11-27
+  - title: 'Ark compatibility (Sand AI Platform docs)'
+    url: https://platform.sand.ai/docs/ark-generations
+    accessed: 2026-11-27
+  - title: 'Balance and billing (Sand AI Platform docs)'
+    url: https://platform.sand.ai/docs/credits/
+    accessed: 2026-11-27
+  - title: 'Rate limits (Sand AI Platform docs)'
+    url: https://platform.sand.ai/docs/limits/
+    accessed: 2026-11-27
+  - title: 'sand-ai/MAGI-2-preview model card (Hugging Face)'
+    url: https://huggingface.co/sand-ai/MAGI-2-preview
+    accessed: 2026-11-27
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the six cited pages (REVISE with 8 findings - 2 high, 1 low-medium, 5 low - all applied; no second round). Not verified - the model was not tested, top-up was not tried in an account, the Artificial Analysis leaderboard was not checked, and pages were read through a fetch tool that returns summaries and selected quotes, so the wording overlap check and not-stated points rest on that.'
+---
+
+Sand.ai announced MAGI-2 on 24 November 2026, a model that generates video and its soundtrack together. The headline claims are long clips and full HD output. For a small business thinking about product videos or social clips, the useful questions are what it costs, how API access and payment work and what is only promised. This is what the company's pages said when read on 27 November 2026.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test MAGI-2 and has no affiliate relationship with Sand.ai at the time of writing. The header image is AI-generated. This is general information, not financial or legal advice.*
+
+## What Sand.ai says the model does
+
+According to the launch post, MAGI-2 produces up to 30 seconds of 1080p video at 25 frames per second, with audio generated natively. The company lists dialogue with lip-sync, sound effects, ambient sound and music, and offers six aspect ratios. Its documentation names them: 21:9, 16:9, 4:3, 1:1, 3:4 and 9:16.
+
+You are not limited to a text prompt. The post describes references made from images, video and audio, up to 20 media items in one native request: as many as 10 images, 5 videos and 5 audio clips. It also describes control over timing and shot cuts, and targeted editing of existing video.
+
+On the technical side, Sand.ai gives 480 billion total parameters with about 28 billion active at a time. In plain terms, only a small share of the model works on any given piece of the output. That design detail does not tell you how good a clip will look.
+
+## Price on the API
+
+The platform's pricing page lists one model, `magi-2`, at 1080p, for 0.08 US dollars per second. The chart below is simple multiplication of that rate by clip length.
+
+![Column chart of listed MAGI-2 cost by clip length: 4 seconds 0.32 dollars, 10 seconds 0.80 dollars, 20 seconds 1.60 dollars, 30 seconds 2.40 dollars](/images/site1/magi-2-video-model-explained-price-and-limits-chart.svg)
+*Chart created by Stackbrook from the cited pages. Calculated at the listed 0.08 US dollars per second, as read on 27 November 2026.*
+
+You may need several attempts. As an illustration of our own, five tries at a 10-second clip would add up to 4.00 dollars at the listed rate, if every try were billed. The pages we read did not say how failed or expired generations are charged, how partial seconds are billed, or whether any free credits exist. They also gave no refund policy.
+
+There is also an access catch. The pricing page says top-up is not supported for the time being and points to the company's X account for a launch date. The billing page, meanwhile, describes top-up through Alipay on the China site and a Stripe checkout on the global site. We could not reconcile the two, so check inside your account whether you can actually add money before planning around it.
+
+## Request limits for developers
+
+The API works in two steps: you create a generation task, then ask for its status until it finishes. Sand.ai's compatibility page documents these rules:
+
+- Duration must be a whole number from 4 to 30 seconds.
+- Only 1080p is supported.
+- Sound is on by default and can be switched off.
+- Reference videos must be 2 to 30 seconds each, no more than 30 seconds combined. Reference audio also has a 30-second combined cap.
+- You can give a first frame, or a first and last frame, but not combine those with general references.
+- The finished video link is valid for one hour. Fetching the task again refreshes it.
+- Creating a task is not idempotent, which means resending after a lost response could create a second one. The page says not to resubmit automatically.
+
+That last point could matter for your bill. If you or a contractor build an integration, make sure it saves every task ID and keeps checking that ID instead of creating a new task. If the response is lost before an ID arrives, do not resend automatically. The limits page says the status request cannot find a task without its ID, so our suggestion is to check your account spending or ask Sand.ai first. Also save finished files to your own storage soon after they arrive.
+
+The default limits are shared by all keys in an organization: 20 create requests and 20 status requests per 60 seconds, and up to 5 generations running at once. The limits page suggests polling a single generation every 10 seconds. With five running, it suggests polling each every 20 seconds, spaced 4 seconds apart, which comes to about 15 status requests a minute and stays within the default.
+
+## What is open and what is only promised
+
+The launch post says open-source releases and a detailed technical report will follow soon. It gives no date, and we found no licence or hardware requirement for the flagship model.
+
+What you can download today is the earlier MAGI-2 Preview, a smaller model with 114 billion total parameters and about 6 billion active. Its Hugging Face card lists an Apache 2.0 licence and a repository of roughly 307 GB. It makes clips of exactly 10 seconds, from text or from a first-frame image, and reaches its 1080p tier through a second refining stage.
+
+The card calls for 8 NVIDIA Hopper GPUs. That is data-centre equipment, so downloadable weights do not mean this runs on an office computer. Do not assume the preview behaves like the new flagship either.
+
+## How to read the quality claims
+
+Sand.ai reports an average Elo rating (a relative score) of 1150.3 for MAGI-2 against 998.5 for the preview, across four tasks on the Artificial Analysis Video Arena v2.1 leaderboard. We took these figures from the company's post and did not check the leaderboard itself. The comparison with its own earlier model also says nothing about how MAGI-2 ranks against rivals.
+
+The post admits weak spots. Fast action can sometimes break motion paths or continuity. Fine movement in some medium and wide 2D animation shots can look too smooth. Busy soundtracks could be more layered and physically realistic.
+
+## What to check before using it for work
+
+The pages we read did not state commercial-use terms, training data sources or a safety policy for MAGI-2. The site links to terms of use and a privacy policy, which we did not review. Read them before you upload photos of staff, customers or products, or publish a clip in an advert.
+
+A sensible approach is to hold back until you can confirm payment works, then run a few short clips on material you own. Judge hands, text on packaging, faces, lip-sync and sound with your own eyes, and keep a record of what each attempt cost. If you are weighing other tools, our [AI video generator pricing comparison](/posts/ai-video-generators-pricing-compared) shows how different services charge, although its figures were checked on an earlier date.
