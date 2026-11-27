@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, sans-serif">
+<rect width="1200" height="630" fill="#f8fafc"/>
+<text x="40" y="66" font-size="32" font-weight="700" fill="#0f172a">OpenWorks: the 20 pilot communities</text>
+<text x="40" y="100" font-size="19" fill="#475569">As listed on OpenAI's program page, read 27 November 2026. One tile per community.</text>
+<rect x="40" y="134" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="144" cy="161" r="9" fill="#0f766e"/>
+<text x="144" y="200" font-size="20" text-anchor="middle" fill="#0f172a">Chicago</text>
+<rect x="268" y="134" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="372" cy="161" r="9" fill="#0f766e"/>
+<text x="372" y="200" font-size="20" text-anchor="middle" fill="#0f172a">Kansas City</text>
+<rect x="496" y="134" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="600" cy="161" r="9" fill="#0f766e"/>
+<text x="600" y="200" font-size="20" text-anchor="middle" fill="#0f172a">Fargo</text>
+<rect x="724" y="134" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="828" cy="161" r="9" fill="#0f766e"/>
+<text x="828" y="200" font-size="20" text-anchor="middle" fill="#0f172a">Madison</text>
+<rect x="952" y="134" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="1056" cy="161" r="9" fill="#0f766e"/>
+<text x="1056" y="200" font-size="20" text-anchor="middle" fill="#0f172a">Cleveland</text>
+<rect x="40" y="242" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="144" cy="269" r="9" fill="#0f766e"/>
+<text x="144" y="308" font-size="20" text-anchor="middle" fill="#0f172a">South Bend</text>
+<rect x="268" y="242" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="372" cy="269" r="9" fill="#0f766e"/>
+<text x="372" y="308" font-size="20" text-anchor="middle" fill="#0f172a">St. Louis</text>
+<rect x="496" y="242" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="600" cy="269" r="9" fill="#0f766e"/>
+<text x="600" y="308" font-size="20" text-anchor="middle" fill="#0f172a">Jackson</text>
+<rect x="724" y="242" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="828" cy="269" r="9" fill="#0f766e"/>
+<text x="828" y="308" font-size="20" text-anchor="middle" fill="#0f172a">Charlotte</text>
+<rect x="952" y="242" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="1056" cy="269" r="9" fill="#0f766e"/>
+<text x="1056" y="308" font-size="20" text-anchor="middle" fill="#0f172a">Oklahoma City</text>
+<rect x="40" y="350" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="144" cy="377" r="9" fill="#0f766e"/>
+<text x="144" y="416" font-size="20" text-anchor="middle" fill="#0f172a">Charleston</text>
+<rect x="268" y="350" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="372" cy="377" r="9" fill="#0f766e"/>
+<text x="372" y="416" font-size="20" text-anchor="middle" fill="#0f172a">Nashville</text>
+<rect x="496" y="350" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="600" cy="377" r="9" fill="#0f766e"/>
+<text x="600" y="416" font-size="20" text-anchor="middle" fill="#0f172a">Austin</text>
+<rect x="724" y="350" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="828" cy="377" r="9" fill="#0f766e"/>
+<text x="828" y="416" font-size="20" text-anchor="middle" fill="#0f172a">Houston</text>
+<rect x="952" y="350" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="1056" cy="377" r="9" fill="#0f766e"/>
+<text x="1056" y="416" font-size="20" text-anchor="middle" fill="#0f172a">Atlanta</text>
+<rect x="40" y="458" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="144" cy="485" r="9" fill="#0f766e"/>
+<text x="144" y="524" font-size="20" text-anchor="middle" fill="#0f172a">Los Angeles</text>
+<rect x="268" y="458" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="372" cy="485" r="9" fill="#0f766e"/>
+<text x="372" y="524" font-size="20" text-anchor="middle" fill="#0f172a">Incline Village</text>
+<rect x="496" y="458" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="600" cy="485" r="9" fill="#0f766e"/>
+<text x="600" y="524" font-size="20" text-anchor="middle" fill="#0f172a">Olympia</text>
+<rect x="724" y="458" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="828" cy="485" r="9" fill="#0f766e"/>
+<text x="828" y="524" font-size="20" text-anchor="middle" fill="#0f172a">Seattle</text>
+<rect x="952" y="458" width="208" height="90" rx="14" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<circle cx="1056" cy="485" r="9" fill="#0f766e"/>
+<text x="1056" y="524" font-size="20" text-anchor="middle" fill="#0f172a">New York</text>
+<text x="40" y="600" font-size="16" fill="#475569">Order follows the page; positions are not geographic. Chart by Stackbrook.</text></svg>
