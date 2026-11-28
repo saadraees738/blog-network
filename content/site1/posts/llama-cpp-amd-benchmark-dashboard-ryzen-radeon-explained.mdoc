@@ -1,0 +1,109 @@
+---
+title: 'llama.cpp AMD benchmark dashboard - local AI speed on Ryzen and Radeon'
+description: 'A new llama.cpp dashboard tracks local AI speed on two AMD chips. Learn what PP512 and TG128 mean, what is covered, and how to compare your own PC.'
+status: published
+queueReason: ''
+publishDate: 2026-11-28
+lastVerified: 2026-11-28
+category: AI Hardware
+author: saad-r
+heroImage: /images/site1/llama-cpp-amd-benchmark-dashboard-ryzen-radeon-explained-cover.jpg
+heroAlt: 'AI-generated illustration of a graphics card on a dark desk in front of red and blue streaks of light'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: On 26 November 2026 the llama.cpp team announced a public dashboard that tracks how fast local AI models run on two AMD options, the Radeon 8060S and the Radeon AI Pro R9700S. It reports prompt reading speed (PP512) and writing speed (TG128) in tokens per second, from scheduled weekly runs. Use it to compare builds, model files and those two chips. It does not tell you how fast other AMD hardware will be.
+sources:
+  - title: 'Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon (Hugging Face, 26 November 2026)'
+    url: https://huggingface.co/blog/ggml-org/llamacpp-amd-bench
+    accessed: 2026-11-28
+  - title: 'llama.cpp x AMD dashboard Space (ggml-org on Hugging Face)'
+    url: https://huggingface.co/spaces/ggml-org/llamacpp-amd-bench
+    accessed: 2026-11-28
+  - title: 'llama-bench documentation (llama.cpp on GitHub)'
+    url: https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md
+    accessed: 2026-11-28
+  - title: 'Performance of llama.cpp on AMD ROCm, community discussion 15021'
+    url: https://github.com/ggml-org/llama.cpp/discussions/15021
+    accessed: 2026-11-28
+  - title: 'Performance of llama.cpp with Vulkan, community discussion 10879'
+    url: https://github.com/ggml-org/llama.cpp/discussions/10879
+    accessed: 2026-11-28
+  - title: 'AMD GPU specifications (ROCm 7.14.1 documentation)'
+    url: https://rocm.docs.amd.com/en/docs-7.14.1/reference/gpu-specs.html
+    accessed: 2026-11-28
+  - title: 'AMD Radeon AI PRO R9700S product page'
+    url: https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700s.html
+    accessed: 2026-11-28
+  - title: 'Installation (llama.app documentation)'
+    url: https://llama.app/docs/installation
+    accessed: 2026-11-28
+  - title: 'llama.cpp v1.0.0 announcement (Hugging Face, 13 November 2026)'
+    url: https://huggingface.co/blog/ggml-org/llama-cpp-v1
+    accessed: 2026-11-28
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE with 6 findings - 3 medium, 3 low - all applied; no second round). Not verified - the live dashboard app and its numbers, which backend its builds use, the dates of the four charted scoreboard rows, and the cause of the gap between rows; several pages were read through fetch-tool summaries, so the copied-text check was partial.'
+---
+
+If you want to run an AI model on your own computer, the first question is usually speed. Will answers appear quickly enough to be useful, or will you watch them crawl onto the screen? The team behind llama.cpp, a widely used open source program for running models locally, has started publishing measured numbers for some AMD hardware. Here is what the new dashboard shows, what it leaves out, and how to compare your own machine fairly.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test llama.cpp, the dashboard or any hardware, and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated.*
+
+## What was announced
+
+A team post dated 26 November 2026 on the Hugging Face blog introduced the dashboard, with thanks to AMD for providing test infrastructure. You can open it from the blog post or from the ggml-org Space on Hugging Face. You pick the hardware, a model and a build of llama.cpp (a build is one specific version of the software), then compare the results.
+
+The post offers two hardware choices:
+
+- **Radeon 8060S** (listed as gfx1151). AMD's specification table shows this as the built-in graphics of processors such as the Ryzen AI Max+ 395. AMD lists its memory as dynamic plus carveout, meaning it draws on shared system memory, which can include a reserved portion, rather than having separate video memory of its own.
+- **Radeon AI Pro R9700S** (gfx1201). This is a workstation graphics card. AMD lists 32 GB of GDDR6 memory, 640 GB/s peak memory bandwidth, 300 W total board power, passive cooling and a recommended power supply of at least 750 W.
+
+Those are very different machines, so the dashboard is a starting point for two designs rather than a ranking of AMD products. Check which exact chip you have before reading anything into a figure.
+
+## The two numbers that matter
+
+Language models work in tokens, which are small chunks of text. The dashboard reports two tests, each as average tokens per second:
+
+- **PP512** processes 512 input tokens. It shows how quickly the model reads your prompt.
+- **TG128** generates 128 tokens. It shows how quickly the model writes its reply.
+
+Both are run at a context depth of zero, meaning the model starts without earlier conversation stored. A separate context scaling view shows writing speed as that stored context grows, which is worth a look if you work with long documents or long chats.
+
+The other views are an overview that compares quantizations on one machine, and a build history that tracks both tests across recorded versions. Quantization means storing a model's numbers at lower precision so the file is smaller. The post mentions formats including Q4_K_M, Q8_0, BF16 and F16, and models from the Inkling 2 Mini, Qwen, Gemma, gpt-oss and LFM families. Not every combination is guaranteed to exist, so check the dashboard for yours. A faster file is not automatically a better one, because speed says nothing about answer quality.
+
+## How the figures are produced
+
+According to the post, the team tests the prebuilt programs distributed through its install project, the one behind llama.app. Public workflows are scheduled weekly and use llama-bench, the project's own measuring tool. Each setup runs with a setting called Flash Attention both on and off, with 10 repetitions per configuration. The results sit in a public storage bucket.
+
+One limit is easy to miss. The llama-bench documentation says its timings do not include tokenization (turning text into tokens) or sampling (choosing the next token). Treat the figures as a measure of the model engine, not the full wait you will feel in a chat app.
+
+## Why one number is not enough
+
+The project also hosts community scoreboards, where users post their own results. The chart below uses four rows from the AMD ROCm thread, with Flash Attention off, running the older Llama 2 7B model in Q4_0 format. ROCm is AMD's software platform for GPU computing.
+
+![Horizontal bar charts of community llama.cpp results: Radeon AI PRO R9700 reads 4444 tokens per second and writes 94; RX 7900 XTX 3552 and 167; Ryzen AI Max+ 395 row 911 and 50; Radeon 8060S row 351 and 48](/images/site1/llama-cpp-amd-benchmark-dashboard-ryzen-radeon-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+Two things stand out, with a warning first: these rows come from different users and software versions, so treat every gap as illustrative. First, reading and writing speed do not move together. In that table the R9700 row reads prompts about 25% faster than the RX 7900 XTX row, yet writes about 44% slower. Note that this is the R9700 listed in the thread, not the passively cooled R9700S on the dashboard.
+
+Second, the rows labelled AI Max+ 395 and Radeon 8060S should involve the same graphics design according to AMD's table, but their reading speeds differ by more than two and a half times, while writing speeds are close. The rows come from different contributors and different software commits (saved code versions), and the table also describes their memory differently, as 128 GB of LPDDR5 in one and shared system DDR5 in the other. That does not establish the cause. A later comment in the same thread, dated 11 August 2026, reports about 1,064 reading and 44 writing with Flash Attention off on an AI Max 395+ system, so the 351 figure may not reflect current software. Do not buy hardware on the strength of one community row.
+
+As a rough illustration using our own arithmetic, a 500-token reply would take about 3 seconds at the writing speed in the 7900 XTX row, about 5 seconds at the R9700 row speed and about 10 seconds at the AI Max+ 395 row speed. That ignores prompt reading and the excluded steps above, and larger models will behave differently.
+
+## How to compare your own PC
+
+1. Install llama.cpp. The llama.app documentation points Mac and Windows users to the Llama app and offers a one-line command for Linux or command-line-only use, with versions for Mac and Linux and for Windows PowerShell. It also lists package managers, prebuilt files, Docker and source builds. That page does not mention AMD, so confirm that your build uses your graphics chip. Read any install script before you run it.
+2. Get llama-bench, the measuring tool. The community threads point users to the project's releases on GitHub for ready-made ROCm or Vulkan versions.
+3. Use the same model file as the figure you want to compare with, including the quantization.
+4. Run a test such as `llama-bench -m your-model.gguf -ngl 99 -p 512 -n 128 -r 10 -fa on`, then repeat with `-fa off`. Here `-ngl` sets how many model layers go to the graphics processor.
+5. Write down the build or commit, the backend (ROCm or Vulkan), the driver or ROCm version, and the operating system next to both results. The dashboard announcement does not say which backend its tested builds use.
+
+The tool reports an average and a standard deviation, which shows how much the repeats varied. Its default is five repetitions, so the `-r 10` above is there to match the dashboard's count. Close other heavy programs first, and change one thing at a time.
+
+## What this means for a small business
+
+If you are considering a local model for private notes, drafting or document search, use the dashboard to see whether writing speed on a comparable chip and model feels workable, and whether a newer build changes it. Speed is only one test. You still need enough memory for the model, answers good enough for the job, a licence that allows your use and someone to keep the software current. The project released version 1.0.0 on 13 November 2026 to signal a stable programming interface, which helps developers but does not promise any speed.
+
+Before spending money, try a small model on the computer you already own. If you do buy, ask the seller for the exact chip name, memory amount and bandwidth, then look for results that match your intended model. Where no matching result exists, treat the speed as unknown.
