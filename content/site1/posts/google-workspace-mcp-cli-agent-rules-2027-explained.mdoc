@@ -1,0 +1,110 @@
+---
+title: 'Google Workspace AI agent rules - MCP, usage tiers and 2027 dates'
+description: 'Google made Workspace MCP servers and a CLI generally available and set 2027 deadlines for AI agents. See the tiers, limits, prices and what to check.'
+status: published
+queueReason: ''
+publishDate: 2026-11-28
+lastVerified: 2026-11-28
+category: AI Developer Tools
+author: saad-r
+heroImage: /images/site1/google-workspace-mcp-cli-agent-rules-2027-explained-cover.jpg
+heroAlt: 'AI-generated illustration of document pages, a calendar tile, an envelope, a shield and a small key joined by glowing teal lines'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: If an AI agent reaches your Google Workspace data, check how it connects before 1 February 2027, when Google says enforcement of its MCP or CLI requirement begins. The Standard tier has no charge and published rate limits, including 5,000 MCP requests per day, per project, per product. Paid Scaled tier billing for Gmail, Drive and Calendar starts on 1 April 2027.
+sources:
+  - title: 'Simplifying agent access while keeping organizations in control (Google Workspace Updates, 24 November 2026)'
+    url: https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html
+    accessed: 2026-11-28
+  - title: 'Built for trust and control - new AI agent protections and developer tools in Google Workspace (Google Workspace blog, 25 November 2026)'
+    url: https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace
+    accessed: 2026-11-28
+  - title: 'Usage tiers and quotas for Google Workspace APIs and MCP servers (Google for Developers)'
+    url: https://developers.google.com/workspace/guides/quota-usage-tiers
+    accessed: 2026-11-28
+  - title: 'Understand Google Workspace API and MCP server pricing and billing tiers (Google for Developers)'
+    url: https://developers.google.com/workspace/guides/quota-pricing
+    accessed: 2026-11-28
+  - title: 'Workspace AI Tools Addendum (Google Workspace terms, last modified 24 November 2026)'
+    url: https://workspace.google.com/terms/ai-tools/
+    accessed: 2026-11-28
+  - title: 'Configure the Google Workspace MCP servers (Google for Developers)'
+    url: https://developers.google.com/workspace/guides/configure-mcp-servers
+    accessed: 2026-11-28
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE with 11 findings - 2 high, 4 medium, 5 low or low to medium - all applied; no second round). Not verified - pages were read through fetch-tool summaries with short quotes, some partly truncated, so wording is not byte-exact, a full copied-text comparison was not possible and statements that something is not on a page rest on those extracts. The pages differ on whether the CLI satisfies the MCP requirement and on MCP free allowances; both differences are stated in the post.'
+---
+
+Google has set new ground rules for AI agents that read or change data in Google Workspace. On 24 November 2026 it said its Workspace MCP servers and official Workspace command line tool (CLI) are generally available, alongside two usage tiers and a new Workspace AI Tools Addendum. MCP, short for Model Context Protocol, is an open standard that lets an AI app connect to outside tools and data. If your business has connected an assistant, a custom script with AI in it or a third-party agent to Gmail or Drive, the 2027 dates are worth putting in your calendar.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Google competes with Anthropic. Stackbrook did not test any product described here and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not legal or financial advice.*
+
+## What became available
+
+The MCP servers cover Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat and Tasks, with Keep listed as coming soon. Google describes them as the route for cloud and web agents, and the CLI as the route for local and desktop agents and workflow automation. It says the release is available to all Workspace customers and developers. For both Rapid Release and Scheduled Release domains, the update post gives the rollout as reaching everyone within two weeks, so some tools may not show up straight away. The developer pages also warn that some MCP tools might be temporarily unavailable while this happens.
+
+Connecting is a developer-style setup. Google's configuration guide calls for a Google Cloud project, an AI app that can act as an MCP host, and an OAuth client (the credential an app uses to ask for access) with the option marking it as used for an AI-powered agent. It names Google Antigravity and Claude among the clients, and says Claude.ai or Claude Desktop need a Claude Enterprise, Pro, Max or Team plan for these remote servers. Claude is made by Anthropic, which also made the model that drafted this post.
+
+## The dates that matter
+
+- **24 November 2026** - Standard and Scaled tiers launch, with a dashboard for checking API usage.
+- **1 February 2027** - the usage tier page says the Addendum takes effect, establishing the MCP requirement, and Google says technical enforcement begins.
+- **1 April 2027** - billing and quota enforcement start. Google says it will not bill Scaled tier usage before this date.
+
+The wording differs slightly between pages, so read it carefully. The update post, the Workspace blog and the usage tier page say AI agents must use the MCP servers or the CLI instead of calling the REST APIs (the ordinary programming interfaces) directly. The Addendum text we read says a covered tool that is, or is driven by, an AI agent, AI harness, AI model or AI model service must use a Google MCP, and that clause does not mention the CLI. If you plan to rely on the CLI for an agent, confirm the point with Google or your developer.
+
+Covered tool is our shorthand for the Addendum's GWS Access Tool, a broad term that takes in software and applications as well as AI, where they can be used to get Workspace user data. The Addendum defines AI agents as goal-oriented AI systems or workflows that act for you, with or without supervision. The pages we read do not walk through how particular third-party automation products are classed, so ask each vendor how its AI features connect to Workspace.
+
+## Standard and Scaled tiers
+
+**Standard** costs nothing, needs no billing account and is the default for new Cloud projects. It also applies to existing projects unless they opt into Scaled. Projects active between November 2025 and April 2026 kept earlier quotas, and the usage tier page says standard limits are enforced across all projects from 1 April 2027. Standard has published rate limits. For the generally available MCP servers, the cap is 5,000 requests per day, per project, per product, and per-minute limits also apply. Some MCP tools count as more than one request. Projects over their limits are throttled, and Standard projects cannot ask for a quota increase.
+
+**Scaled** is for projects that need more. It covers the Gmail, Drive and Calendar APIs, and the developer pages say MCP billing currently applies to the Gmail, Drive and Calendar MCP servers. It needs an active Cloud billing account. Joining does not raise limits by itself; you also have to submit a quota increase request.
+
+There is a catch for older agent setups. From 1 February 2027, an AI agent that calls the REST APIs directly is limited to Standard quotas, whichever tier the project has selected. Paying for Scaled does not lift that.
+
+Google expects most developers to stay on the free tier. The update post puts more than 99% of active developers within the Standard tier. That is a figure about developers as a group, not a promise about your project, so check your own usage.
+
+One detail needs care. The update post says Scaled customers pay only for API or MCP usage above any daily free allowances. The developer pricing page is more specific: REST APIs have daily no-charge allowances, but Gmail, Drive and Calendar MCP usage on the Scaled tier has none and is billed from the first successful request once billing starts. We would budget on the more specific page.
+
+![Bar chart of Google's listed Scaled tier unit prices per 1,000 requests: Light 0.10 US dollars, Medium 0.20, Plus 0.25 and Premium 0.50](/images/site1/google-workspace-mcp-cli-agent-rules-2027-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+## What Scaled usage costs
+
+| Bucket | Price per 1,000 requests | Examples Google lists |
+|---|---|---|
+| Light | $0.10 | Looking up file details or permissions, listing Gmail labels |
+| Medium | $0.20 | Reading a message, creating a draft or a file |
+| Plus | $0.25 | Searching or listing Drive files, all Calendar API requests |
+| Premium | $0.50 | Reading or downloading file content, reading Gmail threads |
+
+As a simple illustration using these list prices: 1,000 Drive MCP searches (Plus) and 1,000 file content reads (Premium) on a Scaled project would come to $0.75 after 1 April 2027, before any volume discount and assuming each call counts once. If each call counted once and there were no other Drive MCP calls that day, the same 2,000 calls would sit under the 5,000 daily Standard cap, subject to per-minute limits.
+
+Unsuccessful requests (HTTP 3xx, 4xx and 5xx) are not billed, and neither are MCP tool calls that return an error flag. Failed MCP calls of that kind still count against rate limits. Volume discounts apply automatically to much larger monthly spending.
+
+There is also an internal-use exception. A Workspace super administrator can turn on higher per-project REST quotas for a project used only inside the organisation, with no sign-in client for outside users. It does not raise MCP limits, and it does not help an AI agent that calls REST APIs directly after 1 February 2027.
+
+## Controls and data rules
+
+The admin controls and usage dashboard are part of the same two-week rollout, so you may not see them yet. Google says admins can manage agent access, require a person to confirm certain actions, and review agent activity logs, under Security and then API Controls in the Admin console. Existing data loss prevention rules apply to agent use. Its examples of high-impact actions include sending external email, changing Drive sharing and bulk edits.
+
+The configuration guide also warns about indirect prompt injection, where instructions hidden in content an AI reads, such as an email or document, try to steer it. Connect only apps you trust and check the actions they take for you.
+
+Some protections are not here yet. Google lists time-limited approvals and AI access restrictions on chosen Gmail messages and Drive files as coming soon, and says users will later be able to view and revoke agent access themselves.
+
+The Addendum also restricts what a covered tool may do with data. The usage tier page gives 1 February 2027 as its effective date, while the Addendum text we read shows a last-modified date of 24 November 2026. Among other things, it bars using Workspace user data for model training or fine-tuning, keeping user data after the tool is disconnected, and scraping beyond what a task you authorised requires. If Google reasonably believes those rules were broken, the Addendum says it may immediately restrict or remove the tool's access, and may suspend or end your access to the affected services or access points. It applies when you use or authorise such a tool. Google also says it takes no responsibility for what third-party tools do.
+
+## A short checklist
+
+1. List every AI tool that can reach Gmail, Drive, Calendar or other Workspace data.
+2. Ask each vendor or developer whether it connects through Google's MCP servers or CLI, and by when it will.
+3. Check the usage dashboard for each Cloud project you own and compare it with Standard limits.
+4. If an internal project needs more REST quota, ask a super admin about the exception. If it needs more MCP quota, or is not internal, consider Scaled, which needs a billing account and a separate quota increase request. Neither route raises the limit for an agent calling REST directly after 1 February. Act before 1 April 2027 if you need to keep higher limits, because the update post says projects that take no action will move to Standard rate limits.
+5. Review who can approve agent access, and require confirmation for risky actions.
+6. Read the Addendum, and get proper advice if your contracts or customer data raise questions.
+
+The practical step now is the inventory. Many small teams will not know which apps have agent access until they look, and Google's pages may change before the February deadline, so read them again in January.

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, Arial, sans-serif">
+<rect width="1200" height="630" fill="#ffffff"/>
+<text x="60" y="70" font-size="34" font-weight="700" fill="#14223a">Workspace Scaled tier list prices</text>
+<text x="60" y="110" font-size="22" fill="#4b5870">US dollars per 1,000 requests, by billing bucket (before volume discounts)</text>
+<text x="220" y="193" font-size="26" text-anchor="end" fill="#14223a">Light</text>
+<rect x="250" y="155" width="152" height="58" rx="6" fill="#0f9f8f"/>
+<text x="418" y="194" font-size="26" font-weight="700" fill="#14223a">$0.10</text>
+<text x="220" y="283" font-size="26" text-anchor="end" fill="#14223a">Medium</text>
+<rect x="250" y="245" width="304" height="58" rx="6" fill="#0f9f8f"/>
+<text x="570" y="284" font-size="26" font-weight="700" fill="#14223a">$0.20</text>
+<text x="220" y="373" font-size="26" text-anchor="end" fill="#14223a">Plus</text>
+<rect x="250" y="335" width="380" height="58" rx="6" fill="#0f9f8f"/>
+<text x="646" y="374" font-size="26" font-weight="700" fill="#14223a">$0.25</text>
+<text x="220" y="463" font-size="26" text-anchor="end" fill="#14223a">Premium</text>
+<rect x="250" y="425" width="760" height="58" rx="6" fill="#0f9f8f"/>
+<text x="1026" y="464" font-size="26" font-weight="700" fill="#14223a">$0.50</text>
+<text x="60" y="548" font-size="19" fill="#4b5870">Billing starts 1 April 2027. On Scaled, REST APIs have daily free allowances; Gmail, Drive and Calendar MCP has none.</text>
+<text x="60" y="590" font-size="18" fill="#4b5870">Source: Google for Developers, Workspace pricing and billing tiers page, read 28 November 2026.</text>
+</svg>
