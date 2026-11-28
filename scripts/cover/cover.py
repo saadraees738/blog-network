@@ -9,8 +9,9 @@ def f(w,s):
 W,H=1200,630
 ACC={'CRM':(76,201,240),'Automation':(255,138,61),'AI Coding':(167,139,250),'AI Video':(244,114,182),'AI Images':(250,204,21),
      'AI Writing':(52,211,153),'AI Assistants':(251,146,120),'AI Productivity':(45,212,191),'AI Meetings':(129,140,248),
-     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191),'AI Infrastructure':(56,189,248),'AI Shopping':(250,204,21),'AI Music':(244,114,182),'AI Phones':(96,165,250),'AI Social Media':(129,140,248),'AI Search':(96,165,250),'AI Business':(45,212,191),'Online Safety':(74,222,128)}
+     'AI Explainers':(96,165,250),'AI Hardware':(251,191,36),'Robots':(248,113,113),'AI Safety':(74,222,128),'AI Presentations':(232,121,249),'Gaming':(45,212,191),'AI Models':(129,140,248),'AI Agents':(52,211,153),'AI Privacy':(94,234,212),'AI Developer Tools':(45,212,191),'AI Infrastructure':(56,189,248),'AI Shopping':(250,204,21),'AI Music':(244,114,182),'AI Phones':(96,165,250),'AI Social Media':(129,140,248),'AI Search':(96,165,250),'AI Business':(45,212,191),'Online Safety':(74,222,128),'Messaging Apps':(74,222,128)}
 POSTS={
+'whatsapp-scheduled-messages-how-to-business-app-options':('Messaging Apps','WhatsApp scheduled messages'),
 'google-workspace-mcp-cli-agent-rules-2027-explained':('AI Developer Tools','Workspace AI agent rules for 2027'),
 'glinet-router-kvm-malware-goodcloud-update-steps':('Online Safety','GL.iNet router malware: act now'),
 'claude-watermarks-content-credentials-explained':('AI Explainers','Claude watermarks, explained'),
