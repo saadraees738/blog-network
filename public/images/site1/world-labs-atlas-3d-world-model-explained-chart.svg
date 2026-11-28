@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Inter, DejaVu Sans, Arial" role="img" aria-label="Dot plot of listed Atlas Studio action costs">
+<rect width="1200" height="630" fill="#ffffff"/>
+<text x="60" y="62" font-size="32" font-weight="700" fill="#111827">Listed Atlas Studio costs per action (US dollars)</text>
+<text x="60" y="98" font-size="20" fill="#4b5563">1,000 credits = $1. Billing page, checked 28 November 2026.</text>
+<line x1="360.0" y1="135" x2="360.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="360.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.00</text>
+<line x1="480.0" y1="135" x2="480.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="480.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.10</text>
+<line x1="600.0" y1="135" x2="600.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="600.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.20</text>
+<line x1="720.0" y1="135" x2="720.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="720.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.30</text>
+<line x1="840.0" y1="135" x2="840.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="840.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.40</text>
+<line x1="960.0" y1="135" x2="960.0" y2="515" stroke="#e5e7eb" stroke-width="1"/><text x="960.0" y="545" font-size="18" fill="#6b7280" text-anchor="middle">$0.50</text>
+<text x="332" y="177" font-size="21" fill="#111827" text-anchor="end">Image upscale</text><line x1="360" y1="170" x2="372.0" y2="170" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3 5"/><circle cx="372.0" cy="170" r="11" fill="#0f766e"/>
+<text x="394.0" y="177" font-size="19" font-weight="600" fill="#111827">$0.01 (10 credits)</text>
+<text x="332" y="255" font-size="21" fill="#111827" text-anchor="end">Prompt enhancement</text><line x1="360" y1="248" x2="384.0" y2="248" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3 5"/><circle cx="384.0" cy="248" r="11" fill="#0f766e"/>
+<text x="406.0" y="255" font-size="19" font-weight="600" fill="#111827">$0.02 (20 credits)</text>
+<text x="332" y="333" font-size="21" fill="#111827" text-anchor="end">Chisel caption</text><line x1="360" y1="326" x2="384.0" y2="326" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3 5"/><circle cx="384.0" cy="326" r="11" fill="#0f766e"/>
+<text x="406.0" y="333" font-size="19" font-weight="600" fill="#111827">$0.02 (20 credits)</text>
+<text x="332" y="411" font-size="21" fill="#111827" text-anchor="end">Image edit</text><line x1="360" y1="404" x2="510.0" y2="404" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3 5"/><circle cx="510.0" cy="404" r="11" fill="#0f766e"/>
+<text x="532.0" y="411" font-size="19" font-weight="600" fill="#111827">$0.125 (125 credits)</text>
+<text x="332" y="489" font-size="21" fill="#111827" text-anchor="end">Frameboy session</text><line x1="360" y1="482" x2="960.0" y2="482" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3 5"/><circle cx="960.0" cy="482" r="11" fill="#0f766e"/>
+<text x="960.0" y="460" font-size="19" font-weight="600" fill="#111827" text-anchor="middle">$0.50 (500 credits)</text>
+<text x="60" y="595" font-size="18" fill="#4b5563">Not shown: Relight edits (provider cost) and Developer API tasks (priced separately).</text></svg>

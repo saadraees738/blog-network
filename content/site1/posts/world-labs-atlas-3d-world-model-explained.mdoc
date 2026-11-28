@@ -1,0 +1,152 @@
+---
+title: 'World Labs Atlas explained - photos to 3D scenes, costs and ownership'
+description: 'Atlas from World Labs turns images into 3D scenes and camera-path video. See the tools, credit costs, photo tips and why your plan decides who owns the output.'
+status: published
+queueReason: ''
+publishDate: 2026-11-28
+lastVerified: 2026-11-28
+category: AI 3D
+author: saad-r
+heroImage: /images/site1/world-labs-atlas-3d-world-model-explained-cover.jpg
+heroAlt: 'AI-generated illustration of blank photo prints floating inside a dark room outlined by rows of glowing dots'
+imageCredit: 'Cover image generated with AI (FLUX.1 schnell via Cloudflare Workers AI); title and layout added by Stackbrook'
+affiliateLinks: false
+testedFirstHand: false
+quickAnswer: Atlas is a World Labs model that takes text, images or camera data and produces new views, video and 3D scene data, with web tools and a developer API. Its terms limit output from free and Standard tiers to personal, non-commercial use. With eligible paid access, such as Pro or higher or the paid API, you own output as between you and World Labs, where law allows, and may use it commercially. Check before client work.
+sources:
+  - title: 'Atlas - A World Model for Spatial Intelligence (World Labs, 1 September 2026)'
+    url: https://worldlabs.ai/blog/atlas
+    accessed: 2026-11-28
+  - title: 'Atlas release page (World Labs)'
+    url: https://worldlabs.ai/atlas
+    accessed: 2026-11-28
+  - title: 'Research and Insights index (World Labs)'
+    url: https://worldlabs.ai/blog
+    accessed: 2026-11-28
+  - title: 'Frameboy - Atlas in Real-time (World Labs, 5 November 2026)'
+    url: https://worldlabs.ai/blog/atlas-realtime
+    accessed: 2026-11-28
+  - title: 'World Labs is Joining AMD (World Labs, 28 September 2026)'
+    url: https://worldlabs.ai/blog/amd-announcement
+    accessed: 2026-11-28
+  - title: 'AMD Completes Acquisition of World Labs (AMD, 16 November 2026)'
+    url: https://newsroom.amd.com/news/amd-completes-acquisition-world-labs/
+    accessed: 2026-11-28
+  - title: 'Posed images to splats (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/posed-images-to-splats
+    accessed: 2026-11-28
+  - title: 'Terms of Service (World Labs)'
+    url: https://worldlabs.ai/terms-of-service
+    accessed: 2026-11-28
+  - title: 'Billing (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/billing
+    accessed: 2026-11-28
+  - title: 'Best practices (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/best-practices
+    accessed: 2026-11-28
+  - title: 'How to use Atlas (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/how-to-use-atlas
+    accessed: 2026-11-28
+  - title: 'Assets (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/assets
+    accessed: 2026-11-28
+  - title: 'Rate limits (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/rate-limits
+    accessed: 2026-11-28
+  - title: 'Web quickstart (Atlas documentation)'
+    url: https://docs.atlas.worldlabs.ai/web-quickstart
+    accessed: 2026-11-28
+  - title: 'Quickstart (Atlas documentation, text version)'
+    url: https://docs.atlas.worldlabs.ai/quickstart.md
+    accessed: 2026-11-28
+factCheck:
+  status: passed
+  reviewStatus: approved
+  notes: 'Drafted by Claude. One independent AI review round against the cited pages (REVISE with 10 findings - 3 high, 5 medium, 2 low - all applied; no second round). Not verified - current Viewfinder access, subscription prices, the in-platform rate card, the meaning of the terms date 11.10.26, and what happens to Atlas under AMD; pages were read through fetch-tool summaries with short quotes, so wording is not byte-exact and the copied-text check was partial.'
+---
+
+A handful of photos of a room, a shopfront or a landscape, turned into a scene you can move a camera through. That is the pitch for Atlas, a model from World Labs, the AI company associated with Fei-Fei Li that AMD bought in November 2026. It could interest designers, property marketers, video makers and game builders. Before you use anything it makes for a paying client, though, there is a rights clause worth five minutes of your time.
+
+*Disclosure: this post was drafted by Claude, an AI assistant made by Anthropic, and checked by a separate AI reviewer against the cited pages for figures, dates and wording. This is not a full human review. Stackbrook did not test Atlas and has no affiliate relationship with any company mentioned at the time of writing. The header image is AI-generated. This is general information, not legal or financial advice.*
+
+## What Atlas is
+
+World Labs introduced Atlas on 1 September 2026 as a "world model", meaning a model built to work with space as well as pictures. According to the announcement, it was trained from scratch to handle text, images, video and 3D together. You can give it text, images, camera positions and depth maps (data recording how far away each point is).
+
+The company says it can:
+
+- Generate camera-controlled video of up to 1 minute at 1440p from one to six input images and a camera path you design.
+- Rebuild a real space from one to dozens of images, producing new viewpoints plus 3D data such as point clouds and Gaussian splats (a way of storing a scene as many soft 3D blobs).
+- Reframe video shot from as few as three cameras, and produce colour and depth data for robot simulation.
+- Make still images and 360-degree panoramas, although World Labs says image generation is not the main focus.
+
+Where Atlas cannot see something in your input, it fills the gap by imagining it. The company's own point is that the more it sees, the less it has to invent. For anything where accuracy matters, such as a property listing, treat unseen corners as made up.
+
+## What you can use now
+
+A release post listed on the World Labs blog on 12 November 2026 points people to web tools and developer APIs. The release page names these:
+
+- **Viewfinder:** rebuild a scene from photos or generated images, explore new viewpoints and render camera paths.
+- **Chisel:** shape a world through controlled scene building and grayboxing (rough block layouts).
+- **Splats to Mesh:** convert splats into meshes for games and interactive environments.
+- **Relight:** experiment with lighting on splats.
+- **Developer API and integrations:** use Atlas in your own software and tools, including Blender.
+
+The release page lists these as tools launching with Atlas, offers a "Get started" link for Viewfinder and shows no beta label. A week earlier, on 5 November, a post about real-time viewing had described Viewfinder as a closed beta with a waitlist, so the release appears to have superseded that, although we did not test sign-up. That November 5 post also introduced Frameboy as a research preview that streams frames from cloud graphics chips to your browser at up to 15 frames per second while you steer the camera. World Labs notes that this needs a powerful cloud GPU server and costs noticeably more than rendering on your own device.
+
+## Take better source photos
+
+The documentation gives practical advice that costs nothing to follow:
+
+1. Shoot crisp photos of a well-defined place, showing plenty of surfaces at different distances.
+2. Step back, since medium and wide framing works better than tight close-ups.
+3. Lock your exposure and colour settings, and leave the scene untouched while shooting.
+4. Let neighbouring shots share content. When shape or size matters, walk to new spots as well as pivoting.
+5. Delete blurry shots, ones where something blocks much of the view, and any from a different place.
+
+World Labs says Atlas is strongest on places, architecture and landscapes. It is weaker on crowds, close-up people, jointed movement, moving vehicles or water, and objects that change position between shots. Scale is estimated, so do not rely on it for real measurements.
+
+## For developers
+
+The API flow is short. Create a key in the developer area, send images to a task that estimates camera position and depth, then poll the operation until it finishes. A second task generates new views from those results, and a Chisel task edits objects using a grayscale mask. The documented target camera sizes are 1280 × 720, 960 × 720, 528 × 704 and 720 × 1280, so do not assume the 1440p figure from the announcement applies to every API request. Keep the key on your server, not in browser code.
+
+Two storage details are easy to miss. A task output link works for 24 hours, although its asset ID lasts until you delete the asset. An unfinished upload is removed two hours after the later of its creation or its latest upload link. Rate limits are unfinished too. The page says final per-task quotas have not been published, and it lists a default of 10 requests per second per account for some other create, update and delete requests. Asset requests and task submissions have separate limits.
+
+## What it costs
+
+The billing page sets 1,000 credits to one US dollar and gives these costs for Atlas Studio actions, as of 28 November 2026:
+
+![Dot plot of listed Atlas Studio costs in US dollars: image upscale 0.01, prompt enhancement 0.02, Chisel caption 0.02, image edit 0.125 and a Frameboy session 0.50](/images/site1/world-labs-atlas-3d-world-model-explained-chart.svg)
+*Chart created by Stackbrook from the cited pages.*
+
+A Frameboy session runs for up to one minute and is charged once, when it ends. You pay nothing for sessions with under 5 seconds of playback, or ones cut off by an unresponsive server. A Relight image edit is billed at whatever the model provider charged. For the developer API, the splat guide lists $5 (5,000 credits) for each successful refined reconstruction, using 2 to 512 posed frames, and $0.50 for a draft using 2 to 32. Failed runs are free. These figures do not cover other steps such as estimating camera positions. We did not find public prices for the other tasks we looked at, and the billing page points to a rate card in the platform, which can change. We also found no subscription prices on the pages we read.
+
+Account and billing owners can set a monthly dollar spend limit for the account or a project. At 100%, new Developer API tasks pause while running ones finish. World Labs warns that these limits are not exact to the moment, so some variance is possible.
+
+There is also a mismatch to check. The billing page says credits purchased for the account do not expire. The Terms of Service say top-up and API credits last one year from purchase, although for API credits an order form or the pricing page can say otherwise. Monthly subscription credits are separate and expire with the billing period. Ask World Labs which applies before buying a large balance.
+
+## Who owns what you make
+
+This is the part to read carefully. The terms split output by access level:
+
+- **Low-tier access** (free and Standard tiers, plus anything else that is not eligible paid access): World Labs keeps rights in the output, apart from any of your own input inside it. You get a revocable licence for personal, non-commercial use only.
+- **Eligible paid access** (an active Pro or higher subscription, paid API access, or other non-subscription paid access that World Labs designates as eligible): as between you and World Labs, and where law allows, you own the output and may use it commercially.
+
+The level that applies is the one in force when the output was generated. Upgrading later does not change older work.
+
+Training differs as well. The terms grant World Labs a licence to use customer content, including for developing and training AI models. For content tied to eligible paid access, you can opt out of model training from account settings or by written notice, though only going forward. For low-tier access, which includes the Standard tier, the terms say the licence is irrevocable and cannot be opted out of, subject to applicable law. The web quickstart mentions a "Use my data to improve models" switch for account owners to opt out of training on inputs, without naming a tier, so rely on the terms and ask if unsure. The terms also say content may be public by default on some account tiers, require users to be at least 18 or the local age of majority if higher, and bar pre-release products from production use unless authorised. The page shows a last-updated date of 11.10.26, which could be read two ways.
+
+Do not upload client photos, floor plans or anything confidential until you have checked your tier and sharing settings.
+
+## The AMD deal
+
+AMD announced on 16 November 2026 that it had completed its acquisition of World Labs, a deal first announced on 28 September. Fei-Fei Li is now an executive vice president and chief scientist at AMD, and AMD says the World Labs team will continue its model research. Neither announcement we read says what happens to Atlas. The terms page we read still names World Labs Technologies, Inc. If you plan to build a workflow around Atlas, keep copies of your source images and exports.
+
+## Should you try it?
+
+- **Curious or hobby use:** a reasonable experiment, as long as you accept non-commercial limits on low tiers.
+- **Client or advertising work:** confirm you have eligible paid access before you generate, not after.
+- **Measurements, safety or evidence:** do not use generated views as a record of what is there.
+- **Developers:** prototype first, since final quotas are unpublished and we found public prices for only some API tasks.
+
+A sensible first test is ten overlapping photos of an empty room you own. Compare the result with the real space and note what was invented.
