@@ -105,3 +105,4 @@ P70. published | AI Productivity | Install a Claude artifact as a Mac or Windows
 P71. published | Smart Home | Google Home November 2026 update explained (2026-11-27; Google blog 17 Nov + five Google Home help and store pages; community release-note threads unreadable)
 P72. published | AI Coding | Copilot code review billing default moves to organizations on 30 Dec, how-to (2026-11-27; GitHub changelogs 25 Nov, 17 Nov, 28 Oct, 27 Apr + four GitHub Docs pages)
 P73. published | AI Explainers | Claude text watermarks and file Content Credentials explained, EU 2 December marking date (2026-11-28; Claude Help Center + Anthropic explainer + platform docs + checker page + three European Commission pages)
+P74. published | Online Safety | GL.iNet GoodCloud router and KVM malware, firmware and recovery steps (2026-11-28; GL.iNet forum + website notice 20/23 Nov + two forum check threads + BleepingComputer and The Hacker News; upgrade guide unfetchable)
